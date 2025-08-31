@@ -27,6 +27,8 @@ struct LoadedSaveData
 {
  /*0x0000*/ struct Bag bag;
  /*0x02E8*/ struct Mail mail[MAIL_COUNT];
+ /*0x0230*/ struct ItemSlot medicine[BAG_MEDICINE_COUNT];
+ /*0x0230*/ struct ItemSlot heldItems[BAG_HELDITEMS_COUNT];
 };
 
 // EWRAM DATA

@@ -85,6 +85,8 @@ struct GFRomHeader
     u8 bagCountPokeballs;
     u8 bagCountTMHMs;
     u8 bagCountBerries;
+    u8 bagCountMedicine;
+    u8 bagCountHeldItems;
     u8 pcItemsCount;
     u32 pcItemsOffset;
     u32 giftRibbonsOffset;
@@ -167,6 +169,8 @@ __attribute__((section(".text.header_gf"))) USED static const struct GFRomHeader
     .bagCountPokeballs = BAG_POKEBALLS_COUNT,
     .bagCountTMHMs = BAG_TMHM_COUNT,
     .bagCountBerries = BAG_BERRIES_COUNT,
+    .bagCountMedicine = BAG_MEDICINE_COUNT,
+    .bagCountHeldItems = BAG_HELDITEMS_COUNT,
     .pcItemsCount = PC_ITEMS_COUNT,
     .pcItemsOffset = offsetof(struct SaveBlock1, pcItems),
     .giftRibbonsOffset = offsetof(struct SaveBlock1, giftRibbons),

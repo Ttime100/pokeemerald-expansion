@@ -1,9 +1,11 @@
 #ifndef GUARD_ITEM_CONSTANTS_H
 #define GUARD_ITEM_CONSTANTS_H
 
-enum Pocket
+enum Pocket //Ttime changed order
 {
     POCKET_ITEMS,
+    POCKET_HELD_ITEMS,
+    POCKET_MEDICINE,
     POCKET_POKE_BALLS,
     POCKET_TM_HM,
     POCKET_BERRIES,
