@@ -4369,3 +4369,20 @@ void SetHiddenNature(void)
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HIDDEN_NATURE, &hiddenNature);
     CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
 }
+
+void GiveMonWithCustomLocation(void)
+{
+    struct Pokemon mon;
+    u16 species = VarGet(VAR_0x8004);
+    u8 level = VarGet(VAR_0x8005);
+    u16 item = VarGet(VAR_0x8006);
+    u8 metLocation = VarGet(VAR_0x8007);
+
+    CreateMon(&mon, species, level, 32, 0, 0, OT_ID_PLAYER_ID, 0);
+    if (item != ITEM_NONE)
+    {
+        SetMonData(&mon, MON_DATA_HELD_ITEM, &item);
+    }
+    SetMonData(&mon, MON_DATA_MET_LOCATION, &metLocation);
+    gSpecialVar_Result = GiveMonToPlayer(&mon);
+}
