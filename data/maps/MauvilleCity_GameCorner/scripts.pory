@@ -836,7 +836,7 @@ script _MauvilleCity_GameCorner_EventScript_PrizeCornerTMs {
   	dynmultipush("{FONT_NARROW}TM35 Flamethrower{CLEAR_TO 0x58}{FONT_NORMAL}SOLD OUT", 0)
 	} else {dynmultipush("{FONT_NARROW}TM35 Flamethrower{CLEAR_TO 0x58}{FONT_NORMAL}4,000 Coins", ITEM_TM_FLAMETHROWER)
 	}
-  dynmultistack(0, 4, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+  dynmultistack(0, 4, FALSE, 5, FALSE, ITEM_TM_DOUBLE_TEAM, DYN_MULTICHOICE_CB_SHOW_ITEM)
   if (var(VAR_RESULT) == MULTI_B_PRESSED) {
     msgbox(MauvilleCity_GameCorner_Text_OhIsThatSo)
     hidecoinsbox(0, 0)
