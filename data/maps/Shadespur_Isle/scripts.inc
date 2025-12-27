@@ -5,4 +5,3 @@ Shadespur_Isle_MapScripts::
 Shadespur_Isle_OnTransition:
 	setflag FLAG_LANDMARK_SHADESPUR_ISLE
 	end
-	
