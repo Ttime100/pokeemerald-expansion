@@ -571,3 +571,4 @@ gSpecials::
 	def_special GetPrevLevelCap
 	def_special SetMonToLevel
 	def_special SetMonFriendship
+	def_special ResetMonEVs

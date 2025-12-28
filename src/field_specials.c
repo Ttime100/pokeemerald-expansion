@@ -4438,3 +4438,35 @@ void SetMonFriendship(void)
     SetMonData(mon, MON_DATA_FRIENDSHIP, &friendship);
     gSpecialVar_Result = 1;
 }
+
+void ResetMonEVs(void)
+{
+    u8 slot = VarGet(VAR_TEMP_4);
+    struct Pokemon *mon;
+    u8 zero = 0;
+    u32 i;
+    u16 evStats[] = {
+        MON_DATA_HP_EV,
+        MON_DATA_ATK_EV,
+        MON_DATA_DEF_EV,
+        MON_DATA_SPATK_EV,
+        MON_DATA_SPDEF_EV,
+        MON_DATA_SPEED_EV
+    };
+
+    if (slot >= PARTY_SIZE)
+    {
+        gSpecialVar_Result = 0;
+        return;
+    }
+
+    mon = &gPlayerParty[slot];
+
+    for (i = 0; i < ARRAY_COUNT(evStats); i++)
+    {
+        SetMonData(mon, evStats[i], &zero);
+    }
+    CalculateMonStats(mon);
+
+    gSpecialVar_Result = 1;
+}
