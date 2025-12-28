@@ -568,3 +568,5 @@ gSpecials::
 	def_special ObjectEventInteractionGetApricornTreeData
 	def_special ObjectEventInteractionPickApricornTree
 	def_special GetLevelCap
+	def_special GetPrevLevelCap
+	def_special SetMonToLevel

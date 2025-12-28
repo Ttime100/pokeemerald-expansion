@@ -75,6 +75,7 @@
 #include "naming_screen.h"
 
 u32 GetCurrentLevelCap(void); //Ttime100 added
+u32 GetPreviousLevelCap(void); //Ttime100 added
 
 #define TAG_ITEM_ICON 5500
 
@@ -4386,4 +4387,39 @@ void SetAbility(void)
 void GetLevelCap(void) //Ttime100 added
 {
     gSpecialVar_0x8004 = GetCurrentLevelCap();
+}
+
+void GetPrevLevelCap(void) //Ttime100 added
+{
+    gSpecialVar_0x8004 = GetPreviousLevelCap();
+}
+
+void SetMonToLevel(void)
+{
+    u8 slot = VarGet(VAR_TEMP_4);
+    u8 level = VarGet(VAR_TEMP_3);
+    struct Pokemon *mon;
+    u16 species;
+    u32 exp;
+    u8 currentlevel;
+
+    if (slot >= PARTY_SIZE)
+    {
+        gSpecialVar_Result = 0; // Failure: Invalid slot
+        return;
+    }
+    mon = &gPlayerParty[slot];
+    currentlevel = GetMonData(mon, MON_DATA_LEVEL);
+    if (level <= currentlevel)
+    {
+        gSpecialVar_Result = 0; // Failure: Target level is lower or equal
+        return;
+    }
+    species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    exp = gExperienceTables[gSpeciesInfo[species].growthRate][level];
+
+    SetMonData(mon, MON_DATA_EXP, &exp);
+    SetMonData(mon, MON_DATA_LEVEL, &level);
+    CalculateMonStats(mon);
+    gSpecialVar_Result = 1; // Success!
 }
