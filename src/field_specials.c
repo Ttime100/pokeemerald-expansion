@@ -74,6 +74,8 @@
 #include "battle_util.h"
 #include "naming_screen.h"
 
+u32 GetCurrentLevelCap(void); //Ttime100 added
+
 #define TAG_ITEM_ICON 5500
 
 #define GFXTAG_MULTICHOICE_SCROLL_ARROWS 2000
@@ -4379,4 +4381,9 @@ void SetAbility(void)
 {
     u32 ability = gSpecialVar_Result;
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_ABILITY_NUM, &ability);
+}
+
+void GetLevelCap(void) //Ttime100 added
+{
+    gSpecialVar_0x8004 = GetCurrentLevelCap();
 }
