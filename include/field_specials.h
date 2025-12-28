@@ -39,5 +39,6 @@ bool32 CheckPartyHasSpecies(u32);
 void GetLevelCap(void); //Ttime100 added
 void GetPrevLevelCap(void); //Ttime100 added
 void SetMonToLevel(void); //Ttime100 added
+void SetMonFriendship(void); //Ttime100 added
 
 #endif // GUARD_FIELD_SPECIALS_H

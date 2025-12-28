@@ -570,3 +570,4 @@ gSpecials::
 	def_special GetLevelCap
 	def_special GetPrevLevelCap
 	def_special SetMonToLevel
+	def_special SetMonFriendship

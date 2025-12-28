@@ -4423,3 +4423,18 @@ void SetMonToLevel(void)
     CalculateMonStats(mon);
     gSpecialVar_Result = 1; // Success!
 }
+
+void SetMonFriendship(void)
+{
+    u8 slot = VarGet(VAR_TEMP_4);
+    u8 friendship = VarGet(VAR_TEMP_6); // The target value (0-255)
+    struct Pokemon *mon;
+    if (slot >= PARTY_SIZE)
+    {
+        gSpecialVar_Result = 0;
+        return;
+    }
+    mon = &gPlayerParty[slot];
+    SetMonData(mon, MON_DATA_FRIENDSHIP, &friendship);
+    gSpecialVar_Result = 1;
+}
