@@ -1,0 +1,278 @@
+script Pokemon_Center_Assistant {
+    lock
+    faceplayer
+    call(Assistant_Hello)
+    waitmessage
+    call(Assistant_Help_Functions)
+    call(Assistant_Goodbye)
+    release
+    end
+
+}
+
+const LEVEL_CAP = VAR_TEMP_1
+const VERSION   = VAR_TEMP_2
+const PRE_LVLCAP= VAR_TEMP_3
+const PARTY_MON = VAR_TEMP_4
+const MON_STAT  = VAR_TEMP_5
+const HAPPINESS = VAR_TEMP_6
+const SPECIES   = VAR_TEMP_7
+
+script Assistant_Hello {
+    if(!flag(FLAG_MET_ASSISTANT)){
+        msgbox(format("Hello!\p
+        I am here to assist you as you progress in your Pokémon journey!\p
+        Forgive me, but I too am just starting my journey as an assistant,\N
+        so I might not be much help right now,\N
+        but I promise I will learn as I go!\p
+        How may I help you today?"))
+        setflag(FLAG_MET_ASSISTANT)
+    }
+    else{
+        msgbox(format("Hello again!\n How may I help you today?"))
+    }
+}
+
+script Assistant_Goodbye {
+    switch(random(9)) {
+      case  0: msgbox(format("See you later!"))
+      case  1: msgbox(format("Goodbye!"))
+      case  2: msgbox(format("Bye bye!"))
+      case  3: msgbox(format("Bye now!"))
+      case  4: msgbox(format("Bye!"))
+      case  5: msgbox(format("Ciao!"))
+      case  6: msgbox(format("Have fun out there!"))
+      case  7: msgbox(format("Good luck!"))
+      case  8: msgbox(format("You'll do great!"))
+    }
+}
+
+script Assistant_Help_Functions {
+    dynmultipush("Current Level Cap", 0)
+    //dynmultipush("Version Info", 1)
+    if (flag(FLAG_BADGE02_GET)) { dynmultipush("Set Mon to Prev Lvl Cap", 2) }
+    if (flag(FLAG_BADGE03_GET)) { dynmultipush("Maximize Friendship", 3) }
+    if (flag(FLAG_BADGE06_GET)) { dynmultipush("Change Nature", 4) }
+    if (flag(FLAG_BADGE07_GET)) { dynmultipush("Reset EVs", 5) }
+    if (flag(FLAG_BADGE08_GET)) {
+        dynmultipush("Swap Gender", 6)
+        dynmultipush("Lower IVs", 7)
+    }
+    if (flag(FLAG_SYS_GAME_CLEAR)) {
+        // Add postgame-enabled logic here.
+    }
+    dynmultistack(0, 0, FALSE, 6, FALSE, 0, 0)
+    if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+    return
+    }
+    switch (var(VAR_RESULT)){
+        case 0: call (Assistant_CurrentLevelCap)
+        case 1: call (Assistant_VersionInfo)
+        case 2: call (Assistant_SetMontoPrevLvlCap)
+        case 3: call (Assistant_MaxFriendship)
+        case 4: call (Assistant_NatureChange)
+        case 5: call (Assistant_ResetEVs)
+        case 6: call (Assistant_SwapGender)
+        case 7: call (Assistant_LowerIVs)
+    }
+}
+
+script Assistant_CurrentLevelCap {
+    special(GetLevelCap)
+    copyvar(LEVEL_CAP, VAR_0x8004)
+    buffernumberstring (STR_VAR_1, LEVEL_CAP)
+    msgbox("The current level cap is {STR_VAR_1}.")
+    return
+}
+
+script Assistant_VersionInfo {
+    //TODO Call Var that represents version info
+    //copyvar(VERSION, VAR_0x8004)
+    msgbox ("TEST VERSION INFO")
+    //bufferstdstring (STR_VAR_1, VERSION)
+    //msgbox(format("Version: {STR_VAR_1}"))
+    return
+}
+
+script Assistant_SetMontoPrevLvlCap {
+    msgbox(format("Which Pokémon should I level?"))
+    special(ChoosePartyMon)
+    waitstate
+    lock
+    faceplayer
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
+    return
+    }
+    copyvar(PARTY_MON, VAR_0x8004)
+    bufferpartymonnick(STR_VAR_1, PARTY_MON)
+    special(GetPrevLevelCap)
+    copyvar(PRE_LVLCAP, VAR_0x8004)
+    buffernumberstring(STR_VAR_2, PRE_LVLCAP)
+    special(SetMonToLevel)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("{STR_VAR_1} has already reached this level cap!"))
+    } else {
+    playse(SE_EXP) //TODO not finalized yet
+    msgbox("I have set {STR_VAR_1} to level {STR_VAR_2}!")
+    return
+    }
+}
+
+script Assistant_MaxFriendship {
+    special(ChoosePartyMon)
+    waitstate
+    lock
+    faceplayer
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
+    return
+    }
+    copyvar(PARTY_MON, VAR_0x8004)
+    setvar(HAPPINESS, 255)
+    bufferpartymonnick(STR_VAR_1, PARTY_MON)
+    special(SetMonFriendship)
+    playfanfare(MUS_OBTAIN_ITEM) //TODO not finalized yet
+    msgbox(format("{STR_VAR_1} is the happiest they will ever be!"))
+    waitfanfare
+    return
+}
+
+script Assistant_NatureChange {
+    msgbox(format("Which Pokémon?"))
+    special(ChoosePartyMon)
+    waitstate
+    lock
+    faceplayer
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
+        return
+    }
+    bufferpartymonnick(STR_VAR_1,VAR_0x8004)
+    msgbox(format("Which new nature best serves {STR_VAR_1}?"))
+    dynmultipush("Adamant{CLEAR_TO 0x48}{COLOR RED}+Atk{COLOR DARK_GRAY}/{COLOR BLUE}-SpAtk", NATURE_ADAMANT) //Numbered based on include/constants/pokemon.h file that numbers natures
+    dynmultipush("Bashful{CLEAR_TO 0x48}Neutral", NATURE_BASHFUL)
+    dynmultipush("Bold   {CLEAR_TO 0x48}{COLOR RED}+Def{COLOR DARK_GRAY}/{COLOR BLUE}-Atk", NATURE_BOLD)
+    dynmultipush("Brave  {CLEAR_TO 0x48}{COLOR RED}+Atk{COLOR DARK_GRAY}/{COLOR BLUE}-Speed", NATURE_BRAVE)
+    dynmultipush("Calm   {CLEAR_TO 0x48}{COLOR RED}+SpDef{COLOR DARK_GRAY}/{COLOR BLUE}-Atk", NATURE_CALM)
+    dynmultipush("Careful{CLEAR_TO 0x48}{COLOR RED}+SpDef{COLOR DARK_GRAY}/{COLOR BLUE}-SpAtk", NATURE_CAREFUL)
+    dynmultipush("Docile {CLEAR_TO 0x48}Neutral", NATURE_DOCILE)
+    dynmultipush("Gentle {CLEAR_TO 0x48}{COLOR RED}+SpDef{COLOR DARK_GRAY}/{COLOR BLUE}-Def", NATURE_GENTLE)
+    dynmultipush("Hardy  {CLEAR_TO 0x48}Neutral", NATURE_HARDY)
+    dynmultipush("Hasty  {CLEAR_TO 0x48}{COLOR RED}+Speed{COLOR DARK_GRAY}/{COLOR BLUE}-Def", NATURE_HASTY)
+    dynmultipush("Impish {CLEAR_TO 0x48}{COLOR RED}+Def{COLOR DARK_GRAY}/{COLOR BLUE}-SpAtk", NATURE_IMPISH)
+    dynmultipush("Jolly  {CLEAR_TO 0x48}{COLOR RED}+Speed{COLOR DARK_GRAY}/{COLOR BLUE}-SpAtk", NATURE_JOLLY)
+    dynmultipush("Lax    {CLEAR_TO 0x48}{COLOR RED}+Def{COLOR DARK_GRAY}/{COLOR BLUE}-SpDef", NATURE_LAX)
+    dynmultipush("Lonely {CLEAR_TO 0x48}{COLOR RED}+Atk{COLOR DARK_GRAY}/{COLOR BLUE}-Def", NATURE_LONELY)
+    dynmultipush("Mild   {CLEAR_TO 0x48}{COLOR RED}+SpAtk{COLOR DARK_GRAY}/{COLOR BLUE}-Def", NATURE_MILD)
+    dynmultipush("Modest {CLEAR_TO 0x48}{COLOR RED}+SpAtk{COLOR DARK_GRAY}/{COLOR BLUE}-Atk", NATURE_MODEST)
+    dynmultipush("Naive  {CLEAR_TO 0x48}{COLOR RED}+Speed{COLOR DARK_GRAY}/{COLOR BLUE}-SpDef", NATURE_NAIVE)
+    dynmultipush("Naughty{CLEAR_TO 0x48}{COLOR RED}+Atk{COLOR DARK_GRAY}/{COLOR BLUE}-SpDef", NATURE_NAUGHTY)
+    dynmultipush("Quiet  {CLEAR_TO 0x48}{COLOR RED}+SpAtk{COLOR DARK_GRAY}/{COLOR BLUE}-Speed", NATURE_QUIET)
+    dynmultipush("Quirky {CLEAR_TO 0x48}Neutral", NATURE_QUIRKY)
+    dynmultipush("Rash   {CLEAR_TO 0x48}{COLOR RED}+SpAtk{COLOR DARK_GRAY}/{COLOR BLUE}-SpDef", NATURE_RASH)
+    dynmultipush("Relaxed{CLEAR_TO 0x48}{COLOR RED}+Def{COLOR DARK_GRAY}/{COLOR BLUE}-Speed", NATURE_RELAXED)
+    dynmultipush("Sassy  {CLEAR_TO 0x48}{COLOR RED}+SpDef{COLOR DARK_GRAY}/{COLOR BLUE}-Speed", NATURE_SASSY)
+    dynmultipush("Serious{CLEAR_TO 0x48}Neutral", NATURE_SERIOUS)
+    dynmultipush("Timid  {CLEAR_TO 0x48}{COLOR RED}+Speed{COLOR DARK_GRAY}/{COLOR BLUE}-Atk", NATURE_TIMID)
+    dynmultistack(0, 0, FALSE, 6, FALSE, NATURE_ADAMANT, 0)
+    if(var(VAR_RESULT) == MULTI_B_PRESSED){
+    return
+    }
+    copyvar(VAR_0x8005,VAR_RESULT)
+    special(SetHiddenNature)
+    special(CalculatePlayerPartyCount)
+    playfanfare(MUS_RG_OBTAIN_KEY_ITEM) //TODO not finalized yet
+    msgbox(format("{STR_VAR_1}'s nature has been changed!"))
+    waitfanfare
+    return
+}
+
+script Assistant_ResetEVs {
+    special(ChoosePartyMon)
+    waitstate
+    lock
+    faceplayer
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
+    return
+    }
+    copyvar(PARTY_MON, VAR_0x8004)
+    bufferpartymonnick(STR_VAR_1, PARTY_MON)
+    special(ResetMonEVs)
+    playfanfare(MUS_RG_OBTAIN_KEY_ITEM) //TODO not finalized
+    msgbox(format("I have reset all of {STR_VAR_1}'s EVs!"))
+    waitfanfare
+    return
+}
+
+script Assistant_SwapGender { //TODO figure out if you want it to be species specific or not, if so, then how
+    //msgbox(format("I can only swap the genders of Pokémon who have a gender-based evolution line.\p
+    //    Which Pokémon should I change?"))
+    msgbox(format("Which Pokémon should I change?"))
+    special(ChoosePartyMon)
+    waitstate
+    lock
+    faceplayer
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
+    return
+    }
+    copyvar(PARTY_MON, VAR_0x8004)
+    //copyvar(VAR_0x8005, VAR_0x8004)
+    //special(GetTradeSpecies) This currently does not work, but not sure why
+    //copyvar(SPECIES, VAR_0x8005)
+    //buffernumberstring(STR_VAR_2,
+    //msgbox(format("Species ID is: {STR_VAR_2}")) This is for testing
+    //if(var(SPECIES) == SPECIES_COMBEE ||
+    //var(SPECIES) == SPECIES_SALANDIT ||
+    //var(SPECIES) == SPECIES_KIRLIA ||
+    //var(SPECIES) == SPECIES_RALTS ||
+    //var(SPECIES) == SPECIES_BURMY ||
+    //var(SPECIES) == SPECIES_ESPURR ||
+    //var(SPECIES) == SPECIES_LECHONK ||
+    //var(SPECIES) == SPECIES_BASCULIN_WHITE_STRIPED ||
+    //var(SPECIES) == SPECIES_SNORUNT){
+        bufferpartymonnick(STR_VAR_1, PARTY_MON)
+        special(SwapMonGender)
+        playfanfare(MUS_RG_OBTAIN_KEY_ITEM) //TODO not finalized
+        msgbox(format("{STR_VAR_1}'s gender has been changed!"))
+        waitfanfare
+        return
+    //}
+    //else{
+    //    msgbox(format("I'm sorry, I cannot change this Pokémon."))
+    //    return
+    //}
+}
+
+script Assistant_LowerIVs {
+    msgbox(format("I can lower one of your Pokémon's IVs to 0. Which Pokémon should I modify?"))
+    special(ChoosePartyMon)
+    waitstate
+    lock
+    faceplayer
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
+    return
+    }
+    copyvar(PARTY_MON, VAR_0x8004)
+    bufferpartymonnick(STR_VAR_1, PARTY_MON)
+    msgbox(format("Which stat should be lowered?"))
+    dynmultipush("HP", STAT_HP)
+    dynmultipush("Attack", STAT_ATK)
+    dynmultipush("Defense", STAT_DEF)
+    dynmultipush("Sp. Atk", STAT_SPATK)
+    dynmultipush("Sp. Def", STAT_SPDEF)
+    dynmultipush("Speed", STAT_SPEED)
+    dynmultistack(0, 0, FALSE, 6, FALSE, STAT_HP, 0)
+    if(var(VAR_RESULT) == MULTI_B_PRESSED){
+    return
+    }
+    copyvar(MON_STAT, VAR_RESULT)
+    if(var(MON_STAT) == STAT_HP) { bufferstring(STR_VAR_2, "HP") }
+    if(var(MON_STAT) == STAT_ATK) { bufferstring(STR_VAR_2, "Attack") }
+    if(var(MON_STAT) == STAT_DEF) { bufferstring(STR_VAR_2, "Defense") }
+    if(var(MON_STAT) == STAT_SPATK) { bufferstring(STR_VAR_2, "Sp. Atk") }
+    if(var(MON_STAT) == STAT_SPDEF) { bufferstring(STR_VAR_2, "Sp. Def") }
+    if(var(MON_STAT) == STAT_SPEED) { bufferstring(STR_VAR_2, "Speed") }
+    special(LowerMonIV)
+    playse(SE_M_MINIMIZE)
+    msgbox(format("{STR_VAR_1}'s {STR_VAR_2} IV has been lowered!"))
+    waitse
+    return
+}
