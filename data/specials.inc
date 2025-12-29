@@ -573,3 +573,4 @@ gSpecials::
 	def_special SetMonFriendship
 	def_special ResetMonEVs
 	def_special SwapMonGender
+	def_special LowerMonIV

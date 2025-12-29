@@ -42,5 +42,6 @@ void SetMonToLevel(void); //Ttime100 added
 void SetMonFriendship(void); //Ttime100 added
 void ResetMonEVs(void); //Ttime100 added
 void SwapMonGender(void); //Ttime100 added
+void LowerMonIV(void); //Ttime100 added
 
 #endif // GUARD_FIELD_SPECIALS_H

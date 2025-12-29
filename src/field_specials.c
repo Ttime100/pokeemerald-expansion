@@ -4562,3 +4562,33 @@ void SwapMonGender(void)
 
     gSpecialVar_Result = 1;
 }
+
+void LowerMonIV(void)
+{
+    struct Pokemon *mon;
+    u8 slot = gSpecialVar_0x8004;
+    u8 statId = VarGet(VAR_TEMP_3); // Assuming MON_STAT is VAR_TEMP_3
+    u32 zeroIv = 0;
+    u8 ivDataToSet;
+
+    if (slot >= PARTY_SIZE)
+    {
+        return;
+    }
+
+    mon = &gPlayerParty[slot];
+
+    switch (statId)
+    {
+        case 0: ivDataToSet = MON_DATA_HP_IV; break;
+        case 1: ivDataToSet = MON_DATA_ATK_IV; break;
+        case 2: ivDataToSet = MON_DATA_DEF_IV; break;
+        case 3: ivDataToSet = MON_DATA_SPATK_IV; break;
+        case 4: ivDataToSet = MON_DATA_SPDEF_IV; break;
+        case 5: ivDataToSet = MON_DATA_SPEED_IV; break;
+        default: return;
+    }
+
+    SetMonData(mon, ivDataToSet, &zeroIv);
+    CalculateMonStats(mon);
+}
