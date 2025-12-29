@@ -4470,3 +4470,95 @@ void ResetMonEVs(void)
 
     gSpecialVar_Result = 1;
 }
+
+void SwapMonGender(void)
+{
+    struct Pokemon *mon;
+    struct BoxPokemon tempBoxMon;
+    u32 oldPid, newPid, otId, exp, personalIv;
+    u32 hpEv, atkEv, defEv, speedEv, spatkEv, spdefEv;
+    u16 moves[4], species, item;
+    u8 pp[4], friendship, metLevel, metLocation, ball, targetGender, currentGender, nature;
+    bool8 isShiny;
+    int i;
+
+    mon = &gPlayerParty[gSpecialVar_0x8004];
+    
+    species = GetMonData(mon, MON_DATA_SPECIES);
+    oldPid = GetMonData(mon, MON_DATA_PERSONALITY);
+    otId = GetMonData(mon, MON_DATA_OT_ID);
+    nature = GetNature(mon);
+    currentGender = GetMonGender(mon);
+    
+    {
+        u32 shinyCheck = (HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(oldPid) ^ LOHALF(oldPid));
+        isShiny = (shinyCheck < 8);
+    }
+
+    if (currentGender == MON_GENDERLESS)
+    {
+        gSpecialVar_Result = 2;
+        return;
+    }
+
+    targetGender = (currentGender == MON_FEMALE) ? MON_MALE : MON_FEMALE;
+
+    exp = GetMonData(mon, MON_DATA_EXP);
+    friendship = GetMonData(mon, MON_DATA_FRIENDSHIP);
+    item = GetMonData(mon, MON_DATA_HELD_ITEM);
+    metLevel = GetMonData(mon, MON_DATA_MET_LEVEL);
+    metLocation = GetMonData(mon, MON_DATA_MET_LOCATION);
+    ball = GetMonData(mon, MON_DATA_POKEBALL);
+    hpEv = GetMonData(mon, MON_DATA_HP_EV);
+    atkEv = GetMonData(mon, MON_DATA_ATK_EV);
+    defEv = GetMonData(mon, MON_DATA_DEF_EV);
+    speedEv = GetMonData(mon, MON_DATA_SPEED_EV);
+    spatkEv = GetMonData(mon, MON_DATA_SPATK_EV);
+    spdefEv = GetMonData(mon, MON_DATA_SPDEF_EV);
+    personalIv = GetMonData(mon, MON_DATA_IVS);
+
+    for (i = 0; i < 4; i++)
+    {
+        moves[i] = GetMonData(mon, MON_DATA_MOVE1 + i);
+        pp[i] = GetMonData(mon, MON_DATA_PP1 + i);
+    }
+
+    newPid = oldPid;
+    while (TRUE)
+    {
+        newPid++;
+        if (GetNatureFromPersonality(newPid) != nature) continue;
+        if (GetGenderFromSpeciesAndPersonality(species, newPid) != targetGender) continue;
+        {
+            u32 newShinyCheck = (HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(newPid) ^ LOHALF(newPid));
+            if ((newShinyCheck < 8) != isShiny) continue;
+        }
+        break;
+    }
+
+    CreateBoxMon(&tempBoxMon, species, metLevel, 31, TRUE, newPid, 1, otId);
+
+    SetBoxMonData(&tempBoxMon, MON_DATA_EXP, &exp);
+    SetBoxMonData(&tempBoxMon, MON_DATA_FRIENDSHIP, &friendship);
+    SetBoxMonData(&tempBoxMon, MON_DATA_HELD_ITEM, &item);
+    SetBoxMonData(&tempBoxMon, MON_DATA_MET_LOCATION, &metLocation);
+    SetBoxMonData(&tempBoxMon, MON_DATA_POKEBALL, &ball);
+    SetBoxMonData(&tempBoxMon, MON_DATA_HP_EV, &hpEv);
+    SetBoxMonData(&tempBoxMon, MON_DATA_ATK_EV, &atkEv);
+    SetBoxMonData(&tempBoxMon, MON_DATA_DEF_EV, &defEv);
+    SetBoxMonData(&tempBoxMon, MON_DATA_SPEED_EV, &speedEv);
+    SetBoxMonData(&tempBoxMon, MON_DATA_SPATK_EV, &spatkEv);
+    SetBoxMonData(&tempBoxMon, MON_DATA_SPDEF_EV, &spdefEv);
+    SetBoxMonData(&tempBoxMon, MON_DATA_IVS, &personalIv);
+
+    for (i = 0; i < 4; i++)
+    {
+        SetBoxMonData(&tempBoxMon, MON_DATA_MOVE1 + i, &moves[i]);
+        SetBoxMonData(&tempBoxMon, MON_DATA_PP1 + i, &pp[i]);
+    }
+
+    BoxMonToMon(&tempBoxMon, mon);
+    CalculateMonStats(mon);
+
+    gSpecialVar_Result = 1;
+}
