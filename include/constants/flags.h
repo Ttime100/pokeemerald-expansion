@@ -1311,8 +1311,7 @@
 #define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
+
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
@@ -1327,6 +1326,8 @@
 #define FLAG_RUSTUNGRUNT                                            0x4F9 // Beat Aqua Grunt in Rusturf Tunnel (for Level Caps)
 #define FLAG_RIVAL3_BEAT                                            0x4FA // Beat Rival on Route 110 (for Level Caps)
 #define FLAG_MUSEUMGRUNT                                            0x4EF // Beat Team Aqua in Slateport Museum (for Level Caps)
+#define FLAG_DEFEAT_MAXIE_SPACE_CENTER                              0x4EE // Beat Maxie in Space Center (for Level Caps)
+#define FLAG_DEFEAT_ARCHIE                                          0x4ED // Beat Archie in Seafloor Cavern (for Level Caps)
 
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
@@ -1349,7 +1350,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_MET_ASSISTANT                           (SYSTEM_FLAGS + 0x3) // Ttime100 added
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)

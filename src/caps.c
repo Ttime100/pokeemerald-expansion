@@ -21,7 +21,8 @@ static const u32 sLevelCapFlagMap[][2] =
     {FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, 68}, // Triggers after defeating Magma Hideout
     {FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, 71}, // Triggers after defeating Aqua Admin Matt
     {FLAG_BADGE07_GET, 77},
-    {FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA, 80},
+    {FLAG_DEFEAT_MAXIE_SPACE_CENTER, 80},
+    {FLAG_DEFEAT_ARCHIE, 83}, //Triggers after defeating Archie is Seafloor Cavern
     {FLAG_BADGE08_GET, 85},
     {FLAG_IS_CHAMPION, 95},
 };
