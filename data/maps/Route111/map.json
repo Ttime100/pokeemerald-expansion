@@ -1189,7 +1189,7 @@
       "y": 44,
       "elevation": 0,
       "item": "ITEM_STONE_PLATE",
-      "flag": "FLAG_TEMP_1"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_STONE_PLATE"
     },
     {
       "type": "hidden_item",
