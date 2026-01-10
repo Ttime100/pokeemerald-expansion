@@ -859,12 +859,19 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     }
     else
     {
-        if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
-            PlayerRunSlow(direction);
+        if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER)
+        {
+            PlayerWalkNormal(direction);
+        }
         else
-            PlayerRun(direction);
-            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
-            return;
+        {
+            if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
+                PlayerRunSlow(direction);
+            else
+                PlayerRun(direction);
+                gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
+                return;
+        }
     }
 }
 
