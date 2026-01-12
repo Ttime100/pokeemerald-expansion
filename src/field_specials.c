@@ -4476,7 +4476,7 @@ void SwapMonGender(void)
 {
     struct Pokemon *mon;
     struct BoxPokemon tempBoxMon;
-    u32 oldPid, newPid, otId, exp, personalIv;
+    u32 oldPid, newPid, otId, exp, personalIv, genderRatio;
     u32 hpEv, atkEv, defEv, speedEv, spatkEv, spdefEv;
     u16 moves[4], species, item;
     u8 pp[4], friendship, metLevel, metLocation, ball, targetGender, currentGender, nature;
@@ -4490,6 +4490,7 @@ void SwapMonGender(void)
     otId = GetMonData(mon, MON_DATA_OT_ID);
     nature = GetNature(mon);
     currentGender = GetMonGender(mon);
+    genderRatio = gSpeciesInfo[species].genderRatio;
     
     {
         u32 shinyCheck = (HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(oldPid) ^ LOHALF(oldPid));
@@ -4499,6 +4500,12 @@ void SwapMonGender(void)
     if (currentGender == MON_GENDERLESS)
     {
         gSpecialVar_Result = 2;
+        return;
+    }
+
+    if (genderRatio == MON_MALE || genderRatio == MON_FEMALE)
+    {
+        gSpecialVar_Result = 3;
         return;
     }
 
