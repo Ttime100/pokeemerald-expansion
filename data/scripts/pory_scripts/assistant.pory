@@ -230,10 +230,21 @@ script Assistant_SwapGender { //TODO figure out if you want it to be species spe
     //var(SPECIES) == SPECIES_SNORUNT){
         bufferpartymonnick(STR_VAR_1, PARTY_MON)
         special(SwapMonGender)
+        // 1 = Success, 2 = Genderless/Invalid, 3 = Cannot Swap (All Female or All Male)
+        if(var(VAR_RESULT) == 2) {
+            msgbox("I'm sorry, but {STR_VAR_1} is genderless!\nThey do not have a gender to change!")
+            return
+        }
+        if(var(VAR_RESULT) == 3) {
+            msgbox(format("I'm sorry, but {STR_VAR_1} cannot change their gender!"))
+            return
+        }
+        else {
         playfanfare(MUS_RG_OBTAIN_KEY_ITEM) //TODO not finalized
         msgbox(format("{STR_VAR_1}'s gender has been changed!"))
         waitfanfare
         return
+        }
     //}
     //else{
     //    msgbox(format("I'm sorry, I cannot change this Pokémon."))
