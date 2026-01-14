@@ -280,6 +280,18 @@ const u16 gTrainerPalette_RubySapphireBrendan[] = INCBIN_U16("graphics/trainers/
 const u32 gTrainerFrontPic_RubySapphireMay[] = INCBIN_U32("graphics/trainers/front_pics/may_rs.4bpp.smol");
 const u16 gTrainerPalette_RubySapphireMay[] = INCBIN_U16("graphics/trainers/palettes/may_rs.gbapal");
 
+const u32 gTrainerFrontPic_EliteFourTyler[] = INCBIN_U32("graphics/trainers/front_pics/Elite4_Tyler.4bpp.smol");
+const u16 gTrainerPalette_EliteFourTyler[] = INCBIN_U16("graphics/trainers/front_pics/Elite4_Tyler.gbapal");
+
+const u32 gTrainerFrontPic_EliteFourRob[] = INCBIN_U32("graphics/trainers/front_pics/Elite4_Rob.4bpp.smol");
+const u16 gTrainerPalette_EliteFourRob[] = INCBIN_U16("graphics/trainers/front_pics/Elite4_Rob.gbapal");
+
+const u32 gTrainerFrontPic_EliteFourAustin[] = INCBIN_U32("graphics/trainers/front_pics/Elite4_Austin.4bpp.smol");
+const u16 gTrainerPalette_EliteFourAustin[] = INCBIN_U16("graphics/trainers/front_pics/Elite4_Austin.gbapal");
+
+const u32 gTrainerFrontPic_EliteFourParth[] = INCBIN_U32("graphics/trainers/front_pics/Elite4_Parth.4bpp.smol");
+const u16 gTrainerPalette_EliteFourParth[] = INCBIN_U16("graphics/trainers/front_pics/Elite4_Parth.gbapal");
+
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
 const u8 gTrainerBackPic_Red[] = INCBIN_U8("graphics/trainers/back_pics/red.4bpp");
@@ -348,6 +360,10 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_PHOEBE, gTrainerFrontPic_EliteFourPhoebe, gTrainerPalette_EliteFourPhoebe),
     TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_GLACIA, gTrainerFrontPic_EliteFourGlacia, gTrainerPalette_EliteFourGlacia, -4, 4, 0x1B0),
     TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_DRAKE, gTrainerFrontPic_EliteFourDrake, gTrainerPalette_EliteFourDrake, 0, 5, 0x1A0),
+    TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_TYLER, gTrainerFrontPic_EliteFourTyler, gTrainerPalette_EliteFourTyler),
+    TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_ROB, gTrainerFrontPic_EliteFourRob, gTrainerPalette_EliteFourRob),
+    TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_AUSTIN, gTrainerFrontPic_EliteFourAustin, gTrainerPalette_EliteFourAustin),
+    TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_PARTH, gTrainerFrontPic_EliteFourParth, gTrainerPalette_EliteFourParth),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_ROXANNE, gTrainerFrontPic_LeaderRoxanne, gTrainerPalette_LeaderRoxanne),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_BRAWLY, gTrainerFrontPic_LeaderBrawly, gTrainerPalette_LeaderBrawly),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_WATTSON, gTrainerFrontPic_LeaderWattson, gTrainerPalette_LeaderWattson),
