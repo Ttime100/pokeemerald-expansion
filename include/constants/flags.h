@@ -1306,10 +1306,6 @@
 #define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
 #define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
 #define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
 
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
@@ -1332,6 +1328,11 @@
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
 #define FLAG_DEFEATED_ELITE_4_GLACIA                                0x4FD
 #define FLAG_DEFEATED_ELITE_4_DRAKE                                 0x4FE
+
+#define FLAG_DEFEATED_ELITE_4_PARTH                                 0x4E9 // New Elite 4
+#define FLAG_DEFEATED_ELITE_4_AUSTIN                                0x4EA // New Elite 4
+#define FLAG_DEFEATED_ELITE_4_ROB                                   0x4EB // New Elite 4
+#define FLAG_DEFEATED_ELITE_4_TYLER                                 0x4EC // New Elite 4
 
 #define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
 
