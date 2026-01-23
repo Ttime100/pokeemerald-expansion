@@ -8,6 +8,7 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform in weather from an opponent's m
     PARAMETRIZE { move = MOVE_RAIN_DANCE; }
     PARAMETRIZE { move = MOVE_HAIL; }
     PARAMETRIZE { move = MOVE_SNOWSCAPE; }
+    PARAMETRIZE { move = MOVE_SANDSTORM; }
     GIVEN {
         PLAYER(SPECIES_CASTFORM_NORMAL) { Ability(ABILITY_FORECAST); }
         OPPONENT(SPECIES_WOBBUFFET);
@@ -30,6 +31,8 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform in weather from an opponent's m
         case MOVE_SNOWSCAPE:
             EXPECT_EQ(player->species, SPECIES_CASTFORM_SNOWY);
             break;
+        case MOVE_SANDSTORM:
+            EXPECT_EQ(player->species, SPECIES_CASTFORM_SANDY);
         }
     }
 }
@@ -41,6 +44,7 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform in weather from its own move")
     PARAMETRIZE { move = MOVE_RAIN_DANCE; }
     PARAMETRIZE { move = MOVE_HAIL; }
     PARAMETRIZE { move = MOVE_SNOWSCAPE; }
+    PARAMETRIZE { move = MOVE_SANDSTORM; }
     GIVEN {
         PLAYER(SPECIES_CASTFORM_NORMAL) { Ability(ABILITY_FORECAST); }
         OPPONENT(SPECIES_WOBBUFFET);
@@ -63,6 +67,8 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform in weather from its own move")
         case MOVE_SNOWSCAPE:
             EXPECT_EQ(player->species, SPECIES_CASTFORM_SNOWY);
             break;
+        case MOVE_SANDSTORM:
+            EXPECT_EQ(player->species, SPECIES_CASTFORM_SANDY);
         }
     }
 }
@@ -74,6 +80,7 @@ DOUBLE_BATTLE_TEST("Forecast transforms Castform in weather from a partner's mov
     PARAMETRIZE { move = MOVE_RAIN_DANCE; }
     PARAMETRIZE { move = MOVE_HAIL; }
     PARAMETRIZE { move = MOVE_SNOWSCAPE; }
+    PARAMETRIZE { move = MOVE_SANDSTORM; }
     GIVEN {
         PLAYER(SPECIES_CASTFORM_NORMAL) { Ability(ABILITY_FORECAST); }
         PLAYER(SPECIES_WOBBUFFET);
@@ -98,6 +105,8 @@ DOUBLE_BATTLE_TEST("Forecast transforms Castform in weather from a partner's mov
         case MOVE_SNOWSCAPE:
             EXPECT_EQ(playerLeft->species, SPECIES_CASTFORM_SNOWY);
             break;
+        case MOVE_SANDSTORM:
+            EXPECT_EQ(playerLeft->species, SPECIES_CASTFORM_SANDY);
         }
     }
 }
@@ -109,6 +118,7 @@ DOUBLE_BATTLE_TEST("Forecast transforms all Castforms present in weather")
     PARAMETRIZE { move = MOVE_RAIN_DANCE; }
     PARAMETRIZE { move = MOVE_HAIL; }
     PARAMETRIZE { move = MOVE_SNOWSCAPE; }
+    PARAMETRIZE { move = MOVE_SANDSTORM; }
     GIVEN {
         PLAYER(SPECIES_CASTFORM_NORMAL) { Ability(ABILITY_FORECAST); Speed(10); }
         PLAYER(SPECIES_CASTFORM_NORMAL) { Ability(ABILITY_FORECAST); Speed(5); }
@@ -151,6 +161,12 @@ DOUBLE_BATTLE_TEST("Forecast transforms all Castforms present in weather")
             EXPECT_EQ(opponentLeft->species, SPECIES_CASTFORM_SNOWY);
             EXPECT_EQ(opponentRight->species, SPECIES_CASTFORM_SNOWY);
             break;
+        case MOVE_SANDSTORM:
+            EXPECT_EQ(playerLeft->species, SPECIES_CASTFORM_SANDY);
+            EXPECT_EQ(playerRight->species, SPECIES_CASTFORM_SANDY);
+            EXPECT_EQ(opponentLeft->species, SPECIES_CASTFORM_SANDY);
+            EXPECT_EQ(opponentRight->species, SPECIES_CASTFORM_SANDY);
+            break;
         }
     }
 }
@@ -162,6 +178,7 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform in weather from an ability")
     PARAMETRIZE { species = SPECIES_KYOGRE; ability = ABILITY_DRIZZLE; }
     PARAMETRIZE { species = SPECIES_GROUDON; ability = ABILITY_DROUGHT; }
     PARAMETRIZE { species = SPECIES_ABOMASNOW; ability = ABILITY_SNOW_WARNING; }
+    PARAMETRIZE { species = SPECIES_TYRANITAR; ability = ABILITY_SAND_STREAM; }
     GIVEN {
         PLAYER(SPECIES_CASTFORM_NORMAL) { Ability(ABILITY_FORECAST); }
         OPPONENT(SPECIES_WOBBUFFET);
@@ -184,6 +201,8 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform in weather from an ability")
         case ABILITY_SNOW_WARNING:
             EXPECT_EQ(player->species, SPECIES_CASTFORM_SNOWY);
             break;
+        case ABILITY_SAND_STREAM:
+            EXPECT_EQ(player->species, SPECIES_CASTFORM_SANDY);
         default:
             break;
         }
