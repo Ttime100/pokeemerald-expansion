@@ -338,6 +338,10 @@ static bool32 TrySymbiosis(u32 battler, u32 itemId, bool32 moveEnd);
 static bool32 CanAbilityShieldActivateForBattler(u32 battler);
 static void TryClearChargeVolatile(u32 moveType);
 static bool32 IsAnyTargetAffected(void);
+static bool32 IsCastform(u32 battler);
+static bool32 CastformTriggerWeatherChange(u32 battler, u16 move);
+void CastformWeatherVisualUpdate(void);
+void CastformFormChangeVisualUpdate(void);
 
 static void Cmd_attackcanceler(void);
 static void Cmd_accuracycheck(void);
@@ -1542,6 +1546,17 @@ static void Cmd_accuracycheck(void)
 
 static void Cmd_printattackstring(void)
 {
+    if (IsCastform(gBattlerAttacker))
+    {
+        gDisableStructs[gBattlerAttacker].weatherAbilityDone = FALSE;
+    }
+    
+    if (CastformTriggerWeatherChange(gBattlerAttacker, gCurrentMove))
+    {
+        CastformWeatherVisualUpdate();
+        CastformFormChangeVisualUpdate();
+    }
+
     CMD_ARGS();
 
     if (gBattleControllerExecFlags)
@@ -18056,4 +18071,67 @@ void BS_TryAbsorbToxicSpikesOnFaint(void)
     }
 
     gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+static bool32 IsCastform(u32 battler)
+{
+    u32 species = gBattleMons[battler].species;
+    return (species == SPECIES_CASTFORM || species == SPECIES_CASTFORM_SUNNY || 
+            species == SPECIES_CASTFORM_RAINY || species == SPECIES_CASTFORM_SNOWY ||
+            species == SPECIES_CASTFORM_SANDY);
+}
+
+static bool32 CastformTriggerWeatherChange(u32 battler, u16 move)
+{
+    u32 ability = GetBattlerAbility(battler);
+    u32 moveType = GetBattleMoveType(move);
+    u16 newWeather = 0;
+
+    if (gProtectStructs[battler].castformForecastDone)
+        return FALSE;
+
+    if (IsCastform(battler) && ability == ABILITY_FORECAST)
+    {
+        if ((gBattleWeather & (B_WEATHER_SUN_PRIMAL | B_WEATHER_RAIN_PRIMAL | B_WEATHER_STRONG_WINDS)) 
+            || IsAbilityOnField(ABILITY_CLOUD_NINE) || IsAbilityOnField(ABILITY_AIR_LOCK))
+            return FALSE;
+
+        if (moveType == TYPE_WATER || move == MOVE_THUNDER || move == MOVE_HURRICANE)
+            newWeather = B_WEATHER_RAIN;
+        else if (moveType == TYPE_FIRE || move == MOVE_SOLAR_BEAM || move == MOVE_SOLAR_BLADE)
+            newWeather = B_WEATHER_SUN;
+        else if (moveType == TYPE_ICE || move == MOVE_BLIZZARD)
+            newWeather = B_WEATHER_HAIL;
+        else if (moveType == TYPE_ROCK || moveType == TYPE_GROUND)
+            newWeather = B_WEATHER_SANDSTORM;
+
+        if (newWeather != 0 && !(gBattleWeather & newWeather))
+        {
+            gBattleWeather &= ~(B_WEATHER_RAIN | B_WEATHER_SUN | B_WEATHER_HAIL | B_WEATHER_SANDSTORM);
+            gBattleWeather |= newWeather;
+            gProtectStructs[battler].castformForecastDone = TRUE;
+            //PrepareStringBattle(STRINGID_CASTFORMFORECAST, battler);
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+void CastformWeatherVisualUpdate(void)
+{
+    extern const u8 BattleScript_DrizzleActivates[];
+    extern const u8 BattleScript_DroughtActivates[];
+    extern const u8 BattleScript_SnowWarningActivatesHail[];
+
+    if (gBattleWeather & B_WEATHER_RAIN)
+        BattleScriptPushCursorAndCallback(BattleScript_DrizzleActivates);
+    else if (gBattleWeather & B_WEATHER_SUN)
+        BattleScriptPushCursorAndCallback(BattleScript_DroughtActivates);
+    else if (gBattleWeather & B_WEATHER_HAIL)
+        BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivatesHail);
+}
+
+void CastformFormChangeVisualUpdate(void)
+{
+    AbilityBattleEffects(ABILITYEFFECT_ON_WEATHER, 0, ABILITY_NONE, 0, 0);
 }

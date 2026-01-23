@@ -172,7 +172,8 @@ struct ProtectStruct
     u16 assuranceDoubled:1;
     u16 myceliumMight:1;
     u16 revengeDoubled:4;
-    u16 padding:7;
+    u16 castformForecastDone:1;
+    u16 padding:6;
     // End of 16-bit bitfield
     u16 physicalDmg;
     u16 specialDmg;
