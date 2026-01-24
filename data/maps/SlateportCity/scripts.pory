@@ -1356,3 +1356,34 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "the perfect fit for the Battle Tent!\p"
 	.string "Give it your best effort!$"
 `
+// On line 540, changed SlateportCity_Pokemart_PowerTMs to give different TMs
+
+script _SlateportCity_EventScript_Sailor1 {
+	lock
+	faceplayer
+	if (flag(FLAG_RECEIVED_OLD_SEA_MAP)){
+		msgbox(SlateportCity_Text_SeaIsSoWet)
+		release
+		end
+	}
+	msgbox(Text_GiveOldSeaMap)
+	giveitem(ITEM_OLD_SEA_MAP)
+	setflag(FLAG_RECEIVED_OLD_SEA_MAP)
+	msgbox(Text_PostGivingMap)
+	release
+	end
+}
+
+text Text_GiveOldSeaMap {
+	format("I've spent my whole life\n
+	watching these waves.\p
+	Years ago, I found this map floating in a bottle made of glass.\p
+	I tried to follow it once,\nbut the fog…\p
+	It was like the sea itself\ndidn't want me there.\p
+	You have a different look in your eyes. Maybe you're the one it's waiting for…")
+}
+
+text Text_PostGivingMap {
+	format("Be careful out there. You never know\n
+	what exists beyond the waves…")
+}
