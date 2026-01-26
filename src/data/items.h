@@ -14047,6 +14047,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Sapphire,
     },
 
+    [ITEM_LIBERTY_PASS] =
+    {
+        .name = ITEM_NAME("Liberty Pass"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A special pass\n"
+            "to board the ship\n"
+            "to Liberty Garden."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_LibertyPass,
+        .iconPalette = gItemIconPalette_LibertyPass,
+    },
+
     [ITEM_ABILITY_SHIELD] =
     {
         .name = ITEM_NAME("Ability Shield"),
