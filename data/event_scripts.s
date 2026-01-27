@@ -1183,3 +1183,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ShadespurHouse1/scripts.inc"
 
 	.include "data/maps/ShadespurHouse2/scripts.inc"
+
+	.include "data/maps/LibertyGarden/scripts.inc"
+
+	.include "data/maps/LibertyGarden_Interior/scripts.inc"
+
+	.include "data/maps/LibertyGarden_Basement/scripts.inc"

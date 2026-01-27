@@ -4530,6 +4530,36 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/ShadespurHouse2/border.bin",
       "blockdata_filepath": "data/layouts/ShadespurHouse2/map.bin"
+    },
+    {
+      "id": "LAYOUT_LIBERTY_GARDEN",
+      "name": "LibertyGarden_Layout",
+      "width": 35,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/LibertyGarden/border.bin",
+      "blockdata_filepath": "data/layouts/LibertyGarden/map.bin"
+    },
+    {
+      "id": "LAYOUT_LIBERTY_GARDEN_INTERIOR",
+      "name": "LibertyGarden_Interior_Layout",
+      "width": 14,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LibertyGarden_Interior/border.bin",
+      "blockdata_filepath": "data/layouts/LibertyGarden_Interior/map.bin"
+    },
+    {
+      "id": "LAYOUT_LIBERTY_GARDEN_BASEMENT",
+      "name": "LibertyGarden_Basement_Layout",
+      "width": 19,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LibertyGarden_Basement/border.bin",
+      "blockdata_filepath": "data/layouts/LibertyGarden_Basement/map.bin"
     }
   ]
 }

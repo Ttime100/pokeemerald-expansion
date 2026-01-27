@@ -251,11 +251,12 @@
 #define OBJ_EVENT_GFX_ROB                        244
 #define OBJ_EVENT_GFX_PARTH                      245
 #define OBJ_EVENT_GFX_AUSTIN                     246
+#define OBJ_EVENT_GFX_VICTINI                    247
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        247
+#define NUM_OBJ_EVENT_GFX                        248
 
 
 // These are dynamic object gfx ids.
@@ -374,7 +375,7 @@
 #define OBJ_EVENT_PAL_TAG_KYOGRE_REFLECTION       0x1117
 #define OBJ_EVENT_PAL_TAG_GROUDON                 0x1118
 #define OBJ_EVENT_PAL_TAG_GROUDON_REFLECTION      0x1119
-#define OBJ_EVENT_PAL_TAG_UNUSED                  0x111A
+#define OBJ_EVENT_PAL_TAG_VICTINI                 0x111A
 #define OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW        0x111B
 #define OBJ_EVENT_PAL_TAG_POOCHYENA               0x111C
 #define OBJ_EVENT_PAL_TAG_RED_LEAF                0x111D

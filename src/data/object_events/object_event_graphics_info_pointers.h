@@ -196,6 +196,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Archie;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Maxie;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KyogreFront;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GroudonFront;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Victini;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fossil;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regirock;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regice;
@@ -503,6 +504,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ROB] =                      &gObjectEventGraphicsInfo_Rob,
     [OBJ_EVENT_GFX_PARTH] =                    &gObjectEventGraphicsInfo_Parth,
     [OBJ_EVENT_GFX_AUSTIN] =                   &gObjectEventGraphicsInfo_Austin,
+    [OBJ_EVENT_GFX_VICTINI] =                  &gObjectEventGraphicsInfo_Victini,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
