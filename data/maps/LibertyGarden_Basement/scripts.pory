@@ -1,0 +1,70 @@
+raw`
+LibertyGarden_Basement_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LibertyGarden_Basement_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, LibertyGarden_Basement_OnResume
+	.byte 0
+
+LibertyGarden_Basement_OnTransition:
+	call_if_set FLAG_CAUGHT_VICTINI, LibertyGarden_Basement_EventScript_HideVictini
+	call_if_unset FLAG_CAUGHT_VICTINI, LibertyGarden_Basement_EventScript_TryShowVictini
+	end
+
+LibertyGarden_Basement_EventScript_HideVictini::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_VICTINI
+	return
+
+LibertyGarden_Basement_EventScript_TryShowVictini::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_VICTINI, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_VICTINI
+	return
+
+LibertyGarden_Basement_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, LibertyGarden_Basement_EventScript_TryRemoveVictini
+	end
+
+LibertyGarden_Basement_EventScript_TryRemoveVictini::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_LIBERTY_GARDEN_VICTINI
+	return
+`
+
+script LibertyGarden_Basement_BattleVictini {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_VICTINI,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_VICTINI,50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	waitstate
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_LIBERTY_GARDEN_VICTINI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, LibertyGarden_Basement_EventScript_DefeatedVictini)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, LibertyGarden_Basement_EventScript_RanFromVictini)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, LibertyGarden_Basement_EventScript_RanFromVictini)
+	setflag(FLAG_CAUGHT_VICTINI)
+    release
+    end
+}
+
+script LibertyGarden_Basement_EventScript_DefeatedVictini {
+    setflag(FLAG_DEFEATED_VICTINI)
+	setvar(VAR_0x8004, SPECIES_VICTINI)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script LibertyGarden_Basement_EventScript_RanFromVictini {
+    setvar(VAR_0x8004, SPECIES_VICTINI)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
