@@ -1369,6 +1369,7 @@ script _SlateportCity_EventScript_Sailor1 {
 	msgbox(Text_GiveOldSeaMap)
 	giveitem(ITEM_OLD_SEA_MAP)
 	setflag(FLAG_RECEIVED_OLD_SEA_MAP)
+	setflag(FLAG_ENABLE_SHIP_FARAWAY_ISLAND)
 	msgbox(Text_PostGivingMap)
 	release
 	end
