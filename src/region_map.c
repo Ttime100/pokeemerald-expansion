@@ -277,7 +277,8 @@ static const mapsec_u8_t sMapSecIdsOffMap[] =
 {
     MAPSEC_BIRTH_ISLAND,
     MAPSEC_FARAWAY_ISLAND,
-    MAPSEC_NAVEL_ROCK
+    MAPSEC_NAVEL_ROCK,
+    MAPSEC_LIBERTY_GARDEN
 };
 
 static const u16 sRegionMapFramePal[] = INCBIN_U16("graphics/pokenav/region_map/frame.gbapal");
