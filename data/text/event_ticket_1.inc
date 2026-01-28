@@ -10,6 +10,12 @@ EventTicket_Text_ThatPass:
 	.string "Oh?\n"
 	.string "That Pass…$"
 
+EventTicket_Text_ShowLibertyPass:
+	.string "That Liberty Pass!\p"
+	.string "If you have that,\n"
+	.string "you can board this ship.\p"
+	.string "Let's set sail for Liberty Garden!$"
+
 EventTicket_Text_ShowEonTicket:
 	.string "Aye, mate, are you the one who brought\n"
 	.string "that mighty odd Pass?\p"

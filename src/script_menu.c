@@ -874,6 +874,22 @@ static void CreateLilycoveSSTidalMultichoice(void)
         }
     }
 
+    if (CheckBagHasItem(ITEM_LIBERTY_PASS, 1) == TRUE && FlagGet(FLAG_ENABLE_SHIP_LIBERTY_GARDEN) == TRUE)
+    {
+        if (gSpecialVar_0x8004 == 0)
+        {
+            sLilycoveSSTidalSelections[selectionCount] = SSTIDAL_SELECTION_LIBERTY_GARDEN;
+            selectionCount++;
+        }
+
+        if (gSpecialVar_0x8004 == 1 && FlagGet(FLAG_SHOWN_LIBERTY_PASS) == FALSE)
+        {
+            sLilycoveSSTidalSelections[selectionCount] = SSTIDAL_SELECTION_LIBERTY_GARDEN;
+            selectionCount++;
+            FlagSet(FLAG_SHOWN_LIBERTY_PASS);
+        }
+    }
+
     sLilycoveSSTidalSelections[selectionCount] = SSTIDAL_SELECTION_EXIT;
     selectionCount++;
 

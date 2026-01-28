@@ -516,8 +516,8 @@
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 #define FLAG_CAUGHT_VICTINI                  0x1DE // Ttime100 added
 #define FLAG_DEFEATED_VICTINI                0x1DF // Ttime100 added
+#define FLAG_SHOWN_LIBERTY_PASS              0x1E0 // Ttime100 added
 
-#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
 #define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
 #define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
 #define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
@@ -1503,7 +1503,7 @@
 #define FLAG_ARRIVED_AT_NAVEL_ROCK                  (SYSTEM_FLAGS + 0x81)
 #define FLAG_LANDMARK_TRAINER_HILL                  (SYSTEM_FLAGS + 0x82)
 
-#define FLAG_UNUSED_0x8E3                           (SYSTEM_FLAGS + 0x83) // Unused Flag
+#define FLAG_ENABLE_SHIP_LIBERTY_GARDEN             (SYSTEM_FLAGS + 0x83) // Ttime100 added
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
