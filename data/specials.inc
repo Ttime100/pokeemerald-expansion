@@ -574,3 +574,4 @@ gSpecials::
 	def_special ResetMonEVs
 	def_special SwapMonGender
 	def_special LowerMonIV
+	def_special JackpotCount

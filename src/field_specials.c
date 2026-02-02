@@ -4600,3 +4600,9 @@ void LowerMonIV(void)
     SetMonData(mon, ivDataToSet, &zeroIv);
     CalculateMonStats(mon);
 }
+
+void JackpotCount(void)
+{
+    u32 jackpotcount = GetGameStat(GAME_STAT_SLOT_JACKPOTS);
+    gSpecialVar_Result = jackpotcount;
+}
