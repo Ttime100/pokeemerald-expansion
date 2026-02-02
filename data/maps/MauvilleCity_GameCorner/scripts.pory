@@ -677,7 +677,7 @@ MauvilleCity_GameCorner_Text_DontNeedCoinsThen:
 MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes:
 	.string "Welcome.\p"
 	.string "You can exchange your Coins for\n"
-	.string "prizes here.\p"
+	.string "prizes here.$"
 
 MauvilleCity_GameCorner_Text_WhichPrize:
 	.string "Which prize would you like?$"
@@ -882,4 +882,36 @@ script _MauvilleCity_GameCorner_EventScript_PrizeCornerTMs {
   hidecoinsbox(0, 0)
   release
   end
+}
+
+script MauvilleCity_GameCorner_EventScript_VictiniMan {
+    lock
+    faceplayer
+    if (flag(FLAG_ENABLE_SHIP_LIBERTY_GARDEN)) {
+        msgbox(format("The luck that led you to that jackpot…\p"
+               "I wonder where it will lead you next?"))
+        release
+        end
+    }
+    special(JackpotCount)
+    if (var(VAR_RESULT) > 0) {
+        msgbox(format("Wait… that aura!\n"
+               "You just hit a jackpot, didn't you?\p"
+               "You are exactly the kind of trainer\n"
+               "I have been waiting for!"))
+        
+        giveitem(ITEM_LIBERTY_PASS)
+        setflag(FLAG_ENABLE_SHIP_LIBERTY_GARDEN)
+        
+        msgbox(format("That Pass was sent to me\n"
+               "from a faraway region.\p"
+               "Perhaps you should take it to the"
+               "Lilycove Harbor and see for yourself."))
+    } else {
+        msgbox(format("I'm looking for a truly lucky person.\p"
+               "If you manage to hit a jackpot,\n"
+               "come back and see me."))
+    }
+    release
+    end
 }
