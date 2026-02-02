@@ -4102,15 +4102,26 @@ static void SpriteCB_ReelSymbol(struct Sprite *sprite)
 
 static void CreateCreditPayoutNumberSprites(void)
 {
-    s16 i;
+    s32 i;
     s16 x;
 
     // Credit number sprite
-    for (x = 203, i = 1; i <= MAX_COINS; i *= 10, x -= 7)
-        CreateCoinNumberSprite(x, 23, FALSE, i);
+    for (x = 211, i = 1; i <= 10000; i *= 10, x -= 7)
+    {
+        // If we are on the 4th digit (1,000) or 5th digit (10,000), 
+        // add or subtract a few pixels to the 'x'
+        if (i >= 1000)
+        {
+            CreateCoinNumberSprite(x - 1, 23, FALSE, i);
+        }
+        else
+        {
+            CreateCoinNumberSprite(x, 23, FALSE, i);
+        }
+    }
 
     // Payout number sprite
-    for (x = 235, i = 1; i <= MAX_COINS; i *= 10, x -= 7)
+    for (x = 235, i = 1; i <= 100; i *= 10, x -= 7)
         CreateCoinNumberSprite(x, 23, TRUE, i);
 }
 
