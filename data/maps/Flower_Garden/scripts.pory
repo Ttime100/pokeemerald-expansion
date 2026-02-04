@@ -1,0 +1,70 @@
+raw`
+Flower_Garden_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FlowerGarden_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, FlowerGarden_OnResume
+	.byte 0
+
+FlowerGarden_OnTransition:
+	call_if_set FLAG_CAUGHT_SHAYMIN, FlowerGarden_EventScript_HideShaymin
+	call_if_unset FLAG_CAUGHT_SHAYMIN, FlowerGarden_EventScript_TryShowShaymin
+	end
+
+FlowerGarden_EventScript_HideShaymin::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_SHAYMIN
+	return
+
+FlowerGarden_EventScript_TryShowShaymin::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_SHAYMIN, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_SHAYMIN
+	return
+
+FlowerGarden_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FlowerGarden_EventScript_TryRemoveShaymin
+	end
+
+FlowerGarden_EventScript_TryRemoveShaymin::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_FLOWER_GARDEN_SHAYMIN
+	return
+`
+
+script FlowerGarden_BattleShaymin {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_SHAYMIN,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_SHAYMIN,50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	waitstate
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_FLOWER_GARDEN_SHAYMIN)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, FlowerGarden_EventScript_DefeatedShaymin)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, FlowerGarden_EventScript_RanFromShaymin)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FlowerGarden_EventScript_RanFromShaymin)
+	setflag(FLAG_CAUGHT_SHAYMIN)
+    release
+    end
+}
+
+script FlowerGarden_EventScript_DefeatedShaymin {
+    setflag(FLAG_DEFEATED_SHAYMIN)
+	setvar(VAR_0x8004, SPECIES_SHAYMIN)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script FlowerGarden_EventScript_RanFromShaymin {
+    setvar(VAR_0x8004, SPECIES_SHAYMIN)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}

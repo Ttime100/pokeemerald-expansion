@@ -596,7 +596,8 @@
     "TrainerHill_Elevator",
     "LibertyGarden",
     "LibertyGarden_Interior",
-    "LibertyGarden_Basement"
+    "LibertyGarden_Basement",
+    "Flower_Garden"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

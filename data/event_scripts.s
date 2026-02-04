@@ -1189,3 +1189,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LibertyGarden_Interior/scripts.inc"
 
 	.include "data/maps/LibertyGarden_Basement/scripts.inc"
+
+	.include "data/maps/Flower_Garden/scripts.inc"

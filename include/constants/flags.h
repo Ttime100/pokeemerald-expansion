@@ -254,7 +254,7 @@
 #define FLAG_RECEIVED_TM_ROAR                0xE7
 #define FLAG_RECEIVED_TM_GIGA_DRAIN          0xE8
 
-#define FLAG_UNUSED_0xE9                     0xE9
+#define FLAG_RECEIVED_GRACIDEA               0xE9
 
 #define FLAG_RECEIVED_TM_REST                0xEA
 #define FLAG_RECEIVED_TM_ATTRACT             0xEB
@@ -517,10 +517,9 @@
 #define FLAG_CAUGHT_VICTINI                  0x1DE // Ttime100 added
 #define FLAG_DEFEATED_VICTINI                0x1DF // Ttime100 added
 #define FLAG_SHOWN_LIBERTY_PASS              0x1E0 // Ttime100 added
-
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_CAUGHT_SHAYMIN                  0x1E1 // Ttime100 added
+#define FLAG_DEFEATED_SHAYMIN                0x1E2 // Ttime100 added
+#define FLAG_HIDE_SHAYMIN                    0x1E3 // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4

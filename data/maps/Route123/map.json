@@ -27,7 +27,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 11,
+      "x": 12,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -40,7 +40,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 12,
+      "x": 13,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -144,8 +144,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 14,
-      "y": 5,
+      "x": 29,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -157,8 +157,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 15,
-      "y": 5,
+      "x": 30,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -170,7 +170,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 17,
+      "x": 16,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -183,7 +183,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 18,
+      "x": 17,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -196,7 +196,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 17,
+      "x": 16,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -209,7 +209,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 18,
+      "x": 17,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -222,7 +222,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 11,
+      "x": 12,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -235,7 +235,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 12,
+      "x": 13,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -592,6 +592,20 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE123_BERRY_MASTERS_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_FLOWER_GARDEN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_FLOWER_GARDEN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -748,6 +762,42 @@
       "y": 10,
       "elevation": 3,
       "weather": "COORD_EVENT_WEATHER_ROUTE123_CYCLE"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ROUTE123_STATE",
+      "var_value": "1",
+      "script": "Route123_EventScript_OpenEntrance"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ROUTE123_STATE",
+      "var_value": "1",
+      "script": "Route123_EventScript_OpenEntrance"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ROUTE123_STATE",
+      "var_value": "1",
+      "script": "Route123_EventScript_OpenEntrance"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ROUTE123_STATE",
+      "var_value": "1",
+      "script": "Route123_EventScript_OpenEntrance"
     }
   ],
   "bg_events": [
