@@ -520,6 +520,9 @@
 #define FLAG_CAUGHT_SHAYMIN                  0x1E1 // Ttime100 added
 #define FLAG_DEFEATED_SHAYMIN                0x1E2 // Ttime100 added
 #define FLAG_HIDE_SHAYMIN                    0x1E3 // Ttime100 added
+#define FLAG_CAUGHT_HEATRAN                  0x4E6 // Ttime100 added
+#define FLAG_DEFEATED_HEATRAN                0x4E7 // Ttime100 added
+#define FLAG_HIDE_HEATRAN                    0x4E8 // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -1302,10 +1305,6 @@
 #define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
 #define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
-#define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
-#define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
-#define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

@@ -1,4 +1,70 @@
-raw `
+raw`
 ScorchedSlab_HiddenRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ScorchedSlab_HiddenRoom_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, ScorchedSlab_HiddenRoom_OnResume
 	.byte 0
+
+ScorchedSlab_HiddenRoom_OnTransition:
+	call_if_set FLAG_CAUGHT_HEATRAN, ScorchedSlab_HiddenRoom_EventScript_HideHeatran
+	call_if_unset FLAG_CAUGHT_HEATRAN, ScorchedSlab_HiddenRoom_EventScript_TryShowHeatran
+	end
+
+ScorchedSlab_HiddenRoom_EventScript_HideHeatran::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_HEATRAN
+	return
+
+ScorchedSlab_HiddenRoom_EventScript_TryShowHeatran::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_HEATRAN, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_HEATRAN
+	return
+
+ScorchedSlab_HiddenRoom_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, ScorchedSlab_HiddenRoom_EventScript_TryRemoveHeatran
+	end
+
+ScorchedSlab_HiddenRoom_EventScript_TryRemoveHeatran::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_SCORCHED_SLAB_HEATRAN
+	return
 `
+
+script ScorchedSlab_HiddenRoom_BattleHeatran {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_HEATRAN,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_HEATRAN,50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	waitstate
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_SCORCHED_SLAB_HEATRAN)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, ScorchedSlab_HiddenRoom_EventScript_DefeatedHeatran)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, ScorchedSlab_HiddenRoom_EventScript_RanFromHeatran)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, ScorchedSlab_HiddenRoom_EventScript_RanFromHeatran)
+	setflag(FLAG_CAUGHT_HEATRAN)
+    release
+    end
+}
+
+script ScorchedSlab_HiddenRoom_EventScript_DefeatedHeatran {
+    setflag(FLAG_DEFEATED_HEATRAN)
+	setvar(VAR_0x8004, SPECIES_HEATRAN)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script ScorchedSlab_HiddenRoom_EventScript_RanFromHeatran {
+    setvar(VAR_0x8004, SPECIES_HEATRAN)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}

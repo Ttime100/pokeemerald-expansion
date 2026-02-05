@@ -35,8 +35,79 @@
       "elevation": 1,
       "dest_map": "MAP_ROUTE120",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SCORCHED_SLAB_HIDDEN_ROOM",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SCORCHED_SLAB_STATE",
+      "var_value": "1",
+      "script": "ScorchedSlab_EventScript_OpenHeatranWall"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SCORCHED_SLAB_STATE",
+      "var_value": "1",
+      "script": "ScorchedSlab_EventScript_OpenHeatranWall"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SCORCHED_SLAB_STATE",
+      "var_value": "1",
+      "script": "ScorchedSlab_EventScript_OpenHeatranWall"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SCORCHED_SLAB_STATE",
+      "var_value": "1",
+      "script": "ScorchedSlab_EventScript_OpenHeatranWall"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SCORCHED_SLAB_STATE",
+      "var_value": "1",
+      "script": "ScorchedSlab_EventScript_OpenHeatranWall"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SCORCHED_SLAB_STATE",
+      "var_value": "1",
+      "script": "ScorchedSlab_EventScript_OpenHeatranWall"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SCORCHED_SLAB_STATE",
+      "var_value": "1",
+      "script": "ScorchedSlab_EventScript_OpenHeatranWall"
+    }
+  ],
   "bg_events": []
 }
