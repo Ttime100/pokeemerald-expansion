@@ -132,6 +132,13 @@
 #define METATILE_Cave_ShoalCave_BlueStone_Small          0x35B
 #define METATILE_Cave_ShoalCave_DirtPile_Large           0x358
 #define METATILE_Cave_ShoalCave_DirtPile_Small           0x35A
+#define METATILE_Cave_CaveWall                           0x219
+#define METATILE_Cave_WallLowerLeftofOpening             0x213
+#define METATILE_Cave_WallUpperLeftofOpening             0x20B
+#define METATILE_Cave_WallLowerRightofOpening            0x215
+#define METATILE_Cave_WallUpperRightofOpening            0x20D
+#define METATILE_Cave_WallEntranceTop                    0x20C
+#define METATILE_Cave_WallEntranceBottom                 0x214
 
 // gTileset_Contest
 #define METATILE_Contest_CounterFlap_Bottom  0x2D9
