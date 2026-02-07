@@ -213,6 +213,11 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    FlagSet(FLAG_HIDE_EXILE_SIDNEY); //Ttime100 added
+    FlagSet(FLAG_HIDE_EXILE_PHOEBE);
+    FlagSet(FLAG_HIDE_EXILE_GLACIA);
+    FlagSet(FLAG_HIDE_EXILE_DRAKE);
+    FlagSet(FLAG_HIDE_TYLER_LEAGUE);
 }
 
 static void ResetMiniGamesRecords(void)
