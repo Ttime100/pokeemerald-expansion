@@ -1375,6 +1375,19 @@ script _SlateportCity_EventScript_Sailor1 {
 	end
 }
 
+script SlateportCity_EventScript_FlyCallTrigger {
+    lockall
+    playse(SE_POKENAV_CALL)
+    waitse
+    pokenavcall(SlateportCity_Text_StoneFlyCall)
+    waitmessage
+    delay(30)
+    setflag(FLAG_RECEIVED_FLY_CALL)
+	setvar(VAR_POKENAV_FLY_STATE,1)
+    releaseall
+    end
+}
+
 text Text_GiveOldSeaMap {
 	format("I've spent my whole life\n
 	watching these waves.\p
@@ -1387,4 +1400,25 @@ text Text_GiveOldSeaMap {
 text Text_PostGivingMap {
 	format("Be careful out there. You never know\n
 	what exists beyond the waves…")
+}
+
+text SlateportCity_Text_StoneFlyCall {
+    format("… … … … … …\n
+    … … … … … BEEP!\p
+    Mr. Stone: Hello, {PLAYER}!\n
+    It's Mr. Stone from Devon Corp.\p
+    I've been tracking your progress,\n
+    and I must say, I'm quite impressed!\p
+    As a token of my gratitude for your\n
+    help in Dewford, I've had our tech\l
+    team update your PokéNav.\p
+    You can now use the Map feature to\n
+    Fly directly to locations you have\l
+    already visited.\p
+    It should make your journey across\n
+    Hoenn much more efficient!\p
+    Give my best to Steven if you see\n
+    him again. Keep up the good work!\n
+    … … … … … …\n
+    Click!")
 }
