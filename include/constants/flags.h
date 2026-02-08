@@ -674,7 +674,7 @@
 #define FLAG_HIDDEN_ITEM_FIERY_PATH_TOXIC_PLATE              0x274 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_SPOOKY_PLATE         0x275 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_FIST_PLATE          0x276 // Ttime100 added
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
+#define FLAG_HIDDEN_ITEM_VERDANTURF_TOWN_PIXIE_PLATE         0x277 // Ttime100 added
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag
 #define FLAG_UNUSED_0x279  0x279 // Unused Flag
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag
