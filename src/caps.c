@@ -24,7 +24,7 @@ static const u32 sLevelCapFlagMap[][2] =
     {FLAG_DEFEAT_MAXIE_SPACE_CENTER, 80},
     {FLAG_DEFEAT_ARCHIE, 83}, //Triggers after defeating Archie is Seafloor Cavern
     {FLAG_BADGE08_GET, 85},
-    {FLAG_DEFEATED_WALLY_VICTORY_ROAD, 95},
+    {FLAG_LANDMARK_POKEMON_LEAGUE, 95},
     {FLAG_IS_CHAMPION, 100},
 };
 
