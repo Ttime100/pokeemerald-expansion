@@ -1046,6 +1046,7 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE                            0x3E5
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
+#define FLAG_HIDE_GRACIDEA_GIRL                                     0x4E1 // Ttime100 added
 #define FLAG_HIDE_EXILE_SIDNEY                                      0x4E2 // Ttime100 added
 #define FLAG_HIDE_EXILE_PHOEBE                                      0x4E3 // Ttime100 added
 #define FLAG_HIDE_EXILE_GLACIA                                      0x4E4 // Ttime100 added
@@ -1302,7 +1303,6 @@
 #define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
 #define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
 #define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
-#define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
