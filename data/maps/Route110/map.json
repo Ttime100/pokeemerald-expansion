@@ -746,8 +746,8 @@
       "x": 4,
       "y": 35,
       "elevation": 3,
-      "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_POKE_BALL"
+      "item": "ITEM_HARBOR_MAIL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_HARBOR_MAIL"
     },
     {
       "type": "hidden_item",
