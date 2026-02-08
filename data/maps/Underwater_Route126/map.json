@@ -54,8 +54,8 @@
       "x": 41,
       "y": 19,
       "elevation": 3,
-      "item": "ITEM_ULTRA_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_ULTRA_BALL"
+      "item": "ITEM_SPLASH_PLATE",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_SPLASH_PLATE"
     },
     {
       "type": "hidden_item",
