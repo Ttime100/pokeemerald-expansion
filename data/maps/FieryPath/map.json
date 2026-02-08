@@ -136,5 +136,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 4,
+      "y": 21,
+      "elevation": 0,
+      "item": "ITEM_TOXIC_PLATE",
+      "flag": "FLAG_HIDDEN_ITEM_FIERY_PATH_TOXIC_PLATE"
+    }
+  ]
 }
