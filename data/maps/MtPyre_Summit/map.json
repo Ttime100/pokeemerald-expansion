@@ -234,6 +234,14 @@
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_RARE_CANDY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 26,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_SPOOKY_PLATE",
+      "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_SPOOKY_PLATE"
     }
   ]
 }

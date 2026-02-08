@@ -672,7 +672,7 @@
 #define FLAG_HIDDEN_ITEM_UMBRA_INLET_COMET_SHARD             0x272 // Ttime100 added hidden Comet Shard
 #define FLAG_HIDDEN_ITEM_MT_CHIMNEY_FLAME_PLATE              0x273 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_FIERY_PATH_TOXIC_PLATE              0x274 // Ttime100 added
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
+#define FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_SPOOKY_PLATE         0x275 // Ttime100 added
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag
