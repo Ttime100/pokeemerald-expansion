@@ -198,6 +198,14 @@
       "elevation": 4,
       "item": "ITEM_ULTRA_BALL",
       "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 28,
+      "elevation": 0,
+      "item": "ITEM_FIST_PLATE",
+      "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_FIST_PLATE"
     }
   ]
 }
