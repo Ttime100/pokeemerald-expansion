@@ -157,7 +157,7 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	waitmovement 0
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
-	hideobjectat LOCALID_PLAYER, 0
+	hideplayer
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
@@ -478,7 +478,7 @@ LittlerootTown_EventScript_GiveRunningShoesTrigger::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_MomApproachPlayerMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_MomApproachPlayerFemale
-	call _LittlerootTown_EventScript_GiveRunningShoes
+	call LittlerootTown_EventScript_GiveBoxLink
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_MomReturnHomeMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_MomReturnHomeFemale
@@ -873,7 +873,7 @@ LittlerootTown_EventScript_Mom::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetHomeDoorCoordsMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_SetHomeDoorCoordsFemale
-	call _LittlerootTown_EventScript_GiveRunningShoes
+	call LittlerootTown_EventScript_GiveBoxLink
 	applymovement LOCALID_LITTLEROOT_MOM, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	opendoor VAR_0x8009, VAR_0x800A
@@ -1017,7 +1017,7 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 
 `
 
-script _LittlerootTown_EventScript_GiveRunningShoes {
+script LittlerootTown_EventScript_GiveBoxLink {
   msgbox(format("{PLAYER}! {PLAYER}! Did you introduce yourself to Prof. Birch?\pOh! What an adorable Pokémon! You must have gotten it from him. How nice!\pYou're your father's child, all right. You look good together with your Pokémon!\pHere, honey!\nIf you're going out on an adventure, you are going to want to access all of your Pokémon where ever you go!"))
   giveitem(ITEM_POKEMON_BOX_LINK)
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
