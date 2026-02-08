@@ -1229,8 +1229,8 @@
 #define FLAG_ITEM_SKY_PILLAR_TOP_SKY_PLATE                          0x496 // Ttime100 added
 #define FLAG_ITEM_FLOWER_GARDEN_MEADOW_PLATE                        0x497 // Ttime100 added
 #define FLAG_ITEM_CAVE_OF_ORIGIN_1F_IRON_PLATE                      0x498 // Ttime100 added
+#define FLAG_ITEM_METEOR_FALLS_B1F_1R_DRACO_PLATE                   0x499 // Ttime100 added
 
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
