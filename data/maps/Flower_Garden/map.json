@@ -2,7 +2,7 @@
   "id": "MAP_FLOWER_GARDEN",
   "name": "Flower_Garden",
   "layout": "LAYOUT_FLOWER_GARDEN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_VERDANTURF",
   "region_map_section": "MAPSEC_FLOWER_GARDEN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
