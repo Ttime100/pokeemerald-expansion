@@ -2,7 +2,7 @@
   "id": "MAP_SCORCHED_SLAB_HIDDEN_ROOM",
   "name": "ScorchedSlab_HiddenRoom",
   "layout": "LAYOUT_SCORCHED_SLAB_HIDDEN_ROOM",
-  "music": "MUS_DUMMY",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_SCORCHED_SLAB",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
