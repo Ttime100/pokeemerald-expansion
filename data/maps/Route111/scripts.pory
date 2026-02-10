@@ -741,3 +741,31 @@ text Route111_Text_ClayPostBattle {
     format("Take them, then! But you’ll never
         truly leave the desert.\n Now hurry up and get out!")
 }
+
+script Route111_EventScript_VictorNew {
+	lock
+	faceplayer
+	setflag(FLAG_LANDMARK_WINSTRATE_FAMILY)
+	msgbox(format("Hello! I take it you're a traveler."))
+	if (!flag(FLAG_BADGE04_GET)){
+		msgbox(Route111_Text_NotQuiteReady)
+		release
+		end
+	}
+	msgbox(Route111_Text_BattleOurFamilyNew, MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, Route111_EventScript_BattleWinstrates)
+	msgbox(Route111_Text_IsThatSo, MSGBOX_DEFAULT)
+	release
+	end
+}
+
+text Route111_Text_NotQuiteReady {
+	format("We only accept challenges from those who have earn four gym badges.\p
+	Come back once you've proven yourself!")
+}
+
+text Route111_Text_BattleOurFamilyNew {
+	format("How's this? What do you say to taking\n
+	on our family of four in a series of\l
+	Pokémon battles?")
+}
