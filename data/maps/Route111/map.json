@@ -1198,6 +1198,14 @@
       "elevation": 0,
       "item": "ITEM_BIG_NUGGET",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_BIG_NUGGET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 27,
+      "y": 40,
+      "elevation": 0,
+      "item": "ITEM_METAL_COAT",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_METAL_COAT"
     }
   ]
 }
