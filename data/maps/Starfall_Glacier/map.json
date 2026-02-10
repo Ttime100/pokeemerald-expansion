@@ -2,7 +2,7 @@
   "id": "MAP_STARFALL_GLACIER",
   "name": "Starfall_Glacier",
   "layout": "LAYOUT_STARFALL_GLACIER",
-  "music": "MUS_DUMMY",
+  "music": "MUS_MT_PYRE",
   "region_map_section": "MAPSEC_STARFALL_GLACIER",
   "requires_flash": false,
   "weather": "WEATHER_SNOW",
