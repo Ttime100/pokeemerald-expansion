@@ -2,7 +2,7 @@
   "id": "MAP_LIBERTY_GARDEN",
   "name": "LibertyGarden",
   "layout": "LAYOUT_LIBERTY_GARDEN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_SLATEPORT",
   "region_map_section": "MAPSEC_LIBERTY_GARDEN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
