@@ -52,11 +52,12 @@ script Assistant_Help_Functions {
     //dynmultipush("Version Info", 1)
     if (flag(FLAG_BADGE02_GET)) { dynmultipush("Set Mon to Prev Lvl Cap", 2) }
     if (flag(FLAG_BADGE03_GET)) { dynmultipush("Maximize Friendship", 3) }
-    if (flag(FLAG_BADGE06_GET)) { dynmultipush("Change Nature", 4) }
-    if (flag(FLAG_BADGE07_GET)) { dynmultipush("Reset EVs", 5) }
+    if (flag(FLAG_BADGE04_GET)) { dynmultipush("Hatch Egg", 4)}
+    if (flag(FLAG_BADGE06_GET)) { dynmultipush("Change Nature", 5) }
+    if (flag(FLAG_BADGE07_GET)) { dynmultipush("Reset EVs", 6) }
     if (flag(FLAG_BADGE08_GET)) {
-        dynmultipush("Swap Gender", 6)
-        dynmultipush("Lower IVs", 7)
+        dynmultipush("Swap Gender", 7)
+        dynmultipush("Lower IVs", 8)
     }
     if (flag(FLAG_SYS_GAME_CLEAR)) {
         // Add postgame-enabled logic here.
@@ -70,10 +71,11 @@ script Assistant_Help_Functions {
         case 1: call (Assistant_VersionInfo)
         case 2: call (Assistant_SetMontoPrevLvlCap)
         case 3: call (Assistant_MaxFriendship)
-        case 4: call (Assistant_NatureChange)
-        case 5: call (Assistant_ResetEVs)
-        case 6: call (Assistant_SwapGender)
-        case 7: call (Assistant_LowerIVs)
+        case 4: call (Assistant_HatchEgg)
+        case 5: call (Assistant_NatureChange)
+        case 6: call (Assistant_ResetEVs)
+        case 7: call (Assistant_SwapGender)
+        case 8: call (Assistant_LowerIVs)
     }
 }
 
@@ -133,6 +135,27 @@ script Assistant_MaxFriendship {
     playfanfare(MUS_OBTAIN_ITEM) //TODO not finalized yet
     msgbox(format("{STR_VAR_1} is the happiest they will ever be!"))
     waitfanfare
+    return
+}
+
+script Assistant_HatchEgg {
+    msgbox(format("Which Egg should I help hatch?"))
+    special(ChoosePartyMon)
+    waitstate
+    lock
+    faceplayer
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
+        return
+    }
+    specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
+    if(var(VAR_RESULT) != SPECIES_EGG){
+        msgbox(format("That's not a Pokémon Egg!"))
+        releaseall
+	    end
+    }
+    msgbox(format("One moment..."))
+    special(EggHatch)
+    waitstate
     return
 }
 
