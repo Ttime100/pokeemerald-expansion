@@ -326,7 +326,7 @@ Route104_EventScript_Woman::
 Route104_EventScript_Boy2::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_BULLET_SEED, Route104_EventScript_ReceivedBulletSeed
+	goto_if_set FLAG_RECEIVED_TM_BULLET_SEED, Route104_EventScript_ReceivedBulletSeedNew
 	msgbox Route104_Text_LikeFillingMouthWithSeedsTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_TM_BULLET_SEED
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
@@ -1168,3 +1168,12 @@ Route104_Text_BrendanPostBattle:
 	.string "Like Mr. Briney, it's important to\n"
 	.string "become friends with your Pokémon.$"
 `
+script Route104_EventScript_ReceivedBulletSeedNew {
+	msgbox(format("A TM, Technical Machine, used to be\n
+	good only for one-time use.\p
+	Thanks to new advances in technology,\n
+	now they can be used forever!\p
+	Use it to your heart's content!"))
+	release
+	end
+}
