@@ -80,8 +80,9 @@ def parse_trainers(path):
             first_line = mon_lines[0]
             item = "None"
             if "@" in first_line:
-                first_line, item_part = first_line.split("@", 1)
-                item = item_part.strip().replace("ITEM_", "").title()
+                first_line_parts = first_line.split("@", 1)
+                first_line = first_line_parts[0]
+                item = first_line_parts[1].strip().replace("ITEM_", "").replace("_", " ").title()
             gender = ""
             if "(M)" in first_line: gender = "♂"
             elif "(F)" in first_line: gender = "♀"
@@ -111,7 +112,6 @@ def generate_master_guide():
     <style>
     body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; margin: 0; color: #333; overflow-x: hidden; }
     
-    /* CSS TAB LOGIC - NO JS */
     .tab-radio { display: none; }
     .nav { background: #2c3e50; padding: 12px; position: sticky; top: 0; text-align: center; z-index: 1000; display: flex; justify-content: center; gap: 8px; }
     .nav label { padding: 10px 15px; font-size: 14px; cursor: pointer; background: #34495e; color: white; border-radius: 6px; transition: 0.2s; -webkit-tap-highlight-color: transparent; }
@@ -126,7 +126,6 @@ def generate_master_guide():
     #radio-trainers:checked ~ #trainers-view,
     #radio-bosses:checked ~ #bosses-view { display: block; }
 
-    /* Layout */
     .card { background: white; padding: 15px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 6px solid #3498db; }
     .card h3 { margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 8px; text-transform: capitalize; font-size: 1.2em; }
     .mon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
@@ -183,11 +182,16 @@ def generate_master_guide():
         for p in t['party']:
             sprite_url = get_sprite_url(p['species'], p['is_shiny'], use_icon=(not use_gen5))
             moves = "".join([f"<li>{m}</li>" for m in p['moves']])
+            held_item = p.get('item', 'None')
+            iv_display = p.get('ivs', '31/31/31/31/31/31')
+            
             party_html += f'''<div class="mon-row {row_class}">
                 <img class="mon-img" src="{sprite_url}">
                 <div class="mon-data">
                     <div class="mon-header"><span>{p['species']}</span> <span>Lv.{p['level']}</span></div>
                     <div style="color: #666; font-size: 0.9em;"><b>{p['nature']}</b> | {p['ability']}</div>
+                    <div style="color: #2c3e50; font-size: 0.85em; margin-top: 2px;"><b>Item:</b> {held_item}</div>
+                    <div style="color: #7f8c8d; font-size: 0.8em; margin-top: 1px;"><b>IVs:</b> {iv_display}</div>
                     <ul class="move-list">{moves}</ul>
                 </div>
             </div>'''
@@ -208,8 +212,7 @@ def generate_master_guide():
     html += "</div></body></html>"
 
     with open(OUTPUT_HTML, 'w', encoding='utf-8') as f: f.write(html)
-    print("Mobile-Ready Master Guide Generated!")
+    print("Master Guide Generated!")
 
 if __name__ == "__main__":
     generate_master_guide()
-    
