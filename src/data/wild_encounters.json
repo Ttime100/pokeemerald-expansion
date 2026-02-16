@@ -2767,14 +2767,14 @@
                 "species": "SPECIES_RELICANTH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_TIRTOUGA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_CLOYSTER"
               }
             ]
           }
