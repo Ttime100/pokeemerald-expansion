@@ -1,0 +1,8202 @@
+{
+    "SPECIES_BULBASAUR": {
+        "hp": 45,
+        "at": 49,
+        "de": 49,
+        "sa": 65,
+        "sd": 65,
+        "sp": 45
+    },
+    "SPECIES_IVYSAUR": {
+        "hp": 60,
+        "at": 62,
+        "de": 63,
+        "sa": 80,
+        "sd": 80,
+        "sp": 60
+    },
+    "SPECIES_VENUSAUR": {
+        "hp": 80,
+        "at": 82,
+        "de": 83,
+        "sa": 100,
+        "sd": 100,
+        "sp": 80
+    },
+    "SPECIES_CHARMANDER": {
+        "hp": 39,
+        "at": 52,
+        "de": 43,
+        "sa": 60,
+        "sd": 50,
+        "sp": 65
+    },
+    "SPECIES_CHARMELEON": {
+        "hp": 58,
+        "at": 64,
+        "de": 58,
+        "sa": 80,
+        "sd": 65,
+        "sp": 80
+    },
+    "SPECIES_CHARIZARD": {
+        "hp": 78,
+        "at": 84,
+        "de": 78,
+        "sa": 109,
+        "sd": 85,
+        "sp": 100
+    },
+    "SPECIES_SQUIRTLE": {
+        "hp": 44,
+        "at": 48,
+        "de": 65,
+        "sa": 50,
+        "sd": 64,
+        "sp": 43
+    },
+    "SPECIES_WARTORTLE": {
+        "hp": 59,
+        "at": 63,
+        "de": 80,
+        "sa": 65,
+        "sd": 80,
+        "sp": 58
+    },
+    "SPECIES_BLASTOISE": {
+        "hp": 79,
+        "at": 83,
+        "de": 100,
+        "sa": 85,
+        "sd": 105,
+        "sp": 78
+    },
+    "SPECIES_CATERPIE": {
+        "hp": 45,
+        "at": 30,
+        "de": 35,
+        "sa": 20,
+        "sd": 20,
+        "sp": 45
+    },
+    "SPECIES_METAPOD": {
+        "hp": 50,
+        "at": 20,
+        "de": 55,
+        "sa": 25,
+        "sd": 25,
+        "sp": 30
+    },
+    "SPECIES_BUTTERFREE": {
+        "hp": 60,
+        "at": 45,
+        "de": 50,
+        "sa": 90,
+        "sd": 80,
+        "sp": 70
+    },
+    "SPECIES_WEEDLE": {
+        "hp": 40,
+        "at": 35,
+        "de": 30,
+        "sa": 20,
+        "sd": 20,
+        "sp": 50
+    },
+    "SPECIES_KAKUNA": {
+        "hp": 45,
+        "at": 25,
+        "de": 50,
+        "sa": 25,
+        "sd": 25,
+        "sp": 35
+    },
+    "SPECIES_BEEDRILL": {
+        "hp": 65,
+        "at": 90,
+        "de": 40,
+        "sa": 45,
+        "sd": 80,
+        "sp": 75
+    },
+    "SPECIES_PIDGEY": {
+        "hp": 40,
+        "at": 45,
+        "de": 40,
+        "sa": 35,
+        "sd": 35,
+        "sp": 56
+    },
+    "SPECIES_PIDGEOTTO": {
+        "hp": 63,
+        "at": 60,
+        "de": 55,
+        "sa": 50,
+        "sd": 50,
+        "sp": 71
+    },
+    "SPECIES_PIDGEOT": {
+        "hp": 83,
+        "at": 80,
+        "de": 75,
+        "sa": 70,
+        "sd": 70,
+        "sp": 101
+    },
+    "SPECIES_RATTATA": {
+        "hp": 30,
+        "at": 56,
+        "de": 35,
+        "sa": 25,
+        "sd": 35,
+        "sp": 72
+    },
+    "SPECIES_RATICATE": {
+        "hp": 55,
+        "at": 81,
+        "de": 60,
+        "sa": 50,
+        "sd": 70,
+        "sp": 97
+    },
+    "SPECIES_SPEAROW": {
+        "hp": 40,
+        "at": 60,
+        "de": 30,
+        "sa": 31,
+        "sd": 31,
+        "sp": 70
+    },
+    "SPECIES_FEAROW": {
+        "hp": 65,
+        "at": 90,
+        "de": 65,
+        "sa": 61,
+        "sd": 61,
+        "sp": 100
+    },
+    "SPECIES_EKANS": {
+        "hp": 35,
+        "at": 60,
+        "de": 44,
+        "sa": 40,
+        "sd": 54,
+        "sp": 55
+    },
+    "SPECIES_ARBOK": {
+        "hp": 60,
+        "at": 95,
+        "de": 69,
+        "sa": 65,
+        "sd": 79,
+        "sp": 80
+    },
+    "SPECIES_PIKACHU": {
+        "hp": 35,
+        "at": 55,
+        "de": 40,
+        "sa": 50,
+        "sd": 50,
+        "sp": 90
+    },
+    "SPECIES_RAICHU": {
+        "hp": 60,
+        "at": 90,
+        "de": 55,
+        "sa": 90,
+        "sd": 80,
+        "sp": 110
+    },
+    "SPECIES_SANDSHREW": {
+        "hp": 50,
+        "at": 75,
+        "de": 85,
+        "sa": 20,
+        "sd": 30,
+        "sp": 40
+    },
+    "SPECIES_SANDSLASH": {
+        "hp": 75,
+        "at": 100,
+        "de": 110,
+        "sa": 45,
+        "sd": 55,
+        "sp": 65
+    },
+    "SPECIES_NIDORAN_F": {
+        "hp": 55,
+        "at": 47,
+        "de": 52,
+        "sa": 40,
+        "sd": 40,
+        "sp": 41
+    },
+    "SPECIES_NIDORINA": {
+        "hp": 70,
+        "at": 62,
+        "de": 67,
+        "sa": 55,
+        "sd": 55,
+        "sp": 56
+    },
+    "SPECIES_NIDOQUEEN": {
+        "hp": 90,
+        "at": 92,
+        "de": 87,
+        "sa": 75,
+        "sd": 85,
+        "sp": 76
+    },
+    "SPECIES_NIDORAN_M": {
+        "hp": 46,
+        "at": 57,
+        "de": 40,
+        "sa": 40,
+        "sd": 40,
+        "sp": 50
+    },
+    "SPECIES_NIDORINO": {
+        "hp": 61,
+        "at": 72,
+        "de": 57,
+        "sa": 55,
+        "sd": 55,
+        "sp": 65
+    },
+    "SPECIES_NIDOKING": {
+        "hp": 81,
+        "at": 102,
+        "de": 77,
+        "sa": 85,
+        "sd": 75,
+        "sp": 85
+    },
+    "SPECIES_CLEFAIRY": {
+        "hp": 70,
+        "at": 45,
+        "de": 48,
+        "sa": 60,
+        "sd": 65,
+        "sp": 35
+    },
+    "SPECIES_CLEFABLE": {
+        "hp": 95,
+        "at": 70,
+        "de": 73,
+        "sa": 95,
+        "sd": 90,
+        "sp": 60
+    },
+    "SPECIES_VULPIX": {
+        "hp": 38,
+        "at": 41,
+        "de": 40,
+        "sa": 50,
+        "sd": 65,
+        "sp": 65
+    },
+    "SPECIES_NINETALES": {
+        "hp": 73,
+        "at": 76,
+        "de": 75,
+        "sa": 81,
+        "sd": 100,
+        "sp": 100
+    },
+    "SPECIES_JIGGLYPUFF": {
+        "hp": 115,
+        "at": 45,
+        "de": 20,
+        "sa": 45,
+        "sd": 25,
+        "sp": 20
+    },
+    "SPECIES_WIGGLYTUFF": {
+        "hp": 140,
+        "at": 70,
+        "de": 45,
+        "sa": 85,
+        "sd": 50,
+        "sp": 45
+    },
+    "SPECIES_ZUBAT": {
+        "hp": 40,
+        "at": 45,
+        "de": 35,
+        "sa": 30,
+        "sd": 40,
+        "sp": 55
+    },
+    "SPECIES_GOLBAT": {
+        "hp": 75,
+        "at": 80,
+        "de": 70,
+        "sa": 65,
+        "sd": 75,
+        "sp": 90
+    },
+    "SPECIES_ODDISH": {
+        "hp": 45,
+        "at": 50,
+        "de": 55,
+        "sa": 75,
+        "sd": 65,
+        "sp": 30
+    },
+    "SPECIES_GLOOM": {
+        "hp": 60,
+        "at": 65,
+        "de": 70,
+        "sa": 85,
+        "sd": 75,
+        "sp": 40
+    },
+    "SPECIES_VILEPLUME": {
+        "hp": 75,
+        "at": 80,
+        "de": 85,
+        "sa": 110,
+        "sd": 90,
+        "sp": 50
+    },
+    "SPECIES_PARAS": {
+        "hp": 35,
+        "at": 70,
+        "de": 55,
+        "sa": 45,
+        "sd": 55,
+        "sp": 25
+    },
+    "SPECIES_PARASECT": {
+        "hp": 60,
+        "at": 95,
+        "de": 80,
+        "sa": 60,
+        "sd": 80,
+        "sp": 30
+    },
+    "SPECIES_VENONAT": {
+        "hp": 60,
+        "at": 55,
+        "de": 50,
+        "sa": 40,
+        "sd": 55,
+        "sp": 45
+    },
+    "SPECIES_VENOMOTH": {
+        "hp": 70,
+        "at": 65,
+        "de": 60,
+        "sa": 90,
+        "sd": 75,
+        "sp": 90
+    },
+    "SPECIES_DIGLETT": {
+        "hp": 10,
+        "at": 55,
+        "de": 25,
+        "sa": 35,
+        "sd": 45,
+        "sp": 95
+    },
+    "SPECIES_DUGTRIO": {
+        "hp": 35,
+        "at": 100,
+        "de": 50,
+        "sa": 50,
+        "sd": 70,
+        "sp": 120
+    },
+    "SPECIES_MEOWTH": {
+        "hp": 40,
+        "at": 45,
+        "de": 35,
+        "sa": 40,
+        "sd": 40,
+        "sp": 90
+    },
+    "SPECIES_PERSIAN": {
+        "hp": 65,
+        "at": 70,
+        "de": 60,
+        "sa": 65,
+        "sd": 65,
+        "sp": 115
+    },
+    "SPECIES_PSYDUCK": {
+        "hp": 50,
+        "at": 52,
+        "de": 48,
+        "sa": 65,
+        "sd": 50,
+        "sp": 55
+    },
+    "SPECIES_GOLDUCK": {
+        "hp": 80,
+        "at": 82,
+        "de": 78,
+        "sa": 95,
+        "sd": 80,
+        "sp": 85
+    },
+    "SPECIES_MANKEY": {
+        "hp": 40,
+        "at": 80,
+        "de": 35,
+        "sa": 35,
+        "sd": 45,
+        "sp": 70
+    },
+    "SPECIES_PRIMEAPE": {
+        "hp": 65,
+        "at": 105,
+        "de": 60,
+        "sa": 60,
+        "sd": 70,
+        "sp": 95
+    },
+    "SPECIES_GROWLITHE": {
+        "hp": 55,
+        "at": 70,
+        "de": 45,
+        "sa": 70,
+        "sd": 50,
+        "sp": 60
+    },
+    "SPECIES_ARCANINE": {
+        "hp": 90,
+        "at": 110,
+        "de": 80,
+        "sa": 100,
+        "sd": 80,
+        "sp": 95
+    },
+    "SPECIES_POLIWAG": {
+        "hp": 40,
+        "at": 50,
+        "de": 40,
+        "sa": 40,
+        "sd": 40,
+        "sp": 90
+    },
+    "SPECIES_POLIWHIRL": {
+        "hp": 65,
+        "at": 65,
+        "de": 65,
+        "sa": 50,
+        "sd": 50,
+        "sp": 90
+    },
+    "SPECIES_POLIWRATH": {
+        "hp": 90,
+        "at": 95,
+        "de": 95,
+        "sa": 70,
+        "sd": 90,
+        "sp": 70
+    },
+    "SPECIES_ABRA": {
+        "hp": 25,
+        "at": 20,
+        "de": 15,
+        "sa": 105,
+        "sd": 55,
+        "sp": 90
+    },
+    "SPECIES_KADABRA": {
+        "hp": 40,
+        "at": 35,
+        "de": 30,
+        "sa": 120,
+        "sd": 70,
+        "sp": 105
+    },
+    "SPECIES_ALAKAZAM": {
+        "hp": 55,
+        "at": 50,
+        "de": 45,
+        "sa": 135,
+        "sd": 95,
+        "sp": 120
+    },
+    "SPECIES_MACHOP": {
+        "hp": 70,
+        "at": 80,
+        "de": 50,
+        "sa": 35,
+        "sd": 35,
+        "sp": 35
+    },
+    "SPECIES_MACHOKE": {
+        "hp": 80,
+        "at": 100,
+        "de": 70,
+        "sa": 50,
+        "sd": 60,
+        "sp": 45
+    },
+    "SPECIES_MACHAMP": {
+        "hp": 90,
+        "at": 130,
+        "de": 80,
+        "sa": 65,
+        "sd": 85,
+        "sp": 55
+    },
+    "SPECIES_BELLSPROUT": {
+        "hp": 50,
+        "at": 75,
+        "de": 35,
+        "sa": 70,
+        "sd": 30,
+        "sp": 40
+    },
+    "SPECIES_WEEPINBELL": {
+        "hp": 65,
+        "at": 90,
+        "de": 50,
+        "sa": 85,
+        "sd": 45,
+        "sp": 55
+    },
+    "SPECIES_VICTREEBEL": {
+        "hp": 80,
+        "at": 105,
+        "de": 65,
+        "sa": 100,
+        "sd": 70,
+        "sp": 70
+    },
+    "SPECIES_TENTACOOL": {
+        "hp": 40,
+        "at": 40,
+        "de": 35,
+        "sa": 50,
+        "sd": 100,
+        "sp": 70
+    },
+    "SPECIES_TENTACRUEL": {
+        "hp": 80,
+        "at": 70,
+        "de": 65,
+        "sa": 80,
+        "sd": 120,
+        "sp": 100
+    },
+    "SPECIES_GEODUDE": {
+        "hp": 40,
+        "at": 80,
+        "de": 100,
+        "sa": 30,
+        "sd": 30,
+        "sp": 20
+    },
+    "SPECIES_GRAVELER": {
+        "hp": 55,
+        "at": 95,
+        "de": 115,
+        "sa": 45,
+        "sd": 45,
+        "sp": 35
+    },
+    "SPECIES_GOLEM": {
+        "hp": 80,
+        "at": 120,
+        "de": 130,
+        "sa": 55,
+        "sd": 65,
+        "sp": 45
+    },
+    "SPECIES_PONYTA": {
+        "hp": 50,
+        "at": 85,
+        "de": 55,
+        "sa": 65,
+        "sd": 65,
+        "sp": 90
+    },
+    "SPECIES_RAPIDASH": {
+        "hp": 65,
+        "at": 100,
+        "de": 70,
+        "sa": 80,
+        "sd": 80,
+        "sp": 105
+    },
+    "SPECIES_SLOWPOKE": {
+        "hp": 90,
+        "at": 65,
+        "de": 65,
+        "sa": 40,
+        "sd": 40,
+        "sp": 15
+    },
+    "SPECIES_SLOWBRO": {
+        "hp": 95,
+        "at": 75,
+        "de": 110,
+        "sa": 100,
+        "sd": 80,
+        "sp": 30
+    },
+    "SPECIES_MAGNEMITE": {
+        "hp": 25,
+        "at": 35,
+        "de": 70,
+        "sa": 95,
+        "sd": 55,
+        "sp": 45
+    },
+    "SPECIES_MAGNETON": {
+        "hp": 50,
+        "at": 60,
+        "de": 95,
+        "sa": 120,
+        "sd": 70,
+        "sp": 70
+    },
+    "SPECIES_FARFETCHD": {
+        "hp": 52,
+        "at": 90,
+        "de": 55,
+        "sa": 58,
+        "sd": 62,
+        "sp": 60
+    },
+    "SPECIES_DODUO": {
+        "hp": 35,
+        "at": 85,
+        "de": 45,
+        "sa": 35,
+        "sd": 35,
+        "sp": 75
+    },
+    "SPECIES_DODRIO": {
+        "hp": 60,
+        "at": 110,
+        "de": 70,
+        "sa": 60,
+        "sd": 60,
+        "sp": 110
+    },
+    "SPECIES_SEEL": {
+        "hp": 65,
+        "at": 45,
+        "de": 55,
+        "sa": 45,
+        "sd": 70,
+        "sp": 45
+    },
+    "SPECIES_DEWGONG": {
+        "hp": 90,
+        "at": 70,
+        "de": 80,
+        "sa": 70,
+        "sd": 95,
+        "sp": 70
+    },
+    "SPECIES_GRIMER": {
+        "hp": 80,
+        "at": 80,
+        "de": 50,
+        "sa": 40,
+        "sd": 50,
+        "sp": 25
+    },
+    "SPECIES_MUK": {
+        "hp": 105,
+        "at": 105,
+        "de": 75,
+        "sa": 65,
+        "sd": 100,
+        "sp": 50
+    },
+    "SPECIES_SHELLDER": {
+        "hp": 30,
+        "at": 65,
+        "de": 100,
+        "sa": 45,
+        "sd": 25,
+        "sp": 40
+    },
+    "SPECIES_CLOYSTER": {
+        "hp": 50,
+        "at": 95,
+        "de": 180,
+        "sa": 85,
+        "sd": 45,
+        "sp": 70
+    },
+    "SPECIES_GASTLY": {
+        "hp": 30,
+        "at": 35,
+        "de": 30,
+        "sa": 100,
+        "sd": 35,
+        "sp": 80
+    },
+    "SPECIES_HAUNTER": {
+        "hp": 45,
+        "at": 50,
+        "de": 45,
+        "sa": 115,
+        "sd": 55,
+        "sp": 95
+    },
+    "SPECIES_GENGAR": {
+        "hp": 60,
+        "at": 65,
+        "de": 60,
+        "sa": 130,
+        "sd": 75,
+        "sp": 110
+    },
+    "SPECIES_ONIX": {
+        "hp": 35,
+        "at": 45,
+        "de": 160,
+        "sa": 30,
+        "sd": 45,
+        "sp": 70
+    },
+    "SPECIES_DROWZEE": {
+        "hp": 60,
+        "at": 48,
+        "de": 45,
+        "sa": 43,
+        "sd": 90,
+        "sp": 42
+    },
+    "SPECIES_HYPNO": {
+        "hp": 85,
+        "at": 73,
+        "de": 70,
+        "sa": 73,
+        "sd": 115,
+        "sp": 67
+    },
+    "SPECIES_KRABBY": {
+        "hp": 30,
+        "at": 105,
+        "de": 90,
+        "sa": 25,
+        "sd": 25,
+        "sp": 50
+    },
+    "SPECIES_KINGLER": {
+        "hp": 55,
+        "at": 130,
+        "de": 115,
+        "sa": 50,
+        "sd": 50,
+        "sp": 75
+    },
+    "SPECIES_VOLTORB": {
+        "hp": 40,
+        "at": 30,
+        "de": 50,
+        "sa": 55,
+        "sd": 55,
+        "sp": 100
+    },
+    "SPECIES_ELECTRODE": {
+        "hp": 60,
+        "at": 50,
+        "de": 70,
+        "sa": 80,
+        "sd": 80,
+        "sp": 150
+    },
+    "SPECIES_EXEGGCUTE": {
+        "hp": 60,
+        "at": 40,
+        "de": 80,
+        "sa": 60,
+        "sd": 45,
+        "sp": 40
+    },
+    "SPECIES_EXEGGUTOR": {
+        "hp": 95,
+        "at": 95,
+        "de": 85,
+        "sa": 125,
+        "sd": 75,
+        "sp": 55
+    },
+    "SPECIES_CUBONE": {
+        "hp": 50,
+        "at": 50,
+        "de": 95,
+        "sa": 40,
+        "sd": 50,
+        "sp": 35
+    },
+    "SPECIES_MAROWAK": {
+        "hp": 60,
+        "at": 80,
+        "de": 110,
+        "sa": 50,
+        "sd": 80,
+        "sp": 45
+    },
+    "SPECIES_HITMONLEE": {
+        "hp": 50,
+        "at": 120,
+        "de": 53,
+        "sa": 35,
+        "sd": 110,
+        "sp": 87
+    },
+    "SPECIES_HITMONCHAN": {
+        "hp": 50,
+        "at": 105,
+        "de": 79,
+        "sa": 35,
+        "sd": 110,
+        "sp": 76
+    },
+    "SPECIES_LICKITUNG": {
+        "hp": 90,
+        "at": 55,
+        "de": 75,
+        "sa": 60,
+        "sd": 75,
+        "sp": 30
+    },
+    "SPECIES_KOFFING": {
+        "hp": 40,
+        "at": 65,
+        "de": 95,
+        "sa": 60,
+        "sd": 45,
+        "sp": 35
+    },
+    "SPECIES_WEEZING": {
+        "hp": 65,
+        "at": 90,
+        "de": 120,
+        "sa": 85,
+        "sd": 70,
+        "sp": 60
+    },
+    "SPECIES_RHYHORN": {
+        "hp": 80,
+        "at": 85,
+        "de": 95,
+        "sa": 30,
+        "sd": 30,
+        "sp": 25
+    },
+    "SPECIES_RHYDON": {
+        "hp": 105,
+        "at": 130,
+        "de": 120,
+        "sa": 45,
+        "sd": 45,
+        "sp": 40
+    },
+    "SPECIES_CHANSEY": {
+        "hp": 250,
+        "at": 5,
+        "de": 5,
+        "sa": 35,
+        "sd": 105,
+        "sp": 50
+    },
+    "SPECIES_TANGELA": {
+        "hp": 65,
+        "at": 55,
+        "de": 115,
+        "sa": 100,
+        "sd": 40,
+        "sp": 60
+    },
+    "SPECIES_KANGASKHAN": {
+        "hp": 105,
+        "at": 95,
+        "de": 80,
+        "sa": 40,
+        "sd": 80,
+        "sp": 90
+    },
+    "SPECIES_HORSEA": {
+        "hp": 30,
+        "at": 40,
+        "de": 70,
+        "sa": 70,
+        "sd": 25,
+        "sp": 60
+    },
+    "SPECIES_SEADRA": {
+        "hp": 55,
+        "at": 65,
+        "de": 95,
+        "sa": 95,
+        "sd": 45,
+        "sp": 85
+    },
+    "SPECIES_GOLDEEN": {
+        "hp": 45,
+        "at": 67,
+        "de": 60,
+        "sa": 35,
+        "sd": 50,
+        "sp": 63
+    },
+    "SPECIES_SEAKING": {
+        "hp": 80,
+        "at": 92,
+        "de": 65,
+        "sa": 65,
+        "sd": 80,
+        "sp": 68
+    },
+    "SPECIES_STARYU": {
+        "hp": 30,
+        "at": 45,
+        "de": 55,
+        "sa": 70,
+        "sd": 55,
+        "sp": 85
+    },
+    "SPECIES_STARMIE": {
+        "hp": 60,
+        "at": 75,
+        "de": 85,
+        "sa": 100,
+        "sd": 85,
+        "sp": 115
+    },
+    "SPECIES_MR_MIME": {
+        "hp": 40,
+        "at": 45,
+        "de": 65,
+        "sa": 100,
+        "sd": 120,
+        "sp": 90
+    },
+    "SPECIES_SCYTHER": {
+        "hp": 70,
+        "at": 110,
+        "de": 80,
+        "sa": 55,
+        "sd": 80,
+        "sp": 105
+    },
+    "SPECIES_JYNX": {
+        "hp": 65,
+        "at": 50,
+        "de": 35,
+        "sa": 115,
+        "sd": 95,
+        "sp": 95
+    },
+    "SPECIES_ELECTABUZZ": {
+        "hp": 65,
+        "at": 83,
+        "de": 57,
+        "sa": 95,
+        "sd": 85,
+        "sp": 105
+    },
+    "SPECIES_MAGMAR": {
+        "hp": 65,
+        "at": 95,
+        "de": 57,
+        "sa": 100,
+        "sd": 85,
+        "sp": 93
+    },
+    "SPECIES_PINSIR": {
+        "hp": 65,
+        "at": 125,
+        "de": 100,
+        "sa": 55,
+        "sd": 70,
+        "sp": 85
+    },
+    "SPECIES_TAUROS": {
+        "hp": 75,
+        "at": 100,
+        "de": 95,
+        "sa": 40,
+        "sd": 70,
+        "sp": 110
+    },
+    "SPECIES_MAGIKARP": {
+        "hp": 20,
+        "at": 10,
+        "de": 55,
+        "sa": 15,
+        "sd": 20,
+        "sp": 80
+    },
+    "SPECIES_GYARADOS": {
+        "hp": 95,
+        "at": 125,
+        "de": 79,
+        "sa": 60,
+        "sd": 100,
+        "sp": 81
+    },
+    "SPECIES_LAPRAS": {
+        "hp": 130,
+        "at": 85,
+        "de": 80,
+        "sa": 85,
+        "sd": 95,
+        "sp": 60
+    },
+    "SPECIES_DITTO": {
+        "hp": 48,
+        "at": 48,
+        "de": 48,
+        "sa": 48,
+        "sd": 48,
+        "sp": 48
+    },
+    "SPECIES_EEVEE": {
+        "hp": 55,
+        "at": 55,
+        "de": 50,
+        "sa": 45,
+        "sd": 65,
+        "sp": 55
+    },
+    "SPECIES_VAPOREON": {
+        "hp": 130,
+        "at": 65,
+        "de": 60,
+        "sa": 110,
+        "sd": 95,
+        "sp": 65
+    },
+    "SPECIES_JOLTEON": {
+        "hp": 65,
+        "at": 65,
+        "de": 60,
+        "sa": 110,
+        "sd": 95,
+        "sp": 130
+    },
+    "SPECIES_FLAREON": {
+        "hp": 65,
+        "at": 130,
+        "de": 60,
+        "sa": 95,
+        "sd": 110,
+        "sp": 65
+    },
+    "SPECIES_PORYGON": {
+        "hp": 65,
+        "at": 60,
+        "de": 70,
+        "sa": 85,
+        "sd": 75,
+        "sp": 40
+    },
+    "SPECIES_OMANYTE": {
+        "hp": 35,
+        "at": 40,
+        "de": 100,
+        "sa": 90,
+        "sd": 55,
+        "sp": 35
+    },
+    "SPECIES_OMASTAR": {
+        "hp": 70,
+        "at": 60,
+        "de": 125,
+        "sa": 115,
+        "sd": 70,
+        "sp": 55
+    },
+    "SPECIES_KABUTO": {
+        "hp": 30,
+        "at": 80,
+        "de": 90,
+        "sa": 55,
+        "sd": 45,
+        "sp": 55
+    },
+    "SPECIES_KABUTOPS": {
+        "hp": 60,
+        "at": 115,
+        "de": 105,
+        "sa": 65,
+        "sd": 70,
+        "sp": 80
+    },
+    "SPECIES_AERODACTYL": {
+        "hp": 80,
+        "at": 105,
+        "de": 65,
+        "sa": 60,
+        "sd": 75,
+        "sp": 130
+    },
+    "SPECIES_SNORLAX": {
+        "hp": 160,
+        "at": 110,
+        "de": 65,
+        "sa": 65,
+        "sd": 110,
+        "sp": 30
+    },
+    "SPECIES_ARTICUNO": {
+        "hp": 90,
+        "at": 85,
+        "de": 100,
+        "sa": 95,
+        "sd": 125,
+        "sp": 85
+    },
+    "SPECIES_ZAPDOS": {
+        "hp": 90,
+        "at": 90,
+        "de": 85,
+        "sa": 125,
+        "sd": 90,
+        "sp": 100
+    },
+    "SPECIES_MOLTRES": {
+        "hp": 90,
+        "at": 100,
+        "de": 90,
+        "sa": 125,
+        "sd": 85,
+        "sp": 90
+    },
+    "SPECIES_DRATINI": {
+        "hp": 41,
+        "at": 64,
+        "de": 45,
+        "sa": 50,
+        "sd": 50,
+        "sp": 50
+    },
+    "SPECIES_DRAGONAIR": {
+        "hp": 61,
+        "at": 84,
+        "de": 65,
+        "sa": 70,
+        "sd": 70,
+        "sp": 70
+    },
+    "SPECIES_DRAGONITE": {
+        "hp": 91,
+        "at": 134,
+        "de": 95,
+        "sa": 100,
+        "sd": 100,
+        "sp": 80
+    },
+    "SPECIES_MEWTWO": {
+        "hp": 106,
+        "at": 110,
+        "de": 90,
+        "sa": 154,
+        "sd": 90,
+        "sp": 130
+    },
+    "SPECIES_MEW": {
+        "hp": 100,
+        "at": 100,
+        "de": 100,
+        "sa": 100,
+        "sd": 100,
+        "sp": 100
+    },
+    "SPECIES_CHIKORITA": {
+        "hp": 45,
+        "at": 49,
+        "de": 65,
+        "sa": 49,
+        "sd": 65,
+        "sp": 45
+    },
+    "SPECIES_BAYLEEF": {
+        "hp": 60,
+        "at": 62,
+        "de": 80,
+        "sa": 63,
+        "sd": 80,
+        "sp": 60
+    },
+    "SPECIES_MEGANIUM": {
+        "hp": 80,
+        "at": 82,
+        "de": 100,
+        "sa": 83,
+        "sd": 100,
+        "sp": 80
+    },
+    "SPECIES_CYNDAQUIL": {
+        "hp": 39,
+        "at": 52,
+        "de": 43,
+        "sa": 60,
+        "sd": 50,
+        "sp": 65
+    },
+    "SPECIES_QUILAVA": {
+        "hp": 58,
+        "at": 64,
+        "de": 58,
+        "sa": 80,
+        "sd": 65,
+        "sp": 80
+    },
+    "SPECIES_TYPHLOSION": {
+        "hp": 78,
+        "at": 84,
+        "de": 78,
+        "sa": 109,
+        "sd": 85,
+        "sp": 100
+    },
+    "SPECIES_TOTODILE": {
+        "hp": 50,
+        "at": 65,
+        "de": 64,
+        "sa": 44,
+        "sd": 48,
+        "sp": 43
+    },
+    "SPECIES_CROCONAW": {
+        "hp": 65,
+        "at": 80,
+        "de": 80,
+        "sa": 59,
+        "sd": 63,
+        "sp": 58
+    },
+    "SPECIES_FERALIGATR": {
+        "hp": 85,
+        "at": 105,
+        "de": 100,
+        "sa": 79,
+        "sd": 83,
+        "sp": 78
+    },
+    "SPECIES_SENTRET": {
+        "hp": 35,
+        "at": 46,
+        "de": 34,
+        "sa": 35,
+        "sd": 45,
+        "sp": 20
+    },
+    "SPECIES_FURRET": {
+        "hp": 85,
+        "at": 76,
+        "de": 64,
+        "sa": 45,
+        "sd": 55,
+        "sp": 90
+    },
+    "SPECIES_HOOTHOOT": {
+        "hp": 60,
+        "at": 30,
+        "de": 30,
+        "sa": 36,
+        "sd": 56,
+        "sp": 50
+    },
+    "SPECIES_NOCTOWL": {
+        "hp": 100,
+        "at": 50,
+        "de": 50,
+        "sa": 86,
+        "sd": 96,
+        "sp": 70
+    },
+    "SPECIES_LEDYBA": {
+        "hp": 40,
+        "at": 20,
+        "de": 30,
+        "sa": 40,
+        "sd": 80,
+        "sp": 55
+    },
+    "SPECIES_LEDIAN": {
+        "hp": 55,
+        "at": 35,
+        "de": 50,
+        "sa": 55,
+        "sd": 110,
+        "sp": 85
+    },
+    "SPECIES_SPINARAK": {
+        "hp": 40,
+        "at": 60,
+        "de": 40,
+        "sa": 40,
+        "sd": 40,
+        "sp": 30
+    },
+    "SPECIES_ARIADOS": {
+        "hp": 70,
+        "at": 90,
+        "de": 70,
+        "sa": 60,
+        "sd": 70,
+        "sp": 40
+    },
+    "SPECIES_CROBAT": {
+        "hp": 85,
+        "at": 90,
+        "de": 80,
+        "sa": 70,
+        "sd": 80,
+        "sp": 130
+    },
+    "SPECIES_CHINCHOU": {
+        "hp": 75,
+        "at": 38,
+        "de": 38,
+        "sa": 56,
+        "sd": 56,
+        "sp": 67
+    },
+    "SPECIES_LANTURN": {
+        "hp": 125,
+        "at": 58,
+        "de": 58,
+        "sa": 76,
+        "sd": 76,
+        "sp": 67
+    },
+    "SPECIES_PICHU": {
+        "hp": 20,
+        "at": 40,
+        "de": 15,
+        "sa": 35,
+        "sd": 35,
+        "sp": 60
+    },
+    "SPECIES_CLEFFA": {
+        "hp": 50,
+        "at": 25,
+        "de": 28,
+        "sa": 45,
+        "sd": 55,
+        "sp": 15
+    },
+    "SPECIES_IGGLYBUFF": {
+        "hp": 90,
+        "at": 30,
+        "de": 15,
+        "sa": 40,
+        "sd": 20,
+        "sp": 15
+    },
+    "SPECIES_TOGEPI": {
+        "hp": 35,
+        "at": 20,
+        "de": 65,
+        "sa": 40,
+        "sd": 65,
+        "sp": 20
+    },
+    "SPECIES_TOGETIC": {
+        "hp": 55,
+        "at": 40,
+        "de": 85,
+        "sa": 80,
+        "sd": 105,
+        "sp": 40
+    },
+    "SPECIES_NATU": {
+        "hp": 40,
+        "at": 50,
+        "de": 45,
+        "sa": 70,
+        "sd": 45,
+        "sp": 70
+    },
+    "SPECIES_XATU": {
+        "hp": 65,
+        "at": 75,
+        "de": 70,
+        "sa": 95,
+        "sd": 70,
+        "sp": 95
+    },
+    "SPECIES_MAREEP": {
+        "hp": 55,
+        "at": 40,
+        "de": 40,
+        "sa": 65,
+        "sd": 45,
+        "sp": 35
+    },
+    "SPECIES_FLAAFFY": {
+        "hp": 70,
+        "at": 55,
+        "de": 55,
+        "sa": 80,
+        "sd": 60,
+        "sp": 45
+    },
+    "SPECIES_AMPHAROS": {
+        "hp": 90,
+        "at": 75,
+        "de": 85,
+        "sa": 115,
+        "sd": 90,
+        "sp": 55
+    },
+    "SPECIES_BELLOSSOM": {
+        "hp": 75,
+        "at": 80,
+        "de": 95,
+        "sa": 90,
+        "sd": 100,
+        "sp": 50
+    },
+    "SPECIES_MARILL": {
+        "hp": 70,
+        "at": 20,
+        "de": 50,
+        "sa": 20,
+        "sd": 50,
+        "sp": 40
+    },
+    "SPECIES_AZUMARILL": {
+        "hp": 100,
+        "at": 50,
+        "de": 80,
+        "sa": 60,
+        "sd": 80,
+        "sp": 50
+    },
+    "SPECIES_SUDOWOODO": {
+        "hp": 70,
+        "at": 100,
+        "de": 115,
+        "sa": 30,
+        "sd": 65,
+        "sp": 30
+    },
+    "SPECIES_POLITOED": {
+        "hp": 90,
+        "at": 75,
+        "de": 75,
+        "sa": 90,
+        "sd": 100,
+        "sp": 70
+    },
+    "SPECIES_HOPPIP": {
+        "hp": 35,
+        "at": 35,
+        "de": 40,
+        "sa": 35,
+        "sd": 55,
+        "sp": 50
+    },
+    "SPECIES_SKIPLOOM": {
+        "hp": 55,
+        "at": 45,
+        "de": 50,
+        "sa": 45,
+        "sd": 65,
+        "sp": 80
+    },
+    "SPECIES_JUMPLUFF": {
+        "hp": 75,
+        "at": 55,
+        "de": 70,
+        "sa": 55,
+        "sd": 95,
+        "sp": 110
+    },
+    "SPECIES_AIPOM": {
+        "hp": 55,
+        "at": 70,
+        "de": 55,
+        "sa": 40,
+        "sd": 55,
+        "sp": 85
+    },
+    "SPECIES_SUNKERN": {
+        "hp": 30,
+        "at": 30,
+        "de": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 30
+    },
+    "SPECIES_SUNFLORA": {
+        "hp": 75,
+        "at": 75,
+        "de": 55,
+        "sa": 105,
+        "sd": 85,
+        "sp": 30
+    },
+    "SPECIES_YANMA": {
+        "hp": 65,
+        "at": 65,
+        "de": 45,
+        "sa": 75,
+        "sd": 45,
+        "sp": 95
+    },
+    "SPECIES_WOOPER": {
+        "hp": 55,
+        "at": 45,
+        "de": 45,
+        "sa": 25,
+        "sd": 25,
+        "sp": 15
+    },
+    "SPECIES_QUAGSIRE": {
+        "hp": 95,
+        "at": 85,
+        "de": 85,
+        "sa": 65,
+        "sd": 65,
+        "sp": 35
+    },
+    "SPECIES_ESPEON": {
+        "hp": 65,
+        "at": 65,
+        "de": 60,
+        "sa": 130,
+        "sd": 95,
+        "sp": 110
+    },
+    "SPECIES_UMBREON": {
+        "hp": 95,
+        "at": 65,
+        "de": 110,
+        "sa": 60,
+        "sd": 130,
+        "sp": 65
+    },
+    "SPECIES_MURKROW": {
+        "hp": 60,
+        "at": 85,
+        "de": 42,
+        "sa": 85,
+        "sd": 42,
+        "sp": 91
+    },
+    "SPECIES_SLOWKING": {
+        "hp": 95,
+        "at": 75,
+        "de": 80,
+        "sa": 100,
+        "sd": 110,
+        "sp": 30
+    },
+    "SPECIES_MISDREAVUS": {
+        "hp": 60,
+        "at": 60,
+        "de": 60,
+        "sa": 85,
+        "sd": 85,
+        "sp": 85
+    },
+    "SPECIES_UNOWN": {
+        "hp": 48,
+        "at": 72,
+        "de": 48,
+        "sa": 72,
+        "sd": 48,
+        "sp": 48
+    },
+    "SPECIES_WOBBUFFET": {
+        "hp": 190,
+        "at": 33,
+        "de": 58,
+        "sa": 33,
+        "sd": 58,
+        "sp": 33
+    },
+    "SPECIES_GIRAFARIG": {
+        "hp": 70,
+        "at": 80,
+        "de": 65,
+        "sa": 90,
+        "sd": 65,
+        "sp": 85
+    },
+    "SPECIES_PINECO": {
+        "hp": 50,
+        "at": 65,
+        "de": 90,
+        "sa": 35,
+        "sd": 35,
+        "sp": 15
+    },
+    "SPECIES_FORRETRESS": {
+        "hp": 75,
+        "at": 90,
+        "de": 140,
+        "sa": 60,
+        "sd": 60,
+        "sp": 40
+    },
+    "SPECIES_DUNSPARCE": {
+        "hp": 100,
+        "at": 70,
+        "de": 70,
+        "sa": 65,
+        "sd": 65,
+        "sp": 45
+    },
+    "SPECIES_GLIGAR": {
+        "hp": 65,
+        "at": 75,
+        "de": 105,
+        "sa": 35,
+        "sd": 65,
+        "sp": 85
+    },
+    "SPECIES_STEELIX": {
+        "hp": 75,
+        "at": 85,
+        "de": 200,
+        "sa": 55,
+        "sd": 65,
+        "sp": 30
+    },
+    "SPECIES_SNUBBULL": {
+        "hp": 60,
+        "at": 80,
+        "de": 50,
+        "sa": 40,
+        "sd": 40,
+        "sp": 30
+    },
+    "SPECIES_GRANBULL": {
+        "hp": 90,
+        "at": 120,
+        "de": 75,
+        "sa": 60,
+        "sd": 60,
+        "sp": 45
+    },
+    "SPECIES_QWILFISH": {
+        "hp": 65,
+        "at": 95,
+        "de": 85,
+        "sa": 55,
+        "sd": 55,
+        "sp": 85
+    },
+    "SPECIES_SCIZOR": {
+        "hp": 70,
+        "at": 130,
+        "de": 100,
+        "sa": 55,
+        "sd": 80,
+        "sp": 65
+    },
+    "SPECIES_SHUCKLE": {
+        "hp": 20,
+        "at": 10,
+        "de": 230,
+        "sa": 10,
+        "sd": 230,
+        "sp": 5
+    },
+    "SPECIES_HERACROSS": {
+        "hp": 80,
+        "at": 125,
+        "de": 75,
+        "sa": 40,
+        "sd": 95,
+        "sp": 85
+    },
+    "SPECIES_SNEASEL": {
+        "hp": 55,
+        "at": 95,
+        "de": 55,
+        "sa": 35,
+        "sd": 75,
+        "sp": 115
+    },
+    "SPECIES_TEDDIURSA": {
+        "hp": 60,
+        "at": 80,
+        "de": 50,
+        "sa": 50,
+        "sd": 50,
+        "sp": 40
+    },
+    "SPECIES_URSARING": {
+        "hp": 90,
+        "at": 130,
+        "de": 75,
+        "sa": 75,
+        "sd": 75,
+        "sp": 55
+    },
+    "SPECIES_SLUGMA": {
+        "hp": 40,
+        "at": 40,
+        "de": 40,
+        "sa": 70,
+        "sd": 40,
+        "sp": 20
+    },
+    "SPECIES_MAGCARGO": {
+        "hp": 60,
+        "at": 50,
+        "de": 120,
+        "sa": 90,
+        "sd": 80,
+        "sp": 30
+    },
+    "SPECIES_SWINUB": {
+        "hp": 50,
+        "at": 50,
+        "de": 40,
+        "sa": 30,
+        "sd": 30,
+        "sp": 50
+    },
+    "SPECIES_PILOSWINE": {
+        "hp": 100,
+        "at": 100,
+        "de": 80,
+        "sa": 60,
+        "sd": 60,
+        "sp": 50
+    },
+    "SPECIES_CORSOLA": {
+        "hp": 65,
+        "at": 55,
+        "de": 95,
+        "sa": 65,
+        "sd": 95,
+        "sp": 35
+    },
+    "SPECIES_REMORAID": {
+        "hp": 35,
+        "at": 65,
+        "de": 35,
+        "sa": 65,
+        "sd": 35,
+        "sp": 65
+    },
+    "SPECIES_OCTILLERY": {
+        "hp": 75,
+        "at": 105,
+        "de": 75,
+        "sa": 105,
+        "sd": 75,
+        "sp": 45
+    },
+    "SPECIES_DELIBIRD": {
+        "hp": 45,
+        "at": 55,
+        "de": 45,
+        "sa": 65,
+        "sd": 45,
+        "sp": 75
+    },
+    "SPECIES_MANTINE": {
+        "hp": 85,
+        "at": 40,
+        "de": 70,
+        "sa": 80,
+        "sd": 140,
+        "sp": 70
+    },
+    "SPECIES_SKARMORY": {
+        "hp": 65,
+        "at": 80,
+        "de": 140,
+        "sa": 40,
+        "sd": 70,
+        "sp": 70
+    },
+    "SPECIES_HOUNDOUR": {
+        "hp": 45,
+        "at": 60,
+        "de": 30,
+        "sa": 80,
+        "sd": 50,
+        "sp": 65
+    },
+    "SPECIES_HOUNDOOM": {
+        "hp": 75,
+        "at": 90,
+        "de": 50,
+        "sa": 110,
+        "sd": 80,
+        "sp": 95
+    },
+    "SPECIES_KINGDRA": {
+        "hp": 75,
+        "at": 95,
+        "de": 95,
+        "sa": 95,
+        "sd": 95,
+        "sp": 85
+    },
+    "SPECIES_PHANPY": {
+        "hp": 90,
+        "at": 60,
+        "de": 60,
+        "sa": 40,
+        "sd": 40,
+        "sp": 40
+    },
+    "SPECIES_DONPHAN": {
+        "hp": 90,
+        "at": 120,
+        "de": 120,
+        "sa": 60,
+        "sd": 60,
+        "sp": 50
+    },
+    "SPECIES_PORYGON2": {
+        "hp": 85,
+        "at": 80,
+        "de": 90,
+        "sa": 105,
+        "sd": 95,
+        "sp": 60
+    },
+    "SPECIES_STANTLER": {
+        "hp": 73,
+        "at": 95,
+        "de": 62,
+        "sa": 85,
+        "sd": 65,
+        "sp": 85
+    },
+    "SPECIES_SMEARGLE": {
+        "hp": 55,
+        "at": 20,
+        "de": 35,
+        "sa": 20,
+        "sd": 45,
+        "sp": 75
+    },
+    "SPECIES_TYROGUE": {
+        "hp": 35,
+        "at": 35,
+        "de": 35,
+        "sa": 35,
+        "sd": 35,
+        "sp": 35
+    },
+    "SPECIES_HITMONTOP": {
+        "hp": 50,
+        "at": 95,
+        "de": 95,
+        "sa": 35,
+        "sd": 110,
+        "sp": 70
+    },
+    "SPECIES_SMOOCHUM": {
+        "hp": 45,
+        "at": 30,
+        "de": 15,
+        "sa": 85,
+        "sd": 65,
+        "sp": 65
+    },
+    "SPECIES_ELEKID": {
+        "hp": 45,
+        "at": 63,
+        "de": 37,
+        "sa": 65,
+        "sd": 55,
+        "sp": 95
+    },
+    "SPECIES_MAGBY": {
+        "hp": 45,
+        "at": 75,
+        "de": 37,
+        "sa": 70,
+        "sd": 55,
+        "sp": 83
+    },
+    "SPECIES_MILTANK": {
+        "hp": 95,
+        "at": 80,
+        "de": 105,
+        "sa": 40,
+        "sd": 70,
+        "sp": 100
+    },
+    "SPECIES_BLISSEY": {
+        "hp": 255,
+        "at": 10,
+        "de": 10,
+        "sa": 75,
+        "sd": 135,
+        "sp": 55
+    },
+    "SPECIES_RAIKOU": {
+        "hp": 90,
+        "at": 85,
+        "de": 75,
+        "sa": 115,
+        "sd": 100,
+        "sp": 115
+    },
+    "SPECIES_ENTEI": {
+        "hp": 115,
+        "at": 115,
+        "de": 85,
+        "sa": 90,
+        "sd": 75,
+        "sp": 100
+    },
+    "SPECIES_SUICUNE": {
+        "hp": 100,
+        "at": 75,
+        "de": 115,
+        "sa": 90,
+        "sd": 115,
+        "sp": 85
+    },
+    "SPECIES_LARVITAR": {
+        "hp": 50,
+        "at": 64,
+        "de": 50,
+        "sa": 45,
+        "sd": 50,
+        "sp": 41
+    },
+    "SPECIES_PUPITAR": {
+        "hp": 70,
+        "at": 84,
+        "de": 70,
+        "sa": 65,
+        "sd": 70,
+        "sp": 51
+    },
+    "SPECIES_TYRANITAR": {
+        "hp": 100,
+        "at": 134,
+        "de": 110,
+        "sa": 95,
+        "sd": 100,
+        "sp": 61
+    },
+    "SPECIES_LUGIA": {
+        "hp": 106,
+        "at": 90,
+        "de": 130,
+        "sa": 90,
+        "sd": 154,
+        "sp": 110
+    },
+    "SPECIES_HO_OH": {
+        "hp": 106,
+        "at": 130,
+        "de": 90,
+        "sa": 110,
+        "sd": 154,
+        "sp": 90
+    },
+    "SPECIES_CELEBI": {
+        "hp": 100,
+        "at": 100,
+        "de": 100,
+        "sa": 100,
+        "sd": 100,
+        "sp": 100
+    },
+    "SPECIES_TREECKO": {
+        "hp": 40,
+        "at": 45,
+        "de": 35,
+        "sa": 65,
+        "sd": 55,
+        "sp": 70
+    },
+    "SPECIES_GROVYLE": {
+        "hp": 50,
+        "at": 65,
+        "de": 45,
+        "sa": 85,
+        "sd": 65,
+        "sp": 95
+    },
+    "SPECIES_SCEPTILE": {
+        "hp": 70,
+        "at": 85,
+        "de": 65,
+        "sa": 105,
+        "sd": 85,
+        "sp": 120
+    },
+    "SPECIES_TORCHIC": {
+        "hp": 45,
+        "at": 60,
+        "de": 40,
+        "sa": 70,
+        "sd": 50,
+        "sp": 45
+    },
+    "SPECIES_COMBUSKEN": {
+        "hp": 60,
+        "at": 85,
+        "de": 60,
+        "sa": 85,
+        "sd": 60,
+        "sp": 55
+    },
+    "SPECIES_BLAZIKEN": {
+        "hp": 80,
+        "at": 120,
+        "de": 70,
+        "sa": 110,
+        "sd": 70,
+        "sp": 80
+    },
+    "SPECIES_MUDKIP": {
+        "hp": 50,
+        "at": 70,
+        "de": 50,
+        "sa": 50,
+        "sd": 50,
+        "sp": 40
+    },
+    "SPECIES_MARSHTOMP": {
+        "hp": 70,
+        "at": 85,
+        "de": 70,
+        "sa": 60,
+        "sd": 70,
+        "sp": 50
+    },
+    "SPECIES_SWAMPERT": {
+        "hp": 100,
+        "at": 110,
+        "de": 90,
+        "sa": 85,
+        "sd": 90,
+        "sp": 60
+    },
+    "SPECIES_POOCHYENA": {
+        "hp": 35,
+        "at": 55,
+        "de": 35,
+        "sa": 30,
+        "sd": 30,
+        "sp": 35
+    },
+    "SPECIES_MIGHTYENA": {
+        "hp": 70,
+        "at": 90,
+        "de": 70,
+        "sa": 60,
+        "sd": 60,
+        "sp": 70
+    },
+    "SPECIES_ZIGZAGOON": {
+        "hp": 38,
+        "at": 30,
+        "de": 41,
+        "sa": 30,
+        "sd": 41,
+        "sp": 60
+    },
+    "SPECIES_LINOONE": {
+        "hp": 78,
+        "at": 70,
+        "de": 61,
+        "sa": 50,
+        "sd": 61,
+        "sp": 100
+    },
+    "SPECIES_WURMPLE": {
+        "hp": 45,
+        "at": 45,
+        "de": 35,
+        "sa": 20,
+        "sd": 30,
+        "sp": 20
+    },
+    "SPECIES_SILCOON": {
+        "hp": 50,
+        "at": 35,
+        "de": 55,
+        "sa": 25,
+        "sd": 25,
+        "sp": 15
+    },
+    "SPECIES_BEAUTIFLY": {
+        "hp": 60,
+        "at": 70,
+        "de": 50,
+        "sa": 100,
+        "sd": 50,
+        "sp": 65
+    },
+    "SPECIES_CASCOON": {
+        "hp": 50,
+        "at": 35,
+        "de": 55,
+        "sa": 25,
+        "sd": 25,
+        "sp": 15
+    },
+    "SPECIES_DUSTOX": {
+        "hp": 60,
+        "at": 50,
+        "de": 70,
+        "sa": 50,
+        "sd": 90,
+        "sp": 65
+    },
+    "SPECIES_LOTAD": {
+        "hp": 40,
+        "at": 30,
+        "de": 30,
+        "sa": 40,
+        "sd": 50,
+        "sp": 30
+    },
+    "SPECIES_LOMBRE": {
+        "hp": 60,
+        "at": 50,
+        "de": 50,
+        "sa": 60,
+        "sd": 70,
+        "sp": 50
+    },
+    "SPECIES_LUDICOLO": {
+        "hp": 80,
+        "at": 70,
+        "de": 70,
+        "sa": 90,
+        "sd": 100,
+        "sp": 70
+    },
+    "SPECIES_SEEDOT": {
+        "hp": 40,
+        "at": 40,
+        "de": 50,
+        "sa": 30,
+        "sd": 30,
+        "sp": 30
+    },
+    "SPECIES_NUZLEAF": {
+        "hp": 70,
+        "at": 70,
+        "de": 40,
+        "sa": 60,
+        "sd": 40,
+        "sp": 60
+    },
+    "SPECIES_SHIFTRY": {
+        "hp": 90,
+        "at": 100,
+        "de": 60,
+        "sa": 90,
+        "sd": 60,
+        "sp": 80
+    },
+    "SPECIES_TAILLOW": {
+        "hp": 40,
+        "at": 55,
+        "de": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 85
+    },
+    "SPECIES_SWELLOW": {
+        "hp": 60,
+        "at": 85,
+        "de": 60,
+        "sa": 75,
+        "sd": 50,
+        "sp": 125
+    },
+    "SPECIES_WINGULL": {
+        "hp": 40,
+        "at": 30,
+        "de": 30,
+        "sa": 55,
+        "sd": 30,
+        "sp": 85
+    },
+    "SPECIES_PELIPPER": {
+        "hp": 60,
+        "at": 50,
+        "de": 100,
+        "sa": 95,
+        "sd": 70,
+        "sp": 65
+    },
+    "SPECIES_RALTS": {
+        "hp": 28,
+        "at": 25,
+        "de": 25,
+        "sa": 45,
+        "sd": 35,
+        "sp": 40
+    },
+    "SPECIES_KIRLIA": {
+        "hp": 38,
+        "at": 35,
+        "de": 35,
+        "sa": 65,
+        "sd": 55,
+        "sp": 50
+    },
+    "SPECIES_GARDEVOIR": {
+        "hp": 68,
+        "at": 65,
+        "de": 65,
+        "sa": 125,
+        "sd": 115,
+        "sp": 80
+    },
+    "SPECIES_SURSKIT": {
+        "hp": 40,
+        "at": 30,
+        "de": 32,
+        "sa": 50,
+        "sd": 52,
+        "sp": 65
+    },
+    "SPECIES_MASQUERAIN": {
+        "hp": 70,
+        "at": 60,
+        "de": 62,
+        "sa": 100,
+        "sd": 82,
+        "sp": 80
+    },
+    "SPECIES_SHROOMISH": {
+        "hp": 60,
+        "at": 40,
+        "de": 60,
+        "sa": 40,
+        "sd": 60,
+        "sp": 35
+    },
+    "SPECIES_BRELOOM": {
+        "hp": 60,
+        "at": 130,
+        "de": 80,
+        "sa": 60,
+        "sd": 60,
+        "sp": 70
+    },
+    "SPECIES_SLAKOTH": {
+        "hp": 60,
+        "at": 60,
+        "de": 60,
+        "sa": 35,
+        "sd": 35,
+        "sp": 30
+    },
+    "SPECIES_VIGOROTH": {
+        "hp": 80,
+        "at": 80,
+        "de": 80,
+        "sa": 55,
+        "sd": 55,
+        "sp": 90
+    },
+    "SPECIES_SLAKING": {
+        "hp": 150,
+        "at": 160,
+        "de": 100,
+        "sa": 95,
+        "sd": 65,
+        "sp": 100
+    },
+    "SPECIES_NINCADA": {
+        "hp": 31,
+        "at": 45,
+        "de": 90,
+        "sa": 30,
+        "sd": 30,
+        "sp": 40
+    },
+    "SPECIES_NINJASK": {
+        "hp": 61,
+        "at": 90,
+        "de": 45,
+        "sa": 50,
+        "sd": 50,
+        "sp": 160
+    },
+    "SPECIES_SHEDINJA": {
+        "hp": 1,
+        "at": 90,
+        "de": 45,
+        "sa": 30,
+        "sd": 30,
+        "sp": 40
+    },
+    "SPECIES_WHISMUR": {
+        "hp": 64,
+        "at": 51,
+        "de": 23,
+        "sa": 51,
+        "sd": 23,
+        "sp": 28
+    },
+    "SPECIES_LOUDRED": {
+        "hp": 84,
+        "at": 71,
+        "de": 43,
+        "sa": 71,
+        "sd": 43,
+        "sp": 48
+    },
+    "SPECIES_EXPLOUD": {
+        "hp": 104,
+        "at": 91,
+        "de": 63,
+        "sa": 91,
+        "sd": 73,
+        "sp": 68
+    },
+    "SPECIES_MAKUHITA": {
+        "hp": 72,
+        "at": 60,
+        "de": 30,
+        "sa": 20,
+        "sd": 30,
+        "sp": 25
+    },
+    "SPECIES_HARIYAMA": {
+        "hp": 144,
+        "at": 120,
+        "de": 60,
+        "sa": 40,
+        "sd": 60,
+        "sp": 50
+    },
+    "SPECIES_AZURILL": {
+        "hp": 50,
+        "at": 20,
+        "de": 40,
+        "sa": 20,
+        "sd": 40,
+        "sp": 20
+    },
+    "SPECIES_NOSEPASS": {
+        "hp": 30,
+        "at": 45,
+        "de": 135,
+        "sa": 45,
+        "sd": 90,
+        "sp": 30
+    },
+    "SPECIES_SKITTY": {
+        "hp": 50,
+        "at": 45,
+        "de": 45,
+        "sa": 35,
+        "sd": 35,
+        "sp": 50
+    },
+    "SPECIES_DELCATTY": {
+        "hp": 70,
+        "at": 65,
+        "de": 65,
+        "sa": 55,
+        "sd": 55,
+        "sp": 90
+    },
+    "SPECIES_SABLEYE": {
+        "hp": 50,
+        "at": 75,
+        "de": 75,
+        "sa": 65,
+        "sd": 65,
+        "sp": 50
+    },
+    "SPECIES_MAWILE": {
+        "hp": 50,
+        "at": 85,
+        "de": 85,
+        "sa": 55,
+        "sd": 55,
+        "sp": 50
+    },
+    "SPECIES_ARON": {
+        "hp": 50,
+        "at": 70,
+        "de": 100,
+        "sa": 40,
+        "sd": 40,
+        "sp": 30
+    },
+    "SPECIES_LAIRON": {
+        "hp": 60,
+        "at": 90,
+        "de": 140,
+        "sa": 50,
+        "sd": 50,
+        "sp": 40
+    },
+    "SPECIES_AGGRON": {
+        "hp": 70,
+        "at": 110,
+        "de": 180,
+        "sa": 60,
+        "sd": 60,
+        "sp": 50
+    },
+    "SPECIES_MEDITITE": {
+        "hp": 30,
+        "at": 40,
+        "de": 55,
+        "sa": 40,
+        "sd": 55,
+        "sp": 60
+    },
+    "SPECIES_MEDICHAM": {
+        "hp": 60,
+        "at": 60,
+        "de": 75,
+        "sa": 60,
+        "sd": 75,
+        "sp": 80
+    },
+    "SPECIES_ELECTRIKE": {
+        "hp": 40,
+        "at": 45,
+        "de": 40,
+        "sa": 65,
+        "sd": 40,
+        "sp": 65
+    },
+    "SPECIES_MANECTRIC": {
+        "hp": 70,
+        "at": 75,
+        "de": 60,
+        "sa": 105,
+        "sd": 60,
+        "sp": 105
+    },
+    "SPECIES_PLUSLE": {
+        "hp": 60,
+        "at": 50,
+        "de": 40,
+        "sa": 85,
+        "sd": 75,
+        "sp": 95
+    },
+    "SPECIES_MINUN": {
+        "hp": 60,
+        "at": 40,
+        "de": 50,
+        "sa": 75,
+        "sd": 85,
+        "sp": 95
+    },
+    "SPECIES_VOLBEAT": {
+        "hp": 65,
+        "at": 73,
+        "de": 75,
+        "sa": 47,
+        "sd": 85,
+        "sp": 85
+    },
+    "SPECIES_ILLUMISE": {
+        "hp": 65,
+        "at": 47,
+        "de": 75,
+        "sa": 73,
+        "sd": 85,
+        "sp": 85
+    },
+    "SPECIES_ROSELIA": {
+        "hp": 50,
+        "at": 60,
+        "de": 45,
+        "sa": 100,
+        "sd": 80,
+        "sp": 65
+    },
+    "SPECIES_GULPIN": {
+        "hp": 70,
+        "at": 43,
+        "de": 53,
+        "sa": 43,
+        "sd": 53,
+        "sp": 40
+    },
+    "SPECIES_SWALOT": {
+        "hp": 100,
+        "at": 73,
+        "de": 83,
+        "sa": 73,
+        "sd": 83,
+        "sp": 55
+    },
+    "SPECIES_CARVANHA": {
+        "hp": 45,
+        "at": 90,
+        "de": 20,
+        "sa": 65,
+        "sd": 20,
+        "sp": 65
+    },
+    "SPECIES_SHARPEDO": {
+        "hp": 70,
+        "at": 120,
+        "de": 40,
+        "sa": 95,
+        "sd": 40,
+        "sp": 95
+    },
+    "SPECIES_WAILMER": {
+        "hp": 130,
+        "at": 70,
+        "de": 35,
+        "sa": 70,
+        "sd": 35,
+        "sp": 60
+    },
+    "SPECIES_WAILORD": {
+        "hp": 170,
+        "at": 90,
+        "de": 45,
+        "sa": 90,
+        "sd": 45,
+        "sp": 60
+    },
+    "SPECIES_NUMEL": {
+        "hp": 60,
+        "at": 60,
+        "de": 40,
+        "sa": 65,
+        "sd": 45,
+        "sp": 35
+    },
+    "SPECIES_CAMERUPT": {
+        "hp": 70,
+        "at": 100,
+        "de": 70,
+        "sa": 105,
+        "sd": 75,
+        "sp": 40
+    },
+    "SPECIES_TORKOAL": {
+        "hp": 70,
+        "at": 85,
+        "de": 140,
+        "sa": 85,
+        "sd": 70,
+        "sp": 20
+    },
+    "SPECIES_SPOINK": {
+        "hp": 60,
+        "at": 25,
+        "de": 35,
+        "sa": 70,
+        "sd": 80,
+        "sp": 60
+    },
+    "SPECIES_GRUMPIG": {
+        "hp": 80,
+        "at": 45,
+        "de": 65,
+        "sa": 90,
+        "sd": 110,
+        "sp": 80
+    },
+    "SPECIES_SPINDA": {
+        "hp": 60,
+        "at": 60,
+        "de": 60,
+        "sa": 60,
+        "sd": 60,
+        "sp": 60
+    },
+    "SPECIES_TRAPINCH": {
+        "hp": 45,
+        "at": 100,
+        "de": 45,
+        "sa": 45,
+        "sd": 45,
+        "sp": 10
+    },
+    "SPECIES_VIBRAVA": {
+        "hp": 50,
+        "at": 70,
+        "de": 50,
+        "sa": 50,
+        "sd": 50,
+        "sp": 70
+    },
+    "SPECIES_FLYGON": {
+        "hp": 80,
+        "at": 100,
+        "de": 80,
+        "sa": 80,
+        "sd": 80,
+        "sp": 100
+    },
+    "SPECIES_CACNEA": {
+        "hp": 50,
+        "at": 85,
+        "de": 40,
+        "sa": 85,
+        "sd": 40,
+        "sp": 35
+    },
+    "SPECIES_CACTURNE": {
+        "hp": 70,
+        "at": 115,
+        "de": 60,
+        "sa": 115,
+        "sd": 60,
+        "sp": 55
+    },
+    "SPECIES_SWABLU": {
+        "hp": 45,
+        "at": 40,
+        "de": 60,
+        "sa": 40,
+        "sd": 75,
+        "sp": 50
+    },
+    "SPECIES_ALTARIA": {
+        "hp": 75,
+        "at": 70,
+        "de": 90,
+        "sa": 70,
+        "sd": 105,
+        "sp": 80
+    },
+    "SPECIES_ZANGOOSE": {
+        "hp": 73,
+        "at": 115,
+        "de": 60,
+        "sa": 60,
+        "sd": 60,
+        "sp": 90
+    },
+    "SPECIES_SEVIPER": {
+        "hp": 73,
+        "at": 100,
+        "de": 60,
+        "sa": 100,
+        "sd": 60,
+        "sp": 65
+    },
+    "SPECIES_LUNATONE": {
+        "hp": 90,
+        "at": 55,
+        "de": 65,
+        "sa": 95,
+        "sd": 85,
+        "sp": 70
+    },
+    "SPECIES_SOLROCK": {
+        "hp": 90,
+        "at": 95,
+        "de": 85,
+        "sa": 55,
+        "sd": 65,
+        "sp": 70
+    },
+    "SPECIES_BARBOACH": {
+        "hp": 50,
+        "at": 48,
+        "de": 43,
+        "sa": 46,
+        "sd": 41,
+        "sp": 60
+    },
+    "SPECIES_WHISCASH": {
+        "hp": 110,
+        "at": 78,
+        "de": 73,
+        "sa": 76,
+        "sd": 71,
+        "sp": 60
+    },
+    "SPECIES_CORPHISH": {
+        "hp": 43,
+        "at": 80,
+        "de": 65,
+        "sa": 50,
+        "sd": 35,
+        "sp": 35
+    },
+    "SPECIES_CRAWDAUNT": {
+        "hp": 63,
+        "at": 120,
+        "de": 85,
+        "sa": 90,
+        "sd": 55,
+        "sp": 55
+    },
+    "SPECIES_BALTOY": {
+        "hp": 40,
+        "at": 40,
+        "de": 55,
+        "sa": 40,
+        "sd": 70,
+        "sp": 55
+    },
+    "SPECIES_CLAYDOL": {
+        "hp": 60,
+        "at": 70,
+        "de": 105,
+        "sa": 70,
+        "sd": 120,
+        "sp": 75
+    },
+    "SPECIES_LILEEP": {
+        "hp": 66,
+        "at": 41,
+        "de": 77,
+        "sa": 61,
+        "sd": 87,
+        "sp": 23
+    },
+    "SPECIES_CRADILY": {
+        "hp": 86,
+        "at": 81,
+        "de": 97,
+        "sa": 81,
+        "sd": 107,
+        "sp": 43
+    },
+    "SPECIES_ANORITH": {
+        "hp": 45,
+        "at": 95,
+        "de": 50,
+        "sa": 40,
+        "sd": 50,
+        "sp": 75
+    },
+    "SPECIES_ARMALDO": {
+        "hp": 75,
+        "at": 125,
+        "de": 100,
+        "sa": 70,
+        "sd": 80,
+        "sp": 45
+    },
+    "SPECIES_FEEBAS": {
+        "hp": 20,
+        "at": 15,
+        "de": 20,
+        "sa": 10,
+        "sd": 55,
+        "sp": 80
+    },
+    "SPECIES_MILOTIC": {
+        "hp": 95,
+        "at": 60,
+        "de": 79,
+        "sa": 100,
+        "sd": 125,
+        "sp": 81
+    },
+    "SPECIES_CASTFORM": {
+        "hp": 70,
+        "at": 70,
+        "de": 70,
+        "sa": 70,
+        "sd": 70,
+        "sp": 70
+    },
+    "SPECIES_KECLEON": {
+        "hp": 60,
+        "at": 90,
+        "de": 70,
+        "sa": 60,
+        "sd": 120,
+        "sp": 40
+    },
+    "SPECIES_SHUPPET": {
+        "hp": 44,
+        "at": 75,
+        "de": 35,
+        "sa": 63,
+        "sd": 33,
+        "sp": 45
+    },
+    "SPECIES_BANETTE": {
+        "hp": 64,
+        "at": 115,
+        "de": 65,
+        "sa": 83,
+        "sd": 63,
+        "sp": 65
+    },
+    "SPECIES_DUSKULL": {
+        "hp": 20,
+        "at": 40,
+        "de": 90,
+        "sa": 30,
+        "sd": 90,
+        "sp": 25
+    },
+    "SPECIES_DUSCLOPS": {
+        "hp": 40,
+        "at": 70,
+        "de": 130,
+        "sa": 60,
+        "sd": 130,
+        "sp": 25
+    },
+    "SPECIES_TROPIUS": {
+        "hp": 99,
+        "at": 68,
+        "de": 83,
+        "sa": 72,
+        "sd": 87,
+        "sp": 51
+    },
+    "SPECIES_CHIMECHO": {
+        "hp": 75,
+        "at": 50,
+        "de": 80,
+        "sa": 95,
+        "sd": 90,
+        "sp": 65
+    },
+    "SPECIES_ABSOL": {
+        "hp": 65,
+        "at": 130,
+        "de": 60,
+        "sa": 75,
+        "sd": 60,
+        "sp": 75
+    },
+    "SPECIES_WYNAUT": {
+        "hp": 95,
+        "at": 23,
+        "de": 48,
+        "sa": 23,
+        "sd": 48,
+        "sp": 23
+    },
+    "SPECIES_SNORUNT": {
+        "hp": 50,
+        "at": 50,
+        "de": 50,
+        "sa": 50,
+        "sd": 50,
+        "sp": 50
+    },
+    "SPECIES_GLALIE": {
+        "hp": 80,
+        "at": 80,
+        "de": 80,
+        "sa": 80,
+        "sd": 80,
+        "sp": 80
+    },
+    "SPECIES_SPHEAL": {
+        "hp": 70,
+        "at": 40,
+        "de": 50,
+        "sa": 55,
+        "sd": 50,
+        "sp": 25
+    },
+    "SPECIES_SEALEO": {
+        "hp": 90,
+        "at": 60,
+        "de": 70,
+        "sa": 75,
+        "sd": 70,
+        "sp": 45
+    },
+    "SPECIES_WALREIN": {
+        "hp": 110,
+        "at": 80,
+        "de": 90,
+        "sa": 95,
+        "sd": 90,
+        "sp": 65
+    },
+    "SPECIES_CLAMPERL": {
+        "hp": 35,
+        "at": 64,
+        "de": 85,
+        "sa": 74,
+        "sd": 55,
+        "sp": 32
+    },
+    "SPECIES_HUNTAIL": {
+        "hp": 55,
+        "at": 104,
+        "de": 105,
+        "sa": 94,
+        "sd": 75,
+        "sp": 52
+    },
+    "SPECIES_GOREBYSS": {
+        "hp": 55,
+        "at": 84,
+        "de": 105,
+        "sa": 114,
+        "sd": 75,
+        "sp": 52
+    },
+    "SPECIES_RELICANTH": {
+        "hp": 100,
+        "at": 90,
+        "de": 130,
+        "sa": 45,
+        "sd": 65,
+        "sp": 55
+    },
+    "SPECIES_LUVDISC": {
+        "hp": 43,
+        "at": 30,
+        "de": 55,
+        "sa": 40,
+        "sd": 65,
+        "sp": 97
+    },
+    "SPECIES_BAGON": {
+        "hp": 45,
+        "at": 75,
+        "de": 60,
+        "sa": 40,
+        "sd": 30,
+        "sp": 50
+    },
+    "SPECIES_SHELGON": {
+        "hp": 65,
+        "at": 95,
+        "de": 100,
+        "sa": 60,
+        "sd": 50,
+        "sp": 50
+    },
+    "SPECIES_SALAMENCE": {
+        "hp": 95,
+        "at": 135,
+        "de": 80,
+        "sa": 110,
+        "sd": 80,
+        "sp": 100
+    },
+    "SPECIES_BELDUM": {
+        "hp": 40,
+        "at": 55,
+        "de": 80,
+        "sa": 35,
+        "sd": 60,
+        "sp": 30
+    },
+    "SPECIES_METANG": {
+        "hp": 60,
+        "at": 75,
+        "de": 100,
+        "sa": 55,
+        "sd": 80,
+        "sp": 50
+    },
+    "SPECIES_METAGROSS": {
+        "hp": 80,
+        "at": 135,
+        "de": 130,
+        "sa": 95,
+        "sd": 90,
+        "sp": 70
+    },
+    "SPECIES_REGIROCK": {
+        "hp": 80,
+        "at": 100,
+        "de": 200,
+        "sa": 50,
+        "sd": 100,
+        "sp": 50
+    },
+    "SPECIES_REGICE": {
+        "hp": 80,
+        "at": 50,
+        "de": 100,
+        "sa": 100,
+        "sd": 200,
+        "sp": 50
+    },
+    "SPECIES_REGISTEEL": {
+        "hp": 80,
+        "at": 75,
+        "de": 150,
+        "sa": 75,
+        "sd": 150,
+        "sp": 50
+    },
+    "SPECIES_LATIAS": {
+        "hp": 80,
+        "at": 80,
+        "de": 90,
+        "sa": 110,
+        "sd": 130,
+        "sp": 110
+    },
+    "SPECIES_LATIOS": {
+        "hp": 80,
+        "at": 90,
+        "de": 80,
+        "sa": 130,
+        "sd": 110,
+        "sp": 110
+    },
+    "SPECIES_KYOGRE": {
+        "hp": 100,
+        "at": 100,
+        "de": 90,
+        "sa": 150,
+        "sd": 140,
+        "sp": 90
+    },
+    "SPECIES_GROUDON": {
+        "hp": 100,
+        "at": 150,
+        "de": 140,
+        "sa": 100,
+        "sd": 90,
+        "sp": 90
+    },
+    "SPECIES_RAYQUAZA": {
+        "hp": 105,
+        "at": 150,
+        "de": 90,
+        "sa": 150,
+        "sd": 90,
+        "sp": 95
+    },
+    "SPECIES_JIRACHI": {
+        "hp": 100,
+        "at": 100,
+        "de": 100,
+        "sa": 100,
+        "sd": 100,
+        "sp": 100
+    },
+    "SPECIES_DEOXYS": {
+        "hp": 50,
+        "at": 150,
+        "de": 50,
+        "sa": 150,
+        "sd": 50,
+        "sp": 150
+    },
+    "SPECIES_TURTWIG": {
+        "hp": 55,
+        "at": 68,
+        "de": 64,
+        "sa": 45,
+        "sd": 55,
+        "sp": 31
+    },
+    "SPECIES_GROTLE": {
+        "hp": 75,
+        "at": 89,
+        "de": 85,
+        "sa": 55,
+        "sd": 65,
+        "sp": 36
+    },
+    "SPECIES_TORTERRA": {
+        "hp": 95,
+        "at": 109,
+        "de": 105,
+        "sa": 75,
+        "sd": 85,
+        "sp": 56
+    },
+    "SPECIES_CHIMCHAR": {
+        "hp": 44,
+        "at": 58,
+        "de": 44,
+        "sa": 58,
+        "sd": 44,
+        "sp": 61
+    },
+    "SPECIES_MONFERNO": {
+        "hp": 64,
+        "at": 78,
+        "de": 52,
+        "sa": 78,
+        "sd": 52,
+        "sp": 81
+    },
+    "SPECIES_INFERNAPE": {
+        "hp": 76,
+        "at": 104,
+        "de": 71,
+        "sa": 104,
+        "sd": 71,
+        "sp": 108
+    },
+    "SPECIES_PIPLUP": {
+        "hp": 53,
+        "at": 51,
+        "de": 53,
+        "sa": 61,
+        "sd": 56,
+        "sp": 40
+    },
+    "SPECIES_PRINPLUP": {
+        "hp": 64,
+        "at": 66,
+        "de": 68,
+        "sa": 81,
+        "sd": 76,
+        "sp": 50
+    },
+    "SPECIES_EMPOLEON": {
+        "hp": 84,
+        "at": 86,
+        "de": 88,
+        "sa": 111,
+        "sd": 101,
+        "sp": 60
+    },
+    "SPECIES_STARLY": {
+        "hp": 40,
+        "at": 55,
+        "de": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 60
+    },
+    "SPECIES_STARAVIA": {
+        "hp": 55,
+        "at": 75,
+        "de": 50,
+        "sa": 40,
+        "sd": 40,
+        "sp": 80
+    },
+    "SPECIES_STARAPTOR": {
+        "hp": 85,
+        "at": 120,
+        "de": 70,
+        "sa": 50,
+        "sd": 60,
+        "sp": 100
+    },
+    "SPECIES_BIDOOF": {
+        "hp": 59,
+        "at": 45,
+        "de": 40,
+        "sa": 35,
+        "sd": 40,
+        "sp": 31
+    },
+    "SPECIES_BIBAREL": {
+        "hp": 79,
+        "at": 85,
+        "de": 60,
+        "sa": 55,
+        "sd": 60,
+        "sp": 71
+    },
+    "SPECIES_KRICKETOT": {
+        "hp": 37,
+        "at": 25,
+        "de": 41,
+        "sa": 25,
+        "sd": 41,
+        "sp": 25
+    },
+    "SPECIES_KRICKETUNE": {
+        "hp": 77,
+        "at": 85,
+        "de": 51,
+        "sa": 55,
+        "sd": 51,
+        "sp": 65
+    },
+    "SPECIES_SHINX": {
+        "hp": 45,
+        "at": 65,
+        "de": 34,
+        "sa": 40,
+        "sd": 34,
+        "sp": 45
+    },
+    "SPECIES_LUXIO": {
+        "hp": 60,
+        "at": 85,
+        "de": 49,
+        "sa": 60,
+        "sd": 49,
+        "sp": 60
+    },
+    "SPECIES_LUXRAY": {
+        "hp": 80,
+        "at": 120,
+        "de": 79,
+        "sa": 95,
+        "sd": 79,
+        "sp": 70
+    },
+    "SPECIES_BUDEW": {
+        "hp": 40,
+        "at": 30,
+        "de": 35,
+        "sa": 50,
+        "sd": 70,
+        "sp": 55
+    },
+    "SPECIES_ROSERADE": {
+        "hp": 60,
+        "at": 70,
+        "de": 65,
+        "sa": 125,
+        "sd": 105,
+        "sp": 90
+    },
+    "SPECIES_CRANIDOS": {
+        "hp": 67,
+        "at": 125,
+        "de": 40,
+        "sa": 30,
+        "sd": 30,
+        "sp": 58
+    },
+    "SPECIES_RAMPARDOS": {
+        "hp": 97,
+        "at": 165,
+        "de": 60,
+        "sa": 65,
+        "sd": 50,
+        "sp": 58
+    },
+    "SPECIES_SHIELDON": {
+        "hp": 30,
+        "at": 42,
+        "de": 118,
+        "sa": 42,
+        "sd": 88,
+        "sp": 30
+    },
+    "SPECIES_BASTIODON": {
+        "hp": 60,
+        "at": 52,
+        "de": 168,
+        "sa": 47,
+        "sd": 138,
+        "sp": 30
+    },
+    "SPECIES_BURMY": {
+        "hp": 40,
+        "at": 29,
+        "de": 45,
+        "sa": 29,
+        "sd": 45,
+        "sp": 36
+    },
+    "SPECIES_WORMADAM_PLANT": {
+        "hp": 60,
+        "at": 59,
+        "de": 85,
+        "sa": 79,
+        "sd": 105,
+        "sp": 36
+    },
+    "SPECIES_MOTHIM": {
+        "hp": 70,
+        "at": 94,
+        "de": 50,
+        "sa": 94,
+        "sd": 50,
+        "sp": 66
+    },
+    "SPECIES_COMBEE": {
+        "hp": 30,
+        "at": 30,
+        "de": 42,
+        "sa": 30,
+        "sd": 42,
+        "sp": 70
+    },
+    "SPECIES_VESPIQUEN": {
+        "hp": 70,
+        "at": 80,
+        "de": 102,
+        "sa": 80,
+        "sd": 102,
+        "sp": 40
+    },
+    "SPECIES_PACHIRISU": {
+        "hp": 60,
+        "at": 45,
+        "de": 70,
+        "sa": 45,
+        "sd": 90,
+        "sp": 95
+    },
+    "SPECIES_BUIZEL": {
+        "hp": 55,
+        "at": 65,
+        "de": 35,
+        "sa": 60,
+        "sd": 30,
+        "sp": 85
+    },
+    "SPECIES_FLOATZEL": {
+        "hp": 85,
+        "at": 105,
+        "de": 55,
+        "sa": 85,
+        "sd": 50,
+        "sp": 115
+    },
+    "SPECIES_CHERUBI": {
+        "hp": 45,
+        "at": 35,
+        "de": 45,
+        "sa": 62,
+        "sd": 53,
+        "sp": 35
+    },
+    "SPECIES_CHERRIM": {
+        "hp": 70,
+        "at": 60,
+        "de": 70,
+        "sa": 87,
+        "sd": 78,
+        "sp": 85
+    },
+    "SPECIES_SHELLOS": {
+        "hp": 76,
+        "at": 48,
+        "de": 48,
+        "sa": 57,
+        "sd": 62,
+        "sp": 34
+    },
+    "SPECIES_GASTRODON": {
+        "hp": 111,
+        "at": 83,
+        "de": 68,
+        "sa": 92,
+        "sd": 82,
+        "sp": 39
+    },
+    "SPECIES_AMBIPOM": {
+        "hp": 75,
+        "at": 100,
+        "de": 66,
+        "sa": 60,
+        "sd": 66,
+        "sp": 115
+    },
+    "SPECIES_DRIFLOON": {
+        "hp": 90,
+        "at": 50,
+        "de": 34,
+        "sa": 60,
+        "sd": 44,
+        "sp": 70
+    },
+    "SPECIES_DRIFBLIM": {
+        "hp": 150,
+        "at": 80,
+        "de": 44,
+        "sa": 90,
+        "sd": 54,
+        "sp": 80
+    },
+    "SPECIES_BUNEARY": {
+        "hp": 55,
+        "at": 66,
+        "de": 44,
+        "sa": 44,
+        "sd": 56,
+        "sp": 85
+    },
+    "SPECIES_LOPUNNY": {
+        "hp": 65,
+        "at": 76,
+        "de": 84,
+        "sa": 54,
+        "sd": 96,
+        "sp": 105
+    },
+    "SPECIES_MISMAGIUS": {
+        "hp": 60,
+        "at": 60,
+        "de": 60,
+        "sa": 105,
+        "sd": 105,
+        "sp": 105
+    },
+    "SPECIES_HONCHKROW": {
+        "hp": 100,
+        "at": 125,
+        "de": 52,
+        "sa": 105,
+        "sd": 52,
+        "sp": 71
+    },
+    "SPECIES_GLAMEOW": {
+        "hp": 49,
+        "at": 55,
+        "de": 42,
+        "sa": 42,
+        "sd": 37,
+        "sp": 85
+    },
+    "SPECIES_PURUGLY": {
+        "hp": 71,
+        "at": 82,
+        "de": 64,
+        "sa": 64,
+        "sd": 59,
+        "sp": 112
+    },
+    "SPECIES_CHINGLING": {
+        "hp": 45,
+        "at": 30,
+        "de": 50,
+        "sa": 65,
+        "sd": 50,
+        "sp": 45
+    },
+    "SPECIES_STUNKY": {
+        "hp": 63,
+        "at": 63,
+        "de": 47,
+        "sa": 41,
+        "sd": 41,
+        "sp": 74
+    },
+    "SPECIES_SKUNTANK": {
+        "hp": 103,
+        "at": 93,
+        "de": 67,
+        "sa": 71,
+        "sd": 61,
+        "sp": 84
+    },
+    "SPECIES_BRONZOR": {
+        "hp": 57,
+        "at": 24,
+        "de": 86,
+        "sa": 24,
+        "sd": 86,
+        "sp": 23
+    },
+    "SPECIES_BRONZONG": {
+        "hp": 67,
+        "at": 89,
+        "de": 116,
+        "sa": 79,
+        "sd": 116,
+        "sp": 33
+    },
+    "SPECIES_BONSLY": {
+        "hp": 50,
+        "at": 80,
+        "de": 95,
+        "sa": 10,
+        "sd": 45,
+        "sp": 10
+    },
+    "SPECIES_MIME_JR": {
+        "hp": 20,
+        "at": 25,
+        "de": 45,
+        "sa": 70,
+        "sd": 90,
+        "sp": 60
+    },
+    "SPECIES_HAPPINY": {
+        "hp": 100,
+        "at": 5,
+        "de": 5,
+        "sa": 15,
+        "sd": 65,
+        "sp": 30
+    },
+    "SPECIES_CHATOT": {
+        "hp": 76,
+        "at": 65,
+        "de": 45,
+        "sa": 92,
+        "sd": 42,
+        "sp": 91
+    },
+    "SPECIES_SPIRITOMB": {
+        "hp": 50,
+        "at": 92,
+        "de": 108,
+        "sa": 92,
+        "sd": 108,
+        "sp": 35
+    },
+    "SPECIES_GIBLE": {
+        "hp": 58,
+        "at": 70,
+        "de": 45,
+        "sa": 40,
+        "sd": 45,
+        "sp": 42
+    },
+    "SPECIES_GABITE": {
+        "hp": 68,
+        "at": 90,
+        "de": 65,
+        "sa": 50,
+        "sd": 55,
+        "sp": 82
+    },
+    "SPECIES_GARCHOMP": {
+        "hp": 108,
+        "at": 130,
+        "de": 95,
+        "sa": 80,
+        "sd": 85,
+        "sp": 102
+    },
+    "SPECIES_MUNCHLAX": {
+        "hp": 135,
+        "at": 85,
+        "de": 40,
+        "sa": 40,
+        "sd": 85,
+        "sp": 5
+    },
+    "SPECIES_RIOLU": {
+        "hp": 40,
+        "at": 70,
+        "de": 40,
+        "sa": 35,
+        "sd": 40,
+        "sp": 60
+    },
+    "SPECIES_LUCARIO": {
+        "hp": 70,
+        "at": 110,
+        "de": 70,
+        "sa": 115,
+        "sd": 70,
+        "sp": 90
+    },
+    "SPECIES_HIPPOPOTAS": {
+        "hp": 68,
+        "at": 72,
+        "de": 78,
+        "sa": 38,
+        "sd": 42,
+        "sp": 32
+    },
+    "SPECIES_HIPPOWDON": {
+        "hp": 108,
+        "at": 112,
+        "de": 118,
+        "sa": 68,
+        "sd": 72,
+        "sp": 47
+    },
+    "SPECIES_SKORUPI": {
+        "hp": 40,
+        "at": 50,
+        "de": 90,
+        "sa": 30,
+        "sd": 55,
+        "sp": 65
+    },
+    "SPECIES_DRAPION": {
+        "hp": 70,
+        "at": 90,
+        "de": 110,
+        "sa": 60,
+        "sd": 75,
+        "sp": 95
+    },
+    "SPECIES_CROAGUNK": {
+        "hp": 48,
+        "at": 61,
+        "de": 40,
+        "sa": 61,
+        "sd": 40,
+        "sp": 50
+    },
+    "SPECIES_TOXICROAK": {
+        "hp": 83,
+        "at": 106,
+        "de": 65,
+        "sa": 86,
+        "sd": 65,
+        "sp": 85
+    },
+    "SPECIES_CARNIVINE": {
+        "hp": 74,
+        "at": 100,
+        "de": 72,
+        "sa": 90,
+        "sd": 72,
+        "sp": 46
+    },
+    "SPECIES_FINNEON": {
+        "hp": 49,
+        "at": 49,
+        "de": 56,
+        "sa": 49,
+        "sd": 61,
+        "sp": 66
+    },
+    "SPECIES_LUMINEON": {
+        "hp": 69,
+        "at": 69,
+        "de": 76,
+        "sa": 69,
+        "sd": 86,
+        "sp": 91
+    },
+    "SPECIES_MANTYKE": {
+        "hp": 45,
+        "at": 20,
+        "de": 50,
+        "sa": 60,
+        "sd": 120,
+        "sp": 50
+    },
+    "SPECIES_SNOVER": {
+        "hp": 60,
+        "at": 62,
+        "de": 50,
+        "sa": 62,
+        "sd": 60,
+        "sp": 40
+    },
+    "SPECIES_ABOMASNOW": {
+        "hp": 90,
+        "at": 92,
+        "de": 75,
+        "sa": 92,
+        "sd": 85,
+        "sp": 60
+    },
+    "SPECIES_WEAVILE": {
+        "hp": 70,
+        "at": 120,
+        "de": 65,
+        "sa": 45,
+        "sd": 85,
+        "sp": 125
+    },
+    "SPECIES_MAGNEZONE": {
+        "hp": 70,
+        "at": 70,
+        "de": 115,
+        "sa": 130,
+        "sd": 90,
+        "sp": 60
+    },
+    "SPECIES_LICKILICKY": {
+        "hp": 110,
+        "at": 85,
+        "de": 95,
+        "sa": 80,
+        "sd": 95,
+        "sp": 50
+    },
+    "SPECIES_RHYPERIOR": {
+        "hp": 115,
+        "at": 140,
+        "de": 130,
+        "sa": 55,
+        "sd": 55,
+        "sp": 40
+    },
+    "SPECIES_TANGROWTH": {
+        "hp": 100,
+        "at": 100,
+        "de": 125,
+        "sa": 110,
+        "sd": 50,
+        "sp": 50
+    },
+    "SPECIES_ELECTIVIRE": {
+        "hp": 75,
+        "at": 123,
+        "de": 67,
+        "sa": 95,
+        "sd": 85,
+        "sp": 95
+    },
+    "SPECIES_MAGMORTAR": {
+        "hp": 75,
+        "at": 95,
+        "de": 67,
+        "sa": 125,
+        "sd": 95,
+        "sp": 83
+    },
+    "SPECIES_TOGEKISS": {
+        "hp": 85,
+        "at": 50,
+        "de": 95,
+        "sa": 120,
+        "sd": 115,
+        "sp": 80
+    },
+    "SPECIES_YANMEGA": {
+        "hp": 86,
+        "at": 76,
+        "de": 86,
+        "sa": 116,
+        "sd": 56,
+        "sp": 95
+    },
+    "SPECIES_LEAFEON": {
+        "hp": 65,
+        "at": 110,
+        "de": 130,
+        "sa": 60,
+        "sd": 65,
+        "sp": 95
+    },
+    "SPECIES_GLACEON": {
+        "hp": 65,
+        "at": 60,
+        "de": 110,
+        "sa": 130,
+        "sd": 95,
+        "sp": 65
+    },
+    "SPECIES_GLISCOR": {
+        "hp": 75,
+        "at": 95,
+        "de": 125,
+        "sa": 45,
+        "sd": 75,
+        "sp": 95
+    },
+    "SPECIES_MAMOSWINE": {
+        "hp": 110,
+        "at": 130,
+        "de": 80,
+        "sa": 70,
+        "sd": 60,
+        "sp": 80
+    },
+    "SPECIES_PORYGON_Z": {
+        "hp": 85,
+        "at": 80,
+        "de": 70,
+        "sa": 135,
+        "sd": 75,
+        "sp": 90
+    },
+    "SPECIES_GALLADE": {
+        "hp": 68,
+        "at": 125,
+        "de": 65,
+        "sa": 65,
+        "sd": 115,
+        "sp": 80
+    },
+    "SPECIES_PROBOPASS": {
+        "hp": 60,
+        "at": 55,
+        "de": 145,
+        "sa": 75,
+        "sd": 150,
+        "sp": 40
+    },
+    "SPECIES_DUSKNOIR": {
+        "hp": 45,
+        "at": 100,
+        "de": 135,
+        "sa": 65,
+        "sd": 135,
+        "sp": 45
+    },
+    "SPECIES_FROSLASS": {
+        "hp": 70,
+        "at": 80,
+        "de": 70,
+        "sa": 80,
+        "sd": 70,
+        "sp": 110
+    },
+    "SPECIES_ROTOM": {
+        "hp": 50,
+        "at": 50,
+        "de": 77,
+        "sa": 95,
+        "sd": 77,
+        "sp": 91
+    },
+    "SPECIES_UXIE": {
+        "hp": 75,
+        "at": 75,
+        "de": 130,
+        "sa": 75,
+        "sd": 130,
+        "sp": 95
+    },
+    "SPECIES_MESPRIT": {
+        "hp": 80,
+        "at": 105,
+        "de": 105,
+        "sa": 105,
+        "sd": 105,
+        "sp": 80
+    },
+    "SPECIES_AZELF": {
+        "hp": 75,
+        "at": 125,
+        "de": 70,
+        "sa": 125,
+        "sd": 70,
+        "sp": 115
+    },
+    "SPECIES_DIALGA": {
+        "hp": 100,
+        "at": 120,
+        "de": 120,
+        "sa": 150,
+        "sd": 100,
+        "sp": 90
+    },
+    "SPECIES_PALKIA": {
+        "hp": 90,
+        "at": 120,
+        "de": 100,
+        "sa": 150,
+        "sd": 120,
+        "sp": 100
+    },
+    "SPECIES_HEATRAN": {
+        "hp": 91,
+        "at": 90,
+        "de": 106,
+        "sa": 130,
+        "sd": 106,
+        "sp": 77
+    },
+    "SPECIES_REGIGIGAS": {
+        "hp": 110,
+        "at": 160,
+        "de": 110,
+        "sa": 80,
+        "sd": 110,
+        "sp": 100
+    },
+    "SPECIES_GIRATINA_ALTERED": {
+        "hp": 150,
+        "at": 100,
+        "de": 120,
+        "sa": 100,
+        "sd": 120,
+        "sp": 90
+    },
+    "SPECIES_CRESSELIA": {
+        "hp": 120,
+        "at": 70,
+        "de": 110,
+        "sa": 75,
+        "sd": 120,
+        "sp": 85
+    },
+    "SPECIES_PHIONE": {
+        "hp": 80,
+        "at": 80,
+        "de": 80,
+        "sa": 80,
+        "sd": 80,
+        "sp": 80
+    },
+    "SPECIES_MANAPHY": {
+        "hp": 100,
+        "at": 100,
+        "de": 100,
+        "sa": 100,
+        "sd": 100,
+        "sp": 100
+    },
+    "SPECIES_DARKRAI": {
+        "hp": 70,
+        "at": 90,
+        "de": 90,
+        "sa": 135,
+        "sd": 90,
+        "sp": 125
+    },
+    "SPECIES_SHAYMIN_LAND": {
+        "hp": 100,
+        "at": 100,
+        "de": 100,
+        "sa": 100,
+        "sd": 100,
+        "sp": 100
+    },
+    "SPECIES_ARCEUS": {
+        "hp": 120,
+        "at": 120,
+        "de": 120,
+        "sa": 120,
+        "sd": 120,
+        "sp": 120
+    },
+    "SPECIES_VICTINI": {
+        "hp": 100,
+        "at": 100,
+        "de": 100,
+        "sa": 100,
+        "sd": 100,
+        "sp": 100
+    },
+    "SPECIES_SNIVY": {
+        "hp": 45,
+        "at": 45,
+        "de": 55,
+        "sa": 45,
+        "sd": 55,
+        "sp": 63
+    },
+    "SPECIES_SERVINE": {
+        "hp": 60,
+        "at": 60,
+        "de": 75,
+        "sa": 60,
+        "sd": 75,
+        "sp": 83
+    },
+    "SPECIES_SERPERIOR": {
+        "hp": 75,
+        "at": 75,
+        "de": 95,
+        "sa": 75,
+        "sd": 95,
+        "sp": 113
+    },
+    "SPECIES_TEPIG": {
+        "hp": 65,
+        "at": 63,
+        "de": 45,
+        "sa": 45,
+        "sd": 45,
+        "sp": 45
+    },
+    "SPECIES_PIGNITE": {
+        "hp": 90,
+        "at": 93,
+        "de": 55,
+        "sa": 70,
+        "sd": 55,
+        "sp": 55
+    },
+    "SPECIES_EMBOAR": {
+        "hp": 110,
+        "at": 123,
+        "de": 65,
+        "sa": 100,
+        "sd": 65,
+        "sp": 65
+    },
+    "SPECIES_OSHAWOTT": {
+        "hp": 55,
+        "at": 55,
+        "de": 45,
+        "sa": 63,
+        "sd": 45,
+        "sp": 45
+    },
+    "SPECIES_DEWOTT": {
+        "hp": 75,
+        "at": 75,
+        "de": 60,
+        "sa": 83,
+        "sd": 60,
+        "sp": 60
+    },
+    "SPECIES_SAMUROTT": {
+        "hp": 95,
+        "at": 100,
+        "de": 85,
+        "sa": 108,
+        "sd": 70,
+        "sp": 70
+    },
+    "SPECIES_PATRAT": {
+        "hp": 45,
+        "at": 55,
+        "de": 39,
+        "sa": 35,
+        "sd": 39,
+        "sp": 42
+    },
+    "SPECIES_WATCHOG": {
+        "hp": 60,
+        "at": 85,
+        "de": 69,
+        "sa": 60,
+        "sd": 69,
+        "sp": 77
+    },
+    "SPECIES_LILLIPUP": {
+        "hp": 45,
+        "at": 60,
+        "de": 45,
+        "sa": 25,
+        "sd": 45,
+        "sp": 55
+    },
+    "SPECIES_HERDIER": {
+        "hp": 65,
+        "at": 80,
+        "de": 65,
+        "sa": 35,
+        "sd": 65,
+        "sp": 60
+    },
+    "SPECIES_STOUTLAND": {
+        "hp": 85,
+        "at": 110,
+        "de": 90,
+        "sa": 45,
+        "sd": 90,
+        "sp": 80
+    },
+    "SPECIES_PURRLOIN": {
+        "hp": 41,
+        "at": 50,
+        "de": 37,
+        "sa": 50,
+        "sd": 37,
+        "sp": 66
+    },
+    "SPECIES_LIEPARD": {
+        "hp": 64,
+        "at": 88,
+        "de": 50,
+        "sa": 88,
+        "sd": 50,
+        "sp": 106
+    },
+    "SPECIES_PANSAGE": {
+        "hp": 50,
+        "at": 53,
+        "de": 48,
+        "sa": 53,
+        "sd": 48,
+        "sp": 64
+    },
+    "SPECIES_SIMISAGE": {
+        "hp": 75,
+        "at": 98,
+        "de": 63,
+        "sa": 98,
+        "sd": 63,
+        "sp": 101
+    },
+    "SPECIES_PANSEAR": {
+        "hp": 50,
+        "at": 53,
+        "de": 48,
+        "sa": 53,
+        "sd": 48,
+        "sp": 64
+    },
+    "SPECIES_SIMISEAR": {
+        "hp": 75,
+        "at": 98,
+        "de": 63,
+        "sa": 98,
+        "sd": 63,
+        "sp": 101
+    },
+    "SPECIES_PANPOUR": {
+        "hp": 50,
+        "at": 53,
+        "de": 48,
+        "sa": 53,
+        "sd": 48,
+        "sp": 64
+    },
+    "SPECIES_SIMIPOUR": {
+        "hp": 75,
+        "at": 98,
+        "de": 63,
+        "sa": 98,
+        "sd": 63,
+        "sp": 101
+    },
+    "SPECIES_MUNNA": {
+        "hp": 76,
+        "at": 25,
+        "de": 45,
+        "sa": 67,
+        "sd": 55,
+        "sp": 24
+    },
+    "SPECIES_MUSHARNA": {
+        "hp": 116,
+        "at": 55,
+        "de": 85,
+        "sa": 107,
+        "sd": 95,
+        "sp": 29
+    },
+    "SPECIES_PIDOVE": {
+        "hp": 50,
+        "at": 55,
+        "de": 50,
+        "sa": 36,
+        "sd": 30,
+        "sp": 43
+    },
+    "SPECIES_TRANQUILL": {
+        "hp": 62,
+        "at": 77,
+        "de": 62,
+        "sa": 50,
+        "sd": 42,
+        "sp": 65
+    },
+    "SPECIES_UNFEZANT": {
+        "hp": 80,
+        "at": 115,
+        "de": 80,
+        "sa": 65,
+        "sd": 55,
+        "sp": 93
+    },
+    "SPECIES_BLITZLE": {
+        "hp": 45,
+        "at": 60,
+        "de": 32,
+        "sa": 50,
+        "sd": 32,
+        "sp": 76
+    },
+    "SPECIES_ZEBSTRIKA": {
+        "hp": 75,
+        "at": 100,
+        "de": 63,
+        "sa": 80,
+        "sd": 63,
+        "sp": 116
+    },
+    "SPECIES_ROGGENROLA": {
+        "hp": 55,
+        "at": 75,
+        "de": 85,
+        "sa": 25,
+        "sd": 25,
+        "sp": 15
+    },
+    "SPECIES_BOLDORE": {
+        "hp": 70,
+        "at": 105,
+        "de": 105,
+        "sa": 50,
+        "sd": 40,
+        "sp": 20
+    },
+    "SPECIES_GIGALITH": {
+        "hp": 85,
+        "at": 135,
+        "de": 130,
+        "sa": 60,
+        "sd": 80,
+        "sp": 25
+    },
+    "SPECIES_WOOBAT": {
+        "hp": 65,
+        "at": 45,
+        "de": 43,
+        "sa": 55,
+        "sd": 43,
+        "sp": 72
+    },
+    "SPECIES_SWOOBAT": {
+        "hp": 67,
+        "at": 57,
+        "de": 55,
+        "sa": 77,
+        "sd": 55,
+        "sp": 114
+    },
+    "SPECIES_DRILBUR": {
+        "hp": 60,
+        "at": 85,
+        "de": 40,
+        "sa": 30,
+        "sd": 45,
+        "sp": 68
+    },
+    "SPECIES_EXCADRILL": {
+        "hp": 110,
+        "at": 135,
+        "de": 60,
+        "sa": 50,
+        "sd": 65,
+        "sp": 88
+    },
+    "SPECIES_AUDINO": {
+        "hp": 103,
+        "at": 60,
+        "de": 86,
+        "sa": 60,
+        "sd": 86,
+        "sp": 50
+    },
+    "SPECIES_TIMBURR": {
+        "hp": 75,
+        "at": 80,
+        "de": 55,
+        "sa": 25,
+        "sd": 35,
+        "sp": 35
+    },
+    "SPECIES_GURDURR": {
+        "hp": 85,
+        "at": 105,
+        "de": 85,
+        "sa": 40,
+        "sd": 50,
+        "sp": 40
+    },
+    "SPECIES_CONKELDURR": {
+        "hp": 105,
+        "at": 140,
+        "de": 95,
+        "sa": 55,
+        "sd": 65,
+        "sp": 45
+    },
+    "SPECIES_TYMPOLE": {
+        "hp": 50,
+        "at": 50,
+        "de": 40,
+        "sa": 50,
+        "sd": 40,
+        "sp": 64
+    },
+    "SPECIES_PALPITOAD": {
+        "hp": 75,
+        "at": 65,
+        "de": 55,
+        "sa": 65,
+        "sd": 55,
+        "sp": 69
+    },
+    "SPECIES_SEISMITOAD": {
+        "hp": 105,
+        "at": 95,
+        "de": 75,
+        "sa": 85,
+        "sd": 75,
+        "sp": 74
+    },
+    "SPECIES_THROH": {
+        "hp": 120,
+        "at": 100,
+        "de": 85,
+        "sa": 30,
+        "sd": 85,
+        "sp": 45
+    },
+    "SPECIES_SAWK": {
+        "hp": 75,
+        "at": 125,
+        "de": 75,
+        "sa": 30,
+        "sd": 75,
+        "sp": 85
+    },
+    "SPECIES_SEWADDLE": {
+        "hp": 45,
+        "at": 53,
+        "de": 70,
+        "sa": 40,
+        "sd": 60,
+        "sp": 42
+    },
+    "SPECIES_SWADLOON": {
+        "hp": 55,
+        "at": 63,
+        "de": 90,
+        "sa": 50,
+        "sd": 80,
+        "sp": 42
+    },
+    "SPECIES_LEAVANNY": {
+        "hp": 75,
+        "at": 103,
+        "de": 80,
+        "sa": 70,
+        "sd": 80,
+        "sp": 92
+    },
+    "SPECIES_VENIPEDE": {
+        "hp": 30,
+        "at": 45,
+        "de": 59,
+        "sa": 30,
+        "sd": 39,
+        "sp": 57
+    },
+    "SPECIES_WHIRLIPEDE": {
+        "hp": 40,
+        "at": 55,
+        "de": 99,
+        "sa": 40,
+        "sd": 79,
+        "sp": 47
+    },
+    "SPECIES_SCOLIPEDE": {
+        "hp": 60,
+        "at": 100,
+        "de": 89,
+        "sa": 55,
+        "sd": 69,
+        "sp": 112
+    },
+    "SPECIES_COTTONEE": {
+        "hp": 40,
+        "at": 27,
+        "de": 60,
+        "sa": 37,
+        "sd": 50,
+        "sp": 66
+    },
+    "SPECIES_WHIMSICOTT": {
+        "hp": 60,
+        "at": 67,
+        "de": 85,
+        "sa": 77,
+        "sd": 75,
+        "sp": 116
+    },
+    "SPECIES_PETILIL": {
+        "hp": 45,
+        "at": 35,
+        "de": 50,
+        "sa": 70,
+        "sd": 50,
+        "sp": 30
+    },
+    "SPECIES_LILLIGANT": {
+        "hp": 70,
+        "at": 60,
+        "de": 75,
+        "sa": 110,
+        "sd": 75,
+        "sp": 90
+    },
+    "SPECIES_BASCULIN_RED_STRIPED": {
+        "hp": 70,
+        "at": 92,
+        "de": 65,
+        "sa": 80,
+        "sd": 55,
+        "sp": 98
+    },
+    "SPECIES_SANDILE": {
+        "hp": 50,
+        "at": 72,
+        "de": 35,
+        "sa": 35,
+        "sd": 35,
+        "sp": 65
+    },
+    "SPECIES_KROKOROK": {
+        "hp": 60,
+        "at": 82,
+        "de": 45,
+        "sa": 45,
+        "sd": 45,
+        "sp": 74
+    },
+    "SPECIES_KROOKODILE": {
+        "hp": 95,
+        "at": 117,
+        "de": 80,
+        "sa": 65,
+        "sd": 70,
+        "sp": 92
+    },
+    "SPECIES_DARUMAKA": {
+        "hp": 70,
+        "at": 90,
+        "de": 45,
+        "sa": 15,
+        "sd": 45,
+        "sp": 50
+    },
+    "SPECIES_DARMANITAN_STANDARD": {
+        "hp": 105,
+        "at": 140,
+        "de": 55,
+        "sa": 30,
+        "sd": 55,
+        "sp": 95
+    },
+    "SPECIES_MARACTUS": {
+        "hp": 75,
+        "at": 86,
+        "de": 67,
+        "sa": 106,
+        "sd": 67,
+        "sp": 60
+    },
+    "SPECIES_DWEBBLE": {
+        "hp": 50,
+        "at": 65,
+        "de": 85,
+        "sa": 35,
+        "sd": 35,
+        "sp": 55
+    },
+    "SPECIES_CRUSTLE": {
+        "hp": 70,
+        "at": 105,
+        "de": 125,
+        "sa": 65,
+        "sd": 75,
+        "sp": 45
+    },
+    "SPECIES_SCRAGGY": {
+        "hp": 50,
+        "at": 75,
+        "de": 70,
+        "sa": 35,
+        "sd": 70,
+        "sp": 48
+    },
+    "SPECIES_SCRAFTY": {
+        "hp": 65,
+        "at": 90,
+        "de": 115,
+        "sa": 45,
+        "sd": 115,
+        "sp": 58
+    },
+    "SPECIES_SIGILYPH": {
+        "hp": 72,
+        "at": 58,
+        "de": 80,
+        "sa": 103,
+        "sd": 80,
+        "sp": 97
+    },
+    "SPECIES_YAMASK": {
+        "hp": 38,
+        "at": 30,
+        "de": 85,
+        "sa": 55,
+        "sd": 65,
+        "sp": 30
+    },
+    "SPECIES_COFAGRIGUS": {
+        "hp": 58,
+        "at": 50,
+        "de": 145,
+        "sa": 95,
+        "sd": 105,
+        "sp": 30
+    },
+    "SPECIES_TIRTOUGA": {
+        "hp": 54,
+        "at": 78,
+        "de": 103,
+        "sa": 53,
+        "sd": 45,
+        "sp": 22
+    },
+    "SPECIES_CARRACOSTA": {
+        "hp": 74,
+        "at": 108,
+        "de": 133,
+        "sa": 83,
+        "sd": 65,
+        "sp": 32
+    },
+    "SPECIES_ARCHEN": {
+        "hp": 55,
+        "at": 112,
+        "de": 45,
+        "sa": 74,
+        "sd": 45,
+        "sp": 70
+    },
+    "SPECIES_ARCHEOPS": {
+        "hp": 75,
+        "at": 140,
+        "de": 65,
+        "sa": 112,
+        "sd": 65,
+        "sp": 110
+    },
+    "SPECIES_TRUBBISH": {
+        "hp": 50,
+        "at": 50,
+        "de": 62,
+        "sa": 40,
+        "sd": 62,
+        "sp": 65
+    },
+    "SPECIES_GARBODOR": {
+        "hp": 80,
+        "at": 95,
+        "de": 82,
+        "sa": 60,
+        "sd": 82,
+        "sp": 75
+    },
+    "SPECIES_ZORUA": {
+        "hp": 40,
+        "at": 65,
+        "de": 40,
+        "sa": 80,
+        "sd": 40,
+        "sp": 65
+    },
+    "SPECIES_ZOROARK": {
+        "hp": 60,
+        "at": 105,
+        "de": 60,
+        "sa": 120,
+        "sd": 60,
+        "sp": 105
+    },
+    "SPECIES_MINCCINO": {
+        "hp": 55,
+        "at": 50,
+        "de": 40,
+        "sa": 40,
+        "sd": 40,
+        "sp": 75
+    },
+    "SPECIES_CINCCINO": {
+        "hp": 75,
+        "at": 95,
+        "de": 60,
+        "sa": 65,
+        "sd": 60,
+        "sp": 115
+    },
+    "SPECIES_GOTHITA": {
+        "hp": 45,
+        "at": 30,
+        "de": 50,
+        "sa": 55,
+        "sd": 65,
+        "sp": 45
+    },
+    "SPECIES_GOTHORITA": {
+        "hp": 60,
+        "at": 45,
+        "de": 70,
+        "sa": 75,
+        "sd": 85,
+        "sp": 55
+    },
+    "SPECIES_GOTHITELLE": {
+        "hp": 70,
+        "at": 55,
+        "de": 95,
+        "sa": 95,
+        "sd": 110,
+        "sp": 65
+    },
+    "SPECIES_SOLOSIS": {
+        "hp": 45,
+        "at": 30,
+        "de": 40,
+        "sa": 105,
+        "sd": 50,
+        "sp": 20
+    },
+    "SPECIES_DUOSION": {
+        "hp": 65,
+        "at": 40,
+        "de": 50,
+        "sa": 125,
+        "sd": 60,
+        "sp": 30
+    },
+    "SPECIES_REUNICLUS": {
+        "hp": 110,
+        "at": 65,
+        "de": 75,
+        "sa": 125,
+        "sd": 85,
+        "sp": 30
+    },
+    "SPECIES_DUCKLETT": {
+        "hp": 62,
+        "at": 44,
+        "de": 50,
+        "sa": 44,
+        "sd": 50,
+        "sp": 55
+    },
+    "SPECIES_SWANNA": {
+        "hp": 75,
+        "at": 87,
+        "de": 63,
+        "sa": 87,
+        "sd": 63,
+        "sp": 98
+    },
+    "SPECIES_VANILLITE": {
+        "hp": 36,
+        "at": 50,
+        "de": 50,
+        "sa": 65,
+        "sd": 60,
+        "sp": 44
+    },
+    "SPECIES_VANILLISH": {
+        "hp": 51,
+        "at": 65,
+        "de": 65,
+        "sa": 80,
+        "sd": 75,
+        "sp": 59
+    },
+    "SPECIES_VANILLUXE": {
+        "hp": 71,
+        "at": 95,
+        "de": 85,
+        "sa": 110,
+        "sd": 95,
+        "sp": 79
+    },
+    "SPECIES_DEERLING": {
+        "hp": 60,
+        "at": 60,
+        "de": 50,
+        "sa": 40,
+        "sd": 50,
+        "sp": 75
+    },
+    "SPECIES_SAWSBUCK": {
+        "hp": 80,
+        "at": 100,
+        "de": 70,
+        "sa": 60,
+        "sd": 70,
+        "sp": 95
+    },
+    "SPECIES_EMOLGA": {
+        "hp": 55,
+        "at": 75,
+        "de": 60,
+        "sa": 75,
+        "sd": 60,
+        "sp": 103
+    },
+    "SPECIES_KARRABLAST": {
+        "hp": 50,
+        "at": 75,
+        "de": 45,
+        "sa": 40,
+        "sd": 45,
+        "sp": 60
+    },
+    "SPECIES_ESCAVALIER": {
+        "hp": 70,
+        "at": 135,
+        "de": 105,
+        "sa": 60,
+        "sd": 105,
+        "sp": 20
+    },
+    "SPECIES_FOONGUS": {
+        "hp": 69,
+        "at": 55,
+        "de": 45,
+        "sa": 55,
+        "sd": 55,
+        "sp": 15
+    },
+    "SPECIES_AMOONGUSS": {
+        "hp": 114,
+        "at": 85,
+        "de": 70,
+        "sa": 85,
+        "sd": 80,
+        "sp": 30
+    },
+    "SPECIES_FRILLISH": {
+        "hp": 55,
+        "at": 40,
+        "de": 50,
+        "sa": 65,
+        "sd": 85,
+        "sp": 40
+    },
+    "SPECIES_JELLICENT": {
+        "hp": 100,
+        "at": 60,
+        "de": 70,
+        "sa": 85,
+        "sd": 105,
+        "sp": 60
+    },
+    "SPECIES_ALOMOMOLA": {
+        "hp": 165,
+        "at": 75,
+        "de": 80,
+        "sa": 40,
+        "sd": 45,
+        "sp": 65
+    },
+    "SPECIES_JOLTIK": {
+        "hp": 50,
+        "at": 47,
+        "de": 50,
+        "sa": 57,
+        "sd": 50,
+        "sp": 65
+    },
+    "SPECIES_GALVANTULA": {
+        "hp": 70,
+        "at": 77,
+        "de": 60,
+        "sa": 97,
+        "sd": 60,
+        "sp": 108
+    },
+    "SPECIES_FERROSEED": {
+        "hp": 44,
+        "at": 50,
+        "de": 91,
+        "sa": 24,
+        "sd": 86,
+        "sp": 10
+    },
+    "SPECIES_FERROTHORN": {
+        "hp": 74,
+        "at": 94,
+        "de": 131,
+        "sa": 54,
+        "sd": 116,
+        "sp": 20
+    },
+    "SPECIES_KLINK": {
+        "hp": 40,
+        "at": 55,
+        "de": 70,
+        "sa": 45,
+        "sd": 60,
+        "sp": 30
+    },
+    "SPECIES_KLANG": {
+        "hp": 60,
+        "at": 80,
+        "de": 95,
+        "sa": 70,
+        "sd": 85,
+        "sp": 50
+    },
+    "SPECIES_KLINKLANG": {
+        "hp": 60,
+        "at": 100,
+        "de": 115,
+        "sa": 70,
+        "sd": 85,
+        "sp": 90
+    },
+    "SPECIES_TYNAMO": {
+        "hp": 35,
+        "at": 55,
+        "de": 40,
+        "sa": 45,
+        "sd": 40,
+        "sp": 60
+    },
+    "SPECIES_EELEKTRIK": {
+        "hp": 65,
+        "at": 85,
+        "de": 70,
+        "sa": 75,
+        "sd": 70,
+        "sp": 40
+    },
+    "SPECIES_EELEKTROSS": {
+        "hp": 85,
+        "at": 115,
+        "de": 80,
+        "sa": 105,
+        "sd": 80,
+        "sp": 50
+    },
+    "SPECIES_ELGYEM": {
+        "hp": 55,
+        "at": 55,
+        "de": 55,
+        "sa": 85,
+        "sd": 55,
+        "sp": 30
+    },
+    "SPECIES_BEHEEYEM": {
+        "hp": 75,
+        "at": 75,
+        "de": 75,
+        "sa": 125,
+        "sd": 95,
+        "sp": 40
+    },
+    "SPECIES_LITWICK": {
+        "hp": 50,
+        "at": 30,
+        "de": 55,
+        "sa": 65,
+        "sd": 55,
+        "sp": 20
+    },
+    "SPECIES_LAMPENT": {
+        "hp": 60,
+        "at": 40,
+        "de": 60,
+        "sa": 95,
+        "sd": 60,
+        "sp": 55
+    },
+    "SPECIES_CHANDELURE": {
+        "hp": 60,
+        "at": 55,
+        "de": 90,
+        "sa": 145,
+        "sd": 90,
+        "sp": 80
+    },
+    "SPECIES_AXEW": {
+        "hp": 46,
+        "at": 87,
+        "de": 60,
+        "sa": 30,
+        "sd": 40,
+        "sp": 57
+    },
+    "SPECIES_FRAXURE": {
+        "hp": 66,
+        "at": 117,
+        "de": 70,
+        "sa": 40,
+        "sd": 50,
+        "sp": 67
+    },
+    "SPECIES_HAXORUS": {
+        "hp": 76,
+        "at": 147,
+        "de": 90,
+        "sa": 60,
+        "sd": 70,
+        "sp": 97
+    },
+    "SPECIES_CUBCHOO": {
+        "hp": 55,
+        "at": 70,
+        "de": 40,
+        "sa": 60,
+        "sd": 40,
+        "sp": 40
+    },
+    "SPECIES_BEARTIC": {
+        "hp": 95,
+        "at": 130,
+        "de": 80,
+        "sa": 70,
+        "sd": 80,
+        "sp": 50
+    },
+    "SPECIES_CRYOGONAL": {
+        "hp": 80,
+        "at": 50,
+        "de": 50,
+        "sa": 95,
+        "sd": 135,
+        "sp": 105
+    },
+    "SPECIES_SHELMET": {
+        "hp": 50,
+        "at": 40,
+        "de": 85,
+        "sa": 40,
+        "sd": 65,
+        "sp": 25
+    },
+    "SPECIES_ACCELGOR": {
+        "hp": 80,
+        "at": 70,
+        "de": 40,
+        "sa": 100,
+        "sd": 60,
+        "sp": 145
+    },
+    "SPECIES_STUNFISK": {
+        "hp": 109,
+        "at": 66,
+        "de": 84,
+        "sa": 81,
+        "sd": 99,
+        "sp": 32
+    },
+    "SPECIES_MIENFOO": {
+        "hp": 45,
+        "at": 85,
+        "de": 50,
+        "sa": 55,
+        "sd": 50,
+        "sp": 65
+    },
+    "SPECIES_MIENSHAO": {
+        "hp": 65,
+        "at": 125,
+        "de": 60,
+        "sa": 95,
+        "sd": 60,
+        "sp": 105
+    },
+    "SPECIES_DRUDDIGON": {
+        "hp": 77,
+        "at": 120,
+        "de": 90,
+        "sa": 60,
+        "sd": 90,
+        "sp": 48
+    },
+    "SPECIES_GOLETT": {
+        "hp": 59,
+        "at": 74,
+        "de": 50,
+        "sa": 35,
+        "sd": 50,
+        "sp": 35
+    },
+    "SPECIES_GOLURK": {
+        "hp": 89,
+        "at": 124,
+        "de": 80,
+        "sa": 55,
+        "sd": 80,
+        "sp": 55
+    },
+    "SPECIES_PAWNIARD": {
+        "hp": 45,
+        "at": 85,
+        "de": 70,
+        "sa": 40,
+        "sd": 40,
+        "sp": 60
+    },
+    "SPECIES_BISHARP": {
+        "hp": 65,
+        "at": 125,
+        "de": 100,
+        "sa": 60,
+        "sd": 70,
+        "sp": 70
+    },
+    "SPECIES_BOUFFALANT": {
+        "hp": 95,
+        "at": 110,
+        "de": 95,
+        "sa": 40,
+        "sd": 95,
+        "sp": 55
+    },
+    "SPECIES_RUFFLET": {
+        "hp": 70,
+        "at": 83,
+        "de": 50,
+        "sa": 37,
+        "sd": 50,
+        "sp": 60
+    },
+    "SPECIES_BRAVIARY": {
+        "hp": 100,
+        "at": 123,
+        "de": 75,
+        "sa": 57,
+        "sd": 75,
+        "sp": 80
+    },
+    "SPECIES_VULLABY": {
+        "hp": 70,
+        "at": 55,
+        "de": 75,
+        "sa": 45,
+        "sd": 65,
+        "sp": 60
+    },
+    "SPECIES_MANDIBUZZ": {
+        "hp": 110,
+        "at": 65,
+        "de": 105,
+        "sa": 55,
+        "sd": 95,
+        "sp": 80
+    },
+    "SPECIES_HEATMOR": {
+        "hp": 85,
+        "at": 97,
+        "de": 66,
+        "sa": 105,
+        "sd": 66,
+        "sp": 65
+    },
+    "SPECIES_DURANT": {
+        "hp": 58,
+        "at": 109,
+        "de": 112,
+        "sa": 48,
+        "sd": 48,
+        "sp": 109
+    },
+    "SPECIES_DEINO": {
+        "hp": 52,
+        "at": 65,
+        "de": 50,
+        "sa": 45,
+        "sd": 50,
+        "sp": 38
+    },
+    "SPECIES_ZWEILOUS": {
+        "hp": 72,
+        "at": 85,
+        "de": 70,
+        "sa": 65,
+        "sd": 70,
+        "sp": 58
+    },
+    "SPECIES_HYDREIGON": {
+        "hp": 92,
+        "at": 105,
+        "de": 90,
+        "sa": 125,
+        "sd": 90,
+        "sp": 98
+    },
+    "SPECIES_LARVESTA": {
+        "hp": 55,
+        "at": 85,
+        "de": 55,
+        "sa": 50,
+        "sd": 55,
+        "sp": 60
+    },
+    "SPECIES_VOLCARONA": {
+        "hp": 85,
+        "at": 60,
+        "de": 65,
+        "sa": 135,
+        "sd": 105,
+        "sp": 100
+    },
+    "SPECIES_COBALION": {
+        "hp": 91,
+        "at": 90,
+        "de": 129,
+        "sa": 90,
+        "sd": 72,
+        "sp": 108
+    },
+    "SPECIES_TERRAKION": {
+        "hp": 91,
+        "at": 129,
+        "de": 90,
+        "sa": 72,
+        "sd": 90,
+        "sp": 108
+    },
+    "SPECIES_VIRIZION": {
+        "hp": 91,
+        "at": 90,
+        "de": 72,
+        "sa": 90,
+        "sd": 129,
+        "sp": 108
+    },
+    "SPECIES_TORNADUS_INCARNATE": {
+        "hp": 79,
+        "at": 115,
+        "de": 70,
+        "sa": 125,
+        "sd": 80,
+        "sp": 111
+    },
+    "SPECIES_THUNDURUS_INCARNATE": {
+        "hp": 79,
+        "at": 115,
+        "de": 70,
+        "sa": 125,
+        "sd": 80,
+        "sp": 111
+    },
+    "SPECIES_RESHIRAM": {
+        "hp": 100,
+        "at": 120,
+        "de": 100,
+        "sa": 150,
+        "sd": 120,
+        "sp": 90
+    },
+    "SPECIES_ZEKROM": {
+        "hp": 100,
+        "at": 150,
+        "de": 120,
+        "sa": 120,
+        "sd": 100,
+        "sp": 90
+    },
+    "SPECIES_LANDORUS_INCARNATE": {
+        "hp": 89,
+        "at": 125,
+        "de": 90,
+        "sa": 115,
+        "sd": 80,
+        "sp": 101
+    },
+    "SPECIES_KYUREM": {
+        "hp": 125,
+        "at": 130,
+        "de": 90,
+        "sa": 130,
+        "sd": 90,
+        "sp": 95
+    },
+    "SPECIES_KELDEO_ORDINARY": {
+        "hp": 91,
+        "at": 72,
+        "de": 90,
+        "sa": 129,
+        "sd": 90,
+        "sp": 108
+    },
+    "SPECIES_MELOETTA_ARIA": {
+        "hp": 100,
+        "at": 77,
+        "de": 77,
+        "sa": 128,
+        "sd": 128,
+        "sp": 90
+    },
+    "SPECIES_GENESECT": {
+        "hp": 71,
+        "at": 120,
+        "de": 95,
+        "sa": 120,
+        "sd": 95,
+        "sp": 99
+    },
+    "SPECIES_CHESPIN": {
+        "hp": 56,
+        "at": 61,
+        "de": 65,
+        "sa": 48,
+        "sd": 45,
+        "sp": 38
+    },
+    "SPECIES_QUILLADIN": {
+        "hp": 61,
+        "at": 78,
+        "de": 95,
+        "sa": 56,
+        "sd": 58,
+        "sp": 57
+    },
+    "SPECIES_CHESNAUGHT": {
+        "hp": 88,
+        "at": 107,
+        "de": 122,
+        "sa": 74,
+        "sd": 75,
+        "sp": 64
+    },
+    "SPECIES_FENNEKIN": {
+        "hp": 40,
+        "at": 45,
+        "de": 40,
+        "sa": 62,
+        "sd": 60,
+        "sp": 60
+    },
+    "SPECIES_BRAIXEN": {
+        "hp": 59,
+        "at": 59,
+        "de": 58,
+        "sa": 90,
+        "sd": 70,
+        "sp": 73
+    },
+    "SPECIES_DELPHOX": {
+        "hp": 75,
+        "at": 69,
+        "de": 72,
+        "sa": 114,
+        "sd": 100,
+        "sp": 104
+    },
+    "SPECIES_FROAKIE": {
+        "hp": 41,
+        "at": 56,
+        "de": 40,
+        "sa": 62,
+        "sd": 44,
+        "sp": 71
+    },
+    "SPECIES_FROGADIER": {
+        "hp": 54,
+        "at": 63,
+        "de": 52,
+        "sa": 83,
+        "sd": 56,
+        "sp": 97
+    },
+    "SPECIES_GRENINJA": {
+        "hp": 72,
+        "at": 95,
+        "de": 67,
+        "sa": 103,
+        "sd": 71,
+        "sp": 122
+    },
+    "SPECIES_BUNNELBY": {
+        "hp": 38,
+        "at": 36,
+        "de": 38,
+        "sa": 32,
+        "sd": 36,
+        "sp": 57
+    },
+    "SPECIES_DIGGERSBY": {
+        "hp": 85,
+        "at": 56,
+        "de": 77,
+        "sa": 50,
+        "sd": 77,
+        "sp": 78
+    },
+    "SPECIES_FLETCHLING": {
+        "hp": 45,
+        "at": 50,
+        "de": 43,
+        "sa": 40,
+        "sd": 38,
+        "sp": 62
+    },
+    "SPECIES_FLETCHINDER": {
+        "hp": 62,
+        "at": 73,
+        "de": 55,
+        "sa": 56,
+        "sd": 52,
+        "sp": 84
+    },
+    "SPECIES_TALONFLAME": {
+        "hp": 78,
+        "at": 81,
+        "de": 71,
+        "sa": 74,
+        "sd": 69,
+        "sp": 126
+    },
+    "SPECIES_SCATTERBUG": {
+        "hp": 38,
+        "at": 35,
+        "de": 40,
+        "sa": 27,
+        "sd": 25,
+        "sp": 35
+    },
+    "SPECIES_SPEWPA": {
+        "hp": 45,
+        "at": 22,
+        "de": 60,
+        "sa": 27,
+        "sd": 30,
+        "sp": 29
+    },
+    "SPECIES_VIVILLON": {
+        "hp": 80,
+        "at": 52,
+        "de": 50,
+        "sa": 90,
+        "sd": 50,
+        "sp": 89
+    },
+    "SPECIES_LITLEO": {
+        "hp": 62,
+        "at": 50,
+        "de": 58,
+        "sa": 73,
+        "sd": 54,
+        "sp": 72
+    },
+    "SPECIES_PYROAR": {
+        "hp": 86,
+        "at": 68,
+        "de": 72,
+        "sa": 109,
+        "sd": 66,
+        "sp": 106
+    },
+    "SPECIES_FLABEBE": {
+        "hp": 44,
+        "at": 38,
+        "de": 39,
+        "sa": 61,
+        "sd": 79,
+        "sp": 42
+    },
+    "SPECIES_FLOETTE": {
+        "hp": 54,
+        "at": 45,
+        "de": 47,
+        "sa": 75,
+        "sd": 98,
+        "sp": 52
+    },
+    "SPECIES_FLORGES": {
+        "hp": 78,
+        "at": 65,
+        "de": 68,
+        "sa": 112,
+        "sd": 154,
+        "sp": 75
+    },
+    "SPECIES_SKIDDO": {
+        "hp": 66,
+        "at": 65,
+        "de": 48,
+        "sa": 62,
+        "sd": 57,
+        "sp": 52
+    },
+    "SPECIES_GOGOAT": {
+        "hp": 123,
+        "at": 100,
+        "de": 62,
+        "sa": 97,
+        "sd": 81,
+        "sp": 68
+    },
+    "SPECIES_PANCHAM": {
+        "hp": 67,
+        "at": 82,
+        "de": 62,
+        "sa": 46,
+        "sd": 48,
+        "sp": 43
+    },
+    "SPECIES_PANGORO": {
+        "hp": 95,
+        "at": 124,
+        "de": 78,
+        "sa": 69,
+        "sd": 71,
+        "sp": 58
+    },
+    "SPECIES_FURFROU": {
+        "hp": 75,
+        "at": 80,
+        "de": 60,
+        "sa": 65,
+        "sd": 90,
+        "sp": 102
+    },
+    "SPECIES_ESPURR": {
+        "hp": 62,
+        "at": 48,
+        "de": 54,
+        "sa": 63,
+        "sd": 60,
+        "sp": 68
+    },
+    "SPECIES_MEOWSTIC_MALE": {
+        "hp": 74,
+        "at": 48,
+        "de": 76,
+        "sa": 83,
+        "sd": 81,
+        "sp": 104
+    },
+    "SPECIES_HONEDGE": {
+        "hp": 45,
+        "at": 80,
+        "de": 100,
+        "sa": 35,
+        "sd": 37,
+        "sp": 28
+    },
+    "SPECIES_DOUBLADE": {
+        "hp": 59,
+        "at": 110,
+        "de": 150,
+        "sa": 45,
+        "sd": 49,
+        "sp": 35
+    },
+    "SPECIES_AEGISLASH_SHIELD": {
+        "hp": 60,
+        "at": 50,
+        "de": 140,
+        "sa": 50,
+        "sd": 140,
+        "sp": 60
+    },
+    "SPECIES_SPRITZEE": {
+        "hp": 78,
+        "at": 52,
+        "de": 60,
+        "sa": 63,
+        "sd": 65,
+        "sp": 23
+    },
+    "SPECIES_AROMATISSE": {
+        "hp": 101,
+        "at": 72,
+        "de": 72,
+        "sa": 99,
+        "sd": 89,
+        "sp": 29
+    },
+    "SPECIES_SWIRLIX": {
+        "hp": 62,
+        "at": 48,
+        "de": 66,
+        "sa": 59,
+        "sd": 57,
+        "sp": 49
+    },
+    "SPECIES_SLURPUFF": {
+        "hp": 82,
+        "at": 80,
+        "de": 86,
+        "sa": 85,
+        "sd": 75,
+        "sp": 72
+    },
+    "SPECIES_INKAY": {
+        "hp": 53,
+        "at": 54,
+        "de": 53,
+        "sa": 37,
+        "sd": 46,
+        "sp": 45
+    },
+    "SPECIES_MALAMAR": {
+        "hp": 86,
+        "at": 92,
+        "de": 88,
+        "sa": 68,
+        "sd": 75,
+        "sp": 73
+    },
+    "SPECIES_BINACLE": {
+        "hp": 42,
+        "at": 52,
+        "de": 67,
+        "sa": 39,
+        "sd": 56,
+        "sp": 50
+    },
+    "SPECIES_BARBARACLE": {
+        "hp": 72,
+        "at": 105,
+        "de": 115,
+        "sa": 54,
+        "sd": 86,
+        "sp": 68
+    },
+    "SPECIES_SKRELP": {
+        "hp": 50,
+        "at": 60,
+        "de": 60,
+        "sa": 60,
+        "sd": 60,
+        "sp": 30
+    },
+    "SPECIES_DRAGALGE": {
+        "hp": 65,
+        "at": 75,
+        "de": 90,
+        "sa": 97,
+        "sd": 123,
+        "sp": 44
+    },
+    "SPECIES_CLAUNCHER": {
+        "hp": 50,
+        "at": 53,
+        "de": 62,
+        "sa": 58,
+        "sd": 63,
+        "sp": 44
+    },
+    "SPECIES_CLAWITZER": {
+        "hp": 71,
+        "at": 73,
+        "de": 88,
+        "sa": 120,
+        "sd": 89,
+        "sp": 59
+    },
+    "SPECIES_HELIOPTILE": {
+        "hp": 44,
+        "at": 38,
+        "de": 33,
+        "sa": 61,
+        "sd": 43,
+        "sp": 70
+    },
+    "SPECIES_HELIOLISK": {
+        "hp": 62,
+        "at": 55,
+        "de": 52,
+        "sa": 109,
+        "sd": 94,
+        "sp": 109
+    },
+    "SPECIES_TYRUNT": {
+        "hp": 58,
+        "at": 89,
+        "de": 77,
+        "sa": 45,
+        "sd": 45,
+        "sp": 48
+    },
+    "SPECIES_TYRANTRUM": {
+        "hp": 82,
+        "at": 121,
+        "de": 119,
+        "sa": 69,
+        "sd": 59,
+        "sp": 71
+    },
+    "SPECIES_AMAURA": {
+        "hp": 77,
+        "at": 59,
+        "de": 50,
+        "sa": 67,
+        "sd": 63,
+        "sp": 46
+    },
+    "SPECIES_AURORUS": {
+        "hp": 123,
+        "at": 77,
+        "de": 72,
+        "sa": 99,
+        "sd": 92,
+        "sp": 58
+    },
+    "SPECIES_SYLVEON": {
+        "hp": 95,
+        "at": 65,
+        "de": 65,
+        "sa": 110,
+        "sd": 130,
+        "sp": 60
+    },
+    "SPECIES_HAWLUCHA": {
+        "hp": 78,
+        "at": 92,
+        "de": 75,
+        "sa": 74,
+        "sd": 63,
+        "sp": 118
+    },
+    "SPECIES_DEDENNE": {
+        "hp": 67,
+        "at": 58,
+        "de": 57,
+        "sa": 81,
+        "sd": 67,
+        "sp": 101
+    },
+    "SPECIES_CARBINK": {
+        "hp": 50,
+        "at": 50,
+        "de": 150,
+        "sa": 50,
+        "sd": 150,
+        "sp": 50
+    },
+    "SPECIES_GOOMY": {
+        "hp": 45,
+        "at": 50,
+        "de": 35,
+        "sa": 55,
+        "sd": 75,
+        "sp": 40
+    },
+    "SPECIES_SLIGGOO": {
+        "hp": 68,
+        "at": 75,
+        "de": 53,
+        "sa": 83,
+        "sd": 113,
+        "sp": 60
+    },
+    "SPECIES_GOODRA": {
+        "hp": 90,
+        "at": 100,
+        "de": 70,
+        "sa": 110,
+        "sd": 150,
+        "sp": 80
+    },
+    "SPECIES_KLEFKI": {
+        "hp": 57,
+        "at": 80,
+        "de": 91,
+        "sa": 80,
+        "sd": 87,
+        "sp": 75
+    },
+    "SPECIES_PHANTUMP": {
+        "hp": 43,
+        "at": 70,
+        "de": 48,
+        "sa": 50,
+        "sd": 60,
+        "sp": 38
+    },
+    "SPECIES_TREVENANT": {
+        "hp": 85,
+        "at": 110,
+        "de": 76,
+        "sa": 65,
+        "sd": 82,
+        "sp": 56
+    },
+    "SPECIES_PUMPKABOO_AVERAGE": {
+        "hp": 49,
+        "at": 66,
+        "de": 70,
+        "sa": 44,
+        "sd": 55,
+        "sp": 51
+    },
+    "SPECIES_GOURGEIST_AVERAGE": {
+        "hp": 65,
+        "at": 90,
+        "de": 122,
+        "sa": 58,
+        "sd": 75,
+        "sp": 84
+    },
+    "SPECIES_BERGMITE": {
+        "hp": 55,
+        "at": 69,
+        "de": 85,
+        "sa": 32,
+        "sd": 35,
+        "sp": 28
+    },
+    "SPECIES_AVALUGG": {
+        "hp": 95,
+        "at": 117,
+        "de": 184,
+        "sa": 44,
+        "sd": 46,
+        "sp": 28
+    },
+    "SPECIES_NOIBAT": {
+        "hp": 40,
+        "at": 30,
+        "de": 35,
+        "sa": 45,
+        "sd": 40,
+        "sp": 55
+    },
+    "SPECIES_NOIVERN": {
+        "hp": 85,
+        "at": 70,
+        "de": 80,
+        "sa": 97,
+        "sd": 80,
+        "sp": 123
+    },
+    "SPECIES_XERNEAS": {
+        "hp": 126,
+        "at": 131,
+        "de": 95,
+        "sa": 131,
+        "sd": 98,
+        "sp": 99
+    },
+    "SPECIES_YVELTAL": {
+        "hp": 126,
+        "at": 131,
+        "de": 95,
+        "sa": 131,
+        "sd": 98,
+        "sp": 99
+    },
+    "SPECIES_ZYGARDE_50": {
+        "hp": 108,
+        "at": 100,
+        "de": 121,
+        "sa": 81,
+        "sd": 95,
+        "sp": 95
+    },
+    "SPECIES_DIANCIE": {
+        "hp": 50,
+        "at": 100,
+        "de": 150,
+        "sa": 100,
+        "sd": 150,
+        "sp": 50
+    },
+    "SPECIES_HOOPA": {
+        "hp": 80,
+        "at": 110,
+        "de": 60,
+        "sa": 150,
+        "sd": 130,
+        "sp": 70
+    },
+    "SPECIES_VOLCANION": {
+        "hp": 80,
+        "at": 110,
+        "de": 120,
+        "sa": 130,
+        "sd": 90,
+        "sp": 70
+    },
+    "SPECIES_ROWLET": {
+        "hp": 68,
+        "at": 55,
+        "de": 55,
+        "sa": 50,
+        "sd": 50,
+        "sp": 42
+    },
+    "SPECIES_DARTRIX": {
+        "hp": 78,
+        "at": 75,
+        "de": 75,
+        "sa": 70,
+        "sd": 70,
+        "sp": 52
+    },
+    "SPECIES_DECIDUEYE": {
+        "hp": 78,
+        "at": 107,
+        "de": 75,
+        "sa": 100,
+        "sd": 100,
+        "sp": 70
+    },
+    "SPECIES_LITTEN": {
+        "hp": 45,
+        "at": 65,
+        "de": 40,
+        "sa": 60,
+        "sd": 40,
+        "sp": 70
+    },
+    "SPECIES_TORRACAT": {
+        "hp": 65,
+        "at": 85,
+        "de": 50,
+        "sa": 80,
+        "sd": 50,
+        "sp": 90
+    },
+    "SPECIES_INCINEROAR": {
+        "hp": 95,
+        "at": 115,
+        "de": 90,
+        "sa": 80,
+        "sd": 90,
+        "sp": 60
+    },
+    "SPECIES_POPPLIO": {
+        "hp": 50,
+        "at": 54,
+        "de": 54,
+        "sa": 66,
+        "sd": 56,
+        "sp": 40
+    },
+    "SPECIES_BRIONNE": {
+        "hp": 60,
+        "at": 69,
+        "de": 69,
+        "sa": 91,
+        "sd": 81,
+        "sp": 50
+    },
+    "SPECIES_PRIMARINA": {
+        "hp": 80,
+        "at": 74,
+        "de": 74,
+        "sa": 126,
+        "sd": 116,
+        "sp": 60
+    },
+    "SPECIES_PIKIPEK": {
+        "hp": 35,
+        "at": 75,
+        "de": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 65
+    },
+    "SPECIES_TRUMBEAK": {
+        "hp": 55,
+        "at": 85,
+        "de": 50,
+        "sa": 40,
+        "sd": 50,
+        "sp": 75
+    },
+    "SPECIES_TOUCANNON": {
+        "hp": 80,
+        "at": 120,
+        "de": 75,
+        "sa": 75,
+        "sd": 75,
+        "sp": 60
+    },
+    "SPECIES_YUNGOOS": {
+        "hp": 48,
+        "at": 70,
+        "de": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 45
+    },
+    "SPECIES_GUMSHOOS": {
+        "hp": 88,
+        "at": 110,
+        "de": 60,
+        "sa": 55,
+        "sd": 60,
+        "sp": 45
+    },
+    "SPECIES_GRUBBIN": {
+        "hp": 47,
+        "at": 62,
+        "de": 45,
+        "sa": 55,
+        "sd": 45,
+        "sp": 46
+    },
+    "SPECIES_CHARJABUG": {
+        "hp": 57,
+        "at": 82,
+        "de": 95,
+        "sa": 55,
+        "sd": 75,
+        "sp": 36
+    },
+    "SPECIES_VIKAVOLT": {
+        "hp": 77,
+        "at": 70,
+        "de": 90,
+        "sa": 145,
+        "sd": 75,
+        "sp": 43
+    },
+    "SPECIES_CRABRAWLER": {
+        "hp": 47,
+        "at": 82,
+        "de": 57,
+        "sa": 42,
+        "sd": 47,
+        "sp": 63
+    },
+    "SPECIES_CRABOMINABLE": {
+        "hp": 97,
+        "at": 132,
+        "de": 77,
+        "sa": 62,
+        "sd": 67,
+        "sp": 43
+    },
+    "SPECIES_ORICORIO_BAILE": {
+        "hp": 75,
+        "at": 70,
+        "de": 70,
+        "sa": 98,
+        "sd": 70,
+        "sp": 93
+    },
+    "SPECIES_CUTIEFLY": {
+        "hp": 40,
+        "at": 45,
+        "de": 40,
+        "sa": 55,
+        "sd": 40,
+        "sp": 84
+    },
+    "SPECIES_RIBOMBEE": {
+        "hp": 60,
+        "at": 55,
+        "de": 60,
+        "sa": 95,
+        "sd": 70,
+        "sp": 124
+    },
+    "SPECIES_ROCKRUFF": {
+        "hp": 45,
+        "at": 65,
+        "de": 40,
+        "sa": 30,
+        "sd": 40,
+        "sp": 60
+    },
+    "SPECIES_LYCANROC_MIDDAY": {
+        "hp": 75,
+        "at": 115,
+        "de": 65,
+        "sa": 55,
+        "sd": 65,
+        "sp": 112
+    },
+    "SPECIES_WISHIWASHI_SOLO": {
+        "hp": 45,
+        "at": 20,
+        "de": 20,
+        "sa": 25,
+        "sd": 25,
+        "sp": 40
+    },
+    "SPECIES_MAREANIE": {
+        "hp": 50,
+        "at": 53,
+        "de": 62,
+        "sa": 43,
+        "sd": 52,
+        "sp": 45
+    },
+    "SPECIES_TOXAPEX": {
+        "hp": 50,
+        "at": 63,
+        "de": 152,
+        "sa": 53,
+        "sd": 142,
+        "sp": 35
+    },
+    "SPECIES_MUDBRAY": {
+        "hp": 70,
+        "at": 100,
+        "de": 70,
+        "sa": 45,
+        "sd": 55,
+        "sp": 45
+    },
+    "SPECIES_MUDSDALE": {
+        "hp": 100,
+        "at": 125,
+        "de": 100,
+        "sa": 55,
+        "sd": 85,
+        "sp": 35
+    },
+    "SPECIES_DEWPIDER": {
+        "hp": 38,
+        "at": 40,
+        "de": 52,
+        "sa": 40,
+        "sd": 72,
+        "sp": 27
+    },
+    "SPECIES_ARAQUANID": {
+        "hp": 68,
+        "at": 70,
+        "de": 92,
+        "sa": 50,
+        "sd": 132,
+        "sp": 42
+    },
+    "SPECIES_FOMANTIS": {
+        "hp": 40,
+        "at": 55,
+        "de": 35,
+        "sa": 50,
+        "sd": 35,
+        "sp": 35
+    },
+    "SPECIES_LURANTIS": {
+        "hp": 70,
+        "at": 105,
+        "de": 90,
+        "sa": 80,
+        "sd": 90,
+        "sp": 45
+    },
+    "SPECIES_MORELULL": {
+        "hp": 40,
+        "at": 35,
+        "de": 55,
+        "sa": 65,
+        "sd": 75,
+        "sp": 15
+    },
+    "SPECIES_SHIINOTIC": {
+        "hp": 60,
+        "at": 45,
+        "de": 80,
+        "sa": 90,
+        "sd": 100,
+        "sp": 30
+    },
+    "SPECIES_SALANDIT": {
+        "hp": 48,
+        "at": 44,
+        "de": 40,
+        "sa": 71,
+        "sd": 40,
+        "sp": 77
+    },
+    "SPECIES_SALAZZLE": {
+        "hp": 68,
+        "at": 64,
+        "de": 60,
+        "sa": 111,
+        "sd": 60,
+        "sp": 117
+    },
+    "SPECIES_STUFFUL": {
+        "hp": 70,
+        "at": 75,
+        "de": 50,
+        "sa": 45,
+        "sd": 50,
+        "sp": 50
+    },
+    "SPECIES_BEWEAR": {
+        "hp": 120,
+        "at": 125,
+        "de": 80,
+        "sa": 55,
+        "sd": 60,
+        "sp": 60
+    },
+    "SPECIES_BOUNSWEET": {
+        "hp": 42,
+        "at": 30,
+        "de": 38,
+        "sa": 30,
+        "sd": 38,
+        "sp": 32
+    },
+    "SPECIES_STEENEE": {
+        "hp": 52,
+        "at": 40,
+        "de": 48,
+        "sa": 40,
+        "sd": 48,
+        "sp": 62
+    },
+    "SPECIES_TSAREENA": {
+        "hp": 72,
+        "at": 120,
+        "de": 98,
+        "sa": 50,
+        "sd": 98,
+        "sp": 72
+    },
+    "SPECIES_COMFEY": {
+        "hp": 51,
+        "at": 52,
+        "de": 90,
+        "sa": 82,
+        "sd": 110,
+        "sp": 100
+    },
+    "SPECIES_ORANGURU": {
+        "hp": 90,
+        "at": 60,
+        "de": 80,
+        "sa": 90,
+        "sd": 110,
+        "sp": 60
+    },
+    "SPECIES_PASSIMIAN": {
+        "hp": 100,
+        "at": 120,
+        "de": 90,
+        "sa": 40,
+        "sd": 60,
+        "sp": 80
+    },
+    "SPECIES_WIMPOD": {
+        "hp": 25,
+        "at": 35,
+        "de": 40,
+        "sa": 20,
+        "sd": 30,
+        "sp": 80
+    },
+    "SPECIES_GOLISOPOD": {
+        "hp": 75,
+        "at": 125,
+        "de": 140,
+        "sa": 60,
+        "sd": 90,
+        "sp": 40
+    },
+    "SPECIES_SANDYGAST": {
+        "hp": 55,
+        "at": 55,
+        "de": 80,
+        "sa": 70,
+        "sd": 45,
+        "sp": 15
+    },
+    "SPECIES_PALOSSAND": {
+        "hp": 85,
+        "at": 75,
+        "de": 110,
+        "sa": 100,
+        "sd": 75,
+        "sp": 35
+    },
+    "SPECIES_PYUKUMUKU": {
+        "hp": 55,
+        "at": 60,
+        "de": 130,
+        "sa": 30,
+        "sd": 130,
+        "sp": 5
+    },
+    "SPECIES_TYPE_NULL": {
+        "hp": 95,
+        "at": 95,
+        "de": 95,
+        "sa": 95,
+        "sd": 95,
+        "sp": 59
+    },
+    "SPECIES_SILVALLY": {
+        "hp": 95,
+        "at": 95,
+        "de": 95,
+        "sa": 95,
+        "sd": 95,
+        "sp": 95
+    },
+    "SPECIES_MINIOR_RED_METEOR": {
+        "hp": 60,
+        "at": 60,
+        "de": 100,
+        "sa": 60,
+        "sd": 100,
+        "sp": 60
+    },
+    "SPECIES_KOMALA": {
+        "hp": 65,
+        "at": 115,
+        "de": 65,
+        "sa": 75,
+        "sd": 95,
+        "sp": 65
+    },
+    "SPECIES_TURTONATOR": {
+        "hp": 60,
+        "at": 78,
+        "de": 135,
+        "sa": 91,
+        "sd": 85,
+        "sp": 36
+    },
+    "SPECIES_TOGEDEMARU": {
+        "hp": 65,
+        "at": 98,
+        "de": 63,
+        "sa": 40,
+        "sd": 73,
+        "sp": 96
+    },
+    "SPECIES_MIMIKYU_DISGUISED": {
+        "hp": 55,
+        "at": 90,
+        "de": 80,
+        "sa": 50,
+        "sd": 105,
+        "sp": 96
+    },
+    "SPECIES_BRUXISH": {
+        "hp": 68,
+        "at": 105,
+        "de": 70,
+        "sa": 70,
+        "sd": 70,
+        "sp": 92
+    },
+    "SPECIES_DRAMPA": {
+        "hp": 78,
+        "at": 60,
+        "de": 85,
+        "sa": 135,
+        "sd": 91,
+        "sp": 36
+    },
+    "SPECIES_DHELMISE": {
+        "hp": 70,
+        "at": 131,
+        "de": 100,
+        "sa": 86,
+        "sd": 90,
+        "sp": 40
+    },
+    "SPECIES_JANGMO_O": {
+        "hp": 45,
+        "at": 55,
+        "de": 65,
+        "sa": 45,
+        "sd": 45,
+        "sp": 45
+    },
+    "SPECIES_HAKAMO_O": {
+        "hp": 55,
+        "at": 75,
+        "de": 90,
+        "sa": 65,
+        "sd": 70,
+        "sp": 65
+    },
+    "SPECIES_KOMMO_O": {
+        "hp": 75,
+        "at": 110,
+        "de": 125,
+        "sa": 100,
+        "sd": 105,
+        "sp": 85
+    },
+    "SPECIES_TAPU_KOKO": {
+        "hp": 70,
+        "at": 115,
+        "de": 85,
+        "sa": 95,
+        "sd": 75,
+        "sp": 130
+    },
+    "SPECIES_TAPU_LELE": {
+        "hp": 70,
+        "at": 85,
+        "de": 75,
+        "sa": 130,
+        "sd": 115,
+        "sp": 95
+    },
+    "SPECIES_TAPU_BULU": {
+        "hp": 70,
+        "at": 130,
+        "de": 115,
+        "sa": 85,
+        "sd": 95,
+        "sp": 75
+    },
+    "SPECIES_TAPU_FINI": {
+        "hp": 70,
+        "at": 75,
+        "de": 115,
+        "sa": 95,
+        "sd": 130,
+        "sp": 85
+    },
+    "SPECIES_COSMOG": {
+        "hp": 43,
+        "at": 29,
+        "de": 31,
+        "sa": 29,
+        "sd": 31,
+        "sp": 37
+    },
+    "SPECIES_COSMOEM": {
+        "hp": 43,
+        "at": 29,
+        "de": 131,
+        "sa": 29,
+        "sd": 131,
+        "sp": 37
+    },
+    "SPECIES_SOLGALEO": {
+        "hp": 137,
+        "at": 137,
+        "de": 107,
+        "sa": 113,
+        "sd": 89,
+        "sp": 97
+    },
+    "SPECIES_LUNALA": {
+        "hp": 137,
+        "at": 113,
+        "de": 89,
+        "sa": 137,
+        "sd": 107,
+        "sp": 97
+    },
+    "SPECIES_NIHILEGO": {
+        "hp": 109,
+        "at": 53,
+        "de": 47,
+        "sa": 127,
+        "sd": 131,
+        "sp": 103
+    },
+    "SPECIES_BUZZWOLE": {
+        "hp": 107,
+        "at": 139,
+        "de": 139,
+        "sa": 53,
+        "sd": 53,
+        "sp": 79
+    },
+    "SPECIES_PHEROMOSA": {
+        "hp": 71,
+        "at": 137,
+        "de": 37,
+        "sa": 137,
+        "sd": 37,
+        "sp": 151
+    },
+    "SPECIES_XURKITREE": {
+        "hp": 83,
+        "at": 89,
+        "de": 71,
+        "sa": 173,
+        "sd": 71,
+        "sp": 83
+    },
+    "SPECIES_CELESTEELA": {
+        "hp": 97,
+        "at": 101,
+        "de": 103,
+        "sa": 107,
+        "sd": 101,
+        "sp": 61
+    },
+    "SPECIES_KARTANA": {
+        "hp": 59,
+        "at": 181,
+        "de": 131,
+        "sa": 59,
+        "sd": 31,
+        "sp": 109
+    },
+    "SPECIES_GUZZLORD": {
+        "hp": 223,
+        "at": 101,
+        "de": 53,
+        "sa": 97,
+        "sd": 53,
+        "sp": 43
+    },
+    "SPECIES_NECROZMA": {
+        "hp": 97,
+        "at": 107,
+        "de": 101,
+        "sa": 127,
+        "sd": 89,
+        "sp": 79
+    },
+    "SPECIES_MAGEARNA": {
+        "hp": 80,
+        "at": 95,
+        "de": 115,
+        "sa": 130,
+        "sd": 115,
+        "sp": 65
+    },
+    "SPECIES_MARSHADOW": {
+        "hp": 90,
+        "at": 125,
+        "de": 80,
+        "sa": 90,
+        "sd": 90,
+        "sp": 125
+    },
+    "SPECIES_POIPOLE": {
+        "hp": 67,
+        "at": 73,
+        "de": 67,
+        "sa": 73,
+        "sd": 67,
+        "sp": 73
+    },
+    "SPECIES_NAGANADEL": {
+        "hp": 73,
+        "at": 73,
+        "de": 73,
+        "sa": 127,
+        "sd": 73,
+        "sp": 121
+    },
+    "SPECIES_STAKATAKA": {
+        "hp": 61,
+        "at": 131,
+        "de": 211,
+        "sa": 53,
+        "sd": 101,
+        "sp": 13
+    },
+    "SPECIES_BLACEPHALON": {
+        "hp": 53,
+        "at": 127,
+        "de": 53,
+        "sa": 151,
+        "sd": 79,
+        "sp": 107
+    },
+    "SPECIES_ZERAORA": {
+        "hp": 88,
+        "at": 112,
+        "de": 75,
+        "sa": 102,
+        "sd": 80,
+        "sp": 143
+    },
+    "SPECIES_MELTAN": {
+        "hp": 46,
+        "at": 65,
+        "de": 65,
+        "sa": 55,
+        "sd": 35,
+        "sp": 34
+    },
+    "SPECIES_MELMETAL": {
+        "hp": 135,
+        "at": 143,
+        "de": 143,
+        "sa": 80,
+        "sd": 65,
+        "sp": 34
+    },
+    "SPECIES_GROOKEY": {
+        "hp": 50,
+        "at": 65,
+        "de": 50,
+        "sa": 40,
+        "sd": 40,
+        "sp": 65
+    },
+    "SPECIES_THWACKEY": {
+        "hp": 70,
+        "at": 85,
+        "de": 70,
+        "sa": 55,
+        "sd": 60,
+        "sp": 80
+    },
+    "SPECIES_RILLABOOM": {
+        "hp": 100,
+        "at": 125,
+        "de": 90,
+        "sa": 60,
+        "sd": 70,
+        "sp": 85
+    },
+    "SPECIES_SCORBUNNY": {
+        "hp": 50,
+        "at": 71,
+        "de": 40,
+        "sa": 40,
+        "sd": 40,
+        "sp": 69
+    },
+    "SPECIES_RABOOT": {
+        "hp": 65,
+        "at": 86,
+        "de": 60,
+        "sa": 55,
+        "sd": 60,
+        "sp": 94
+    },
+    "SPECIES_CINDERACE": {
+        "hp": 80,
+        "at": 116,
+        "de": 75,
+        "sa": 65,
+        "sd": 75,
+        "sp": 119
+    },
+    "SPECIES_SOBBLE": {
+        "hp": 50,
+        "at": 40,
+        "de": 40,
+        "sa": 70,
+        "sd": 40,
+        "sp": 70
+    },
+    "SPECIES_DRIZZILE": {
+        "hp": 65,
+        "at": 60,
+        "de": 55,
+        "sa": 95,
+        "sd": 55,
+        "sp": 90
+    },
+    "SPECIES_INTELEON": {
+        "hp": 70,
+        "at": 85,
+        "de": 65,
+        "sa": 125,
+        "sd": 65,
+        "sp": 120
+    },
+    "SPECIES_SKWOVET": {
+        "hp": 70,
+        "at": 55,
+        "de": 55,
+        "sa": 35,
+        "sd": 35,
+        "sp": 25
+    },
+    "SPECIES_GREEDENT": {
+        "hp": 120,
+        "at": 95,
+        "de": 95,
+        "sa": 55,
+        "sd": 75,
+        "sp": 20
+    },
+    "SPECIES_ROOKIDEE": {
+        "hp": 38,
+        "at": 47,
+        "de": 35,
+        "sa": 33,
+        "sd": 35,
+        "sp": 57
+    },
+    "SPECIES_CORVISQUIRE": {
+        "hp": 68,
+        "at": 67,
+        "de": 55,
+        "sa": 43,
+        "sd": 55,
+        "sp": 77
+    },
+    "SPECIES_CORVIKNIGHT": {
+        "hp": 98,
+        "at": 87,
+        "de": 105,
+        "sa": 53,
+        "sd": 85,
+        "sp": 67
+    },
+    "SPECIES_BLIPBUG": {
+        "hp": 25,
+        "at": 20,
+        "de": 20,
+        "sa": 25,
+        "sd": 45,
+        "sp": 45
+    },
+    "SPECIES_DOTTLER": {
+        "hp": 50,
+        "at": 35,
+        "de": 80,
+        "sa": 50,
+        "sd": 90,
+        "sp": 30
+    },
+    "SPECIES_ORBEETLE": {
+        "hp": 60,
+        "at": 45,
+        "de": 110,
+        "sa": 80,
+        "sd": 120,
+        "sp": 90
+    },
+    "SPECIES_NICKIT": {
+        "hp": 40,
+        "at": 28,
+        "de": 28,
+        "sa": 47,
+        "sd": 52,
+        "sp": 50
+    },
+    "SPECIES_THIEVUL": {
+        "hp": 70,
+        "at": 58,
+        "de": 58,
+        "sa": 87,
+        "sd": 92,
+        "sp": 90
+    },
+    "SPECIES_GOSSIFLEUR": {
+        "hp": 40,
+        "at": 40,
+        "de": 60,
+        "sa": 40,
+        "sd": 60,
+        "sp": 10
+    },
+    "SPECIES_ELDEGOSS": {
+        "hp": 60,
+        "at": 50,
+        "de": 90,
+        "sa": 80,
+        "sd": 120,
+        "sp": 60
+    },
+    "SPECIES_WOOLOO": {
+        "hp": 42,
+        "at": 40,
+        "de": 55,
+        "sa": 40,
+        "sd": 45,
+        "sp": 48
+    },
+    "SPECIES_DUBWOOL": {
+        "hp": 72,
+        "at": 80,
+        "de": 100,
+        "sa": 60,
+        "sd": 90,
+        "sp": 88
+    },
+    "SPECIES_CHEWTLE": {
+        "hp": 50,
+        "at": 64,
+        "de": 50,
+        "sa": 38,
+        "sd": 38,
+        "sp": 44
+    },
+    "SPECIES_DREDNAW": {
+        "hp": 90,
+        "at": 115,
+        "de": 90,
+        "sa": 48,
+        "sd": 68,
+        "sp": 74
+    },
+    "SPECIES_YAMPER": {
+        "hp": 59,
+        "at": 45,
+        "de": 50,
+        "sa": 40,
+        "sd": 50,
+        "sp": 26
+    },
+    "SPECIES_BOLTUND": {
+        "hp": 69,
+        "at": 90,
+        "de": 60,
+        "sa": 90,
+        "sd": 60,
+        "sp": 121
+    },
+    "SPECIES_ROLYCOLY": {
+        "hp": 30,
+        "at": 40,
+        "de": 50,
+        "sa": 40,
+        "sd": 50,
+        "sp": 30
+    },
+    "SPECIES_CARKOL": {
+        "hp": 80,
+        "at": 60,
+        "de": 90,
+        "sa": 60,
+        "sd": 70,
+        "sp": 50
+    },
+    "SPECIES_COALOSSAL": {
+        "hp": 110,
+        "at": 80,
+        "de": 120,
+        "sa": 80,
+        "sd": 90,
+        "sp": 30
+    },
+    "SPECIES_APPLIN": {
+        "hp": 40,
+        "at": 40,
+        "de": 80,
+        "sa": 40,
+        "sd": 40,
+        "sp": 20
+    },
+    "SPECIES_FLAPPLE": {
+        "hp": 70,
+        "at": 110,
+        "de": 80,
+        "sa": 95,
+        "sd": 60,
+        "sp": 70
+    },
+    "SPECIES_APPLETUN": {
+        "hp": 110,
+        "at": 85,
+        "de": 80,
+        "sa": 100,
+        "sd": 80,
+        "sp": 30
+    },
+    "SPECIES_SILICOBRA": {
+        "hp": 52,
+        "at": 57,
+        "de": 75,
+        "sa": 35,
+        "sd": 50,
+        "sp": 46
+    },
+    "SPECIES_SANDACONDA": {
+        "hp": 72,
+        "at": 107,
+        "de": 125,
+        "sa": 65,
+        "sd": 70,
+        "sp": 71
+    },
+    "SPECIES_CRAMORANT": {
+        "hp": 70,
+        "at": 85,
+        "de": 55,
+        "sa": 85,
+        "sd": 95,
+        "sp": 85
+    },
+    "SPECIES_ARROKUDA": {
+        "hp": 41,
+        "at": 63,
+        "de": 40,
+        "sa": 40,
+        "sd": 30,
+        "sp": 66
+    },
+    "SPECIES_BARRASKEWDA": {
+        "hp": 61,
+        "at": 123,
+        "de": 60,
+        "sa": 60,
+        "sd": 50,
+        "sp": 136
+    },
+    "SPECIES_TOXEL": {
+        "hp": 40,
+        "at": 38,
+        "de": 35,
+        "sa": 54,
+        "sd": 35,
+        "sp": 40
+    },
+    "SPECIES_TOXTRICITY_AMPED": {
+        "hp": 75,
+        "at": 98,
+        "de": 70,
+        "sa": 114,
+        "sd": 70,
+        "sp": 75
+    },
+    "SPECIES_SIZZLIPEDE": {
+        "hp": 50,
+        "at": 65,
+        "de": 45,
+        "sa": 50,
+        "sd": 50,
+        "sp": 45
+    },
+    "SPECIES_CENTISKORCH": {
+        "hp": 100,
+        "at": 115,
+        "de": 65,
+        "sa": 90,
+        "sd": 90,
+        "sp": 65
+    },
+    "SPECIES_CLOBBOPUS": {
+        "hp": 50,
+        "at": 68,
+        "de": 60,
+        "sa": 50,
+        "sd": 50,
+        "sp": 32
+    },
+    "SPECIES_GRAPPLOCT": {
+        "hp": 80,
+        "at": 118,
+        "de": 90,
+        "sa": 70,
+        "sd": 80,
+        "sp": 42
+    },
+    "SPECIES_SINISTEA": {
+        "hp": 40,
+        "at": 45,
+        "de": 45,
+        "sa": 74,
+        "sd": 54,
+        "sp": 50
+    },
+    "SPECIES_POLTEAGEIST": {
+        "hp": 60,
+        "at": 65,
+        "de": 65,
+        "sa": 134,
+        "sd": 114,
+        "sp": 70
+    },
+    "SPECIES_HATENNA": {
+        "hp": 42,
+        "at": 30,
+        "de": 45,
+        "sa": 56,
+        "sd": 53,
+        "sp": 39
+    },
+    "SPECIES_HATTREM": {
+        "hp": 57,
+        "at": 40,
+        "de": 65,
+        "sa": 86,
+        "sd": 73,
+        "sp": 49
+    },
+    "SPECIES_HATTERENE": {
+        "hp": 57,
+        "at": 90,
+        "de": 95,
+        "sa": 136,
+        "sd": 103,
+        "sp": 29
+    },
+    "SPECIES_IMPIDIMP": {
+        "hp": 45,
+        "at": 45,
+        "de": 30,
+        "sa": 55,
+        "sd": 40,
+        "sp": 50
+    },
+    "SPECIES_MORGREM": {
+        "hp": 65,
+        "at": 60,
+        "de": 45,
+        "sa": 75,
+        "sd": 55,
+        "sp": 70
+    },
+    "SPECIES_GRIMMSNARL": {
+        "hp": 95,
+        "at": 120,
+        "de": 65,
+        "sa": 95,
+        "sd": 75,
+        "sp": 60
+    },
+    "SPECIES_OBSTAGOON": {
+        "hp": 93,
+        "at": 90,
+        "de": 101,
+        "sa": 60,
+        "sd": 81,
+        "sp": 95
+    },
+    "SPECIES_PERRSERKER": {
+        "hp": 70,
+        "at": 110,
+        "de": 100,
+        "sa": 50,
+        "sd": 60,
+        "sp": 50
+    },
+    "SPECIES_CURSOLA": {
+        "hp": 60,
+        "at": 95,
+        "de": 50,
+        "sa": 145,
+        "sd": 130,
+        "sp": 30
+    },
+    "SPECIES_SIRFETCHD": {
+        "hp": 62,
+        "at": 135,
+        "de": 95,
+        "sa": 68,
+        "sd": 82,
+        "sp": 65
+    },
+    "SPECIES_MR_RIME": {
+        "hp": 80,
+        "at": 85,
+        "de": 75,
+        "sa": 110,
+        "sd": 100,
+        "sp": 70
+    },
+    "SPECIES_RUNERIGUS": {
+        "hp": 58,
+        "at": 95,
+        "de": 145,
+        "sa": 50,
+        "sd": 105,
+        "sp": 30
+    },
+    "SPECIES_MILCERY": {
+        "hp": 45,
+        "at": 40,
+        "de": 40,
+        "sa": 50,
+        "sd": 61,
+        "sp": 34
+    },
+    "SPECIES_ALCREMIE": {
+        "hp": 65,
+        "at": 60,
+        "de": 75,
+        "sa": 110,
+        "sd": 121,
+        "sp": 64
+    },
+    "SPECIES_FALINKS": {
+        "hp": 65,
+        "at": 100,
+        "de": 100,
+        "sa": 70,
+        "sd": 60,
+        "sp": 75
+    },
+    "SPECIES_PINCURCHIN": {
+        "hp": 48,
+        "at": 101,
+        "de": 95,
+        "sa": 91,
+        "sd": 85,
+        "sp": 15
+    },
+    "SPECIES_SNOM": {
+        "hp": 30,
+        "at": 25,
+        "de": 35,
+        "sa": 45,
+        "sd": 30,
+        "sp": 20
+    },
+    "SPECIES_FROSMOTH": {
+        "hp": 70,
+        "at": 65,
+        "de": 60,
+        "sa": 125,
+        "sd": 90,
+        "sp": 65
+    },
+    "SPECIES_STONJOURNER": {
+        "hp": 100,
+        "at": 125,
+        "de": 135,
+        "sa": 20,
+        "sd": 20,
+        "sp": 70
+    },
+    "SPECIES_EISCUE_ICE": {
+        "hp": 75,
+        "at": 80,
+        "de": 110,
+        "sa": 65,
+        "sd": 90,
+        "sp": 50
+    },
+    "SPECIES_INDEEDEE_MALE": {
+        "hp": 60,
+        "at": 65,
+        "de": 55,
+        "sa": 105,
+        "sd": 95,
+        "sp": 95
+    },
+    "SPECIES_MORPEKO_FULL_BELLY": {
+        "hp": 58,
+        "at": 95,
+        "de": 58,
+        "sa": 70,
+        "sd": 58,
+        "sp": 97
+    },
+    "SPECIES_CUFANT": {
+        "hp": 72,
+        "at": 80,
+        "de": 49,
+        "sa": 40,
+        "sd": 49,
+        "sp": 40
+    },
+    "SPECIES_COPPERAJAH": {
+        "hp": 122,
+        "at": 130,
+        "de": 69,
+        "sa": 80,
+        "sd": 69,
+        "sp": 30
+    },
+    "SPECIES_DRACOZOLT": {
+        "hp": 90,
+        "at": 100,
+        "de": 90,
+        "sa": 80,
+        "sd": 70,
+        "sp": 75
+    },
+    "SPECIES_ARCTOZOLT": {
+        "hp": 90,
+        "at": 100,
+        "de": 90,
+        "sa": 90,
+        "sd": 80,
+        "sp": 55
+    },
+    "SPECIES_DRACOVISH": {
+        "hp": 90,
+        "at": 90,
+        "de": 100,
+        "sa": 70,
+        "sd": 80,
+        "sp": 75
+    },
+    "SPECIES_ARCTOVISH": {
+        "hp": 90,
+        "at": 90,
+        "de": 100,
+        "sa": 80,
+        "sd": 90,
+        "sp": 55
+    },
+    "SPECIES_DURALUDON": {
+        "hp": 70,
+        "at": 95,
+        "de": 115,
+        "sa": 120,
+        "sd": 50,
+        "sp": 85
+    },
+    "SPECIES_DREEPY": {
+        "hp": 28,
+        "at": 60,
+        "de": 30,
+        "sa": 40,
+        "sd": 30,
+        "sp": 82
+    },
+    "SPECIES_DRAKLOAK": {
+        "hp": 68,
+        "at": 80,
+        "de": 50,
+        "sa": 60,
+        "sd": 50,
+        "sp": 102
+    },
+    "SPECIES_DRAGAPULT": {
+        "hp": 88,
+        "at": 120,
+        "de": 75,
+        "sa": 100,
+        "sd": 75,
+        "sp": 142
+    },
+    "SPECIES_ZACIAN": {
+        "hp": 92,
+        "at": 120,
+        "de": 115,
+        "sa": 80,
+        "sd": 115,
+        "sp": 138
+    },
+    "SPECIES_ZAMAZENTA": {
+        "hp": 92,
+        "at": 120,
+        "de": 115,
+        "sa": 80,
+        "sd": 115,
+        "sp": 138
+    },
+    "SPECIES_ETERNATUS": {
+        "hp": 140,
+        "at": 85,
+        "de": 95,
+        "sa": 145,
+        "sd": 95,
+        "sp": 130
+    },
+    "SPECIES_KUBFU": {
+        "hp": 60,
+        "at": 90,
+        "de": 60,
+        "sa": 53,
+        "sd": 50,
+        "sp": 72
+    },
+    "SPECIES_URSHIFU_SINGLE_STRIKE": {
+        "hp": 100,
+        "at": 130,
+        "de": 100,
+        "sa": 63,
+        "sd": 60,
+        "sp": 97
+    },
+    "SPECIES_ZARUDE": {
+        "hp": 105,
+        "at": 120,
+        "de": 105,
+        "sa": 70,
+        "sd": 95,
+        "sp": 105
+    },
+    "SPECIES_REGIELEKI": {
+        "hp": 80,
+        "at": 100,
+        "de": 50,
+        "sa": 100,
+        "sd": 50,
+        "sp": 200
+    },
+    "SPECIES_REGIDRAGO": {
+        "hp": 200,
+        "at": 100,
+        "de": 50,
+        "sa": 100,
+        "sd": 50,
+        "sp": 80
+    },
+    "SPECIES_GLASTRIER": {
+        "hp": 100,
+        "at": 145,
+        "de": 130,
+        "sa": 65,
+        "sd": 110,
+        "sp": 30
+    },
+    "SPECIES_SPECTRIER": {
+        "hp": 100,
+        "at": 65,
+        "de": 60,
+        "sa": 145,
+        "sd": 80,
+        "sp": 130
+    },
+    "SPECIES_CALYREX": {
+        "hp": 100,
+        "at": 80,
+        "de": 80,
+        "sa": 80,
+        "sd": 80,
+        "sp": 80
+    },
+    "SPECIES_WYRDEER": {
+        "hp": 103,
+        "at": 105,
+        "de": 72,
+        "sa": 105,
+        "sd": 75,
+        "sp": 65
+    },
+    "SPECIES_KLEAVOR": {
+        "hp": 70,
+        "at": 135,
+        "de": 95,
+        "sa": 45,
+        "sd": 70,
+        "sp": 85
+    },
+    "SPECIES_URSALUNA": {
+        "hp": 130,
+        "at": 140,
+        "de": 105,
+        "sa": 45,
+        "sd": 80,
+        "sp": 50
+    },
+    "SPECIES_BASCULEGION_MALE": {
+        "hp": 120,
+        "at": 112,
+        "de": 65,
+        "sa": 80,
+        "sd": 75,
+        "sp": 78
+    },
+    "SPECIES_SNEASLER": {
+        "hp": 80,
+        "at": 130,
+        "de": 60,
+        "sa": 40,
+        "sd": 80,
+        "sp": 120
+    },
+    "SPECIES_OVERQWIL": {
+        "hp": 85,
+        "at": 115,
+        "de": 95,
+        "sa": 65,
+        "sd": 65,
+        "sp": 85
+    },
+    "SPECIES_ENAMORUS_INCARNATE": {
+        "hp": 74,
+        "at": 115,
+        "de": 70,
+        "sa": 135,
+        "sd": 80,
+        "sp": 106
+    },
+    "SPECIES_SPRIGATITO": {
+        "hp": 40,
+        "at": 61,
+        "de": 54,
+        "sa": 45,
+        "sd": 45,
+        "sp": 65
+    },
+    "SPECIES_FLORAGATO": {
+        "hp": 61,
+        "at": 80,
+        "de": 63,
+        "sa": 60,
+        "sd": 63,
+        "sp": 83
+    },
+    "SPECIES_MEOWSCARADA": {
+        "hp": 76,
+        "at": 110,
+        "de": 70,
+        "sa": 81,
+        "sd": 70,
+        "sp": 123
+    },
+    "SPECIES_FUECOCO": {
+        "hp": 67,
+        "at": 45,
+        "de": 59,
+        "sa": 63,
+        "sd": 40,
+        "sp": 36
+    },
+    "SPECIES_CROCALOR": {
+        "hp": 81,
+        "at": 55,
+        "de": 78,
+        "sa": 90,
+        "sd": 58,
+        "sp": 49
+    },
+    "SPECIES_SKELEDIRGE": {
+        "hp": 104,
+        "at": 75,
+        "de": 100,
+        "sa": 110,
+        "sd": 75,
+        "sp": 66
+    },
+    "SPECIES_QUAXLY": {
+        "hp": 55,
+        "at": 65,
+        "de": 45,
+        "sa": 50,
+        "sd": 45,
+        "sp": 50
+    },
+    "SPECIES_QUAXWELL": {
+        "hp": 70,
+        "at": 85,
+        "de": 65,
+        "sa": 65,
+        "sd": 60,
+        "sp": 65
+    },
+    "SPECIES_QUAQUAVAL": {
+        "hp": 85,
+        "at": 120,
+        "de": 80,
+        "sa": 85,
+        "sd": 75,
+        "sp": 85
+    },
+    "SPECIES_LECHONK": {
+        "hp": 54,
+        "at": 45,
+        "de": 40,
+        "sa": 35,
+        "sd": 45,
+        "sp": 35
+    },
+    "SPECIES_OINKOLOGNE_MALE": {
+        "hp": 110,
+        "at": 100,
+        "de": 75,
+        "sa": 59,
+        "sd": 80,
+        "sp": 65
+    },
+    "SPECIES_TAROUNTULA": {
+        "hp": 35,
+        "at": 41,
+        "de": 45,
+        "sa": 29,
+        "sd": 40,
+        "sp": 20
+    },
+    "SPECIES_SPIDOPS": {
+        "hp": 60,
+        "at": 79,
+        "de": 92,
+        "sa": 52,
+        "sd": 86,
+        "sp": 35
+    },
+    "SPECIES_NYMBLE": {
+        "hp": 33,
+        "at": 46,
+        "de": 40,
+        "sa": 21,
+        "sd": 25,
+        "sp": 45
+    },
+    "SPECIES_LOKIX": {
+        "hp": 71,
+        "at": 102,
+        "de": 78,
+        "sa": 52,
+        "sd": 55,
+        "sp": 92
+    },
+    "SPECIES_PAWMI": {
+        "hp": 45,
+        "at": 50,
+        "de": 20,
+        "sa": 40,
+        "sd": 25,
+        "sp": 60
+    },
+    "SPECIES_PAWMO": {
+        "hp": 60,
+        "at": 75,
+        "de": 40,
+        "sa": 50,
+        "sd": 40,
+        "sp": 85
+    },
+    "SPECIES_PAWMOT": {
+        "hp": 70,
+        "at": 115,
+        "de": 70,
+        "sa": 70,
+        "sd": 60,
+        "sp": 105
+    },
+    "SPECIES_TANDEMAUS": {
+        "hp": 50,
+        "at": 50,
+        "de": 45,
+        "sa": 40,
+        "sd": 45,
+        "sp": 75
+    },
+    "SPECIES_MAUSHOLD_FAMILY_OF_FOUR": {
+        "hp": 74,
+        "at": 75,
+        "de": 70,
+        "sa": 65,
+        "sd": 75,
+        "sp": 111
+    },
+    "SPECIES_FIDOUGH": {
+        "hp": 37,
+        "at": 55,
+        "de": 70,
+        "sa": 30,
+        "sd": 55,
+        "sp": 65
+    },
+    "SPECIES_DACHSBUN": {
+        "hp": 57,
+        "at": 80,
+        "de": 115,
+        "sa": 50,
+        "sd": 80,
+        "sp": 95
+    },
+    "SPECIES_SMOLIV": {
+        "hp": 41,
+        "at": 35,
+        "de": 45,
+        "sa": 58,
+        "sd": 51,
+        "sp": 30
+    },
+    "SPECIES_DOLLIV": {
+        "hp": 52,
+        "at": 53,
+        "de": 60,
+        "sa": 78,
+        "sd": 78,
+        "sp": 33
+    },
+    "SPECIES_ARBOLIVA": {
+        "hp": 78,
+        "at": 69,
+        "de": 90,
+        "sa": 125,
+        "sd": 109,
+        "sp": 39
+    },
+    "SPECIES_SQUAWKABILLY_GREEN_PLUMAGE": {
+        "hp": 82,
+        "at": 96,
+        "de": 51,
+        "sa": 45,
+        "sd": 51,
+        "sp": 92
+    },
+    "SPECIES_NACLI": {
+        "hp": 55,
+        "at": 55,
+        "de": 75,
+        "sa": 35,
+        "sd": 35,
+        "sp": 25
+    },
+    "SPECIES_NACLSTACK": {
+        "hp": 60,
+        "at": 60,
+        "de": 100,
+        "sa": 35,
+        "sd": 65,
+        "sp": 35
+    },
+    "SPECIES_GARGANACL": {
+        "hp": 100,
+        "at": 100,
+        "de": 130,
+        "sa": 45,
+        "sd": 90,
+        "sp": 35
+    },
+    "SPECIES_CHARCADET": {
+        "hp": 40,
+        "at": 50,
+        "de": 40,
+        "sa": 50,
+        "sd": 40,
+        "sp": 35
+    },
+    "SPECIES_ARMAROUGE": {
+        "hp": 85,
+        "at": 60,
+        "de": 100,
+        "sa": 125,
+        "sd": 80,
+        "sp": 75
+    },
+    "SPECIES_CERULEDGE": {
+        "hp": 75,
+        "at": 125,
+        "de": 80,
+        "sa": 60,
+        "sd": 100,
+        "sp": 85
+    },
+    "SPECIES_TADBULB": {
+        "hp": 61,
+        "at": 31,
+        "de": 41,
+        "sa": 59,
+        "sd": 35,
+        "sp": 45
+    },
+    "SPECIES_BELLIBOLT": {
+        "hp": 109,
+        "at": 64,
+        "de": 91,
+        "sa": 103,
+        "sd": 83,
+        "sp": 45
+    },
+    "SPECIES_WATTREL": {
+        "hp": 40,
+        "at": 40,
+        "de": 35,
+        "sa": 55,
+        "sd": 40,
+        "sp": 70
+    },
+    "SPECIES_KILOWATTREL": {
+        "hp": 70,
+        "at": 70,
+        "de": 60,
+        "sa": 105,
+        "sd": 60,
+        "sp": 125
+    },
+    "SPECIES_MASCHIFF": {
+        "hp": 60,
+        "at": 78,
+        "de": 60,
+        "sa": 40,
+        "sd": 51,
+        "sp": 51
+    },
+    "SPECIES_MABOSSTIFF": {
+        "hp": 80,
+        "at": 120,
+        "de": 90,
+        "sa": 60,
+        "sd": 70,
+        "sp": 85
+    },
+    "SPECIES_SHROODLE": {
+        "hp": 40,
+        "at": 65,
+        "de": 35,
+        "sa": 40,
+        "sd": 35,
+        "sp": 75
+    },
+    "SPECIES_GRAFAIAI": {
+        "hp": 63,
+        "at": 95,
+        "de": 65,
+        "sa": 80,
+        "sd": 72,
+        "sp": 110
+    },
+    "SPECIES_BRAMBLIN": {
+        "hp": 40,
+        "at": 65,
+        "de": 30,
+        "sa": 45,
+        "sd": 35,
+        "sp": 60
+    },
+    "SPECIES_BRAMBLEGHAST": {
+        "hp": 55,
+        "at": 115,
+        "de": 70,
+        "sa": 80,
+        "sd": 70,
+        "sp": 90
+    },
+    "SPECIES_TOEDSCOOL": {
+        "hp": 40,
+        "at": 40,
+        "de": 35,
+        "sa": 50,
+        "sd": 100,
+        "sp": 70
+    },
+    "SPECIES_TOEDSCRUEL": {
+        "hp": 80,
+        "at": 70,
+        "de": 65,
+        "sa": 80,
+        "sd": 120,
+        "sp": 100
+    },
+    "SPECIES_KLAWF": {
+        "hp": 70,
+        "at": 100,
+        "de": 115,
+        "sa": 35,
+        "sd": 55,
+        "sp": 75
+    },
+    "SPECIES_CAPSAKID": {
+        "hp": 50,
+        "at": 62,
+        "de": 40,
+        "sa": 62,
+        "sd": 40,
+        "sp": 50
+    },
+    "SPECIES_SCOVILLAIN": {
+        "hp": 65,
+        "at": 108,
+        "de": 65,
+        "sa": 108,
+        "sd": 65,
+        "sp": 75
+    },
+    "SPECIES_RELLOR": {
+        "hp": 41,
+        "at": 50,
+        "de": 60,
+        "sa": 31,
+        "sd": 58,
+        "sp": 30
+    },
+    "SPECIES_RABSCA": {
+        "hp": 75,
+        "at": 50,
+        "de": 85,
+        "sa": 115,
+        "sd": 100,
+        "sp": 45
+    },
+    "SPECIES_FLITTLE": {
+        "hp": 30,
+        "at": 35,
+        "de": 30,
+        "sa": 55,
+        "sd": 30,
+        "sp": 75
+    },
+    "SPECIES_ESPATHRA": {
+        "hp": 95,
+        "at": 60,
+        "de": 60,
+        "sa": 101,
+        "sd": 60,
+        "sp": 105
+    },
+    "SPECIES_TINKATINK": {
+        "hp": 50,
+        "at": 45,
+        "de": 45,
+        "sa": 35,
+        "sd": 64,
+        "sp": 58
+    },
+    "SPECIES_TINKATUFF": {
+        "hp": 65,
+        "at": 55,
+        "de": 55,
+        "sa": 45,
+        "sd": 82,
+        "sp": 78
+    },
+    "SPECIES_TINKATON": {
+        "hp": 85,
+        "at": 75,
+        "de": 77,
+        "sa": 70,
+        "sd": 105,
+        "sp": 94
+    },
+    "SPECIES_WIGLETT": {
+        "hp": 10,
+        "at": 55,
+        "de": 25,
+        "sa": 35,
+        "sd": 25,
+        "sp": 95
+    },
+    "SPECIES_WUGTRIO": {
+        "hp": 35,
+        "at": 100,
+        "de": 50,
+        "sa": 50,
+        "sd": 70,
+        "sp": 120
+    },
+    "SPECIES_BOMBIRDIER": {
+        "hp": 70,
+        "at": 103,
+        "de": 85,
+        "sa": 60,
+        "sd": 85,
+        "sp": 82
+    },
+    "SPECIES_FINIZEN": {
+        "hp": 70,
+        "at": 45,
+        "de": 40,
+        "sa": 45,
+        "sd": 40,
+        "sp": 75
+    },
+    "SPECIES_PALAFIN_ZERO": {
+        "hp": 100,
+        "at": 70,
+        "de": 72,
+        "sa": 53,
+        "sd": 62,
+        "sp": 100
+    },
+    "SPECIES_VAROOM": {
+        "hp": 45,
+        "at": 70,
+        "de": 63,
+        "sa": 30,
+        "sd": 45,
+        "sp": 47
+    },
+    "SPECIES_REVAVROOM": {
+        "hp": 80,
+        "at": 119,
+        "de": 90,
+        "sa": 54,
+        "sd": 67,
+        "sp": 90
+    },
+    "SPECIES_CYCLIZAR": {
+        "hp": 70,
+        "at": 95,
+        "de": 65,
+        "sa": 85,
+        "sd": 65,
+        "sp": 121
+    },
+    "SPECIES_ORTHWORM": {
+        "hp": 70,
+        "at": 85,
+        "de": 145,
+        "sa": 60,
+        "sd": 55,
+        "sp": 65
+    },
+    "SPECIES_GLIMMET": {
+        "hp": 48,
+        "at": 35,
+        "de": 42,
+        "sa": 105,
+        "sd": 60,
+        "sp": 60
+    },
+    "SPECIES_GLIMMORA": {
+        "hp": 83,
+        "at": 55,
+        "de": 90,
+        "sa": 130,
+        "sd": 81,
+        "sp": 86
+    },
+    "SPECIES_GREAVARD": {
+        "hp": 50,
+        "at": 61,
+        "de": 60,
+        "sa": 30,
+        "sd": 55,
+        "sp": 34
+    },
+    "SPECIES_HOUNDSTONE": {
+        "hp": 72,
+        "at": 101,
+        "de": 100,
+        "sa": 50,
+        "sd": 97,
+        "sp": 68
+    },
+    "SPECIES_FLAMIGO": {
+        "hp": 82,
+        "at": 115,
+        "de": 74,
+        "sa": 75,
+        "sd": 64,
+        "sp": 90
+    },
+    "SPECIES_CETODDLE": {
+        "hp": 108,
+        "at": 68,
+        "de": 45,
+        "sa": 30,
+        "sd": 40,
+        "sp": 43
+    },
+    "SPECIES_CETITAN": {
+        "hp": 170,
+        "at": 113,
+        "de": 65,
+        "sa": 45,
+        "sd": 55,
+        "sp": 73
+    },
+    "SPECIES_VELUZA": {
+        "hp": 90,
+        "at": 102,
+        "de": 73,
+        "sa": 78,
+        "sd": 65,
+        "sp": 70
+    },
+    "SPECIES_DONDOZO": {
+        "hp": 150,
+        "at": 100,
+        "de": 115,
+        "sa": 65,
+        "sd": 65,
+        "sp": 35
+    },
+    "SPECIES_TATSUGIRI_CURLY": {
+        "hp": 68,
+        "at": 50,
+        "de": 60,
+        "sa": 120,
+        "sd": 95,
+        "sp": 82
+    },
+    "SPECIES_ANNIHILAPE": {
+        "hp": 110,
+        "at": 115,
+        "de": 80,
+        "sa": 50,
+        "sd": 90,
+        "sp": 90
+    },
+    "SPECIES_CLODSIRE": {
+        "hp": 130,
+        "at": 75,
+        "de": 60,
+        "sa": 45,
+        "sd": 100,
+        "sp": 20
+    },
+    "SPECIES_FARIGIRAF": {
+        "hp": 120,
+        "at": 90,
+        "de": 70,
+        "sa": 110,
+        "sd": 70,
+        "sp": 60
+    },
+    "SPECIES_DUDUNSPARCE_TWO_SEGMENT": {
+        "hp": 125,
+        "at": 100,
+        "de": 80,
+        "sa": 85,
+        "sd": 75,
+        "sp": 55
+    },
+    "SPECIES_KINGAMBIT": {
+        "hp": 100,
+        "at": 135,
+        "de": 120,
+        "sa": 60,
+        "sd": 85,
+        "sp": 50
+    },
+    "SPECIES_GREAT_TUSK": {
+        "hp": 115,
+        "at": 131,
+        "de": 131,
+        "sa": 53,
+        "sd": 53,
+        "sp": 87
+    },
+    "SPECIES_SCREAM_TAIL": {
+        "hp": 115,
+        "at": 65,
+        "de": 99,
+        "sa": 65,
+        "sd": 115,
+        "sp": 111
+    },
+    "SPECIES_BRUTE_BONNET": {
+        "hp": 111,
+        "at": 127,
+        "de": 99,
+        "sa": 79,
+        "sd": 99,
+        "sp": 55
+    },
+    "SPECIES_FLUTTER_MANE": {
+        "hp": 55,
+        "at": 55,
+        "de": 55,
+        "sa": 135,
+        "sd": 135,
+        "sp": 135
+    },
+    "SPECIES_SLITHER_WING": {
+        "hp": 85,
+        "at": 135,
+        "de": 79,
+        "sa": 85,
+        "sd": 105,
+        "sp": 81
+    },
+    "SPECIES_SANDY_SHOCKS": {
+        "hp": 85,
+        "at": 81,
+        "de": 97,
+        "sa": 121,
+        "sd": 85,
+        "sp": 101
+    },
+    "SPECIES_IRON_TREADS": {
+        "hp": 90,
+        "at": 112,
+        "de": 120,
+        "sa": 72,
+        "sd": 70,
+        "sp": 106
+    },
+    "SPECIES_IRON_BUNDLE": {
+        "hp": 56,
+        "at": 80,
+        "de": 114,
+        "sa": 124,
+        "sd": 60,
+        "sp": 136
+    },
+    "SPECIES_IRON_HANDS": {
+        "hp": 154,
+        "at": 140,
+        "de": 108,
+        "sa": 50,
+        "sd": 68,
+        "sp": 50
+    },
+    "SPECIES_IRON_JUGULIS": {
+        "hp": 94,
+        "at": 80,
+        "de": 86,
+        "sa": 122,
+        "sd": 80,
+        "sp": 108
+    },
+    "SPECIES_IRON_MOTH": {
+        "hp": 80,
+        "at": 70,
+        "de": 60,
+        "sa": 140,
+        "sd": 110,
+        "sp": 110
+    },
+    "SPECIES_IRON_THORNS": {
+        "hp": 100,
+        "at": 134,
+        "de": 110,
+        "sa": 70,
+        "sd": 84,
+        "sp": 72
+    },
+    "SPECIES_FRIGIBAX": {
+        "hp": 65,
+        "at": 75,
+        "de": 45,
+        "sa": 35,
+        "sd": 45,
+        "sp": 55
+    },
+    "SPECIES_ARCTIBAX": {
+        "hp": 90,
+        "at": 95,
+        "de": 66,
+        "sa": 45,
+        "sd": 65,
+        "sp": 62
+    },
+    "SPECIES_BAXCALIBUR": {
+        "hp": 115,
+        "at": 145,
+        "de": 92,
+        "sa": 75,
+        "sd": 86,
+        "sp": 87
+    },
+    "SPECIES_GIMMIGHOUL": {
+        "hp": 45,
+        "at": 30,
+        "de": 70,
+        "sa": 75,
+        "sd": 70,
+        "sp": 10
+    },
+    "SPECIES_GHOLDENGO": {
+        "hp": 87,
+        "at": 60,
+        "de": 95,
+        "sa": 133,
+        "sd": 91,
+        "sp": 84
+    },
+    "SPECIES_WO_CHIEN": {
+        "hp": 85,
+        "at": 85,
+        "de": 100,
+        "sa": 95,
+        "sd": 135,
+        "sp": 70
+    },
+    "SPECIES_CHIEN_PAO": {
+        "hp": 80,
+        "at": 120,
+        "de": 80,
+        "sa": 90,
+        "sd": 65,
+        "sp": 135
+    },
+    "SPECIES_TING_LU": {
+        "hp": 155,
+        "at": 110,
+        "de": 125,
+        "sa": 55,
+        "sd": 80,
+        "sp": 45
+    },
+    "SPECIES_CHI_YU": {
+        "hp": 55,
+        "at": 80,
+        "de": 80,
+        "sa": 135,
+        "sd": 120,
+        "sp": 100
+    },
+    "SPECIES_ROARING_MOON": {
+        "hp": 105,
+        "at": 139,
+        "de": 71,
+        "sa": 55,
+        "sd": 101,
+        "sp": 119
+    },
+    "SPECIES_IRON_VALIANT": {
+        "hp": 74,
+        "at": 130,
+        "de": 90,
+        "sa": 120,
+        "sd": 60,
+        "sp": 116
+    },
+    "SPECIES_KORAIDON": {
+        "hp": 100,
+        "at": 135,
+        "de": 115,
+        "sa": 85,
+        "sd": 100,
+        "sp": 135
+    },
+    "SPECIES_MIRAIDON": {
+        "hp": 100,
+        "at": 85,
+        "de": 100,
+        "sa": 135,
+        "sd": 115,
+        "sp": 135
+    },
+    "SPECIES_WALKING_WAKE": {
+        "hp": 99,
+        "at": 83,
+        "de": 91,
+        "sa": 125,
+        "sd": 83,
+        "sp": 109
+    },
+    "SPECIES_IRON_LEAVES": {
+        "hp": 90,
+        "at": 130,
+        "de": 88,
+        "sa": 70,
+        "sd": 108,
+        "sp": 104
+    },
+    "SPECIES_DIPPLIN": {
+        "hp": 80,
+        "at": 80,
+        "de": 110,
+        "sa": 95,
+        "sd": 80,
+        "sp": 40
+    },
+    "SPECIES_POLTCHAGEIST": {
+        "hp": 40,
+        "at": 45,
+        "de": 45,
+        "sa": 74,
+        "sd": 54,
+        "sp": 50
+    },
+    "SPECIES_SINISTCHA": {
+        "hp": 71,
+        "at": 60,
+        "de": 106,
+        "sa": 121,
+        "sd": 80,
+        "sp": 70
+    },
+    "SPECIES_OKIDOGI": {
+        "hp": 88,
+        "at": 128,
+        "de": 115,
+        "sa": 58,
+        "sd": 86,
+        "sp": 80
+    },
+    "SPECIES_MUNKIDORI": {
+        "hp": 88,
+        "at": 75,
+        "de": 66,
+        "sa": 130,
+        "sd": 90,
+        "sp": 106
+    },
+    "SPECIES_FEZANDIPITI": {
+        "hp": 88,
+        "at": 91,
+        "de": 82,
+        "sa": 70,
+        "sd": 125,
+        "sp": 99
+    },
+    "SPECIES_OGERPON": {
+        "hp": 80,
+        "at": 120,
+        "de": 84,
+        "sa": 60,
+        "sd": 96,
+        "sp": 110
+    },
+    "SPECIES_ARCHALUDON": {
+        "hp": 90,
+        "at": 105,
+        "de": 130,
+        "sa": 125,
+        "sd": 65,
+        "sp": 85
+    },
+    "SPECIES_HYDRAPPLE": {
+        "hp": 106,
+        "at": 80,
+        "de": 110,
+        "sa": 120,
+        "sd": 80,
+        "sp": 44
+    },
+    "SPECIES_GOUGING_FIRE": {
+        "hp": 105,
+        "at": 115,
+        "de": 121,
+        "sa": 65,
+        "sd": 93,
+        "sp": 91
+    },
+    "SPECIES_RAGING_BOLT": {
+        "hp": 125,
+        "at": 73,
+        "de": 91,
+        "sa": 137,
+        "sd": 89,
+        "sp": 75
+    },
+    "SPECIES_IRON_BOULDER": {
+        "hp": 90,
+        "at": 120,
+        "de": 80,
+        "sa": 68,
+        "sd": 108,
+        "sp": 124
+    },
+    "SPECIES_IRON_CROWN": {
+        "hp": 90,
+        "at": 72,
+        "de": 100,
+        "sa": 122,
+        "sd": 108,
+        "sp": 98
+    },
+    "SPECIES_TERAPAGOS": {
+        "hp": 90,
+        "at": 65,
+        "de": 85,
+        "sa": 65,
+        "sd": 85,
+        "sp": 60
+    },
+    "SPECIES_PECHARUNT": {
+        "hp": 88,
+        "at": 88,
+        "de": 160,
+        "sa": 88,
+        "sd": 88,
+        "sp": 88
+    }
+}
