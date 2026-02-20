@@ -14492,6 +14492,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_LibertyPass,
     },
 
+    [ITEM_MEMBER_CARD] =
+    {
+        .name = ITEM_NAME("Member Card"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A hotel room card.\n"
+            "It's last date was\n"
+            "oddly 50 years ago."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_MemberCard,
+        .iconPalette = gItemIconPalette_MemberCard,
+    },
+
     [ITEM_ABILITY_SHIELD] =
     {
         .name = ITEM_NAME("Ability Shield"),

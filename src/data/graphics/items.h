@@ -1837,6 +1837,9 @@ const u16 gItemIconPalette_Sapphire[] = INCBIN_U16("graphics/items/icon_palettes
 const u32 gItemIcon_LibertyPass[] = INCBIN_U32("graphics/items/icons/liberty_pass.4bpp.smol");
 const u16 gItemIconPalette_LibertyPass[] = INCBIN_U16("graphics/items/icon_palettes/liberty_pass.gbapal");
 
+const u32 gItemIcon_MemberCard[] = INCBIN_U32("graphics/items/icons/member_card.4bpp.smol");
+const u16 gItemIconPalette_MemberCard[] = INCBIN_U16("graphics/items/icon_palettes/member_card.gbapal");
+
 const u32 gItemIcon_AbilityShield[] = INCBIN_U32("graphics/items/icons/ability_shield.4bpp.smol");
 const u16 gItemIconPalette_AbilityShield[] = INCBIN_U16("graphics/items/icon_palettes/ability_shield.gbapal");
 
