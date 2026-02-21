@@ -1191,3 +1191,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LibertyGarden_Basement/scripts.inc"
 
 	.include "data/maps/Flower_Garden/scripts.inc"
+
+	.include "data/maps/LilycoveCity_CoveLilyMotel_DarkraiRoom/scripts.inc"

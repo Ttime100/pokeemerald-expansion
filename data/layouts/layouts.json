@@ -4570,6 +4570,16 @@
       "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/Flower_Garden/border.bin",
       "blockdata_filepath": "data/layouts/Flower_Garden/map.bin"
+    },
+    {
+      "id": "LAYOUT_LILYCOVE_CITY_COVE_LILY_MOTEL_DARKRAI_ROOM",
+      "name": "LilycoveCity_CoveLilyMotel_DarkraiRoom_Layout",
+      "width": 27,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LilycoveCity_CoveLilyMotel_DarkraiRoom/border.bin",
+      "blockdata_filepath": "data/layouts/LilycoveCity_CoveLilyMotel_DarkraiRoom/map.bin"
     }
   ]
 }
