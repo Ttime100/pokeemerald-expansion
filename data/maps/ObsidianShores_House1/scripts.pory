@@ -1,0 +1,51 @@
+raw`
+ObsidianShores_House1_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, ObsidianShores_House1_OnTransition
+	.byte 0
+`
+
+script ObsidianShores_House1_OnTransition {
+    if (flag(FLAG_BADGE07_GET) && !flag(FLAG_RECEIVED_MEMBER_CARD)) {
+        checkplayergender
+        goto_if_eq(VAR_RESULT, MALE, ObsidianShores_House1_EventScript_ShowMale)
+        goto_if_eq(VAR_RESULT, FEMALE, ObsidianShores_House1_EventScript_ShowFemale)
+    } else {
+        setflag(FLAG_HIDE_RS_MALE)
+        setflag(FLAG_HIDE_RS_FEMALE)
+    }
+    end
+}
+
+script ObsidianShores_House1_EventScript_ShowMale {
+    clearflag(FLAG_HIDE_RS_MALE)
+    setflag(FLAG_HIDE_RS_FEMALE)
+    end
+}
+
+script ObsidianShores_House1_EventScript_ShowFemale {
+    clearflag(FLAG_HIDE_RS_FEMALE)
+    setflag(FLAG_HIDE_RS_MALE)
+    end
+} 
+
+script ObsidianShores_House1_EventScript_PastSelf {
+    lock
+    faceplayer
+    if (!flag(FLAG_RECEIVED_MEMBER_CARD)) {
+    msgbox(format("I've been holding onto this for a very long time.\p
+        I left in such a hurry that I forgot to check out.\p
+        I feel like I haven't slept a day since."))
+    closemessage
+    giveitem(ITEM_MEMBER_CARD)
+    setflag(FLAG_RECEIVED_MEMBER_CARD)
+    }
+    msgbox(format("That card will get you into the suite in the Cove Lily.\p
+        If you're heading that way...\n
+        perhaps you can put it to use again.\p
+        Just... try not to stay too long."))
+    closemessage
+    applymovement(VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection)
+    waitmovement(0)
+    release
+    end
+}

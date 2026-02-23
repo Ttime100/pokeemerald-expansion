@@ -1057,6 +1057,10 @@
 #define FLAG_HIDE_EXILE_DRAKE                                       0x4E5 // Ttime100 added
 #define FLAG_HIDE_MOTEL_OWNER                                       0x4DC // Ttime100 added
 #define FLAG_HIDE_MOTEL_GUEST                                       0x4DD // Ttime100 added
+#define FLAG_HIDE_RS_MALE                                           0x4DA // Ttime100 added
+#define FLAG_HIDE_RS_FEMALE                                         0x4DB // Ttime100 added
+#define FLAG_RECEIVED_MEMBER_CARD                                   0x4D9 // Ttime100 added
+
 
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
@@ -1301,9 +1305,6 @@
 #define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
 #define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
 #define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
-#define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
-#define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
