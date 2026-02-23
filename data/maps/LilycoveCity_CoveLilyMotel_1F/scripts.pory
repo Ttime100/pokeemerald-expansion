@@ -1,0 +1,259 @@
+raw`
+LilycoveCity_CoveLilyMotel_1F_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_CoveLilyMotel_1F_MapScripts_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LilycoveCity_CoveLilyMotel_1F_MapScripts_OnFrame
+	.byte 0
+
+LilycoveCity_CoveLilyMotel_1F_MapScripts_OnFrame:
+    map_script_2 VAR_DARKRAI_STATE, 1, LilycoveCity_CoveLilyMotel_1F_EventScript_Warning
+    map_script_2 VAR_DARKRAI_STATE, 3, LilycoveCity_CoveLilyMotel_1F_EventScript_WakeUp
+    .2byte 0
+
+LilycoveCity_CoveLilyMotel_1F_EventScript_MotelOwner::
+	lockall
+	goto_if_set FLAG_SYS_GAME_CLEAR, LilycoveCity_CoveLilyMotel_1F_EventScript_GameClear
+	goto_if_set FLAG_BADGE07_GET, LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot, MSGBOX_DEFAULT
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_NoGuestsWithTeamAqua, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	releaseall
+	end
+
+LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted::
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_MonFoundLostItem, MSGBOX_DEFAULT
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_HeardAquaHideoutBusted, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	releaseall
+	end
+
+LilycoveCity_CoveLilyMotel_1F_EventScript_GameClear::
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_HouseSittingMonCaughtBurglar, MSGBOX_DEFAULT
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_BetterGetWorkingOnGuestsDinner, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	releaseall
+	end
+
+LilycoveCity_CoveLilyMotel_1F_EventScript_BlockingTV::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_CantSeeTheTV, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, LilycoveCity_CoveLilyMotel_1F_Movement_PlayerPushFromTV
+	applymovement LOCALID_MOTEL_OWNER, LilycoveCity_CoveLilyMotel_1F_Movement_OwnerPushPlayer
+	waitmovement 0
+	applymovement LOCALID_MOTEL_OWNER, LilycoveCity_CoveLilyMotel_1F_Movement_OwnerReturn
+	waitmovement 0
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Movement_PlayerPushFromTV:
+	face_right
+	lock_facing_direction
+	walk_left
+	unlock_facing_direction
+	step_end
+
+LilycoveCity_CoveLilyMotel_1F_Movement_OwnerPushPlayer:
+	walk_up
+	step_end
+
+LilycoveCity_CoveLilyMotel_1F_Movement_OwnerReturn:
+	face_down
+	walk_down
+	face_up
+	step_end
+
+LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot:
+	.string "Hm, so they doubled the guests by\n"
+	.string "using Pokémon as attractions?\p"
+	.string "Hm, well, maybe I should make a cute\n"
+	.string "Pokémon our inn's mascot.\p"
+	.string "I wonder if that will attract more\n"
+	.string "guests to stay with us?$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_NoGuestsWithTeamAqua:
+	.string "Oh, sorry, sorry!\n"
+	.string "I was too involved in watching TV!\p"
+	.string "Since that Team Aqua came to town,\n"
+	.string "the tourists have been staying away.$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_CantSeeTheTV:
+	.string "Hey, down in front!\n"
+	.string "I can't see the TV!$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_MonFoundLostItem:
+	.string "Amazing! You're telling me a Pokémon\n"
+	.string "found someone's lost item?\p"
+	.string "That's something. If we had some smart\n"
+	.string "Pokémon like that…\p"
+	.string "We could recover anything that our\n"
+	.string "guests mislaid…$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_HeardAquaHideoutBusted:
+	.string "Oh, sorry, sorry!\n"
+	.string "I was too involved in watching TV!\p"
+	.string "I heard that someone busted\n"
+	.string "the Team Aqua Hideout.\p"
+	.string "Thanks to that, we just booked\n"
+	.string "a reservation from a big group.\p"
+	.string "It was a company called… Uh…\n"
+	.string "Game something…$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_HouseSittingMonCaughtBurglar:
+	.string "Amazing! A house-sitting Pokémon\n"
+	.string "caught a burglar?\p"
+	.string "That's something. If we had a tough\n"
+	.string "Pokémon as a security guard…\p"
+	.string "We would be able to provide our guests\n"
+	.string "with greater safety.$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_BetterGetWorkingOnGuestsDinner:
+	.string "Oh, sorry, sorry!\n"
+	.string "I was too involved in watching TV.\p"
+	.string "Oh, yes. A big group of guests arrived\n"
+	.string "a little while ago.\p"
+	.string "They booked in as Game Freak,\n"
+	.string "so I guess they must make games.\p"
+	.string "Uh-oh, I'd better get working on\n"
+	.string "their dinner!$"
+
+`
+
+script LilycoveCity_CoveLilyMotel_1F_MapScripts_OnTransition {
+    if (var(VAR_DARKRAI_STATE) == 0) {
+        checkitem(ITEM_MEMBER_CARD)
+        if (var(VAR_RESULT) == TRUE) {
+        	setvar(VAR_DARKRAI_STATE, 1)
+        }
+    }
+
+    if (var(VAR_DARKRAI_STATE) == 2) {
+        setdynamicwarp(MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_DARKRAI_ROOM, 0)
+		playbgm(MUS_RG_LAVENDER, TRUE)
+    } 
+    else {
+        setdynamicwarp(MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_2F, 0, 2, 2)
+    }
+
+    if (var(VAR_DARKRAI_STATE) == 1 || var(VAR_DARKRAI_STATE) == 2) {
+        setflag(FLAG_HIDE_MOTEL_OWNER)
+		clearflag(FLAG_HIDE_MOTEL_GUEST)
+	} else {
+		setflag(FLAG_HIDE_MOTEL_GUEST)
+        clearflag(FLAG_HIDE_MOTEL_OWNER)
+    }
+
+	if (var(VAR_DARKRAI_STATE) == 2) {
+		setflag(FLAG_HIDE_MOTEL_GUEST)
+	}
+    end
+}
+
+script LilycoveCity_CoveLilyMotel_1F_EventScript_Warning {
+    lockall
+	fadeoutbgm(1)
+    delay(30)
+	setvar(VAR_DARKRAI_STATE, 2)
+    applymovement(LOCALID_MOTEL_GUEST, Common_Movement_FacePlayer)
+    waitmovement(0)
+	delay(60)
+    msgbox(format("Who are you?\p
+		No one has come to visit this hotel in 50 years."))
+	closemessage
+	applymovement(LOCALID_MOTEL_GUEST, mGuestFirstStep)
+	waitmovement(0)
+	delay(30)
+	playse(SE_PIN)
+	applymovement(LOCALID_MOTEL_GUEST, Common_Movement_ExclamationMark)
+	waitmovement(0)
+	msgbox(format("That Member Card...\n
+		Could it be?"))
+	closemessage
+	applymovement(LOCALID_MOTEL_GUEST, mGuestApproachesSlowly)
+	waitmovement(0)	
+	msgbox(format("I can't believe I didn't recognize you!\n
+		You haven't aged a day!\p
+		Your room upstairs is waiting for you just how you left it.\p
+		Enjoy your stay..."))
+    closemessage
+    applymovement(LOCALID_MOTEL_GUEST, mGuestDisappears)
+    waitmovement(0)
+	setdynamicwarp(MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_DARKRAI_ROOM, 0)
+	fadescreen(FADE_TO_WHITE)
+    removeobject(LOCALID_MOTEL_GUEST)
+	playbgm(MUS_RG_LAVENDER, TRUE)
+	fadescreen(FADE_FROM_WHITE)
+    setflag(FLAG_HIDE_MOTEL_GUEST)
+    releaseall
+    end
+}
+
+script LilycoveCity_CoveLilyMotel_1F_EventScript_WakeUp {
+    lockall
+    delay(30)
+	applymovement(LOCALID_PLAYER, mDazed)
+    msgbox(format("... ... ... ... ...\n
+		... ... ... ... ..."))
+	waitmovement(0)
+	closemessage
+	playse(SE_PIN)
+	applymovement(LOCALID_PLAYER, Common_Movement_ExclamationMark)
+	waitmovement(0)
+    msgbox(format("You jolted upright!\p
+		It all felt so real..."))
+    closemessage
+    setvar(VAR_DARKRAI_STATE, 4)
+    releaseall
+    end
+}
+
+movement mGuestFirstStep {
+	walk_down
+}
+
+movement mGuestApproachesSlowly {
+	walk_down
+	walk_down
+}
+
+movement mGuestDisappears {
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+}
+
+movement mDazed {
+	face_left
+    delay_16
+    face_right
+    delay_16
+    face_up
+	delay_16
+	face_left
+	delay_16
+	face_right
+	delay_16
+	face_down
+    delay_4
+    step_end
+}

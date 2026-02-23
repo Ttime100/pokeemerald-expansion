@@ -26,7 +26,21 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_CoveLilyMotel_1F_EventScript_MotelOwner",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MOTEL_OWNER"
+    },
+    {
+      "local_id": "LOCALID_MOTEL_GUEST",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LilycoveCity_CoveLilyMotel_1F_EventScript_Warning",
+      "flag": "FLAG_HIDE_MOTEL_GUEST"
     }
   ],
   "warp_events": [
@@ -48,8 +62,8 @@
       "x": 2,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_2F",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "WARP_ID_DYNAMIC"
     }
   ],
   "coord_events": [

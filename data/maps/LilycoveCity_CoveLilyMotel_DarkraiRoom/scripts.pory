@@ -1,0 +1,133 @@
+raw`
+LilycoveCity_CoveLilyMotel_DarkraiRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_CoveLilyMotel_DarkraiRoom_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, LilycoveCity_CoveLilyMotel_DarkraiRoom_OnResume
+	.byte 0
+
+LilycoveCity_CoveLilyMotel_DarkraiRoom_OnTransition:
+	call_if_set FLAG_CAUGHT_DARKRAI, LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_HideDarkrai
+	call_if_unset FLAG_CAUGHT_DARKRAI, LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_TryShowDarkrai
+	end
+
+LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_HideDarkrai::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_DARKRAI
+	return
+
+LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_TryShowDarkrai::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_DARKRAI, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_DARKRAI
+	return
+
+LilycoveCity_CoveLilyMotel_DarkraiRoom_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_TryRemoveDarkrai
+	end
+
+LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_TryRemoveDarkrai::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_COVE_LILY_MOTEL_DARKRAI
+	return
+`
+
+script LilycoveCity_CoveLilyMotel_DarkraiRoom_BattleDarkrai {
+    lock
+	applymovement(LOCALID_COVE_LILY_MOTEL_DARKRAI, Common_Movement_FacePlayer)
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_DARKRAI,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_DARKRAI,50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	waitstate
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_COVE_LILY_MOTEL_DARKRAI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_DefeatedDarkrai)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_RanFromDarkrai)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_RanFromDarkrai)
+	setflag(FLAG_CAUGHT_DARKRAI)
+	goto(LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_DreamEnding)
+	release
+    end
+}
+
+script LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_DefeatedDarkrai {
+    setflag(FLAG_DEFEATED_DARKRAI)
+	removeobject(LOCALID_COVE_LILY_MOTEL_DARKRAI)
+	goto(LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_DreamEnding)
+    release
+    end
+}
+
+script LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_RanFromDarkrai {
+    release
+    end
+}
+
+script LilycoveCity_CoveLilyMotel_DarkraiRoom_EventScript_DreamEnding {  
+	delay(30) 
+    setvar(VAR_0x8004, 2)  // vertical pan
+    setvar(VAR_0x8005, 2)  // horizontal pan
+    setvar(VAR_0x8006, 10) // num shakes
+	setvar(VAR_0x8007, 5)  // shake delay
+    special(ShakeCamera)
+	waitstate
+	msgbox(format("A cold, suffocating shadow fills the room...\p
+		“This isn't over...”"))
+	closemessage
+	applymovement(LOCALID_PLAYER, mLookAround)
+	waitmovement(0)
+	delay(30)
+	setvar(VAR_DARKRAI_STATE, 3)
+	fadescreen(FADE_TO_BLACK)
+	playse(SE_NOT_EFFECTIVE)
+	warp(MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_1F, 5, 5)
+	waitstate
+	release
+	end
+}
+
+script LilycoveCity_CoveLilyMotel_DarkraiRoom_Trigger {
+	lock
+	applymovement(LOCALID_PLAYER, mJumpScare)
+	waitmovement(0)
+	delay(30)
+	playmoncry(SPECIES_DARKRAI, CRY_MODE_ENCOUNTER)
+	waitmoncry
+	delay(60)
+	playse(SE_PIN)
+	applymovement(LOCALID_PLAYER, Common_Movement_ExclamationMark)
+	waitmovement(0)
+	delay(60)
+	call(LilycoveCity_CoveLilyMotel_DarkraiRoom_BattleDarkrai)
+	release
+	end
+}
+
+movement mLookAround {
+    face_down
+	delay_16
+	face_left
+	delay_16
+	face_right
+	delay_16
+	face_up
+    delay_16
+    face_left
+    delay_16
+    face_right
+    delay_16
+    face_down
+    delay_4
+    step_end
+}
+
+movement mJumpScare {
+	face_down
+	delay_4
+	step_end
+}

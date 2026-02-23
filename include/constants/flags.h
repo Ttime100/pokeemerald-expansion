@@ -521,6 +521,10 @@
 #define FLAG_CAUGHT_HEATRAN                  0x4E6 // Ttime100 added
 #define FLAG_DEFEATED_HEATRAN                0x4E7 // Ttime100 added
 #define FLAG_HIDE_HEATRAN                    0x4E8 // Ttime100 added
+#define FLAG_CAUGHT_DARKRAI                  0x4DE // Ttime100 added
+#define FLAG_DEFEATED_DARKRAI                0x4DF // Ttime100 added
+#define FLAG_HIDE_DARKRAI                    0x4E0 // Ttime100 added
+
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -1051,8 +1055,8 @@
 #define FLAG_HIDE_EXILE_PHOEBE                                      0x4E3 // Ttime100 added
 #define FLAG_HIDE_EXILE_GLACIA                                      0x4E4 // Ttime100 added
 #define FLAG_HIDE_EXILE_DRAKE                                       0x4E5 // Ttime100 added
-#define FLAG_HIDE_DARKRAI                                           0x4E0 // Ttime100 added
-
+#define FLAG_HIDE_MOTEL_OWNER                                       0x4DC // Ttime100 added
+#define FLAG_HIDE_MOTEL_GUEST                                       0x4DD // Ttime100 added
 
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
@@ -1300,10 +1304,6 @@
 #define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
-#define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
-#define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
-#define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
-#define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
