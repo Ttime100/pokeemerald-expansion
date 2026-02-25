@@ -611,7 +611,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_104_POKE_BALL                 (FLAG_HIDDEN_ITEMS_START + 0x3E)
 #define FLAG_HIDDEN_ITEM_ROUTE_106_POKE_BALL                 (FLAG_HIDDEN_ITEMS_START + 0x3F)
 #define FLAG_HIDDEN_ITEM_ROUTE_109_ETHER                     (FLAG_HIDDEN_ITEMS_START + 0x40)
-#define FLAG_HIDDEN_ITEM_ROUTE_110_HARBOR_MAIL               (FLAG_HIDDEN_ITEMS_START + 0x41) //Ttime100 changed from Pokeball
+#define FLAG_HIDDEN_ITEM_ROUTE_110_NUGGET                    (FLAG_HIDDEN_ITEMS_START + 0x41) //Ttime100 changed from Pokeball
 #define FLAG_HIDDEN_ITEM_ROUTE_118_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x42)
 #define FLAG_HIDDEN_ITEM_ROUTE_118_IRON                      (FLAG_HIDDEN_ITEMS_START + 0x43)
 #define FLAG_HIDDEN_ITEM_ROUTE_119_FULL_HEAL                 (FLAG_HIDDEN_ITEMS_START + 0x44)
@@ -1123,7 +1123,7 @@
 #define FLAG_ITEM_ROUTE_104_POKE_BALL                               0x421
 #define FLAG_ITEM_PETALBURG_WOODS_ETHER                             0x422
 #define FLAG_ITEM_MAGMA_HIDEOUT_3F_3R_TM_ROCK_SLIDE                 0x423 // Ttime100 replaced Escape Rope
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_ORANGE_MAIL                  0x424
+#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_HARBOR_MAIL                  0x424
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_HARBOR_MAIL                  0x425
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_WAVE_MAIL                    0x426
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_SHADOW_MAIL                  0x427
