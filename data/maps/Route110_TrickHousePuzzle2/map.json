@@ -62,9 +62,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_WAVE_MAIL",
+      "trainer_sight_or_berry_tree_id": "ITEM_GREAT_BALL",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_WAVE_MAIL"
+      "flag": "FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_GREAT_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",

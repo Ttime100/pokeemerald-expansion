@@ -1123,9 +1123,9 @@
 #define FLAG_ITEM_ROUTE_104_POKE_BALL                               0x421
 #define FLAG_ITEM_PETALBURG_WOODS_ETHER                             0x422
 #define FLAG_ITEM_MAGMA_HIDEOUT_3F_3R_TM_ROCK_SLIDE                 0x423 // Ttime100 replaced Escape Rope
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_HARBOR_MAIL                  0x424
+#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_HARBOR_MAIL                  0x424 // Ttime100 replaced other mail
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_HARBOR_MAIL                  0x425
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_WAVE_MAIL                    0x426
+#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_GREAT_BALL                   0x426 // Ttime100 replaced mail
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_SHADOW_MAIL                  0x427
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_WOOD_MAIL                    0x428
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_4_MECH_MAIL                    0x429
