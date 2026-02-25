@@ -1126,8 +1126,8 @@
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_1_HARBOR_MAIL                  0x424 // Ttime100 replaced other mail
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_HARBOR_MAIL                  0x425
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_GREAT_BALL                   0x426 // Ttime100 replaced mail
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_SHADOW_MAIL                  0x427
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_WOOD_MAIL                    0x428
+#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_TM_FLING                     0x427 // Ttime100 replaced mail
+#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_BLACK_BELT                   0x428 // Ttime100 replaced mail
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_4_MECH_MAIL                    0x429
 #define FLAG_ITEM_ROUTE_124_YELLOW_SHARD                            0x42A
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_6_GLITTER_MAIL                 0x42B
