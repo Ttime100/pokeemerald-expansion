@@ -12972,7 +12972,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Slugma
 Level: 28
@@ -13085,7 +13085,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Wingull
 Level: 28
@@ -13198,7 +13198,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Lombre
 Level: 28
@@ -13311,7 +13311,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Wingull
 Level: 28
@@ -13424,7 +13424,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Wingull
 Level: 28
@@ -13537,7 +13537,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Lombre
 Level: 28
@@ -13564,8 +13564,12 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Shadow Punch
 
 Marshtomp
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Level: 30
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Waterfall
+- Mud Shot
+- Ice Punch
+- Rock Slide
 
 === TRAINER_MAY_ROUTE_119_TORCHIC ===
 Name: May
