@@ -335,12 +335,12 @@ PlayersHouse_1F_EventScript_CheckGiveAmuletCoin::
 	goto PlayersHouse_1F_EventScript_MomHealsParty
 
 PlayersHouse_1F_EventScript_TryGiveAmuletCoin::
-	goto_if_set FLAG_RECEIVED_AMULET_COIN, PlayersHouse_1F_EventScript_MomHealsParty
+	goto_if_set FLAG_RECEIVED_SHINY_CHARM, PlayersHouse_1F_EventScript_MomHealsParty
 	msgbox PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom, MSGBOX_DEFAULT
-	giveitem ITEM_AMULET_COIN
+	giveitem ITEM_SHINY_CHARM
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox PlayersHouse_1F_Text_DontPushYourselfTooHard, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_AMULET_COIN
+	setflag FLAG_RECEIVED_SHINY_CHARM
 	release
 	end
 
