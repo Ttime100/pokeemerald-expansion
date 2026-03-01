@@ -5751,7 +5751,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Butterfree
 Level: 35
@@ -8009,19 +8009,24 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Zigzagoon
-Level: 15
+Ability: Gluttony
+Level: 30
+Nature: Hardy
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Growl
-- Tail Whip
 - Headbutt
-- Odor Sleuth
+- Baby-Doll Eyes
+- Pin Missile
+- Rest
 
 Makuhita
-Level: 17
+Ability: Guts
+Level: 30
+Nature: Hardy
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+- Fake Out
+- Vital Throw
+- Whirlwind
+- Knock Off
 
 === TRAINER_ANNA_AND_MEG_2 ===
 Name: Anna & Meg
@@ -8033,19 +8038,24 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Zigzagoon
-Level: 28
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Ability: Gluttony
+Level: 45
+Nature: Hardy
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Flail
+- Belly Drum
+- Take Down
+- Rest
 
 Makuhita
-Level: 30
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Ability: Guts
+Level: 45
+Nature: Hardy
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Reversal
+- Seismic Toss
+- Vital Throw
+- Belly Drum
 
 === TRAINER_ANNA_AND_MEG_3 ===
 Name: Anna & Meg
@@ -8056,20 +8066,25 @@ Music: Twins
 Double Battle: Yes
 AI: Basic Trainer
 
-Zigzagoon
-Level: 31
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Linoone
+Ability: Gluttony
+Level: 48
+Nature: Hardy
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Double-Edge
+- Belly Drum
+- Fling
+- Rest
 
-Makuhita
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Hariyama
+Ability: Guts
+Level: 48
+Nature: Hardy
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Close Combat
+- Knock Off
+- Heavy Slam
+- Belly Drum
 
 === TRAINER_ANNA_AND_MEG_4 ===
 Name: Anna & Meg
@@ -8078,22 +8093,27 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Linoone
-Level: 34
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Linoone @ Sitrus Berry
+Ability: Gluttony
+Level: 51
+Nature: Hardy
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Belly Drum
+- Extreme Speed
+- Seed Bomb
+- Stomping Tantrum
 
-Makuhita
-Level: 36
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Hariyama @ Sitrus Berry
+Ability: Guts
+Level: 51
+Nature: Hardy
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Fake Out
+- Close Combat
+- Rock Slide
+- Helping Hand
 
 === TRAINER_ANNA_AND_MEG_5 ===
 Name: Anna & Meg
@@ -8102,22 +8122,27 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Linoone
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Linoone @ Sitrus Berry
+Ability: Gluttony
+Level: 54
+Nature: Hardy
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Belly Drum
+- Extreme Speed
+- Seed Bomb
+- Stomping Tantrum
 
-Hariyama
-Level: 38
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Hariyama @ Sitrus Berry
+Ability: Guts
+Level: 54
+Nature: Hardy
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Fake Out
+- Close Combat
+- Rock Slide
+- Wide Guard
 
 === TRAINER_VICTOR ===
 Name: Victor
@@ -9827,7 +9852,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Doduo
-Level: 17
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARIA_2 ===
@@ -9840,7 +9865,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Doduo
-Level: 28
+Level: 42
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_MARIA_3 ===
@@ -9853,7 +9878,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Doduo
-Level: 31
+Level: 45
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_MARIA_4 ===
@@ -9866,7 +9891,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Dodrio
-Level: 34
+Level: 48
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_MARIA_5 ===
@@ -9879,7 +9904,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Dodrio
-Level: 37
+Level: 51
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_CAMDEN ===
@@ -13640,28 +13665,64 @@ Double Battle: No
 AI: Basic Trainer
 
 Whismur
-Level: 11
+Ability: Soundproof
+Level: 30
+Nature: Modest
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Echoed Voice
+- Stomp
+- Howl
+- Rest
 
 Zigzagoon
-Level: 11
+Ability: Gluttony
+Level: 30
+Nature: Adamant
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Headbutt
+- Baby-Doll Eyes
+- Pin Missile
+- Rest
 
 Aron
-Level: 11
+Ability: Sturdy
+Level: 30
+Nature: Adamant
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Metal Claw
+- Rock Tomb
+- Iron Defense
+- Roar
 
 Poochyena
-Level: 11
+Ability: Quick Feet
+Level: 30
+Nature: Adamant
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bite
+- Roar
+- Swagger
+- Assurance
 
 Taillow
-Level: 11
+Ability: Guts
+Level: 30
+Nature: Jolly
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Wing Attack
+- Quick Attack
+- Double Team
+- Focus Energy
 
 Makuhita
-Level: 11
+Ability: Guts
+Level: 30
+Nature: Adamant
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Arm Thrust
+- Fake Out
+- Whirlwind
+- Knock Off
 
 === TRAINER_DAVIS ===
 Name: Davis
@@ -13711,28 +13772,64 @@ Double Battle: No
 AI: Basic Trainer
 
 Loudred
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Ability: Soundproof
+Level: 45
+Nature: Modest
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Hyper Voice
+- Uproar
+- Rest
+- Sleep Talk
 
 Linoone
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Ability: Gluttony
+Level: 45
+Nature: Adamant
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Flail
+- Belly Drum
+- Take Down
+- Rest
 
-Aron
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Lairon
+Ability: Sturdy
+Level: 45
+Nature: Adamant
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Iron Head
+- Rock Slide
+- Metal Burst
+- Protect
 
-Mightyena
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Poochyena
+Ability: Quick Feet
+Level: 45
+Nature: Adamant
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Sucker Punch
+- Crunch
+- Scary Face
+- Taunt
 
-Swellow
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Taillow
+Ability: Guts
+Level: 45
+Nature: Jolly
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Brave Bird
+- Quick Attack
+- Agility
+- Endeavor
 
 Makuhita
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Ability: Guts
+Level: 45
+Nature: Adamant
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Reversal
+- Seismic Toss
+- Vital Throw
+- Belly Drum
 
 === TRAINER_ISAAC_3 ===
 Name: Isaac
@@ -13743,29 +13840,65 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Loudred
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Exploud
+Ability: Soundproof
+Level: 48
+Nature: Modest
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Hyper Voice
+- Crunch
+- Ice Fang
+- Fire Fang
 
 Linoone
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ability: Gluttony
+Level: 48
+Nature: Adamant
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Double-Edge
+- Belly Drum
+- Fling
+- Rest
 
-Aron
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Aggron
+Ability: Sturdy
+Level: 48
+Nature: Adamant
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Iron Head
+- Rock Slide
+- Metal Burst
+- Heavy Slam
 
 Mightyena
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ability: Intimidate
+Level: 48
+Nature: Adamant
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Sucker Punch
+- Crunch
+- Play Rough
+- Scary Face
 
 Swellow
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ability: Guts
+Level: 48
+Nature: Jolly
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Brave Bird
+- Quick Attack
+- Air Slash
+- Endeavor
 
 Hariyama
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ability: Guts
+Level: 48
+Nature: Adamant
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Close Combat
+- Knock Off
+- Heavy Slam
+- Belly Drum
 
 === TRAINER_ISAAC_4 ===
 Name: Isaac
@@ -13774,31 +13907,67 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
-Loudred
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Exploud @ Silk Scarf
+Ability: Soundproof
+Level: 51
+Nature: Modest
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Boomburst
+- Fire Blast
+- Surf
+- Focus Blast
 
-Linoone
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Linoone @ Sitrus Berry
+Ability: Gluttony
+Level: 51
+Nature: Adamant
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Belly Drum
+- Extreme Speed
+- Seed Bomb
+- Stomping Tantrum
 
-Aron
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Aggron @ Muscle Band
+Ability: Sturdy
+Level: 51
+Nature: Adamant
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Head Smash
+- Heavy Slam
+- Earthquake
+- Rock Polish
 
-Mightyena
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Mightyena @ Black Glasses
+Ability: Intimidate
+Level: 51
+Nature: Adamant
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Sucker Punch
+- Crunch
+- Play Rough
+- Fire Fang
 
-Swellow
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Swellow @ Flame Orb
+Ability: Guts
+Level: 51
+Nature: Jolly
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Facade
+- Brave Bird
+- U-turn
+- Protect
 
-Hariyama
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Hariyama @ Flame Orb
+Ability: Guts
+Level: 51
+Nature: Adamant
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Fake Out
+- Close Combat
+- Facade
+- Knock Off
 
 === TRAINER_ISAAC_5 ===
 Name: Isaac
@@ -13807,31 +13976,67 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
-Loudred
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Exploud @ Silk Scarf
+Ability: Soundproof
+Level: 54
+Nature: Modest
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Boomburst
+- Fire Blast
+- Surf
+- Focus Blast
 
-Linoone
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Linoone @ Sitrus Berry
+Ability: Gluttony
+Level: 54
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Belly Drum
+- Extreme Speed
+- Seed Bomb
+- Stomping Tantrum
 
-Lairon
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Aggron @ Muscle Band
+Ability: Sturdy
+Level: 54
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Head Smash
+- Heavy Slam
+- Earthquake
+- Rock Polish
 
-Mightyena
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Mightyena @ Black Glasses
+Ability: Intimidate
+Level: 54
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sucker Punch
+- Crunch
+- Play Rough
+- Fire Fang
 
-Swellow
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Swellow @ Flame Orb
+Ability: Guts
+Level: 54
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Facade
+- Brave Bird
+- U-turn
+- Protect
 
-Hariyama
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Hariyama @ Flame Orb
+Ability: Guts
+Level: 54
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Fake Out
+- Close Combat
+- Facade
+- Knock Off
 
 === TRAINER_LYDIA_1 ===
 Name: Lydia
@@ -13843,28 +14048,64 @@ Double Battle: No
 AI: Basic Trainer
 
 Wingull
-Level: 11
+Ability: Keen Eye
+Level: 30
+Nature: Timid
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Water Pulse
+- Wing Attack
+- Supersonic
+- Mist
 
 Shroomish
-Level: 11
+Ability: Poison Heal
+Level: 30
+Nature: Adamant
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Mega Drain
+- Headbutt
+- Poison Powder
+- Stun Spore
 
 Marill
-Level: 11
+Ability: Huge Power
+Level: 30
+Nature: Adamant
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bubble Beam
+- Aqua Ring
+- Rollout
+- Helping Hand
 
 Roselia
-Level: 11
+Ability: Natural Cure
+Level: 30
+Nature: Modest
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Giga Drain
+- Toxic Spikes
+- Leech Seed
+- Grass Whistle
 
 Skitty
-Level: 11
+Ability: Cute Charm
+Level: 30
+Nature: Jolly
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Faint Attack
+- Disarming Voice
+- Sing
+- Charm
 
 Goldeen
-Level: 11
+Ability: Lightning Rod
+Level: 30
+Nature: Adamant
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Water Pulse
+- Horn Attack
+- Fury Attack
+- Aqua Ring
 
 === TRAINER_HALLE ===
 Name: Halle
@@ -13906,29 +14147,65 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Wingull
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Pelipper
+Ability: Keen Eye
+Level: 45
+Nature: Timid
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Hydro Pump
+- Air Slash
+- Roost
+- Stockpile
 
-Shroomish
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Breloom
+Ability: Poison Heal
+Level: 45
+Nature: Adamant
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Sky Uppercut
+- Seed Bomb
+- Mach Punch
+- Force Palm
 
-Marill
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Azumarill
+Ability: Huge Power
+Level: 45
+Nature: Adamant
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Aqua Tail
+- Double-Edge
+- Play Rough
+- Superpower
 
 Roselia
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Ability: Natural Cure
+Level: 45
+Nature: Modest
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Petal Blizzard
+- Synthesis
+- Toxic
+- Aromatherapy
 
-Skitty
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Delcatty
+Ability: Cute Charm
+Level: 45
+Nature: Jolly
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Double-Edge
+- Play Rough
+- Captivate
+- Heal Bell
 
-Goldeen
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Seaking
+Ability: Lightning Rod
+Level: 45
+Nature: Adamant
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+- Megahorn
+- Waterfall
+- Aqua Ring
+- Flail
 
 === TRAINER_LYDIA_3 ===
 Name: Lydia
@@ -13940,28 +14217,64 @@ Double Battle: No
 AI: Basic Trainer
 
 Pelipper
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ability: Drizzle
+Level: 48
+Nature: Timid
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Hydro Pump
+- Air Slash
+- Tailwind
+- Roost
 
 Breloom
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ability: Poison Heal
+Level: 48
+Nature: Adamant
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Sky Uppercut
+- Seed Bomb
+- Spore
+- Mind Reader
 
-Marill
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Azumarill
+Ability: Huge Power
+Level: 48
+Nature: Adamant
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Play Rough
+- Aqua Tail
+- Superpower
+- Double-Edge
 
-Roselia
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Roserade
+Ability: Natural Cure
+Level: 48
+Nature: Modest
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Petal Dance
+- Toxic
+- Synthesis
+- Extrasensory
 
 Delcatty
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ability: Cute Charm
+Level: 48
+Nature: Jolly
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Double-Edge
+- Play Rough
+- Sing
+- Disarming Voice
 
-Goldeen
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Seaking
+Ability: Lightning Rod
+Level: 48
+Nature: Adamant
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Megahorn
+- Waterfall
+- Horn Drill
+- Soak
 
 === TRAINER_LYDIA_4 ===
 Name: Lydia
@@ -13970,31 +14283,67 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
-Pelipper
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Pelipper @ Sharp Beak
+Ability: Keen Eye
+Level: 51
+Nature: Timid
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Scald
+- Hurricane
+- Roost
+- U-turn
 
-Breloom
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Breloom @ Toxic Orb
+Ability: Poison Heal
+Level: 51
+Nature: Adamant
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Spore
+- Focus Punch
+- Seed Bomb
+- Facade
 
-Marill
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Azumarill @ Mystic Water
+Ability: Huge Power
+Level: 51
+Nature: Adamant
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Aqua Jet
+- Play Rough
+- Liquidation
+- Belly Drum
 
-Roselia
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Roserade @ Black Sludge
+Ability: Natural Cure
+Level: 51
+Nature: Modest
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Giga Drain
+- Sludge Bomb
+- Shadow Ball
+- Dazzling Gleam
 
-Delcatty
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Delcatty @ Silk Scarf
+Ability: Cute Charm
+Level: 51
+Nature: Jolly
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Thunder Wave
+- Fake Out
+- Double-Edge
+- Sucker Punch
 
-Goldeen
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Seaking @ Life Orb
+Ability: Lightning Rod
+Level: 51
+Nature: Adamant
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Waterfall
+- Megahorn
+- Drill Run
+- Knock Off
 
 === TRAINER_LYDIA_5 ===
 Name: Lydia
@@ -14003,31 +14352,67 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
-Pelipper
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Pelipper @ Sharp Beak
+Ability: Keen Eye
+Level: 54
+Nature: Timid
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Scald
+- Hurricane
+- Roost
+- U-turn
 
-Breloom
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Breloom @ Toxic Orb
+Ability: Poison Heal
+Level: 54
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Spore
+- Focus Punch
+- Seed Bomb
+- Facade
 
-Azumarill
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Azumarill @ Mystic Water
+Ability: Huge Power
+Level: 54
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aqua Jet
+- Play Rough
+- Liquidation
+- Belly Drum
 
-Roselia
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Roserade @ Black Sludge
+Ability: Natural Cure
+Level: 54
+Nature: Modest
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Giga Drain
+- Sludge Bomb
+- Shadow Ball
+- Dazzling Gleam
 
-Delcatty
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Delcatty @ Silk Scarf
+Ability: Cute Charm
+Level: 54
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thunder Wave
+- Fake Out
+- Double-Edge
+- Sucker Punch
 
-Seaking
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Seaking @ Life Orb
+Ability: Lightning Rod
+Level: 54
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Waterfall
+- Megahorn
+- Drill Run
+- Knock Off
 
 === TRAINER_JACKSON_1 ===
 Name: Jackson
@@ -20199,11 +20584,27 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Assume Stab
+
+Munna
+Ability: Synchronize
+Level: 30
+Nature: Modest
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Psybeam
+- Moonlight
+- Yawn
+- Calm Mind
 
 Kirlia
-Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Trace
+Level: 30
+Nature: Modest
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Psybeam
+- Magical Leaf
+- Calm Mind
+- Shock Wave
 
 === TRAINER_AISHA ===
 Name: Aisha
