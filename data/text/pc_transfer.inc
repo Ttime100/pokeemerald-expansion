@@ -37,8 +37,8 @@ gText_PkmnSentToPCAfterCatch::
 	.string "Box “{STR_VAR_1}”.$"
 
 gText_PlayerObtainedTheMon::
-    .string "{PLAYER} obtained\n"
-    .string "the {STR_VAR_1}!$"
+	.string "{PLAYER} obtained\n"
+	.string "the {STR_VAR_1}!$"
 
 gText_NoMoreRoomForPokemon::
 	.string "There's no more room for Pokémon!\p"

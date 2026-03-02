@@ -274,8 +274,10 @@ static void AnimPunishment(struct Sprite *sprite)
 
 void AnimTask_AttackerFadeToInvisible(u8 taskId)
 {
+    CMD_ARGS(stepDelay);
+
     enum BattlerId battler;
-    gTasks[taskId].data[0] = gBattleAnimArgs[0];
+    gTasks[taskId].data[0] = cmd->stepDelay;
     battler = gBattleAnimAttacker;
     gTasks[taskId].data[1] = 16;
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16, 0));
@@ -435,6 +437,8 @@ static void AnimBite_Step2(struct Sprite *sprite)
 // Launches a tear drop away from the battler. Used by Fake Tears
 void AnimTearDrop(struct Sprite *sprite)
 {
+    CMD_ARGS(relativeTo, type);
+
     enum BattlerId battler;
     s8 xOffset;
 
@@ -1017,7 +1021,7 @@ void AnimTask_SetGrayscaleOrOriginalPal(u8 taskId)
     enum BattlerId battler;
     bool8 calcSpriteId = FALSE;
     u8 position = B_POSITION_PLAYER_LEFT;
-    enum AnimBattler animBattler = gBattleAnimArgs[0];
+    enum AnimBattler animBattler = cmd->battler;
 
     switch (animBattler)
     {
