@@ -7152,7 +7152,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Cranidos (M) @ Shell Bell
 Ability: Mold Breaker
 Level: 14
-Ball: Heavy Ball
+Ball: Heavy
 Nature: Adamant
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Fire Punch
@@ -7163,7 +7163,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Lileep (F) @ Leftovers
 Ability: Storm Drain
 Level: 14
-Ball: Premier Ball
+Ball: Premier
 Nature: Relaxed
 Shiny: Yes
 IVs: 15 HP / 12 Atk / 15 Def / 12 SpA / 15 SpD / 0 Spe
@@ -7175,7 +7175,7 @@ IVs: 15 HP / 12 Atk / 15 Def / 12 SpA / 15 SpD / 0 Spe
 Sudowoodo (M) @ Lum Berry
 Ability: Sturdy
 Level: 15
-Ball: Great Ball
+Ball: Great
 Nature: Relaxed
 IVs: 15 HP / 15 Atk / 18 Def / 15 SpA / 18 SpD / 15 Spe
 - Low Kick
@@ -7186,7 +7186,7 @@ IVs: 15 HP / 15 Atk / 18 Def / 15 SpA / 18 SpD / 15 Spe
 Nosepass (F) @ Magnet
 Ability: Sand Force
 Level: 15
-Ball: Luxury Ball
+Ball: Luxury
 Nature: Relaxed
 IVs: 20 HP / 18 Atk / 20 Def / 18 SpA / 20 SpD / 18 Spe
 - Spark
@@ -7206,7 +7206,7 @@ Mugshot: Yellow
 
 Meditite (M) @ Brightpowder
 Level: 22
-Ball: Friend Ball
+Ball: Friend
 Nature: Careful
 IVs: 18 HP / 15 Atk / 18 Def / 15 SpA / 18 SpD / 18 Spe
 - Brick Break
@@ -7217,7 +7217,7 @@ IVs: 18 HP / 15 Atk / 18 Def / 15 SpA / 18 SpD / 18 Spe
 Hitmontop (M) @ Black Belt
 Ability: Technician
 Level: 22
-Ball: Quick Ball
+Ball: Quick
 Nature: Adamant
 IVs: 15 HP / 18 Atk / 18 Def / 15 SpA / 18 SpD / 18 Spe
 - Triple Kick
@@ -7228,7 +7228,7 @@ IVs: 15 HP / 18 Atk / 18 Def / 15 SpA / 18 SpD / 18 Spe
 Combusken (M) @ King's Rock
 Ability: Speed Boost
 Level: 22
-Ball: Dream Ball
+Ball: Dream
 Nature: Adamant
 IVs: 15 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Fire Punch
@@ -7239,7 +7239,7 @@ IVs: 15 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 Heracross (M) @ Toxic Orb
 Ability: Guts
 Level: 22
-Ball: Sport Ball
+Ball: Sport
 Nature: Adamant
 Shiny: Yes
 IVs: 18 HP / 18 Atk / 16 Def / 18 SpA / 16 SpD / 18 Spe
@@ -7251,7 +7251,7 @@ IVs: 18 HP / 18 Atk / 16 Def / 18 SpA / 16 SpD / 18 Spe
 Poliwrath (M) @ Shell Bell
 Ability: Water Absorb
 Level: 23
-Ball: Net Ball
+Ball: Net
 Nature: Brave
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Drain Punch
@@ -7262,7 +7262,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 Hariyama (M) @ Focus Band
 Ability: Thick Fat
 Level: 24
-Ball: Cherish Ball
+Ball: Cherish
 Nature: Adamant
 IVs: 20 HP / 20 Atk / 20 Def / 18 SpA / 20 SpD / 15 Spe
 - Drain Punch
@@ -7283,7 +7283,7 @@ Mugshot: Yellow
 Electrode @ Quick Claw
 Ability: Static
 Level: 32
-Ball: Poke Ball
+Ball: Poke
 Nature: Naive
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shock Wave
@@ -7294,7 +7294,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Magneton @ Eviolite
 Ability: Sturdy
 Level: 32
-Ball: Heavy Ball
+Ball: Heavy
 Nature: Modest
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shock Wave
@@ -7305,7 +7305,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Electabuzz (M) @ Eviolite
 Ability: Static
 Level: 33
-Ball: Ultra Ball
+Ball: Ultra
 Nature: Brave
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shock Wave
@@ -7316,7 +7316,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Lanturn (F) @ Leftovers
 Ability: Volt Absorb
 Level: 33
-Ball: Dive Ball
+Ball: Dive
 Nature: Modest
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 - Shock Wave
@@ -7327,7 +7327,7 @@ IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 Ampharos (M) @ Focus Sash
 Ability: Static
 Level: 33
-Ball: Love Ball
+Ball: Love
 Nature: Modest
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 - Charge Beam
@@ -7338,7 +7338,7 @@ IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 Luxray (M) @ King's Rock
 Ability: Intimidate
 Level: 34
-Ball: Luxury Ball
+Ball: Luxury
 Nature: Jolly
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Thunder Fang
@@ -7359,7 +7359,7 @@ Mugshot: Pink
 Arcanine (M) @ Sitrus Berry
 Ability: Intimidate
 Level: 43
-Ball: Great Ball
+Ball: Great
 Nature: Naughty
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Iron Head
@@ -7369,7 +7369,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 Ninetales (F) @ White Herb
 Ability: Drought
-Ball: Dream Ball
+Ball: Dream
 Level: 43
 Nature: Modest
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
@@ -7381,7 +7381,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Infernape (M) @ King's Rock
 Ability: Iron Fist
 Level: 44
-Ball: Dream Ball
+Ball: Dream
 Nature: Adamant
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunder Punch
@@ -7402,7 +7402,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Camerupt (M) @ Leftovers
 Ability: Solid Rock
 Level: 44
-Ball: Timer Ball
+Ball: Timer
 Nature: Relaxed
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Overheat
@@ -7413,7 +7413,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 Torkoal (F) @ White Herb
 Ability: Drought
 Level: 45
-Ball: Cherish Ball
+Ball: Cherish
 Nature: Relaxed
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Overheat
@@ -7502,7 +7502,7 @@ Mugshot: Light Blue
 Skarmory (F) @ Rocky Helmet
 Ability: Sturdy
 Level: 54
-Ball: Heavy Ball
+Ball: Heavy
 Nature: Bold
 IVs: 31 HP / 26 Atk / 31 Def / 26 SpA / 31 SpD / 31 Spe
 - Roost
@@ -7711,7 +7711,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Ralts (F)
-Ball: Love Ball
+Ball: Love
 Level: 17
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -7774,12 +7774,12 @@ AI: Basic Trainer
 
 Ralts (F)
 Level: 26
-Ball: Love Ball
+Ball: Love
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Meditite (M)
 Level: 26
-Ball: Friend Ball
+Ball: Friend
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_JERRY_3 ===
@@ -7793,12 +7793,12 @@ AI: Basic Trainer
 
 Gardevoir (F)
 Level: 33
-Ball: Love Ball
+Ball: Love
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 Meditite (M)
 Level: 33
-Ball: Friend Ball
+Ball: Friend
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_JERRY_4 ===
@@ -7812,12 +7812,12 @@ AI: Basic Trainer
 
 Gardevoir (F)
 Level: 40
-Ball: Love Ball
+Ball: Love
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Medicham (M)
 Level: 40
-Ball: Friend Ball
+Ball: Friend
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_JERRY_5 ===
@@ -7831,17 +7831,17 @@ AI: Basic Trainer
 
 Gardevoir (F)
 Level: 47
-Ball: Love Ball
+Ball: Love
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Banette (M)
 Level: 47
-Ball: Moon Ball
+Ball: Moon
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Medicham (M)
 Level: 47
-Ball: Friend Ball
+Ball: Friend
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_KAREN_1 ===
@@ -18847,7 +18847,7 @@ AI: Basic Trainer
 
 Phanpy @ Nugget
 Level: 18
-Ball: Luxury Ball
+Ball: Luxury
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Bulldoze
 - Rollout
@@ -18857,7 +18857,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Mightyena
 Ability: Intimidate
 Level: 18
-Ball: Luxury Ball
+Ball: Luxury
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Thunder Fang
 - Fire Fang
@@ -18876,7 +18876,7 @@ AI: Basic Trainer
 
 Lombre @ Nugget
 Level: 18
-Ball: Luxury Ball
+Ball: Luxury
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Water Pulse
 - Knock Off
@@ -18885,7 +18885,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Aipom
 Level: 18
-Ball: Luxury Ball
+Ball: Luxury
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Acrobatics
 - Fire Punch
