@@ -161,7 +161,7 @@ script HypertrainAll {
         msgbox(format("If you change your mind, I am always ready to train!"))
         release
         end
-    } //TODO needs fixed
+    }
     copyvar(PARTY_MON, VAR_0x8004)
     bufferpartymonnick(STR_VAR_1,PARTY_MON)
     msgbox(format("So you would like me to hyper train all of {STR_VAR_1}'s stats?"), MSGBOX_YESNO)
