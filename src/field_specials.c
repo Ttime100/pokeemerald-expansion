@@ -4760,7 +4760,10 @@ void SwapMonGender(void)
         break;
     }
 
-    CreateBoxMon(&tempBoxMon, species, metLevel, 31, TRUE, newPid, 1, otId);
+    struct OriginalTrainerId trainerId;
+    trainerId.method = OT_ID_PLAYER_ID;
+    trainerId.value  = otId;
+    CreateBoxMon(&tempBoxMon, species, metLevel, newPid, trainerId);
 
     SetBoxMonData(&tempBoxMon, MON_DATA_EXP, &exp);
     SetBoxMonData(&tempBoxMon, MON_DATA_FRIENDSHIP, &friendship);
@@ -4821,6 +4824,8 @@ void JackpotCount(void)
 {
     u32 jackpotcount = GetGameStat(GAME_STAT_SLOT_JACKPOTS);
     gSpecialVar_Result = jackpotcount;
+}
+
 void DaisyMassageServices(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
