@@ -1121,7 +1121,7 @@
 #define SPECIES_CASTFORM_SUNNY                          1051
 #define SPECIES_CASTFORM_RAINY                          1052
 #define SPECIES_CASTFORM_SNOWY                          1053
-#define SPECIES_CASTFORM_SANDY                          1550 //Ttime100 added
+#define SPECIES_CASTFORM_SANDY                          1573 //Ttime100 added
 #define SPECIES_DEOXYS_ATTACK                           1054
 #define SPECIES_DEOXYS_DEFENSE                          1055
 #define SPECIES_DEOXYS_SPEED                            1056
