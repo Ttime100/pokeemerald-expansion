@@ -216,7 +216,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Repeatedly punches the foe\n"
             "2 to 5 times."),
-        .effect = EFFECT_MULTI_HIT,
+        .effect = EFFECT_HIT,
         .power = 25, //CHANGE FROM 18
         .type = TYPE_NORMAL,
         .accuracy = 85,
@@ -3581,7 +3581,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Launches sharp spikes that\n"
             "strike 2 to 5 times."),
-        .effect = EFFECT_MULTI_HIT,
+        .effect = EFFECT_HIT,
         .power = 25, // CHANGE FROM 20
         .type = TYPE_WATER, // CHANGE FROM NORMAL
         .accuracy = 90, // CHANGE FROM 100
@@ -5404,7 +5404,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Strikes the foe with a bone\n"
             "in hand 2 to 5 times.\n"
             "It always hits first."), // UPDATED DESCRIPTION TO INCLUDE INCREASED PRIORIETY
-        .effect = EFFECT_MULTI_HIT,
+        .effect = EFFECT_HIT,
         .power = 15, // CHANGE FROM 25
         .type = TYPE_GROUND,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 90 : 80,
