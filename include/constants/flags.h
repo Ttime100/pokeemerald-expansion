@@ -1064,7 +1064,7 @@
 
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
-#define FLAG_ITEM_ROUTE_116_FIGHTING_GEM                            0x3E9 // Replaced X-Special
+#define FLAG_ITEM_ROUTE_116_NUGGET                                  0x3E9 // Replaced X-Special
 #define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA // Replaced X-item
 #define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
 #define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
