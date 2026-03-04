@@ -3219,6 +3219,7 @@ static const u16 sCastformEggMoveLearnset[] = {
     MOVE_REFLECT_TYPE,
     MOVE_GUARD_SWAP,
     MOVE_COSMIC_POWER,
+    MOVE_ANCIENT_POWER,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_CASTFORM
