@@ -1128,7 +1128,7 @@
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_2_GREAT_BALL                   0x426 // Ttime100 replaced mail
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_TM_FLING                     0x427 // Ttime100 replaced mail
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_BLACK_BELT                   0x428 // Ttime100 replaced mail
-#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_4_MECH_MAIL                    0x429
+#define FLAG_ITEM_TRICK_HOUSE_PUZZLE_4_ULTRA_BALL                   0x429 // Ttime100 replaced mail
 #define FLAG_ITEM_ROUTE_124_YELLOW_SHARD                            0x42A
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_6_LEFTOVERS                    0x42B // Ttime100 replaced mail
 #define FLAG_ITEM_TRICK_HOUSE_PUZZLE_7_ABILITY_PATCH                0x42C
