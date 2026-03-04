@@ -86,7 +86,7 @@
     F(SLEEP_TALK)\
     F(BULLDOZE)\
     F(POISON_JAB)\
-    F(DREAM_EATER)\
+    F(TRAILBLAZE)\
     F(GRASS_KNOT)\
     F(SWAGGER)\
     F(PLUCK)\

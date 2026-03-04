@@ -13365,14 +13365,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_DREAM_EATER] =
+    [ITEM_TM_TRAILBLAZE] =
     {
         .name = ITEM_NAME("TM85"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Takes half the\n"
-            "damage inflicted\n"
-            "on a sleeping foe."),
+            "The user attacks\n"
+            "suddenly, raising\n"
+            "its speed."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
