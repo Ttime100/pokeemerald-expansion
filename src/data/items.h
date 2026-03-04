@@ -13435,14 +13435,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_SUBSTITUTE] =
+    [ITEM_TM_DRAINING_KISS] =
     {
         .name = ITEM_NAME("TM90"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Creates a decoy\n"
-            "using 1/4 of the\n"
-            "user's maximum HP."),
+            "An energy-draining\n"
+            "kiss. Recovers 1/2\n"
+            "HP of damage dealt."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

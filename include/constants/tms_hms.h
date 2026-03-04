@@ -91,7 +91,7 @@
     F(SWAGGER)\
     F(PLUCK)\
     F(U_TURN)\
-    F(SUBSTITUTE)\
+    F(DRAINING_KISS)\
     F(FLASH_CANNON)\
     F(TRICK_ROOM)\
     F(WILD_CHARGE)\
