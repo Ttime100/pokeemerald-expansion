@@ -31,6 +31,7 @@ item_to_ball = {
     "ITEM_PARK_BALL": "Park",
     "ITEM_BEAST_BALL": "Beast",
     "ITEM_CHERISH_BALL": "Cherish",
+    "ITEM_LAVA_BALL": "Lava",
 }
 
 def make_backup_files(files):

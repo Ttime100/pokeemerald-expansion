@@ -34,6 +34,7 @@ item_to_ball = {
     "ITEM_PARK_BALL": "BALL_PARK",
     "ITEM_BEAST_BALL": "BALL_BEAST",
     "ITEM_CHERISH_BALL": "BALL_CHERISH",
+    "ITEM_LAVA_BALL": "BALL_LAVA",
 }
 
 INCFILE_CREATEMON_PAT = re.compile(r"\s*(createmon|givemon)")

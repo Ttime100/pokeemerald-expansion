@@ -627,6 +627,22 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_CherishBall,
     },
 
+    [ITEM_LAVA_BALL] =
+    {
+        .name = ITEM_NAME("Lava Ball"),
+        .price = 1000,
+        .description = COMPOUND_STRING(
+            "A Ball designed for\n"
+            "Fire-, Ground-, and\n"
+            "Rock-type Pokémon."),
+        .pocket = POCKET_POKE_BALLS,
+        .type = ITEM_USE_BAG_MENU,
+        .battleUsage = EFFECT_ITEM_THROW_BALL,
+        .secondaryId = BALL_LAVA,
+        .iconPic = gItemIcon_LavaBall,
+        .iconPalette = gItemIconPalette_LavaBall,
+    },
+
 // Medicine
 
     [ITEM_POTION] =

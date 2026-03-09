@@ -52,5 +52,7 @@ const struct ObjectEventGraphicsInfo gPokeballGraphics[POKEBALL_COUNT] = {
     #ifdef ITEM_STRANGE_BALL
     POKEBALL_GFX_INFO(STRANGE),
     #endif
+    // Custom
+    POKEBALL_GFX_INFO(LAVA),
 };
 #endif //OW_FOLLOWERS_POKEBALLS

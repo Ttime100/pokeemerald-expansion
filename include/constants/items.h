@@ -1055,6 +1055,9 @@ enum __attribute__((packed)) Item
     ITEM_LIBERTY_PASS = 874,
     ITEM_MEMBER_CARD = 875,
 
+    // Newly Added Poké Balls
+    ITEM_LAVA_BALL = 876,
+
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };

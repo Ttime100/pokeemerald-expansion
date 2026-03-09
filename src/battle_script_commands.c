@@ -10745,6 +10745,10 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
         ball->multiplier = 410;
         ball->divider = 4096;
         break;
+    case BALL_LAVA:
+        if (IS_BATTLER_ANY_TYPE(wildMonBattler, TYPE_FIRE, TYPE_ROCK, TYPE_GROUND))
+            ball->multiplier = 350;
+        break;
     }
 
 }
