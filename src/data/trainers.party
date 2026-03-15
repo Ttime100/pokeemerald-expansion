@@ -25,6 +25,7 @@ Optional (but still recommended) fields for trainers:
           see "constants/battle_ai.h" for all flags)
     - Mugshot (enable Mugshots during battle transition
                set to one of Purple, Green, Pink, Blue or Yellow)
+            (Ttime100 added Brown, Gray, and Light Blue mugshots)
     - Starting Status (see include/constants/battle.h for values)
 
 Pokemon are then specified using the Showdown Export format.
@@ -6850,6 +6851,7 @@ Mugshot: Blue
 Aggron (M) @ Leftovers
 Ability: Sturdy
 Level: 100
+Ball: Heavy
 Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Stealth Rock
@@ -6860,7 +6862,9 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Blastoise (M) @ Leftovers
 Ability: Shell Armor
 Level: 100
+Ball: Master
 Nature: Calm
+Shiny: Yes
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Toxic
@@ -6870,6 +6874,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Garchomp (M) @ Rocky Helmet
 Ability: Rough Skin
 Level: 100
+Ball: Great
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Fire Fang
@@ -6880,6 +6885,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Togekiss (M) @ Babiri Berry
 Ability: Serene Grace
 Level: 100
+Ball: Premier
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Air Slash
@@ -6890,6 +6896,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Electivire (M) @ Assault Vest
 Ability: Motor Drive
 Level: 100
+Ball: Ultra
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Wild Charge
@@ -6900,6 +6907,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Infernape (M) @ Punching Glove
 Ability: Iron Fist
 Level: 100
+Ball: Lava
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Drain Punch
@@ -6951,6 +6959,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Mismagius (M) @ Choice Specs
 Ability: Levitate
 Level: 100
+Ball: Dusk
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Shadow Ball
@@ -6971,6 +6980,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Volcarona (M) @ Heavy Duty Boots
 Ability: Flame Body
 Level: 100
+Ball: Lava
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Bug Buzz
@@ -7011,6 +7021,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Umbreon (M) @ Leftovers
 Ability: Inner Focus
 Level: 100
+Ball: Moon
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Foul Play
@@ -7369,8 +7380,8 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 Ninetales (F) @ White Herb
 Ability: Drought
-Ball: Dream
 Level: 43
+Ball: Lava
 Nature: Modest
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Overheat
@@ -7392,6 +7403,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Typhlosion (M) @ White Herb
 Ability: Blaze
 Level: 44
+Ball: Park
 Nature: Modest
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Overheat
@@ -7402,7 +7414,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Camerupt (M) @ Leftovers
 Ability: Solid Rock
 Level: 44
-Ball: Timer
+Ball: Lava
 Nature: Relaxed
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Overheat
@@ -7434,6 +7446,7 @@ Mugshot: Green
 Spinda (M) @ Sitrus Berry
 Ability: Own Tempo
 Level: 45
+Ball: Friend
 Nature: Quirky
 IVs: 24 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 24 Spe
 - Teeter Dance
@@ -7442,7 +7455,9 @@ IVs: 24 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 24 Spe
 - Water Pulse
 
 Staraptor (M) @ Wacan Berry
+Ability: Intimidate
 Level: 45
+Ball: Premier
 Nature: Adamant
 IVs: 24 HP / 30 Atk / 30 Def / 24 SpA / 30 SpD / 30 Spe
 - Dual Wingbeat
@@ -7453,6 +7468,7 @@ IVs: 24 HP / 30 Atk / 30 Def / 24 SpA / 30 SpD / 30 Spe
 Exploud (M) @ Scope Lens
 Ability: Soundproof
 Level: 45
+Ball: Heal
 Nature: Modest
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Thunderbolt
@@ -7463,6 +7479,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 Porygon-Z @ Chople Berry
 Ability: Download
 Level: 46
+Ball: Strange
 Nature: Modest
 IVs: 30 HP / 30 Atk / 30 Def / 31 SpA / 30 SpD / 30 Spe
 - Discharge
@@ -7473,6 +7490,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 31 SpA / 30 SpD / 30 Spe
 Snorlax (M) @ Chesto Berry
 Ability: Thick Fat
 Level: 48
+Ball: Dream
 Nature: Impish
 IVs: 31 HP / 30 Atk / 31 Def / 30 SpA / 31 SpD / 30 Spe
 - Body Slam
@@ -7481,7 +7499,9 @@ IVs: 31 HP / 30 Atk / 31 Def / 30 SpA / 31 SpD / 30 Spe
 - Yawn
 
 Slaking (M) @ Leftovers
+Ability: Truant
 Level: 48
+Ball: Cherish
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Aerial Ace
@@ -7533,6 +7553,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 Charizard (M) @ Lum Berry
 Ability: Solar Power
 Level: 55
+Ball: Lava
 Nature: Naughty
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Thunder Punch
@@ -7543,6 +7564,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Dragonite (M) @ Life Orb
 Ability: Inner Focus
 Level: 56
+Ball: Ultra
 Nature: Lonely
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Dance
@@ -7553,6 +7575,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Altaria (F) @ Lum Berry
 Ability: Natural Cure
 Level: 56
+Ball: Park
 Nature: Hasty
 Shiny: Yes
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -7584,6 +7607,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Bronzong @ Leftovers
 Ability: Levitate
 Level: 75
+Ball: Heavy
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Stealth Rock
