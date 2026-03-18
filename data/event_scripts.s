@@ -1306,6 +1306,20 @@ RusturfTunnel_EventScript_SetRusturfTunnelOpen::
 	setflag FLAG_RUSTURF_TUNNEL_OPENED
 	return
 
+EventScript_DisableAutoRun::
+    msgbox Text_AutoRunDisabled, MSGBOX_AUTOCLOSE
+    end
+
+EventScript_EnableAutoRun::
+    msgbox Text_AutoRunEnabled, MSGBOX_AUTOCLOSE
+    end
+
+Text_AutoRunDisabled:
+    .string "Auto-Run disabled.$"
+
+Text_AutoRunEnabled:
+    .string "Auto-Run enabled.$"
+
 EventScript_UnusedBoardFerry::
 	delay 30
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp

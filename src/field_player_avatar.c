@@ -919,38 +919,45 @@ static void PlayerNotOnBikeMoving(enum Direction direction, u16 heldKeys)
     }
 
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER)
-     && (heldKeys & B_BUTTON)
      && FlagGet(FLAG_SYS_B_DASH)
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0
      && !FollowerNPCComingThroughDoor()
      && (I_ORAS_DOWSING_FLAG == 0 || (I_ORAS_DOWSING_FLAG != 0 && !FlagGet(I_ORAS_DOWSING_FLAG))))
     {
-        if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
-            PlayerWalkSlowStairs(direction);
-        else
-            PlayerWalkNormal(direction);
-    }
-    else if (FlagGet(DN_FLAG_SEARCHING) && (heldKeys & A_BUTTON))
-    {
-        gPlayerAvatar.creeping = TRUE;
-        PlayerWalkSlow(direction);
-    }
-    else
-    {
-        if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER)
-        {
-            PlayerWalkNormal(direction);
-        }
-        else
+        if (gSaveBlock2Ptr->autoRun ? !(heldKeys & B_BUTTON) : (heldKeys & B_BUTTON))
         {
             if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
                 PlayerRunSlow(direction);
             else
                 PlayerRun(direction);
-                gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
-                return;
+
+            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
+            return;
         }
     }
+
+    if (FlagGet(DN_FLAG_SEARCHING) && (heldKeys & A_BUTTON))
+    {
+        gPlayerAvatar.creeping = TRUE;
+        PlayerWalkSlow(direction);
+        gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_DASH;
+        return;
+    }
+
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER)
+    {
+        PlayerWalkNormal(direction);
+    }
+    else if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
+    {
+        PlayerWalkSlowStairs(direction);
+    }
+    else
+    {
+        PlayerWalkNormal(direction);
+    }
+    
+    gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_DASH;
 }
 
 static enum Collision CheckForPlayerAvatarCollision(enum Direction direction)

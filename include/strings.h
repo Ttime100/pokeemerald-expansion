@@ -171,6 +171,7 @@ extern const u8 gText_SaveFailed[];
 extern const u8 gText_MenuPokedex[];
 extern const u8 gText_MenuPokemon[];
 extern const u8 gText_MenuBag[];
+extern const u8 gText_MenuPokeVial[]; // Added for L-Menu
 extern const u8 gText_MenuPokenav[];
 extern const u8 gText_MenuPlayer[];
 extern const u8 gText_MenuSave[];
@@ -179,6 +180,8 @@ extern const u8 gText_MenuExit[];
 extern const u8 gText_MenuRetire[];
 extern const u8 gText_MenuRest[];
 extern const u8 gText_MenuDexNav[];
+extern const u8 gText_AutoRunOn[]; // L-Menu
+extern const u8 gText_AutoRunOff[]; // L-Menu
 extern const u8 gText_Floor1[];
 extern const u8 gText_Floor2[];
 extern const u8 gText_Floor3[];

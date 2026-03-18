@@ -19,6 +19,8 @@ void FieldCB_WarpExitFadeFromWhite(void);
 void FieldCB_RushInjuredPokemonToCenter(void);
 bool8 FieldCB_ReturnToFieldOpenStartMenu(void);
 void ReturnToFieldOpenStartMenu(void);
+bool8 FieldCB_ReturnToFieldOpenLMenu(void);
+void ReturnToFieldOpenLMenu(void);
 void FieldCB_ReturnToFieldNoScript(void);
 void FieldCB_ReturnToFieldNoScriptCheckMusic(void);
 void DoWarp(void);

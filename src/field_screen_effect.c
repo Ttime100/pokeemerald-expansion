@@ -16,6 +16,7 @@
 #include "gpu_regs.h"
 #include "heal_location.h"
 #include "io_reg.h"
+#include "l_menu.h"
 #include "link.h"
 #include "link_rfu.h"
 #include "load_save.h"
@@ -476,6 +477,28 @@ void ReturnToFieldOpenStartMenu(void)
 bool8 FieldCB_ReturnToFieldOpenStartMenu(void)
 {
     ShowReturnToFieldStartMenu();
+    return FALSE;
+}
+// Ttime 100 added for L-Menu
+static void Task_WaitForFadeShowLMenu(u8 taskId)
+{
+    if (WaitForWeatherFadeIn() == TRUE)
+    {
+        DestroyTask(taskId);
+        CreateTask(Task_ShowLMenu, 80);
+    }
+}
+
+void ReturnToFieldOpenLMenu(void)
+{
+    FadeInFromBlack();
+    CreateTask(Task_WaitForFadeShowLMenu, 0x50);
+    LockPlayerFieldControls();
+}
+
+bool8 FieldCB_ReturnToFieldOpenLMenu(void)
+{
+    ShowReturnToFieldLMenu();
     return FALSE;
 }
 

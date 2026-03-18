@@ -153,6 +153,7 @@ extern enum Type gUnionRoomRequestedMonType;
 
 u8 CreateTask_CreateTradeMenu(void);
 void SetUsingUnionRoomStartMenu(void);
+void SetUsingUnionRoomLMenu(void); //Ttime100 added
 void CreateTask_LinkMysteryGiftWithFriend(u32 activity);
 void CreateTask_LinkMysteryGiftOverWireless(u32 activity);
 void CreateTask_SendMysteryGift(u32 activity);
