@@ -5,7 +5,7 @@ FortreeCity_House1_EventScript_Trader::
 	lock
 	faceplayer
 	goto_if_set FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_TradeCompleted
-	ingame_trade INGAME_TRADE_PLUSLE, FortreeCity_House1_Text_YouWillTradeWontYou, FortreeCity_House1_EventScript_DeclineTrade, FortreeCity_House1_EventScript_NotRequestedMon, FortreeCity_House1_Text_MonYouTakeCare
+	ingame_trade INGAME_TRADE_DITTO, FortreeCity_House1_Text_YouWillTradeWontYou, FortreeCity_House1_EventScript_DeclineTrade, FortreeCity_House1_EventScript_NotRequestedMon, FortreeCity_House1_Text_MonYouTakeCare
 	setflag FLAG_FORTREE_NPC_TRADE_COMPLETED
 	release
 	end
@@ -52,7 +52,7 @@ FortreeCity_House1_Text_YouWillTradeWontYou:
 
 FortreeCity_House1_Text_MonYouTakeCare:
 	.string "Oh, yeah, right on!\p"
-	.string "{STR_VAR_1}, welcome!\n"
+	.string "Pikachu, welcome!\n"
 	.string "{STR_VAR_2}, you take care!$"
 
 FortreeCity_House1_Text_ThisIsntAMon:
@@ -64,9 +64,9 @@ FortreeCity_House1_Text_YouWontTradeMe:
 	.string "Even after I bared my heart to you?$"
 
 FortreeCity_House1_Text_GoingToMakeVolbeatStrong:
-	.string "I'm going to make Volbeat super\n"
+	.string "I'm going to make Pikachu super\n"
 	.string "strong from this moment on!\p"
-	.string "I hope you do the same with Pluses!$"
+	.string "I hope you do the same with Ditty!$"
 
 FortreeCity_House1_Text_TradingMemoriesWithOthers:
 	.string "Trading Pokémon with others…\p"
