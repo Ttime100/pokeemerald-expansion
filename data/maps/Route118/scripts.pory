@@ -333,6 +333,8 @@ script Route118_EventScript_Wally {
     msgbox(Route118_Wally_Intro)
     trainerbattle_no_intro(TRAINER_WALLY_ROUTE_118, Route118_Wally_Defeat)
     msgbox(Route118_Wally_PostBattle)
+	giveitem(ITEM_HYPER_POTION, 10)
+	msgbox(Route118_Wally_Goodbye)
 	closemessage
 	call_if_eq(VAR_0x8008, 0, Route118_EventScript_WallyExit0)
 	call_if_eq(VAR_0x8008, 1, Route118_EventScript_WallyExit1)
@@ -395,12 +397,16 @@ text Route118_Wally_Defeat {
     format("I see… Even now, I can feel the distance between us.")
 }
 
-text Route118_Wally_PostBattle{
+text Route118_Wally_PostBattle {
 	format("Thank you, {PLAYER}. That battle… it told me everything I needed to know.\p
 I’m still not quite at your level, am I? But that’s okay. Seeing your strength only makes me want to work harder.\p
 The path ahead is wild and untamed, but I’m not afraid of it anymore. My Pokémon and I will find our own way through.\p
 I’ll keep training. I’ll get every badge, just like you. And one day… I’ll be the one waiting for you at the very end of the road!\p
-Take care, {PLAYER}. I’ll see you again!")
+Here, {PLAYER}.\nUse these to help you on your journey!")
+}
+
+text Route118_Wally_Goodbye {
+	format("Take care, {PLAYER}. I’ll see you again!")
 }
 
 movement Route118_Movement_WallyApproachPlayer0 {

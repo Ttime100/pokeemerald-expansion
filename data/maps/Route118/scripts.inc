@@ -651,199 +651,203 @@ Route118_EventScript_Wally::
 # 335 "data/maps/Route118/scripts.pory"
 	msgbox Route118_Wally_PostBattle
 # 336 "data/maps/Route118/scripts.pory"
-	closemessage
+	giveitem ITEM_HYPER_POTION, 10
 # 337 "data/maps/Route118/scripts.pory"
-	call_if_eq VAR_0x8008, 0, Route118_EventScript_WallyExit0
+	msgbox Route118_Wally_Goodbye
 # 338 "data/maps/Route118/scripts.pory"
-	call_if_eq VAR_0x8008, 1, Route118_EventScript_WallyExit1
+	closemessage
 # 339 "data/maps/Route118/scripts.pory"
-	call_if_eq VAR_0x8008, 2, Route118_EventScript_WallyExit2
+	call_if_eq VAR_0x8008, 0, Route118_EventScript_WallyExit0
 # 340 "data/maps/Route118/scripts.pory"
-	setvar VAR_ROUTE118_STATE, 2
+	call_if_eq VAR_0x8008, 1, Route118_EventScript_WallyExit1
 # 341 "data/maps/Route118/scripts.pory"
-	removeobject LOCALID_ROUTE118_WALLY
+	call_if_eq VAR_0x8008, 2, Route118_EventScript_WallyExit2
 # 342 "data/maps/Route118/scripts.pory"
+	setvar VAR_ROUTE118_STATE, 2
+# 343 "data/maps/Route118/scripts.pory"
+	removeobject LOCALID_ROUTE118_WALLY
+# 344 "data/maps/Route118/scripts.pory"
 	releaseall
 	end
 
 
 Route110_EventScript_WallyApproachPlayer0::
-# 347 "data/maps/Route118/scripts.pory"
+# 349 "data/maps/Route118/scripts.pory"
 	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyApproachPlayer0
-# 348 "data/maps/Route118/scripts.pory"
+# 350 "data/maps/Route118/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route110_EventScript_WallyApproachPlayer1::
-# 353 "data/maps/Route118/scripts.pory"
+# 355 "data/maps/Route118/scripts.pory"
 	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyApproachPlayer1
-# 354 "data/maps/Route118/scripts.pory"
+# 356 "data/maps/Route118/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route110_EventScript_WallyApproachPlayer2::
-# 359 "data/maps/Route118/scripts.pory"
+# 361 "data/maps/Route118/scripts.pory"
 	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyApproachPlayer2
-# 360 "data/maps/Route118/scripts.pory"
+# 362 "data/maps/Route118/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route118_EventScript_WallyExit0::
-# 365 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchWallyExit
-# 366 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyExit0
 # 367 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchWallyExit
+# 368 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyExit0
+# 369 "data/maps/Route118/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route118_EventScript_WallyExit1::
-# 372 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchWallyExit
-# 373 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyExit1
 # 374 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchWallyExit
+# 375 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyExit1
+# 376 "data/maps/Route118/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route118_EventScript_WallyExit2::
-# 379 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchWallyExit2
-# 380 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyExit2
 # 381 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchWallyExit2
+# 382 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyExit2
+# 383 "data/maps/Route118/scripts.pory"
 	waitmovement 0
 	return
 
 
-# 406 "data/maps/Route118/scripts.pory"
+# 412 "data/maps/Route118/scripts.pory"
 Route118_Movement_WallyApproachPlayer0:
-# 407 "data/maps/Route118/scripts.pory"
+# 413 "data/maps/Route118/scripts.pory"
 	walk_down
-# 408 "data/maps/Route118/scripts.pory"
-	walk_left
-# 409 "data/maps/Route118/scripts.pory"
-	walk_down
-# 410 "data/maps/Route118/scripts.pory"
-	walk_in_place_faster_down
-# 411 "data/maps/Route118/scripts.pory"
-	step_end
-
 # 414 "data/maps/Route118/scripts.pory"
-Route118_Movement_WallyApproachPlayer1:
+	walk_left
 # 415 "data/maps/Route118/scripts.pory"
 	walk_down
 # 416 "data/maps/Route118/scripts.pory"
-	walk_down
+	walk_in_place_faster_down
 # 417 "data/maps/Route118/scripts.pory"
 	step_end
 
 # 420 "data/maps/Route118/scripts.pory"
-Route118_Movement_WallyApproachPlayer2:
+Route118_Movement_WallyApproachPlayer1:
 # 421 "data/maps/Route118/scripts.pory"
 	walk_down
 # 422 "data/maps/Route118/scripts.pory"
-	walk_right
-# 423 "data/maps/Route118/scripts.pory"
 	walk_down
-# 424 "data/maps/Route118/scripts.pory"
-	walk_in_place_faster_down
-# 425 "data/maps/Route118/scripts.pory"
+# 423 "data/maps/Route118/scripts.pory"
 	step_end
 
+# 426 "data/maps/Route118/scripts.pory"
+Route118_Movement_WallyApproachPlayer2:
+# 427 "data/maps/Route118/scripts.pory"
+	walk_down
 # 428 "data/maps/Route118/scripts.pory"
-Route118_Movement_WallyExit0:
-# 429 "data/maps/Route118/scripts.pory"
 	walk_right
+# 429 "data/maps/Route118/scripts.pory"
+	walk_down
 # 430 "data/maps/Route118/scripts.pory"
-	walk_down
+	walk_in_place_faster_down
 # 431 "data/maps/Route118/scripts.pory"
-	walk_down
-# 432 "data/maps/Route118/scripts.pory"
-	walk_down
-# 433 "data/maps/Route118/scripts.pory"
-	walk_down
+	step_end
+
 # 434 "data/maps/Route118/scripts.pory"
-	walk_down
+Route118_Movement_WallyExit0:
 # 435 "data/maps/Route118/scripts.pory"
-	walk_down
+	walk_right
 # 436 "data/maps/Route118/scripts.pory"
 	walk_down
 # 437 "data/maps/Route118/scripts.pory"
 	walk_down
-	step_end
-
+# 438 "data/maps/Route118/scripts.pory"
+	walk_down
+# 439 "data/maps/Route118/scripts.pory"
+	walk_down
 # 440 "data/maps/Route118/scripts.pory"
-Route118_Movement_WallyExit1:
+	walk_down
 # 441 "data/maps/Route118/scripts.pory"
-	walk_right
+	walk_down
 # 442 "data/maps/Route118/scripts.pory"
 	walk_down
 # 443 "data/maps/Route118/scripts.pory"
 	walk_down
-# 444 "data/maps/Route118/scripts.pory"
-	walk_left
-# 445 "data/maps/Route118/scripts.pory"
-	walk_down
+	step_end
+
 # 446 "data/maps/Route118/scripts.pory"
-	walk_down
+Route118_Movement_WallyExit1:
 # 447 "data/maps/Route118/scripts.pory"
-	walk_down
+	walk_right
 # 448 "data/maps/Route118/scripts.pory"
 	walk_down
 # 449 "data/maps/Route118/scripts.pory"
 	walk_down
 # 450 "data/maps/Route118/scripts.pory"
-	walk_down
-	step_end
-
-# 453 "data/maps/Route118/scripts.pory"
-Route118_Movement_WallyExit2:
-# 454 "data/maps/Route118/scripts.pory"
 	walk_left
+# 451 "data/maps/Route118/scripts.pory"
+	walk_down
+# 452 "data/maps/Route118/scripts.pory"
+	walk_down
+# 453 "data/maps/Route118/scripts.pory"
+	walk_down
+# 454 "data/maps/Route118/scripts.pory"
+	walk_down
 # 455 "data/maps/Route118/scripts.pory"
 	walk_down
 # 456 "data/maps/Route118/scripts.pory"
 	walk_down
-# 457 "data/maps/Route118/scripts.pory"
-	walk_down
-# 458 "data/maps/Route118/scripts.pory"
-	walk_down
+	step_end
+
 # 459 "data/maps/Route118/scripts.pory"
-	walk_down
+Route118_Movement_WallyExit2:
 # 460 "data/maps/Route118/scripts.pory"
-	walk_down
+	walk_left
 # 461 "data/maps/Route118/scripts.pory"
 	walk_down
 # 462 "data/maps/Route118/scripts.pory"
 	walk_down
-	step_end
-
+# 463 "data/maps/Route118/scripts.pory"
+	walk_down
+# 464 "data/maps/Route118/scripts.pory"
+	walk_down
 # 465 "data/maps/Route118/scripts.pory"
-Route118_Movement_PlayerWatchWallyExit:
+	walk_down
 # 466 "data/maps/Route118/scripts.pory"
-	delay_16
+	walk_down
 # 467 "data/maps/Route118/scripts.pory"
-	walk_in_place_faster_right
+	walk_down
 # 468 "data/maps/Route118/scripts.pory"
+	walk_down
 	step_end
 
 # 471 "data/maps/Route118/scripts.pory"
-Route118_Movement_PlayerWatchWallyExit2:
+Route118_Movement_PlayerWatchWallyExit:
 # 472 "data/maps/Route118/scripts.pory"
 	delay_16
 # 473 "data/maps/Route118/scripts.pory"
-	walk_in_place_faster_left
+	walk_in_place_faster_right
 # 474 "data/maps/Route118/scripts.pory"
 	step_end
 
+# 477 "data/maps/Route118/scripts.pory"
+Route118_Movement_PlayerWatchWallyExit2:
+# 478 "data/maps/Route118/scripts.pory"
+	delay_16
+# 479 "data/maps/Route118/scripts.pory"
+	walk_in_place_faster_left
+# 480 "data/maps/Route118/scripts.pory"
+	step_end
+
 Route118_Wally_Intro::
-# 385 "data/maps/Route118/scripts.pory"
+# 387 "data/maps/Route118/scripts.pory"
 	.string "Oh! {PLAYER}! I… I didn't expect to\n"
 	.string "see you here.\p"
 	.string "Since we last met in Mauville, I’ve been\n"
@@ -864,12 +868,12 @@ Route118_Wally_Intro::
 	.string "together!$"
 
 Route118_Wally_Defeat::
-# 394 "data/maps/Route118/scripts.pory"
+# 396 "data/maps/Route118/scripts.pory"
 	.string "I see… Even now, I can feel the\n"
 	.string "distance between us.$"
 
 Route118_Wally_PostBattle::
-# 398 "data/maps/Route118/scripts.pory"
+# 400 "data/maps/Route118/scripts.pory"
 	.string "Thank you, {PLAYER}. That battle… it\n"
 	.string "told me everything I needed to know.\p"
 	.string "I’m still not quite at your level, am I?\n"
@@ -882,5 +886,10 @@ Route118_Wally_PostBattle::
 	.string "just like you. And one day… I’ll be the\l"
 	.string "one waiting for you at the very end of\l"
 	.string "the road!\p"
+	.string "Here, {PLAYER}.\n"
+	.string "Use these to help you on your journey!$"
+
+Route118_Wally_Goodbye::
+# 408 "data/maps/Route118/scripts.pory"
 	.string "Take care, {PLAYER}. I’ll see you\n"
 	.string "again!$"
