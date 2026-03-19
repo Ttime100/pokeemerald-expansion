@@ -151,7 +151,8 @@ enum __attribute__((__packed__)) Flavor
 #define BERRY_TREE_ROUTE_121_PASSHO   96
 #define BERRY_TREE_ROUTE_121_RINDO    97
 #define BERRY_TREE_ROUTE_121_WACAN    98
-
+#define BERRY_TREE_MT_PYRE_KASIB_1    99
+#define BERRY_TREE_MT_PYRE_KASIB_2   100
 
 // Remainder are unused
 
