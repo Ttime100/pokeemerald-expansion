@@ -526,7 +526,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Parth,                 OBJ_EVENT_PAL_TAG_PARTH},
     {gObjectEventPal_Austin,                OBJ_EVENT_PAL_TAG_AUSTIN},
     {gObjectEventPal_Rob,                   OBJ_EVENT_PAL_TAG_ROB},
-    {gObjectEventPal_VictiniLiberty,        OBJ_EVENT_PAL_TAG_VICTINI},
+    {gObjectEventPal_ManaphyEgg,            OBJ_EVENT_PAL_TAG_MANAPHY_EGG},
 #if IS_FRLG
     {gObjectEventPal_PlayerFrlg,            OBJ_EVENT_PAL_TAG_PLAYER_RED},
     {gObjectEventPal_PlayerReflectionFrlg,  OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION},

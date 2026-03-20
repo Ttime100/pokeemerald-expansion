@@ -3696,22 +3696,22 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GroudonSide = {
     .affineAnims = sAffineAnimTable_KyogreGroudon,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Victini = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ManaphyEgg = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_VICTINI,
+    .paletteTag = OBJ_EVENT_PAL_TAG_MANAPHY_EGG,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
     .paletteSlot = PALSLOT_NPC_1,
-    .shadowSize = SHADOW_SIZE_M,
-    .inanimate = FALSE,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
     .compressed = FALSE,
-    .tracks = TRACKS_FOOT,
+    .tracks = TRACKS_NONE,
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
-    .anims = sAnimTable_Standard,
-    .images = sPicTable_VictiniLiberty,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_ManaphyEgg,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

@@ -1024,16 +1024,16 @@ static const struct SpriteFrameImage sPicTable_GroudonSide[] = {
     overworld_frame(gObjectEventPic_GroudonOld, 4, 4, 3),
 };
 
-static const struct SpriteFrameImage sPicTable_VictiniLiberty[] = {
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 0),
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 1),
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 2),
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 0),
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 0),
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 1),
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 1),
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 2),
-    overworld_frame(gObjectEventPic_VictiniLiberty, 2, 4, 2),
+static const struct SpriteFrameImage sPicTable_ManaphyEgg[] = {
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ManaphyEgg, 2, 4, 0),
 };
 
 static const struct SpriteFrameImage sPicTable_Fossil[] = {

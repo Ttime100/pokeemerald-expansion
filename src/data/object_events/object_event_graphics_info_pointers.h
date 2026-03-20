@@ -196,7 +196,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Archie;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Maxie;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KyogreFront;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GroudonFront;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Victini;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ManaphyEgg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fossil;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regirock;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regice;
@@ -655,7 +655,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ROB] =                      &gObjectEventGraphicsInfo_Rob,
     [OBJ_EVENT_GFX_PARTH] =                    &gObjectEventGraphicsInfo_Parth,
     [OBJ_EVENT_GFX_AUSTIN] =                   &gObjectEventGraphicsInfo_Austin,
-    [OBJ_EVENT_GFX_VICTINI] =                  &gObjectEventGraphicsInfo_Victini,
+    [OBJ_EVENT_GFX_MANAPHY_EGG] =              &gObjectEventGraphicsInfo_ManaphyEgg,
 #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,
