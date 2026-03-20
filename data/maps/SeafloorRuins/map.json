@@ -1,0 +1,43 @@
+{
+  "id": "MAP_SEAFLOOR_RUINS",
+  "name": "SeafloorRuins",
+  "layout": "LAYOUT_SEAFLOOR_RUINS",
+  "music": "MUS_UNDERWATER",
+  "region_map_section": "MAPSEC_SEAFLOOR_RUINS",
+  "requires_flash": false,
+  "weather": "WEATHER_UNDERWATER_BUBBLES",
+  "map_type": "MAP_TYPE_UNDERWATER",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_MANAPHY_EGG",
+      "graphics_id": "OBJ_EVENT_GFX_MANAPHY_EGG",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SeafloorRuins_EventScript_ManaphyEgg",
+      "flag": "FLAG_RECEIVED_MANAPHY_EGG"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERWATER_ROUTE128",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

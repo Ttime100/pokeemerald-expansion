@@ -9492,6 +9492,16 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_SEAFLOOR_RUINS",
+      "name": "SeafloorRuins_Layout",
+      "width": 19,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/SeafloorRuins/border.bin",
+      "blockdata_filepath": "data/layouts/SeafloorRuins/map.bin"
     }
   ]
 }

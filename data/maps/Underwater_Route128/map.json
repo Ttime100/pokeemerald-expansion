@@ -32,6 +32,13 @@
       "elevation": 3,
       "dest_map": "MAP_UNDERWATER_SEAFLOOR_CAVERN",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 31,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFLOOR_RUINS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

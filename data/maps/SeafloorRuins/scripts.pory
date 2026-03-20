@@ -1,0 +1,56 @@
+raw`
+SeafloorRuins_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, SeafloorRuins_OnTransition
+    .byte 0
+
+SeafloorRuins_OnTransition:
+    call_if_set FLAG_RECEIVED_MANAPHY_EGG, SeafloorRuins_EventScript_HideEgg
+    end
+
+SeafloorRuins_EventScript_HideEgg::
+    removeobject LOCALID_MANAPHY_EGG
+    return
+`
+script SeafloorRuins_EventScript_ManaphyEgg {
+    lock
+    faceplayer
+    msgbox(SeafloorRuins_Text_FoundStrangeEgg, MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        getpartysize
+        if (var(VAR_RESULT) == 6) {
+            msgbox(SeafloorRuins_Text_NoRoom)
+        } else {
+            giveegg(SPECIES_MANAPHY)
+            getpartysize
+            copyvar(VAR_0x8004, VAR_RESULT)
+            subvar(VAR_0x8004, 1)
+            setmonmetlocation(VAR_0x8004,0xFF)
+            removeobject(LOCALID_MANAPHY_EGG)
+            playfanfare(MUS_OBTAIN_ITEM)
+            message(SeafloorRuins_Text_ReceivedManaphyEgg)
+            waitmessage
+            waitfanfare
+            setflag(FLAG_RECEIVED_MANAPHY_EGG)
+        }
+    } else {
+        msgbox(SeafloorRuins_Text_LeaveEgg)
+    }   
+    release
+    end
+}
+
+text SeafloorRuins_Text_FoundStrangeEgg {
+    format("You found a strange, glowing Egg.\nWould you like to take it?")
+}
+
+text SeafloorRuins_Text_NoRoom {
+    format("You have no room in your party\nto carry this Egg.")
+}
+
+text SeafloorRuins_Text_ReceivedManaphyEgg {
+    format("{PLAYER} received the Manaphy Egg!")
+}
+
+text SeafloorRuins_Text_LeaveEgg {
+    format("It's probably best to leave it\nwhere it is for now.")
+}
