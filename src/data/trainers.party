@@ -1548,8 +1548,8 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Sandshrew
-Level: 25
+Gastrodon_West
+Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Dig
 - Slash
@@ -1557,12 +1557,12 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Poison Sting
 
 Sandslash
-Level: 25
+Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Dig
 - Slash
 - Sand Attack
-- Poison Sting
+- Poison Jab
 
 === TRAINER_DUSTY_2 ===
 Name: Dusty
@@ -4250,7 +4250,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Carvanha
-Level: 26
+Level: 46
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DOMINIK ===
@@ -4262,8 +4262,8 @@ Music: Swimmer
 Double Battle: No
 AI: Basic Trainer
 
-Tentacool
-Level: 26
+Tentacruel
+Level: 46
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DOUGLAS ===
@@ -10382,6 +10382,10 @@ Vullaby
 Level: 50
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
+Rufflet
+Level: 50
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
 === TRAINER_JARED ===
 Name: Jared
 Class: Bird Keeper
@@ -10438,6 +10442,10 @@ Level: 69
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 Xatu
+Level: 69
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
+Braviary
 Level: 69
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
@@ -11395,12 +11403,12 @@ Music: Swimmer
 Double Battle: No
 AI: Basic Trainer
 
-Wingull
-Level: 25
+Finneon
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wailmer
-Level: 25
+Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_IMANI ===
@@ -11412,8 +11420,8 @@ Music: Swimmer
 Double Battle: No
 AI: Basic Trainer
 
-Marill
-Level: 26
+Azumarill
+Level: 46
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KYLA ===
@@ -12691,6 +12699,10 @@ Level: 69
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 Machamp
+Level: 69
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
+Bouffalant
 Level: 69
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
@@ -18336,7 +18348,7 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer
 
-Swellow
+Braviary
 Level: 72
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
@@ -20206,12 +20218,12 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Sandshrew
-Level: 25
+Nosepass
+Level: 45
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Sandshrew
-Level: 25
+Sandslash
+Level: 45
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_JOSUE ===
@@ -20223,12 +20235,12 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer
 
-Taillow
-Level: 25
+Rufflet
+Level: 45
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Wingull
-Level: 25
+Pelipper
+Level: 45
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_CAMRON ===
@@ -22899,13 +22911,13 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Sandshrew
-Level: 31
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Nosepass
+Level: 51
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
 
-Sandshrew
-Level: 31
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Sandslash
+Level: 51
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
 
 === TRAINER_ANDRES_3 ===
 Name: Andres
@@ -22916,17 +22928,21 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Nosepass
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Probopass
+Level: 53
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
-Sandshrew
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Sandslash
+Level: 53
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
-Sandshrew
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Nidoking
+Level: 53
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+- Poison Jab
+- Megahorn
+- Flatter
+- Earthquake
 
 === TRAINER_ANDRES_4 ===
 Name: Andres
@@ -22937,17 +22953,21 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Nosepass
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Probopass
+Level: 55
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-Sandshrew
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Sandslash
+Level: 55
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-Sandshrew
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Nidoking
+Level: 55
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Poison Jab
+- Megahorn
+- Flatter
+- Earthquake
 
 === TRAINER_ANDRES_5 ===
 Name: Andres
@@ -22958,17 +22978,21 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Nosepass
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Probopass
+Level: 59
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Sandslash
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Level: 59
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
-Sandslash
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Nidoking
+Level: 59
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+- Poison Jab
+- Megahorn
+- Flatter
+- Earthquake
 
 === TRAINER_CORY_2 ===
 Name: Cory
