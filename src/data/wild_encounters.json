@@ -3729,12 +3729,12 @@
               {
                 "min_level": 28,
                 "max_level": 29,
-                "species": "SPECIES_STARAVIA"
+                "species": "SPECIES_RUFFLET"
               },
               {
                 "min_level": 28,
                 "max_level": 29,
-                "species": "SPECIES_SWELLOW"
+                "species": "SPECIES_RUFFLET"
               },
               {
                 "min_level": 28,
@@ -7837,7 +7837,7 @@
               {
                 "min_level": 29,
                 "max_level": 29,
-                "species": "SPECIES_XATU"
+                "species": "SPECIES_BOUFFALANT"
               },
               {
                 "min_level": 27,
@@ -7946,7 +7946,7 @@
               {
                 "min_level": 31,
                 "max_level": 31,
-                "species": "SPECIES_DODRIO"
+                "species": "SPECIES_BOUFFALANT"
               },
               {
                 "min_level": 29,
@@ -10280,63 +10280,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 33,
-                "max_level": 33,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_SABLEYE"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_GOLBAT"
               },
               {
-                "min_level": 35,
-                "max_level": 35,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_GOLBAT"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_SABLEYE"
               },
               {
-                "min_level": 36,
-                "max_level": 36,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_CLAYDOL"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_BANETTE"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
+                "min_level": 54,
+                "max_level": 54,
                 "species": "SPECIES_BANETTE"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_BRONZONG"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_HAUNTER"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
+                "min_level": 54,
+                "max_level": 54,
                 "species": "SPECIES_GOLURK"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_CLAYDOL"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
+                "min_level": 54,
+                "max_level": 54,
                 "species": "SPECIES_CLAYDOL"
               }
             ]
@@ -10448,63 +10448,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 33,
-                "max_level": 33,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_SABLEYE"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_GOLBAT"
               },
               {
-                "min_level": 35,
-                "max_level": 35,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_GOLBAT"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_CLAYDOL"
               },
               {
-                "min_level": 36,
-                "max_level": 36,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_GOLURK"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_BANETTE"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
+                "min_level": 54,
+                "max_level": 54,
                 "species": "SPECIES_BANETTE"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_BRONZONG"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_HAUNTER"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
+                "min_level": 54,
+                "max_level": 54,
                 "species": "SPECIES_CLAYDOL"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_CLAYDOL"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
+                "min_level": 54,
+                "max_level": 54,
                 "species": "SPECIES_CLAYDOL"
               }
             ]
@@ -10517,63 +10517,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 33,
-                "max_level": 33,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_SABLEYE"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_GOLBAT"
               },
               {
-                "min_level": 35,
-                "max_level": 35,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_GOLBAT"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_SABLEYE"
               },
               {
-                "min_level": 36,
-                "max_level": 36,
+                "min_level": 52,
+                "max_level": 52,
                 "species": "SPECIES_CLAYDOL"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_BANETTE"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
+                "min_level": 54,
+                "max_level": 54,
                 "species": "SPECIES_BANETTE"
               },
               {
-                "min_level": 36,
-                "max_level": 36,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_GOLURK"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 53,
+                "max_level": 53,
                 "species": "SPECIES_CLAYDOL"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
+                "min_level": 54,
+                "max_level": 54,
+                "species": "SPECIES_BRAVIARY"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
                 "species": "SPECIES_ALTARIA"
               },
               {
-                "min_level": 39,
-                "max_level": 39,
-                "species": "SPECIES_ALTARIA"
-              },
-              {
-                "min_level": 39,
-                "max_level": 39,
+                "min_level": 55,
+                "max_level": 55,
                 "species": "SPECIES_ALTARIA"
               }
             ]
@@ -12719,7 +12719,7 @@
               {
                 "min_level": 13,
                 "max_level": 13,
-                "species": "SPECIES_ROSELIA"
+                "species": "SPECIES_BUDEW"
               },
               {
                 "min_level": 13,
@@ -12739,7 +12739,7 @@
               {
                 "min_level": 14,
                 "max_level": 14,
-                "species": "SPECIES_ROSELIA"
+                "species": "SPECIES_BELLSPROUT"
               },
               {
                 "min_level": 12,
@@ -12757,14 +12757,14 @@
                 "species": "SPECIES_CHERUBI"
               },
               {
-                "min_level": 14,
+                "min_level": 13,
                 "max_level": 14,
-                "species": "SPECIES_SUNKERN"
+                "species": "SPECIES_COTTONEE"
               },
               {
                 "min_level": 13,
                 "max_level": 14,
-                "species": "SPECIES_BELLSPROUT"
+                "species": "SPECIES_ROSELIA"
               },
               {
                 "min_level": 13,
