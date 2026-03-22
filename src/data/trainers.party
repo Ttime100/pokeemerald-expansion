@@ -2300,17 +2300,58 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Cacturne
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Whimsicott (F) @ Focus Sash
+Ability: Prankster
+Level: 93
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Tailwind
+- Sunny Day
+- Moonblast
+- Giga Drain
 
-Pelipper
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Cacturne (M) @ Life Orb
+Ability: Water Absorb
+Level: 93
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Needle Arm
+- Sucker Punch
+- Spikes
+- Drain Punch
+
+Ninetales (F) @ Heat Rock
+Ability: Drought
+Level: 93
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flamethrower
+- Solar Beam
+- Confuse Ray
+- Will-O-Wisp
+
+Bouffalant (M) @ Assault Vest
+Ability: Sap Sipper
+Level: 93
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Head Charge
+- Megahorn
+- Earthquake
+- Swords Dance
+
+Sceptile (M) @ Throat Spray
+Ability: Unburden
+Level: 94
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Roar
+- Solar Beam
+- Earth Power
 
 === TRAINER_ALBERT ===
 Name: Albert
@@ -13780,23 +13821,37 @@ Pic: Cooltrainer M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
-Lunatone
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Explosion
+Lunatone @ Light Clay
+Ability: Levitate
+Level: 92
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Reflect
 - Light Screen
 - Psychic
-
-Solrock
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Explosion
+
+Solrock @ Light Clay
+Ability: Levitate
+Level: 92
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Reflect
 - Light Screen
-- Shadow Ball
+- Rock Slide
+- Explosion
+
+Metagross @ Life Orb
+Ability: Clear Body
+Level: 92
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Meteor Mash
+- Earthquake
+- Zen Headbutt
+- Bullet Punch
 
 === TRAINER_ISAAC_2 ===
 Name: Isaac
@@ -14149,17 +14204,38 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
-Sableye
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sableye @ Leftovers
+Ability: Prankster
+Level: 92
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Will-O-Wisp
+- Recover
+- Foul Play
 
-Absol
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Absol @ Scope Lens
+Ability: Super Luck
+Level: 92
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Night Slash
+- Psycho Cut
+- Sucker Punch
+- Protect
+
+Banette @ Spell Tag
+Ability: Insomnia
+Level: 92
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Claw
+- Gunk Shot
+- Shadow Sneak
+- Will-O-Wisp
 
 === TRAINER_GARRISON ===
 Name: Garrison
