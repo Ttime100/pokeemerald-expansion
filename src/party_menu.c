@@ -8382,3 +8382,21 @@ static void Task_FirstBattleEnterParty_WaitFadeNormal(u8 taskId)
         gTasks[taskId].func = Task_HandleChooseMonInput;
     }
 }
+
+void DeoxysFormChange(void)
+{
+    u8 slotId = gSpecialVar_0x8004;
+    u8 choice = gSpecialVar_0x8005;
+    struct Pokemon *mon = &gPlayerParty[slotId];
+    u16 targetSpecies;
+    switch (choice)
+    {
+        case 0: targetSpecies = SPECIES_DEOXYS; break;
+        case 1: targetSpecies = SPECIES_DEOXYS_ATTACK; break;
+        case 2: targetSpecies = SPECIES_DEOXYS_DEFENSE; break;
+        case 3: targetSpecies = SPECIES_DEOXYS_SPEED; break;
+        default: targetSpecies = SPECIES_DEOXYS; break;
+    }
+    SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+    CalculateMonStats(mon);
+}
