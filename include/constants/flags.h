@@ -754,7 +754,6 @@
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
 #define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1060,6 +1059,7 @@
 #define FLAG_HIDE_RS_MALE                                           0x4DA // Ttime100 added
 #define FLAG_HIDE_RS_FEMALE                                         0x4DB // Ttime100 added
 #define FLAG_RECEIVED_MEMBER_CARD                                   0x4D9 // Ttime100 added
+#define FLAG_HIDE_DEOXYS_SCIENTIST                                  0x2BB // Ttime100 added
 
 
 // Item Ball Flags

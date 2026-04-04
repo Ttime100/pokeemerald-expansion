@@ -295,6 +295,20 @@
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_MOSSDEEP_PETAYA",
       "script": "BerryTreeScript",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_MOSSDEEP_DEOXYS_SCIENTIST",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 57,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MossdeepCity_EventScript_DeoxysScientist",
+      "flag": "FLAG_HIDE_DEOXYS_SCIENTIST"
     }
   ],
   "warp_events": [
@@ -524,7 +538,7 @@
       "y": 21,
       "elevation": 7,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MossdeepCity_EventScript_WhiteRock"
+      "script": "MossdeepCity_EventScript_WhiteRockDeoxys"
     }
   ]
 }
