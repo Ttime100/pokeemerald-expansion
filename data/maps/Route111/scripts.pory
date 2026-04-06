@@ -760,7 +760,7 @@ script Route111_EventScript_VictorNew {
 }
 
 text Route111_Text_NotQuiteReady {
-	format("We only accept challenges from those who have earn four gym badges.\p
+	format("We only accept challenges from those who have earned four gym badges.\p
 	Come back once you've proven yourself!")
 }
 
