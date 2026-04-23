@@ -53,7 +53,7 @@ EverGrandeCity_PhoebesRoom_EventScript_WalkInCloseDoor::
 # 27 "data/maps/EverGrandeCity_PhoebesRoom/scripts.pory"
 EverGrandeCity_PhoebesRoom_OnLoad:
 # 28 "data/maps/EverGrandeCity_PhoebesRoom/scripts.pory"
-	call_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_ResetAdvanceToNextRoom
+	call_if_set FLAG_DEFEATED_ELITE_4_AUSTIN, EverGrandeCity_PhoebesRoom_EventScript_ResetAdvanceToNextRoom
 # 29 "data/maps/EverGrandeCity_PhoebesRoom/scripts.pory"
 	call_if_eq VAR_ELITE_4_STATE, 2, EverGrandeCity_PhoebesRoom_EventScript_CloseDoor
 # 30 "data/maps/EverGrandeCity_PhoebesRoom/scripts.pory"

@@ -27,7 +27,7 @@ EverGrandeCity_SidneysRoom_OnTransition:
 # 14 "data/maps/EverGrandeCity_SidneysRoom/scripts.pory"
 EverGrandeCity_SidneysRoom_OnLoad:
 # 15 "data/maps/EverGrandeCity_SidneysRoom/scripts.pory"
-	call_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_ResetAdvanceToNextRoom
+	call_if_set FLAG_DEFEATED_ELITE_4_PARTH, EverGrandeCity_SidneysRoom_EventScript_ResetAdvanceToNextRoom
 # 16 "data/maps/EverGrandeCity_SidneysRoom/scripts.pory"
 	call_if_eq VAR_ELITE_4_STATE, 1, EverGrandeCity_SidneysRoom_EventScript_CloseDoor
 # 17 "data/maps/EverGrandeCity_SidneysRoom/scripts.pory"

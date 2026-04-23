@@ -53,7 +53,7 @@ EverGrandeCity_GlaciasRoom_EventScript_WalkInCloseDoor::
 # 27 "data/maps/EverGrandeCity_GlaciasRoom/scripts.pory"
 EverGrandeCity_GlaciasRoom_OnLoad:
 # 28 "data/maps/EverGrandeCity_GlaciasRoom/scripts.pory"
-	call_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_ResetAdvanceToNextRoom
+	call_if_set FLAG_DEFEATED_ELITE_4_ROB, EverGrandeCity_GlaciasRoom_EventScript_ResetAdvanceToNextRoom
 # 29 "data/maps/EverGrandeCity_GlaciasRoom/scripts.pory"
 	call_if_eq VAR_ELITE_4_STATE, 3, EverGrandeCity_GlaciasRoom_EventScript_CloseDoor
 # 30 "data/maps/EverGrandeCity_GlaciasRoom/scripts.pory"
