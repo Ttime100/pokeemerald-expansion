@@ -5,8 +5,7 @@ NewMauville_Inside_MapScripts::
 	.byte 0
 
 NewMauville_Inside_OnResume:
-	call_if_eq VAR_TEMP_1, 1, NewMauville_Inside_EventScript_SetBarrierStateBlueButton
-	call_if_eq VAR_TEMP_2, 1, NewMauville_Inside_EventScript_SetBarrierStateGreenButton
+	call NewMauville_Inside_EventScript_SetBarrierState
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_EventScript_TryRemoveVoltorb
 	end
 
@@ -38,27 +37,37 @@ NewMauville_Inside_EventScript_ShowVoltorb3::
 
 NewMauville_Inside_OnLoad:
 	call_if_eq VAR_NEW_MAUVILLE_STATE, 2, NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
+	call NewMauville_Inside_EventScript_CheckRotomEntrance
+	call NewMauville_Inside_EventScript_SetBarrierState
 	end
+
+NewMauville_Inside_EventScript_CheckRotomEntrance::
+	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, NewMauville_Inside_EventScript_OpenRotomEntrance
+    goto NewMauville_Inside_EventScript_ConcealRotomEntrance
+    return
+
+NewMauville_Inside_EventScript_SetBarrierState::
+    goto_if_eq VAR_NEW_MAUVILLE_BARRIER_STATE, 1, NewMauville_Inside_EventScript_SetBarrierStateGreenButton
+    goto NewMauville_Inside_EventScript_SetBarrierStateBlueButton
+    return
 
 NewMauville_Inside_EventScript_BlueButton::
-	lockall
-	setvar VAR_TEMP_1, 1
-	setvar VAR_TEMP_2, 0
-	playse SE_PIN
-	call NewMauville_Inside_EventScript_SetBarrierStateBlueButton
-	special DrawWholeMapView
-	releaseall
-	end
+    lockall
+    setvar VAR_NEW_MAUVILLE_BARRIER_STATE, 0
+    playse SE_PIN
+    call NewMauville_Inside_EventScript_SetBarrierStateBlueButton
+    special DrawWholeMapView
+    releaseall
+    end
 
 NewMauville_Inside_EventScript_GreenButton::
-	lockall
-	setvar VAR_TEMP_1, 0
-	setvar VAR_TEMP_2, 1
-	playse SE_PIN
-	call NewMauville_Inside_EventScript_SetBarrierStateGreenButton
-	special DrawWholeMapView
-	releaseall
-	end
+    lockall
+    setvar VAR_NEW_MAUVILLE_BARRIER_STATE, 1
+    playse SE_PIN
+    call NewMauville_Inside_EventScript_SetBarrierStateGreenButton
+    special DrawWholeMapView
+    releaseall
+    end
 
 NewMauville_Inside_EventScript_SetBarrierStateBlueButton::
 	setmetatile 23, 34, METATILE_BikeShop_Barrier_Hidden_Top, TRUE
@@ -145,6 +154,10 @@ NewMauville_Inside_EventScript_RedButton::
 	msgbox NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped, MSGBOX_DEFAULT
 	call NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
 	setvar VAR_NEW_MAUVILLE_STATE, 2
+	playse SE_TRUCK_DOOR
+    call NewMauville_Inside_EventScript_OpenRotomEntrance
+    msgbox NewMauville_Inside_Text_SecretDoorMessage, MSGBOX_DEFAULT
+    releaseall
 	releaseall
 	end
 
@@ -261,3 +274,18 @@ NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "… … … … … … … …\p"
 	.string "The generator appears to have\n"
 	.string "stopped…$"
+
+NewMauville_Inside_EventScript_ConcealRotomEntrance::
+    setmetatile 26, 0, 0x21F, TRUE
+    setmetatile 26, 1, 0x227, TRUE
+	return
+
+NewMauville_Inside_EventScript_OpenRotomEntrance::
+	setmetatile	26, 0, 0x26E, TRUE
+	setmetatile 26, 1, 0x276, FALSE
+	special DrawWholeMapView
+	delay 30
+	return
+
+NewMauville_Inside_Text_SecretDoorMessage:
+	.string "A secret entrance opened nearby!"

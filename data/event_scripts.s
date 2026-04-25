@@ -1783,3 +1783,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/LilycoveCity_CoveLilyMotel_DarkraiRoom/scripts.inc"
 
 	.include "data/maps/SeafloorRuins/scripts.inc"
+
+	.include "data/maps/NewMauville_SecretRoom/scripts.inc"

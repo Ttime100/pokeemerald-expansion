@@ -1,0 +1,91 @@
+raw`
+NewMauville_SecretRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NewMauville_SecretRoom_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, NewMauville_SecretRoom_OnResume
+	.byte 0
+
+NewMauville_SecretRoom_OnTransition:
+	call_if_set FLAG_CAUGHT_ROTOM, NewMauville_SecretRoom_EventScript_HideRotom
+	call_if_unset FLAG_CAUGHT_ROTOM, NewMauville_SecretRoom_EventScript_TryShowRotom
+	end
+
+NewMauville_SecretRoom_EventScript_HideRotom::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_ROTOM
+	return
+
+NewMauville_SecretRoom_EventScript_TryShowRotom::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_ROTOM, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_ROTOM
+	return
+
+NewMauville_SecretRoom_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_SecretRoom_EventScript_TryRemoveRotom
+	end
+
+NewMauville_SecretRoom_EventScript_TryRemoveRotom::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_NEW_MAUVILLE_SECRET_ROOM_ROTOM
+	return
+`
+script NewMauville_SecretRoom_BattleRotom {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_ROTOM,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_ROTOM,40)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	waitstate
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_NEW_MAUVILLE_SECRET_ROOM_ROTOM)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, NewMauville_SecretRoom_EventScript_DefeatedRotom)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, NewMauville_SecretRoom_EventScript_RanFromRotom)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_SecretRoom_EventScript_RanFromRotom)
+	setflag(FLAG_CAUGHT_ROTOM)
+    release
+    end
+}
+
+script NewMauville_SecretRoom_EventScript_DefeatedRotom {
+    setflag(FLAG_DEFEATED_ROTOM)
+	setvar(VAR_0x8004, SPECIES_ROTOM)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script NewMauville_SecretRoom_EventScript_RanFromRotom {
+    setvar(VAR_0x8004, SPECIES_ROTOM)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script NewMauville_EventScript_RotomCatalogShelf {
+    lockall
+    if (flag(FLAG_RECEIVED_ROTOM_CATALOG)) {
+        msgbox(format("The shelf is filled with\nold electrical manuals."))
+        releaseall
+        end
+    }
+
+    msgbox(format("There's a dusty book titled\n“Rotom & The Modern Appliance.”"))
+    checkitemspace(ITEM_ROTOM_CATALOG, 1)
+    
+    if (var(VAR_RESULT) == FALSE) {
+        goto(Common_EventScript_BagIsFull)
+    }
+
+    giveitem(ITEM_ROTOM_CATALOG)
+    setflag(FLAG_RECEIVED_ROTOM_CATALOG)
+    msgbox(format("The catalog contains instructions\non how to change Rotom's form!"))
+    releaseall
+    end
+}

@@ -482,7 +482,8 @@
     "MeteorFalls_StevensCave",
     "ScorchedSlab_HiddenRoom",
     "Starfall_Glacier",
-    "SeafloorRuins"
+    "SeafloorRuins",
+    "NewMauville_SecretRoom"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
