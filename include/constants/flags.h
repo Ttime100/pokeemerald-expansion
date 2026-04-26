@@ -536,6 +536,9 @@
 #define FLAG_DEFEATED_ROTOM                  0x2B8 // Ttime100 added
 #define FLAG_HIDE_ROTOM                      0x2B9 // Ttime100 added
 #define FLAG_RECEIVED_ROTOM_CATALOG          0x2BA // Ttime100 added
+#define FLAG_CAUGHT_CELEBI                   0x2B4 // Ttime100 added
+#define FLAG_DEFEATED_CELEBI                 0x2B5 // Ttime100 added
+#define FLAG_HIDE_CELEBI                     0x2B6 // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -750,9 +753,6 @@
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC

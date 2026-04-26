@@ -483,7 +483,8 @@
     "ScorchedSlab_HiddenRoom",
     "Starfall_Glacier",
     "SeafloorRuins",
-    "NewMauville_SecretRoom"
+    "NewMauville_SecretRoom",
+    "IlexForest"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

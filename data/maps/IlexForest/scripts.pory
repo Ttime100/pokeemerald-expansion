@@ -1,0 +1,70 @@
+raw`
+IlexForest_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, IlexForest_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, IlexForest_OnResume
+	.byte 0
+
+IlexForest_OnTransition:
+	call_if_set FLAG_CAUGHT_CELEBI, IlexForest_EventScript_HideCelebi
+	call_if_unset FLAG_CAUGHT_CELEBI, IlexForest_EventScript_TryShowCelebi
+	end
+
+IlexForest_EventScript_HideCelebi::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_CELEBI
+	return
+
+IlexForest_EventScript_TryShowCelebi::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_CELEBI, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_CELEBI
+	return
+
+IlexForest_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, IlexForest_EventScript_TryRemoveCelebi
+	end
+
+IlexForest_EventScript_TryRemoveCelebi::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_ILEX_FOREST_CELEBI
+	return
+`
+script IlexForest_BattleCelebi {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_CELEBI,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_CELEBI,40)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	waitstate
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+	setvar(VAR_CELEBI_STATE, 2) // Added to handle dynamic warps in Route 104
+    setvar(VAR_LAST_TALKED, LOCALID_ILEX_FOREST_CELEBI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, IlexForest_EventScript_DefeatedCelebi)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, IlexForest_EventScript_RanFromCelebi)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, IlexForest_EventScript_RanFromCelebi)
+	setflag(FLAG_CAUGHT_CELEBI)
+    release
+    end
+}
+
+script IlexForest_EventScript_DefeatedCelebi {
+    setflag(FLAG_DEFEATED_CELEBI)
+	setvar(VAR_0x8004, SPECIES_CELEBI)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script IlexForest_EventScript_RanFromCelebi {
+    setvar(VAR_0x8004, SPECIES_CELEBI)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
