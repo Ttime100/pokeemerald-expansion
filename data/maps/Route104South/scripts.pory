@@ -16,6 +16,14 @@ script _Route104South_EventScript_StartSailToDewford {
 script _Route104South_OnTransition {
   call(Common_EventScript_SetupRivalGfxId)
   call(_Route104South_EventScript_TrySetRivalPos)
+  if (var(VAR_CELEBI_STATE) == 0 && flag(FLAG_BADGE05_GET)) {
+    setvar(VAR_CELEBI_STATE, 1)
+  }
+  if (var(VAR_CELEBI_STATE) == 1) {
+      setdynamicwarp(MAP_ILEX_FOREST, 5)
+  } else {
+      setdynamicwarp(MAP_PETALBURG_WOODS, 2)
+  }
   end
 }
 

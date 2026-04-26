@@ -4,5 +4,13 @@ mapscripts Route104North_MapScripts {
 
 script _Route104North_OnTransition {
   call(Route104_EventScript_ShowOrHideWhiteHerbFlorist)
+  if (var(VAR_CELEBI_STATE) == 0 && flag(FLAG_BADGE05_GET)) {
+        setvar(VAR_CELEBI_STATE, 1)
+    }
+  if (var(VAR_CELEBI_STATE) == 1) {
+      setdynamicwarp(MAP_ILEX_FOREST, 1)
+  } else {
+      setdynamicwarp(MAP_PETALBURG_WOODS, 0)
+  }
   end
 }

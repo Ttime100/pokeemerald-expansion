@@ -176,7 +176,7 @@
 #define VAR_RUSTURF_TUNNEL_STATE                         0x409A
 #define VAR_SCORCHED_SLAB_STATE                          0x409B // Ttime100 added
 #define VAR_ELITE_4_STATE                                0x409C
-#define VAR_UNUSED_0x409D                                0x409D // Unused Var
+#define VAR_CELEBI_STATE                                 0x409D // Ttime100 added
 #define VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE      0x409E
 #define VAR_MOSSDEEP_SPACE_CENTER_STATE                  0x409F
 #define VAR_SLATEPORT_HARBOR_STATE                       0x40A0
