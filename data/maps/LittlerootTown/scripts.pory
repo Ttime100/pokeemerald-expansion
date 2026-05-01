@@ -1020,8 +1020,8 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 `
 
 script LittlerootTown_EventScript_GiveBoxLink {
-  msgbox(format("{PLAYER}! {PLAYER}! Did you introduce yourself to Prof. Birch?\pOh! What an adorable Pokémon! You must have gotten it from him. How nice!\pYou're your father's child, all right. You look good together with your Pokémon!\pHere, honey!\nIf you're going out on an adventure, you are going to want to access all of your Pokémon where ever you go!"))
-  giveitem(ITEM_POKEMON_BOX_LINK)
+  msgbox(format("{PLAYER}! {PLAYER}! Did you introduce yourself to Prof. Birch?\pOh! What an adorable Pokémon! You must have gotten it from him. How nice!\pYou're your father's child, all right. You look good together with your Pokémon!\pHere, honey!\nIf you're going out on an adventure, you are going to want to catch all of the Pokémon where ever you go!"))
+  giveitem(ITEM_CATCHING_CHARM)
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
   msgbox(LittlerootTown_Text_ComeHomeIfAnythingHappens)
   closemessage

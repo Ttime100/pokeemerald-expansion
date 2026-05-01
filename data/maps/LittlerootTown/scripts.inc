@@ -2039,7 +2039,7 @@ LittlerootTown_EventScript_GiveBoxLink::
 # 1023 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_GiveBoxLink_Text_0
 # 1024 "data/maps/LittlerootTown/scripts.pory"
-	giveitem ITEM_POKEMON_BOX_LINK
+	giveitem ITEM_CATCHING_CHARM
 # 1025 "data/maps/LittlerootTown/scripts.pory"
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 # 1026 "data/maps/LittlerootTown/scripts.pory"
@@ -2061,5 +2061,5 @@ LittlerootTown_EventScript_GiveBoxLink_Text_0:
 	.string "look good together with your Pokémon!\p"
 	.string "Here, honey!\n"
 	.string "If you're going out on an adventure,\l"
-	.string "you are going to want to access all of\l"
-	.string "your Pokémon where ever you go!$"
+	.string "you are going to want to catch all of\l"
+	.string "the Pokémon where ever you go!$"
