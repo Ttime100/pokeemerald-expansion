@@ -1013,6 +1013,7 @@ const u8 gText_MenuPokedex[] = _("Pokédex");
 const u8 gText_MenuPokemon[] = _("Pokémon");
 const u8 gText_MenuBag[] = _("Bag");
 const u8 gText_MenuPokeVial[] = _("PokéVial"); // Added for L-Menu
+const u8 gText_MenuPC[] = _("PC"); // Added for L-Menu
 const u8 gText_MenuPokenav[] = _("PokéNav");
 const u8 gText_MenuPlayer[] = _("{PLAYER}");
 const u8 gText_MenuSave[] = _("Save");

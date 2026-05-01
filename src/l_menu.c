@@ -58,6 +58,7 @@ void HealPlayerParty(void);
 enum
 {
     MENU_ACTION_POKEVIAL,
+    MENU_ACTION_PC_BOX,
     //MENU_ACTION_DEXNAV,
     MENU_ACTION_AUTO_RUN_ON,
     MENU_ACTION_AUTO_RUN_OFF,
@@ -78,6 +79,7 @@ static bool8 LMenuPokeVialCallback(void);
 static bool8 LMenuPlayerNameCallback(void);
 static bool8 LMenuExitCallback(void);
 //static bool8 LMenuDexNavCallback(void);
+static bool8 LMenuPCBoxCallback(void);
 static bool8 LMenuAutoRunCallback(void);
 
 // Menu callbacks
@@ -90,6 +92,7 @@ static bool8 FieldCB_ReturnToFieldLMenu(void);
 static const struct MenuAction sLMenuItems[] =
 {
     [MENU_ACTION_POKEVIAL]    = {gText_MenuPokeVial, {.u8_void = LMenuPokeVialCallback}},
+    [MENU_ACTION_PC_BOX]      = {gText_MenuPC,           {.u8_void = LMenuPCBoxCallback}},
     //[MENU_ACTION_DEXNAV]    = {gText_MenuDexNav,  {.u8_void = LMenuDexNavCallback}},
     [MENU_ACTION_AUTO_RUN_ON] = {gText_AutoRunOn,  {.u8_void = LMenuAutoRunCallback}},
     [MENU_ACTION_AUTO_RUN_OFF]= {gText_AutoRunOff,  {.u8_void = LMenuAutoRunCallback}},
@@ -106,6 +109,7 @@ static void BuildUnionRoomLMenu(void);
 static void BuildBattlePikeLMenu(void);
 static void BuildBattlePyramidLMenu(void);
 static void BuildMultiPartnerRoomLMenu(void);
+static void BuildElite4LMenu(void);
 static bool32 PrintLMenuActions(s8 *pIndex, u32 count);
 static bool32 InitLMenuStep(void);
 static void CreateLMenuTask(TaskFunc followupFunc);
@@ -141,6 +145,19 @@ static void BuildLMenuActions(void)
     {
         BuildMultiPartnerRoomLMenu();
     }
+    else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_SIDNEYS_ROOM) 
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_PHOEBES_ROOM)
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_GLACIAS_ROOM)
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_DRAKES_ROOM)
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM)
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL1)
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL2)
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL3)
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL4)
+          || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL5))
+    {
+        BuildElite4LMenu();
+    }
     else
     {
         BuildNormalLMenu();
@@ -157,6 +174,7 @@ static void BuildNormalLMenu(void)
     if(FlagGet(FLAG_SYS_POKEMON_GET))
     {
         AddLMenuAction(MENU_ACTION_POKEVIAL);
+        AddLMenuAction(MENU_ACTION_PC_BOX);
     }
     //if (FlagGet(FLAG_SYS_DEXNAV_GET))
     //{
@@ -304,6 +322,22 @@ static void BuildMultiPartnerRoomLMenu(void)
     AddLMenuAction(MENU_ACTION_EXIT);
 }
 
+static void BuildElite4LMenu(void)
+{
+    if(FlagGet(FLAG_SYS_POKEMON_GET))
+    {
+        AddLMenuAction(MENU_ACTION_POKEVIAL);
+    }
+    
+    if (FlagGet(FLAG_SYS_B_DASH))
+    {
+        if (gSaveBlock2Ptr->autoRun)
+            AddLMenuAction(MENU_ACTION_AUTO_RUN_ON);
+        else
+            AddLMenuAction(MENU_ACTION_AUTO_RUN_OFF);
+    }
+    AddLMenuAction(MENU_ACTION_EXIT);
+}
 
 static bool32 PrintLMenuActions(s8 *pIndex, u32 count)
 {
@@ -553,6 +587,17 @@ static bool8 LMenuPokeVialCallback(void)
     return FALSE;
 }
 
+static bool8 LMenuPCBoxCallback(void)
+{
+    if (!gPaletteFade.active)
+    {
+        HideLMenu();
+        sLMenuCursorPos = 0;
+        ScriptContext_SetupScript(EventScript_AccessPokemonBoxLink);
+        return TRUE;
+    }
+    return FALSE;
+}
 
 static bool8 LMenuPlayerNameCallback(void)
 {
