@@ -484,7 +484,8 @@
     "Starfall_Glacier",
     "SeafloorRuins",
     "NewMauville_SecretRoom",
-    "IlexForest"
+    "IlexForest",
+    "AncientColonnade"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

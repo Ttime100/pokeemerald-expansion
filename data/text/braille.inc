@@ -116,6 +116,13 @@ AncientTomb_Braille_ShineInTheMiddle:
 	.braille "WILL, SHINE\n"
 	.braille "IN THE MIDDLE.$"
 
+AncientColonnade_Braille_ThreeGiantsAsOne:
+	brailleformat 3, 0, 25, 19, 6, 3
+	.braille "THREE GIANTS\n"
+	.braille "AS ONE.\n"
+	.braille "THE KING\n"
+	.braille "AWAKENS.$"
+
 @ FRLG
 Braille_Text_Up::
 	brailleformat 3, 0, 25, 19, 6, 3

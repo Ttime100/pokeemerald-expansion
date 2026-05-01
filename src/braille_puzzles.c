@@ -343,3 +343,52 @@ bool8 ShouldDoBrailleRegicePuzzle(void)
 
     return FALSE;
 }
+
+bool8 CheckThreeRegis(void)
+{
+    bool8 hasRegirock  = FALSE;
+    bool8 hasRegice    = FALSE;
+    bool8 hasRegisteel = FALSE;
+    u8 i;
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, 0);
+        if (species == SPECIES_REGIROCK) hasRegirock = TRUE;
+        if (species == SPECIES_REGICE) hasRegice = TRUE;
+        if (species == SPECIES_REGISTEEL) hasRegisteel = TRUE;
+    }
+
+    if (hasRegirock && hasRegice && hasRegisteel)
+        return TRUE;
+
+    return FALSE;
+}
+
+bool8 ShouldDoBrailleRegigigasEffect(void)
+{
+    if (!FlagGet(FLAG_SYS_REGIGIGAS_PUZZLE_COMPLETED)
+        && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ANCIENT_COLONNADE)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ANCIENT_COLONNADE))
+    {
+        if (gSaveBlock1Ptr->pos.x == 13 && gSaveBlock1Ptr->pos.y == 33)
+        {
+            return CheckThreeRegis();
+        }
+    }
+    return FALSE;
+}
+
+void DoBrailleRegigigasEffect(void)
+{
+    MapGridSetMetatileIdAt(12 + MAP_OFFSET, 31 + MAP_OFFSET, METATILE_Cave_SealedChamberEntrance_TopLeft);
+    MapGridSetMetatileIdAt(13 + MAP_OFFSET, 31 + MAP_OFFSET, METATILE_Cave_SealedChamberEntrance_TopMid);
+    MapGridSetMetatileIdAt(14 + MAP_OFFSET, 31 + MAP_OFFSET, METATILE_Cave_SealedChamberEntrance_TopRight);
+    MapGridSetMetatileIdAt(12 + MAP_OFFSET, 32 + MAP_OFFSET, METATILE_Cave_SealedChamberEntrance_BottomLeft | MAPGRID_IMPASSABLE);
+    MapGridSetMetatileIdAt(13 + MAP_OFFSET, 32 + MAP_OFFSET, METATILE_Cave_SealedChamberEntrance_BottomMid);
+    MapGridSetMetatileIdAt(14 + MAP_OFFSET, 32 + MAP_OFFSET, METATILE_Cave_SealedChamberEntrance_BottomRight | MAPGRID_IMPASSABLE);
+    
+    DrawWholeMapView();
+    PlaySE(SE_BANG);
+    FlagSet(FLAG_SYS_REGIGIGAS_PUZZLE_COMPLETED);
+}

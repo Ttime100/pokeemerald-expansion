@@ -46,5 +46,7 @@ void LowerMonIV(void); //Ttime100 added
 void JackpotCount(void); //Ttime100 added
 bool8 CutMoveRuinValleyCheck(void);
 void CutMoveOpenDottedHoleDoor(void);
+bool8 ShouldDoBrailleRegigigasEffect(void); //Ttime100 added
+void DoBrailleRegigigasEffect(void); //Ttime100 added
 
 #endif // GUARD_FIELD_SPECIALS_H

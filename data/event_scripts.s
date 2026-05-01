@@ -1787,3 +1787,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/NewMauville_SecretRoom/scripts.inc"
 
 	.include "data/maps/IlexForest/scripts.inc"
+
+	.include "data/maps/AncientColonnade/scripts.inc"

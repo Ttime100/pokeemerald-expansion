@@ -1298,6 +1298,10 @@
     {
       "id": "MAPSEC_SEAFLOOR_RUINS",
       "name": "Seafloor Ruins"
+    },
+    {
+      "id": "MAPSEC_ANCIENT_COLONNADE",
+      "name": "Ancient Colonnade"
     }
   ]
 }

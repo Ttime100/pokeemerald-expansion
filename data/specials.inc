@@ -647,3 +647,5 @@ gSpecials::
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
 	def_special DeoxysFormChange
+	def_special ShouldDoBrailleRegigigasEffect
+	def_special DoBrailleRegigigasEffect
