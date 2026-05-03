@@ -332,6 +332,7 @@ enum __attribute__((packed)) Ability
     ABILITY_TERA_SHELL = 308,
     ABILITY_TERAFORM_ZERO = 309,
     ABILITY_POISON_PUPPETEER = 310,
+    ABILITY_BLAZING_SOUL = 311, // Ttime100 added custom ability
     ABILITIES_COUNT_GEN9,
     ABILITIES_COUNT = ABILITIES_COUNT_GEN9,
 };
