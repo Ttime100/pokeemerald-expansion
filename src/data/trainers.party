@@ -2046,7 +2046,7 @@ Double Battle: No
 AI: Smart Trainer
 
 Spinda
-Level: 26
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Teeter Dance
 - Dizzy Punch
@@ -2915,7 +2915,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Dragon Dance
 
 Camerupt @ Air Balloon
-Ability: Simple
+Ability: Solid Rock
 Level: 40
 Nature: Quiet
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
@@ -4513,6 +4513,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Samurott
+Ability: Shell Armor
 Level: 74
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
@@ -7119,7 +7120,7 @@ AI: Smart Trainer
 Mugshot: Blue
 
 Typhlosion (M) @ Choice Scarf
-Ability: Adaptability
+Ability: Blazing Soul
 Level: 100
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -7450,7 +7451,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Mach Punch
 
 Typhlosion (M) @ White Herb
-Ability: Blaze
+Ability: Flash Fire
 Level: 44
 Ball: Park
 Nature: Modest
@@ -10890,6 +10891,7 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
+AI: Basic Trainer
 
 Weezing
 Level: 38
@@ -16126,7 +16128,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Claw
 
 Emboar (M) @ Expert Belt
-Ability: Blaze
+Ability: Guts
 Level: 68
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -19528,7 +19530,7 @@ IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 - Night Slash
 
 Typhlosion @ Expert Belt
-Ability: Blaze
+Ability: Blazing Soul
 Level: 65
 Nature: Modest
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
@@ -19567,7 +19569,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Knock Off
 
 Emboar @ Expert Belt
-Ability: Blaze
+Ability: Guts
 Level: 64
 Nature: Adamant
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
