@@ -649,3 +649,8 @@ gSpecials::
 	def_special DeoxysFormChange
 	def_special ShouldDoBrailleRegigigasEffect
 	def_special DoBrailleRegigigasEffect
+	def_special GetFossilItemId
+	def_special GetFossilItemIdFromIndex
+	def_special GetSpeciesFromFossil
+	def_special GetSpeciesFromFossilIndex
+	def_special GetHasMultipleFossils
