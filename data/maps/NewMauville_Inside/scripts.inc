@@ -52,20 +52,22 @@ NewMauville_Inside_EventScript_SetBarrierState::
     return
 
 NewMauville_Inside_EventScript_BlueButton::
-    lockall
+    goto_if_eq VAR_NEW_MAUVILLE_BARRIER_STATE, 0, NewMauville_Inside_EventScript_ButtonExit
     setvar VAR_NEW_MAUVILLE_BARRIER_STATE, 0
     playse SE_PIN
     call NewMauville_Inside_EventScript_SetBarrierStateBlueButton
     special DrawWholeMapView
-    releaseall
     end
 
 NewMauville_Inside_EventScript_GreenButton::
-    lockall
+    goto_if_eq VAR_NEW_MAUVILLE_BARRIER_STATE, 1, NewMauville_Inside_EventScript_ButtonExit
     setvar VAR_NEW_MAUVILLE_BARRIER_STATE, 1
     playse SE_PIN
     call NewMauville_Inside_EventScript_SetBarrierStateGreenButton
     special DrawWholeMapView
+    end
+
+NewMauville_Inside_EventScript_ButtonExit::
     releaseall
     end
 
