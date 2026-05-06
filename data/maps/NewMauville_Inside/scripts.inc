@@ -152,12 +152,12 @@ NewMauville_Inside_EventScript_SetBarrierStateGreenButton::
 NewMauville_Inside_EventScript_RedButton::
 	lockall
 	msgbox NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped, MSGBOX_DEFAULT
+	closemessage
 	call NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
 	setvar VAR_NEW_MAUVILLE_STATE, 2
 	playse SE_TRUCK_DOOR
     call NewMauville_Inside_EventScript_OpenRotomEntrance
     msgbox NewMauville_Inside_Text_SecretDoorMessage, MSGBOX_DEFAULT
-    releaseall
 	releaseall
 	end
 
@@ -288,4 +288,4 @@ NewMauville_Inside_EventScript_OpenRotomEntrance::
 	return
 
 NewMauville_Inside_Text_SecretDoorMessage:
-	.string "A secret entrance opened nearby!"
+	.string "A secret entrance opened nearby!$"
