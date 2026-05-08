@@ -3577,7 +3577,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer / Smart Switching
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Garbodor @ Rocky Helmet
 Ability: Aftermath
@@ -8932,7 +8932,6 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -8958,7 +8957,6 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -10817,6 +10815,7 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Cool
 Double Battle: No
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Lanturn (F) @ Shuca Berry
 Ability: Volt Absorb
@@ -10845,6 +10844,7 @@ Pic: Tuber F
 Gender: Female
 Music: Girl
 Double Battle: No
+AI: Basic Trainer
 
 Azumarill
 Level: 49
@@ -11515,7 +11515,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Seaking
-Level: 26
+Level: 46
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TARA ===
@@ -14749,7 +14749,6 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Smart Trainer
 
@@ -14799,7 +14798,6 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -15007,7 +15005,6 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
 
@@ -15542,6 +15539,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Alakazam @ Focus Sash
 Ability: Magic Guard
@@ -15648,7 +15646,7 @@ Pic: Magma Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
-AI: Basic Trainer / Smart Switching
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Drapion @ Black Sludge
 Ability: Sniper
@@ -23331,7 +23329,7 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Exploud @ Wise Glasses
 Ability: Scrappy
@@ -23380,7 +23378,7 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Exploud @ Wise Glasses
 Ability: Scrappy
@@ -23439,7 +23437,7 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Exploud @ Wise Glasses
 Ability: Scrappy
@@ -23498,7 +23496,7 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Exploud @ Wise Glasses
 Ability: Scrappy
