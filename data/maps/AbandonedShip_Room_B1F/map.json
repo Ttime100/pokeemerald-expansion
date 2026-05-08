@@ -17,7 +17,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 4,
-      "y": 4,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -26,19 +26,33 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TM_SWORDS_DANCE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ABANDONED_SHIP_ROOMS_B1F_TM_SWORDS_DANCE"
+    },
+    {
+      "local_id": "LOCALID_ABANDONED_SHIP_ROOM_B1F_SPIRITOMB",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SPIRITOMB)",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AbandonedShip_Room_B1F_BattleSpiritomb",
+      "flag": "FLAG_HIDE_SPIRITOMB"
     }
   ],
   "warp_events": [
     {
       "x": 4,
-      "y": 7,
+      "y": 9,
       "elevation": 3,
       "dest_map": "MAP_ABANDONED_SHIP_CORRIDORS_B1F",
       "dest_warp_id": "5"
     },
     {
       "x": 5,
-      "y": 7,
+      "y": 9,
       "elevation": 3,
       "dest_map": "MAP_ABANDONED_SHIP_CORRIDORS_B1F",
       "dest_warp_id": "5"

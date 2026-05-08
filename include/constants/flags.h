@@ -542,6 +542,9 @@
 #define FLAG_CAUGHT_REGIGIGAS                0x2B1 // Ttime100 added
 #define FLAG_DEFEATED_REGIGIGAS              0x2B2 // Ttime100 added
 #define FLAG_HIDE_REGIGIGAS                  0x2B3 // Ttime100 added
+#define FLAG_CAUGHT_SPIRITOMB                0x2AE // Ttime100 added
+#define FLAG_DEFEATED_SPIRITOMB              0x2AF // Ttime100 added
+#define FLAG_HIDE_SPIRITOMB                  0x2B0 // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -750,9 +753,6 @@
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
 #define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
-#define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
-#define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
-#define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC

@@ -2117,7 +2117,7 @@
       "id": "LAYOUT_ABANDONED_SHIP_ROOM_B1F",
       "name": "AbandonedShip_Room_B1F_Layout",
       "width": 9,
-      "height": 8,
+      "height": 10,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/AbandonedShip_Room_B1F/border.bin",

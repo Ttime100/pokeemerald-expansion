@@ -1,0 +1,74 @@
+raw`
+AbandonedShip_Room_B1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, AbandonedShip_Room_B1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, AbandonedShip_Room_B1F_OnResume
+	.byte 0
+
+AbandonedShip_Room_B1F_OnTransition:
+	call_if_set FLAG_CAUGHT_SPIRITOMB, AbandonedShip_Room_B1F_EventScript_HideSpiritomb
+    call_if_unset FLAG_CAUGHT_SPIRITOMB, AbandonedShip_Room_B1F_EventScript_CheckGymAndShowSpiritomb
+	end
+
+AbandonedShip_Room_B1F_EventScript_CheckGymAndShowSpiritomb::
+    goto_if_unset FLAG_BADGE07_GET, AbandonedShip_Room_B1F_EventScript_HideSpiritomb
+    goto AbandonedShip_Room_B1F_EventScript_TryShowSpiritomb
+    end
+
+AbandonedShip_Room_B1F_EventScript_HideSpiritomb::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_SPIRITOMB
+	return
+
+AbandonedShip_Room_B1F_EventScript_TryShowSpiritomb::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_SPIRITOMB, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_SPIRITOMB
+	return
+
+AbandonedShip_Room_B1F_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AbandonedShip_Room_B1F_EventScript_TryRemoveSpiritomb
+	end
+
+AbandonedShip_Room_B1F_EventScript_TryRemoveSpiritomb::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_ABANDONED_SHIP_ROOM_B1F_SPIRITOMB
+	return
+`
+script AbandonedShip_Room_B1F_BattleSpiritomb {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_SPIRITOMB,CRY_MODE_ENCOUNTER)
+    delay(30)
+    waitmoncry
+    seteventmon(SPECIES_SPIRITOMB,50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+    waitstate
+    clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_ABANDONED_SHIP_ROOM_B1F_SPIRITOMB)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    goto_if_eq(VAR_RESULT, B_OUTCOME_WON, AbandonedShip_Room_B1F_EventScript_DefeatedSpiritomb)
+    goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, AbandonedShip_Room_B1F_EventScript_RanFromSpiritomb)
+    goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AbandonedShip_Room_B1F_EventScript_RanFromSpiritomb)
+    setflag(FLAG_CAUGHT_SPIRITOMB)
+    release
+    end
+}
+
+script AbandonedShip_Room_B1F_EventScript_DefeatedSpiritomb {
+    setflag(FLAG_DEFEATED_SPIRITOMB)
+	setvar(VAR_0x8004, SPECIES_SPIRITOMB)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script AbandonedShip_Room_B1F_EventScript_RanFromSpiritomb {
+    setvar(VAR_0x8004, SPECIES_SPIRITOMB)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
