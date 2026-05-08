@@ -1242,8 +1242,8 @@
 #define FLAG_ITEM_METEOR_FALLS_B1F_1R_DRACO_PLATE                   0x499 // Ttime100 added
 #define FLAG_ITEM_NEW_MAUVILLE_UPGRADE                              0x49A // Ttime100 added
 #define FLAG_ITEM_RUSTURF_TUNNEL_TM_DRAINING_KISS                   0x49B // Ttime100 added
+#define FLAG_ITEM_SHADESPUR_POKEMON_CENTER_MASTER_BALL              0x49C // Ttime100 added
 
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
