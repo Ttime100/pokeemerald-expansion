@@ -7718,6 +7718,7 @@ Mugshot: Blue
 Azumarill (M) @ Shell Bell
 Ability: Huge Power
 Level: 84
+Ball: Love
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Aqua Jet
@@ -7728,6 +7729,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Whiscash (M) @ Rindo Berry
 Ability: Hydration
 Level: 84
+Ball: Lure
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Dance
@@ -7738,6 +7740,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Walrein (M) @ Leftovers
 Ability: Oblivious
 Level: 84
+Ball: Premier
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Roar
@@ -7748,6 +7751,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Crawdaunt (M) @ Expert Belt
 Ability: Adaptability
 Level: 84
+Ball: Net
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Swords Dance
@@ -7758,6 +7762,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Basculegion (M) @ Mystic Water
 Ability: Adaptability
 Level: 85
+Ball: Ultra
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Wave Crash
@@ -7768,6 +7773,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Kingdra (M) @ Life Orb
 Ability: Swift Swim
 Level: 85
+Ball: Dive
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hydro Pump
@@ -21137,37 +21143,70 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Brown
 
-Golem
-Level: 32
+Golem (M) @ Focus Sash
+Ability: Sturdy
+Level: 92
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Rollout
-- Magnitude
-- Explosion
+- Stealth Rock
+- Earthquake
+- Stone Edge
+- Sucker Punch
 
-Kabuto @ Sitrus Berry
-Level: 35
+Steelix (F) @ Leftovers
+Ability: Sturdy
+Level: 92
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
-
-Onix
-Level: 35
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
+- Heavy Slam
+- Earthquake
+- Toxic
 - Roar
-- Rock Slide
 
-Nosepass @ Sitrus Berry
-Level: 37
+Rampardos (M) @ Life Orb
+Ability: Mold Breaker
+Level: 92
+Ball: Heavy
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
-- Protect
-- Rock Slide
+- Head Smash
+- Zen Headbutt
+- Fire Punch
+- Superpower
+
+Cradily (F) @ Leftovers
+Ability: Storm Drain
+Level: 92
+Ball: Premier
+Nature: Relaxed
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Recover
+- Ancient Power
+- Mirror Coat
+
+Sudowoodo (M) @ Sitrus Berry
+Ability: Sturdy
+Level: 92
+Ball: Great
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wood Hammer
+- Stone Edge
+- Earthquake
+- Sucker Punch
+
+Probopass (F) @ Air Balloon
+Ability: Sand Force
+Level: 92
+Ball: Luxury
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Power Gem
+- Earth Power
+- Flash Cannon
+- Volt Switch
 
 === TRAINER_ROXANNE_3 ===
 Name: Roxanne
@@ -21179,45 +21218,70 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Brown
 
-Omanyte
-Level: 37
+Golem (M) @ Focus Sash
+Ability: Sturdy
+Level: 94
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Ice Beam
-- Rock Slide
-- Surf
+- Stealth Rock
+- Earthquake
+- Stone Edge
+- Sucker Punch
 
-Golem
-Level: 37
+Steelix (F) @ Leftovers
+Ability: Sturdy
+Level: 94
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Rollout
-- Magnitude
-- Explosion
-
-Kabutops @ Sitrus Berry
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
-
-Onix
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
+- Heavy Slam
+- Earthquake
+- Toxic
 - Roar
-- Rock Slide
 
-Nosepass @ Sitrus Berry
-Level: 42
+Rampardos (M) @ Life Orb
+Ability: Mold Breaker
+Level: 94
+Ball: Heavy
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
-- Protect
-- Rock Slide
+- Head Smash
+- Zen Headbutt
+- Fire Punch
+- Superpower
+
+Cradily (F) @ Leftovers
+Ability: Storm Drain
+Level: 94
+Ball: Premier
+Nature: Relaxed
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Recover
+- Ancient Power
+- Mirror Coat
+
+Sudowoodo (M) @ Sitrus Berry
+Ability: Sturdy
+Level: 94
+Ball: Great
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wood Hammer
+- Stone Edge
+- Earthquake
+- Sucker Punch
+
+Probopass (F) @ Air Balloon
+Ability: Sand Force
+Level: 94
+Ball: Luxury
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Power Gem
+- Earth Power
+- Flash Cannon
+- Volt Switch
 
 === TRAINER_ROXANNE_4 ===
 Name: Roxanne
@@ -21229,45 +21293,70 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Brown
 
-Omastar
-Level: 42
+Golem (M) @ Focus Sash
+Ability: Sturdy
+Level: 97
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Ice Beam
-- Rock Slide
-- Surf
-
-Golem
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Rollout
+- Stealth Rock
 - Earthquake
-- Explosion
+- Stone Edge
+- Sucker Punch
 
-Kabutops @ Sitrus Berry
-Level: 45
+Steelix (F) @ Leftovers
+Ability: Sturdy
+Level: 97
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
-
-Onix
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
+- Heavy Slam
+- Earthquake
+- Toxic
 - Roar
-- Rock Slide
 
-Nosepass @ Sitrus Berry
-Level: 47
+Rampardos (M) @ Life Orb
+Ability: Mold Breaker
+Level: 97
+Ball: Heavy
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
-- Protect
-- Rock Slide
+- Head Smash
+- Zen Headbutt
+- Fire Punch
+- Superpower
+
+Cradily (F) @ Leftovers
+Ability: Storm Drain
+Level: 97
+Ball: Premier
+Nature: Relaxed
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Recover
+- Ancient Power
+- Mirror Coat
+
+Sudowoodo (M) @ Sitrus Berry
+Ability: Sturdy
+Level: 97
+Ball: Great
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wood Hammer
+- Stone Edge
+- Earthquake
+- Sucker Punch
+
+Probopass (F) @ Air Balloon
+Ability: Sand Force
+Level: 97
+Ball: Luxury
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Power Gem
+- Earth Power
+- Flash Cannon
+- Volt Switch
 
 === TRAINER_ROXANNE_5 ===
 Name: Roxanne
@@ -21279,53 +21368,70 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Brown
 
-Aerodactyl
-Level: 47
+Golem (M) @ Focus Sash
+Ability: Sturdy
+Level: 100
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rock Slide
-- Hyper Beam
-- Supersonic
-- Protect
-
-Golem
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Punch
-- Rollout
+- Stealth Rock
 - Earthquake
-- Explosion
+- Stone Edge
+- Sucker Punch
 
-Omastar
-Level: 47
+Steelix (F) @ Leftovers
+Ability: Sturdy
+Level: 100
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Ice Beam
-- Rock Slide
-- Surf
-
-Kabutops @ Sitrus Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
-
-Steelix
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
+- Heavy Slam
+- Earthquake
+- Toxic
 - Roar
-- Rock Slide
 
-Nosepass @ Sitrus Berry
-Level: 52
+Rampardos (M) @ Life Orb
+Ability: Mold Breaker
+Level: 100
+Ball: Heavy
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
-- Protect
-- Rock Slide
+- Head Smash
+- Zen Headbutt
+- Fire Punch
+- Superpower
+
+Cradily (F) @ Leftovers
+Ability: Storm Drain
+Level: 100
+Ball: Premier
+Nature: Relaxed
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Recover
+- Ancient Power
+- Mirror Coat
+
+Sudowoodo (M) @ Sitrus Berry
+Ability: Sturdy
+Level: 100
+Ball: Great
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wood Hammer
+- Stone Edge
+- Earthquake
+- Sucker Punch
+
+Probopass (F) @ Air Balloon
+Ability: Sand Force
+Level: 100
+Ball: Luxury
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Power Gem
+- Earth Power
+- Flash Cannon
+- Volt Switch
 
 === TRAINER_BRAWLY_2 ===
 Name: Brawly
@@ -21337,37 +21443,72 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
 
-Machamp @ Sitrus Berry
-Level: 33
+Medicham (M) @ Life Orb
+Ability: Pure Power
+Level: 92
+Ball: Friend
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Karate Chop
-- Rock Slide
-- Focus Punch
-- Bulk Up
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Bullet Punch
 
-Meditite
-Level: 33
+Hitmontop (M) @ Black Belt
+Ability: Technician
+Level: 92
+Ball: Quick
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Light Screen
-- Reflect
-- Focus Punch
-
-Hitmontop
-Level: 35
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pursuit
-- Counter
-- Protect
 - Triple Kick
+- Mach Punch
+- Aerial Ace
+- Triple Axel
 
-Hariyama @ Sitrus Berry
-Level: 37
+Blaziken (M) @ Life Orb
+Ability: Speed Boost
+Level: 92
+Ball: Dream
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- High Jump Kick
+- Stone Edge
+- Protect
+
+Heracross (M) @ Flame Orb
+Ability: Guts
+Level: 92
+Ball: Sport
+Nature: Adamant
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Megahorn
+- Close Combat
+- Facade
+- Night Slash
+
+Poliwrath (M) @ Leftovers
+Ability: Water Absorb
+Level: 92
+Ball: Net
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Substitute
+- Bulk Up
+- Drain Punch
+- Waterfall
+
+Hariyama (M) @ Sitrus Berry
+Ability: Thick Fat
+Level: 92
+Ball: Cherish
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Knock Off
+- Ice Punch
 - Fake Out
-- Focus Punch
-- Belly Drum
-- Earthquake
 
 === TRAINER_BRAWLY_3 ===
 Name: Brawly
@@ -21379,37 +21520,72 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
 
-Machamp @ Sitrus Berry
-Level: 38
+Medicham (M) @ Life Orb
+Ability: Pure Power
+Level: 94
+Ball: Friend
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Karate Chop
-- Rock Slide
-- Focus Punch
-- Bulk Up
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Bullet Punch
 
-Medicham
-Level: 38
+Hitmontop (M) @ Black Belt
+Ability: Technician
+Level: 94
+Ball: Quick
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Light Screen
-- Reflect
-- Focus Punch
-
-Hitmontop
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pursuit
-- Counter
-- Protect
 - Triple Kick
+- Mach Punch
+- Aerial Ace
+- Triple Axel
 
-Hariyama @ Sitrus Berry
-Level: 42
+Blaziken (M) @ Life Orb
+Ability: Speed Boost
+Level: 94
+Ball: Dream
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- High Jump Kick
+- Stone Edge
+- Protect
+
+Heracross (M) @ Flame Orb
+Ability: Guts
+Level: 94
+Ball: Sport
+Nature: Adamant
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Megahorn
+- Close Combat
+- Facade
+- Night Slash
+
+Poliwrath (M) @ Leftovers
+Ability: Water Absorb
+Level: 94
+Ball: Net
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Substitute
+- Bulk Up
+- Drain Punch
+- Waterfall
+
+Hariyama (M) @ Sitrus Berry
+Ability: Thick Fat
+Level: 94
+Ball: Cherish
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Knock Off
+- Ice Punch
 - Fake Out
-- Focus Punch
-- Belly Drum
-- Earthquake
 
 === TRAINER_BRAWLY_4 ===
 Name: Brawly
@@ -21421,45 +21597,72 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
 
-Hitmonchan
-Level: 40
+Medicham (M) @ Life Orb
+Ability: Pure Power
+Level: 97
+Ball: Friend
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sky Uppercut
-- Protect
-- Fire Punch
+- High Jump Kick
+- Zen Headbutt
 - Ice Punch
+- Bullet Punch
 
-Machamp @ Sitrus Berry
-Level: 43
+Hitmontop (M) @ Black Belt
+Ability: Technician
+Level: 97
+Ball: Quick
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Karate Chop
-- Rock Slide
-- Focus Punch
-- Bulk Up
-
-Medicham
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Psychic
-
-Hitmontop
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pursuit
-- Counter
-- Protect
 - Triple Kick
+- Mach Punch
+- Aerial Ace
+- Triple Axel
 
-Hariyama @ Sitrus Berry
-Level: 47
+Blaziken (M) @ Life Orb
+Ability: Speed Boost
+Level: 97
+Ball: Dream
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- High Jump Kick
+- Stone Edge
+- Protect
+
+Heracross (M) @ Flame Orb
+Ability: Guts
+Level: 97
+Ball: Sport
+Nature: Adamant
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Megahorn
+- Close Combat
+- Facade
+- Night Slash
+
+Poliwrath (M) @ Leftovers
+Ability: Water Absorb
+Level: 97
+Ball: Net
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Substitute
+- Bulk Up
+- Drain Punch
+- Waterfall
+
+Hariyama (M) @ Sitrus Berry
+Ability: Thick Fat
+Level: 97
+Ball: Cherish
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Knock Off
+- Ice Punch
 - Fake Out
-- Focus Punch
-- Belly Drum
-- Earthquake
 
 === TRAINER_BRAWLY_5 ===
 Name: Brawly
@@ -21471,53 +21674,72 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
 
-Hitmonlee
-Level: 46
+Medicham (M) @ Life Orb
+Ability: Pure Power
+Level: 100
+Ball: Friend
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Mega Kick
-- Focus Punch
-- Earthquake
-- Bulk Up
-
-Hitmonchan
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sky Uppercut
-- Protect
-- Fire Punch
+- High Jump Kick
+- Zen Headbutt
 - Ice Punch
+- Bullet Punch
 
-Machamp @ Sitrus Berry
-Level: 48
+Hitmontop (M) @ Black Belt
+Ability: Technician
+Level: 100
+Ball: Quick
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Cross Chop
-- Rock Slide
-- Focus Punch
-- Bulk Up
-
-Medicham
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Psychic
-
-Hitmontop
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pursuit
-- Counter
-- Protect
 - Triple Kick
+- Mach Punch
+- Aerial Ace
+- Triple Axel
 
-Hariyama @ Sitrus Berry
-Level: 52
+Blaziken (M) @ Life Orb
+Ability: Speed Boost
+Level: 100
+Ball: Dream
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- High Jump Kick
+- Stone Edge
+- Protect
+
+Heracross (M) @ Flame Orb
+Ability: Guts
+Level: 100
+Ball: Sport
+Nature: Adamant
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Megahorn
+- Close Combat
+- Facade
+- Night Slash
+
+Poliwrath (M) @ Leftovers
+Ability: Water Absorb
+Level: 100
+Ball: Net
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Substitute
+- Bulk Up
+- Drain Punch
+- Waterfall
+
+Hariyama (M) @ Sitrus Berry
+Ability: Thick Fat
+Level: 100
+Ball: Cherish
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Knock Off
+- Ice Punch
 - Fake Out
-- Focus Punch
-- Belly Drum
-- Earthquake
 
 === TRAINER_WATTSON_2 ===
 Name: Wattson
@@ -21529,37 +21751,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
 
-Mareep
-Level: 36
+Electrode @ Focus Sash
+Ability: Aftermath
+Level: 92
+Ball: Poke
+Nature: Naive
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Protect
-- Thunder Wave
-- Light Screen
-
-Electrode
-Level: 36
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
+- Thunderbolt
+- Energy Ball
+- Taunt
 - Explosion
-- Rain Dance
 
-Magneton @ Sitrus Berry
-Level: 38
+Magnezone @ Air Balloon
+Ability: Sturdy
+Level: 92
+Ball: Heavy
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
+- Thunderbolt
+- Flash Cannon
+- Energy Ball
 - Protect
-- Thunder
-- Rain Dance
 
-Manectric @ Sitrus Berry
-Level: 40
+Electivire (M) @ Expert Belt
+Ability: Motor Drive
+Level: 92
+Ball: Ultra
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Thunder Wave
-- Thunder
-- Protect
+- Wild Charge
+- Ice Punch
+- Earthquake
+- Drain Punch
+
+Lanturn (F) @ Leftovers
+Ability: Volt Absorb
+Level: 92
+Ball: Dive
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Discharge
+- Scald
+- Ice Beam
+- Heal Bell
+
+Ampharos (M) @ Sitrus Berry
+Ability: Static
+Level: 92
+Ball: Love
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Dragon Pulse
+- Power Gem
+- Focus Blast
+
+Luxray (M) @ Life Orb
+Ability: Intimidate
+Level: 92
+Ball: Luxury
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wild Charge
+- Crunch
+- Fire Fang
+- Trailblaze
 
 === TRAINER_WATTSON_3 ===
 Name: Wattson
@@ -21571,45 +21827,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
 
-Pikachu
-Level: 39
+Electrode @ Focus Sash
+Ability: Aftermath
+Level: 94
+Ball: Poke
+Nature: Naive
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Slam
-- Rain Dance
-- Shock Wave
-
-Flaaffy
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Protect
-- Thunder Wave
-- Light Screen
-
-Electrode
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
+- Thunderbolt
+- Energy Ball
+- Taunt
 - Explosion
-- Rain Dance
 
-Magneton @ Sitrus Berry
-Level: 43
+Magnezone @ Air Balloon
+Ability: Sturdy
+Level: 94
+Ball: Heavy
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
+- Thunderbolt
+- Flash Cannon
+- Energy Ball
 - Protect
-- Thunder
-- Rain Dance
 
-Manectric @ Sitrus Berry
-Level: 45
+Electivire (M) @ Expert Belt
+Ability: Motor Drive
+Level: 94
+Ball: Ultra
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Thunder Wave
-- Thunder
-- Protect
+- Wild Charge
+- Ice Punch
+- Earthquake
+- Drain Punch
+
+Lanturn (F) @ Leftovers
+Ability: Volt Absorb
+Level: 94
+Ball: Dive
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Discharge
+- Scald
+- Ice Beam
+- Heal Bell
+
+Ampharos (M) @ Sitrus Berry
+Ability: Static
+Level: 94
+Ball: Love
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Dragon Pulse
+- Power Gem
+- Focus Blast
+
+Luxray (M) @ Life Orb
+Ability: Intimidate
+Level: 94
+Ball: Luxury
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wild Charge
+- Crunch
+- Fire Fang
+- Trailblaze
 
 === TRAINER_WATTSON_4 ===
 Name: Wattson
@@ -21621,45 +21903,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
 
-Raichu
-Level: 44
+Electrode @ Focus Sash
+Ability: Aftermath
+Level: 97
+Ball: Poke
+Nature: Naive
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Slam
-- Rain Dance
-- Protect
-
-Ampharos
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Protect
-- Thunder Wave
-- Light Screen
-
-Electrode
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
+- Thunderbolt
+- Energy Ball
+- Taunt
 - Explosion
-- Rain Dance
 
-Magneton @ Sitrus Berry
-Level: 48
+Magnezone @ Air Balloon
+Ability: Sturdy
+Level: 97
+Ball: Heavy
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
+- Thunderbolt
+- Flash Cannon
+- Energy Ball
 - Protect
-- Thunder
-- Rain Dance
 
-Manectric @ Sitrus Berry
-Level: 50
+Electivire (M) @ Expert Belt
+Ability: Motor Drive
+Level: 97
+Ball: Ultra
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Thunder Wave
-- Thunder
-- Protect
+- Wild Charge
+- Ice Punch
+- Earthquake
+- Drain Punch
+
+Lanturn (F) @ Leftovers
+Ability: Volt Absorb
+Level: 97
+Ball: Dive
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Discharge
+- Scald
+- Ice Beam
+- Heal Bell
+
+Ampharos (M) @ Sitrus Berry
+Ability: Static
+Level: 97
+Ball: Love
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Dragon Pulse
+- Power Gem
+- Focus Blast
+
+Luxray (M) @ Life Orb
+Ability: Intimidate
+Level: 97
+Ball: Luxury
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wild Charge
+- Crunch
+- Fire Fang
+- Trailblaze
 
 === TRAINER_WATTSON_5 ===
 Name: Wattson
@@ -21671,53 +21979,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Yellow
 
-Electabuzz
-Level: 50
+Electrode @ Focus Sash
+Ability: Aftermath
+Level: 100
+Ball: Poke
+Nature: Naive
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swift
-- Focus Punch
-- Thunder Punch
-- Light Screen
-
-Raichu
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Slam
-- Rain Dance
-- Protect
-
-Ampharos
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Protect
-- Thunder Wave
-- Light Screen
-
-Electrode
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
+- Thunderbolt
+- Energy Ball
+- Taunt
 - Explosion
-- Rain Dance
 
-Magneton @ Sitrus Berry
-Level: 53
+Magnezone @ Air Balloon
+Ability: Sturdy
+Level: 100
+Ball: Heavy
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
+- Thunderbolt
+- Flash Cannon
+- Energy Ball
 - Protect
-- Thunder
-- Rain Dance
 
-Manectric @ Sitrus Berry
-Level: 55
+Electivire (M) @ Expert Belt
+Ability: Motor Drive
+Level: 100
+Ball: Ultra
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Thunder Wave
-- Thunder
-- Protect
+- Wild Charge
+- Ice Punch
+- Earthquake
+- Drain Punch
+
+Lanturn (F) @ Leftovers
+Ability: Volt Absorb
+Level: 100
+Ball: Dive
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Discharge
+- Scald
+- Ice Beam
+- Heal Bell
+
+Ampharos (M) @ Sitrus Berry
+Ability: Static
+Level: 100
+Ball: Love
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Dragon Pulse
+- Power Gem
+- Focus Blast
+
+Luxray (M) @ Life Orb
+Ability: Intimidate
+Level: 100
+Ball: Luxury
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wild Charge
+- Crunch
+- Fire Fang
+- Trailblaze
 
 === TRAINER_FLANNERY_2 ===
 Name: Flannery
@@ -21729,37 +22055,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Pink
 
-Magcargo @ White Herb
-Level: 38
+Arcanine (M) @ Sitrus Berry
+Ability: Intimidate
+Level: 92
+Ball: Great
+Nature: Naughty
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- Iron Head
+- Thunder Fang
+- Extreme Speed
+
+Ninetales (F) @ White Herb
+Ability: Drought
+Level: 92
+Ball: Lava
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Attract
-- Light Screen
-- Rock Slide
-
-Ponyta
-Level: 36
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Attract
 - Solar Beam
-- Bounce
+- Shadow Ball
+- Heat Wave
 
-Camerupt @ White Herb
-Level: 38
+Infernape (M) @ King's Rock
+Ability: Iron Fist
+Level: 92
+Ball: Dream
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fire Punch
+- Mach Punch
+- Thunder Punch
+- Swords Dance
+
+Typhlosion (M) @ White Herb
+Ability: Blazing Soul
+Level: 92
+Ball: Park
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Sunny Day
-- Earthquake
-- Attract
+- Eruption
+- Solar Beam
+- Extrasensory
 
-Torkoal @ White Herb
-Level: 40
+Camerupt (M) @ Leftovers
+Ability: Solid Rock
+Level: 92
+Ball: Lava
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Earth Power
+- Rock Slide
+- Solar Beam
+
+Torkoal (F) @ White Herb
+Ability: Drought
+Level: 92
+Ball: Cherish
+Nature: Relaxed
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Sunny Day
-- Explosion
-- Attract
+- Solar Beam
+- Earth Power
+- Ancient Power
 
 === TRAINER_FLANNERY_3 ===
 Name: Flannery
@@ -21771,45 +22131,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Pink
 
-Growlithe
-Level: 41
+Arcanine (M) @ Sitrus Berry
+Ability: Intimidate
+Level: 94
+Ball: Great
+Nature: Naughty
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Helping Hand
-- Flamethrower
-- Roar
-- Sunny Day
+- Flare Blitz
+- Iron Head
+- Thunder Fang
+- Extreme Speed
 
-Magcargo @ White Herb
-Level: 43
+Ninetales (F) @ White Herb
+Ability: Drought
+Level: 94
+Ball: Lava
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Attract
-- Light Screen
-- Rock Slide
-
-Ponyta
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Attract
 - Solar Beam
-- Bounce
+- Shadow Ball
+- Heat Wave
 
-Camerupt @ White Herb
-Level: 43
+Infernape (M) @ King's Rock
+Ability: Iron Fist
+Level: 94
+Ball: Dream
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fire Punch
+- Mach Punch
+- Thunder Punch
+- Swords Dance
+
+Typhlosion (M) @ White Herb
+Ability: Blazing Soul
+Level: 94
+Ball: Park
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Sunny Day
-- Earthquake
-- Attract
+- Eruption
+- Solar Beam
+- Extrasensory
 
-Torkoal @ White Herb
-Level: 45
+Camerupt (M) @ Leftovers
+Ability: Solid Rock
+Level: 94
+Ball: Lava
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Earth Power
+- Rock Slide
+- Solar Beam
+
+Torkoal (F) @ White Herb
+Ability: Drought
+Level: 94
+Ball: Cherish
+Nature: Relaxed
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Sunny Day
-- Explosion
-- Attract
+- Solar Beam
+- Earth Power
+- Ancient Power
 
 === TRAINER_FLANNERY_4 ===
 Name: Flannery
@@ -21821,53 +22207,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Pink
 
-Houndour
-Level: 46
+Arcanine (M) @ Sitrus Berry
+Ability: Intimidate
+Level: 97
+Ball: Great
+Nature: Naughty
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Roar
-- Solar Beam
-- Taunt
-- Sunny Day
+- Flare Blitz
+- Iron Head
+- Thunder Fang
+- Extreme Speed
 
-Growlithe
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Helping Hand
-- Flamethrower
-- Sunny Day
-- Roar
-
-Magcargo @ White Herb
-Level: 48
+Ninetales (F) @ White Herb
+Ability: Drought
+Level: 97
+Ball: Lava
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Attract
-- Light Screen
+- Solar Beam
+- Shadow Ball
+- Heat Wave
+
+Infernape (M) @ King's Rock
+Ability: Iron Fist
+Level: 97
+Ball: Dream
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fire Punch
+- Mach Punch
+- Thunder Punch
+- Swords Dance
+
+Typhlosion (M) @ White Herb
+Ability: Blazing Soul
+Level: 97
+Ball: Park
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Overheat
+- Eruption
+- Solar Beam
+- Extrasensory
+
+Camerupt (M) @ Leftovers
+Ability: Solid Rock
+Level: 97
+Ball: Lava
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Earth Power
 - Rock Slide
-
-Rapidash
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Attract
 - Solar Beam
-- Bounce
 
-Camerupt @ White Herb
-Level: 48
+Torkoal (F) @ White Herb
+Ability: Drought
+Level: 97
+Ball: Cherish
+Nature: Relaxed
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Sunny Day
-- Earthquake
-- Attract
-
-Torkoal @ White Herb
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Explosion
-- Attract
+- Solar Beam
+- Earth Power
+- Ancient Power
 
 === TRAINER_FLANNERY_5 ===
 Name: Flannery
@@ -21879,53 +22283,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Pink
 
-Arcanine
-Level: 51
+Arcanine (M) @ Sitrus Berry
+Ability: Intimidate
+Level: 100
+Ball: Great
+Nature: Naughty
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Helping Hand
-- Flamethrower
-- Sunny Day
-- Roar
+- Flare Blitz
+- Iron Head
+- Thunder Fang
+- Extreme Speed
 
-Magcargo @ White Herb
-Level: 53
+Ninetales (F) @ White Herb
+Ability: Drought
+Level: 100
+Ball: Lava
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Attract
-- Light Screen
+- Solar Beam
+- Shadow Ball
+- Heat Wave
+
+Infernape (M) @ King's Rock
+Ability: Iron Fist
+Level: 100
+Ball: Dream
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fire Punch
+- Mach Punch
+- Thunder Punch
+- Swords Dance
+
+Typhlosion (M) @ White Herb
+Ability: Blazing Soul
+Level: 100
+Ball: Park
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Overheat
+- Eruption
+- Solar Beam
+- Extrasensory
+
+Camerupt (M) @ Leftovers
+Ability: Solid Rock
+Level: 100
+Ball: Lava
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Earth Power
 - Rock Slide
-
-Houndoom
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Roar
 - Solar Beam
-- Taunt
-- Sunny Day
 
-Rapidash
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Attract
-- Solar Beam
-- Bounce
-
-Camerupt @ White Herb
-Level: 53
+Torkoal (F) @ White Herb
+Ability: Drought
+Level: 100
+Ball: Cherish
+Nature: Relaxed
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
-- Sunny Day
-- Earthquake
-- Attract
-
-Torkoal @ White Herb
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Overheat
-- Sunny Day
-- Explosion
-- Attract
+- Solar Beam
+- Earth Power
+- Ancient Power
 
 === TRAINER_NORMAN_2 ===
 Name: Norman
@@ -21937,37 +22359,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Green
 
-Chansey
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Light Screen
-- Sing
-- Skill Swap
-- Focus Punch
-
-Slaking @ Sitrus Berry
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
-
-Spinda
-Level: 43
+Spinda (M) @ Sitrus Berry
+Ability: Own Tempo
+Level: 92
+Ball: Friend
+Nature: Quirky
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
+- Drain Punch
+- Psychic
+- Water Pulse
 
-Slaking @ Sitrus Berry
-Level: 45
+Staraptor (M) @ Wacan Berry
+Ability: Intimidate
+Level: 92
+Ball: Premier
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hyper Beam
-- Flamethrower
+- Brave Bird
+- U-turn
+- Tailwind
+- Close Combat
+
+Exploud (M) @ Scope Lens
+Ability: Soundproof
+Level: 92
+Ball: Heal
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Boomburst
+- Overheat
+- Surf
+- Focus Blast
+
+Porygon-Z @ Chople Berry
+Ability: Download
+Level: 92
+Ball: Strange
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Tri Attack
 - Thunderbolt
-- Shadow Ball
+- Ice Beam
+- Recover
+
+Snorlax (M) @ Chesto Berry
+Ability: Thick Fat
+Level: 92
+Ball: Dream
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Body Slam
+- Heavy Slam
+- Rest
+- Recycle
+
+Slaking (M) @ Leftovers
+Ability: Truant
+Level: 92
+Ball: Cherish
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Impact
+- Throat Chop
+- Drain Punch
+- Skill Swap
 
 === TRAINER_NORMAN_3 ===
 Name: Norman
@@ -21979,45 +22435,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Green
 
-Slaking @ Sitrus Berry
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
-
-Chansey
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Light Screen
-- Sing
-- Skill Swap
-- Focus Punch
-
-Kangaskhan
-Level: 45
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Dizzy Punch
-- Endure
-- Reversal
-
-Spinda
-Level: 48
+Spinda (M) @ Sitrus Berry
+Ability: Own Tempo
+Level: 94
+Ball: Friend
+Nature: Quirky
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
+- Drain Punch
+- Psychic
+- Water Pulse
 
-Slaking @ Sitrus Berry
-Level: 50
+Staraptor (M) @ Wacan Berry
+Ability: Intimidate
+Level: 94
+Ball: Premier
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hyper Beam
-- Flamethrower
+- Brave Bird
+- U-turn
+- Tailwind
+- Close Combat
+
+Exploud (M) @ Scope Lens
+Ability: Soundproof
+Level: 94
+Ball: Heal
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Boomburst
+- Overheat
+- Surf
+- Focus Blast
+
+Porygon-Z @ Chople Berry
+Ability: Download
+Level: 94
+Ball: Strange
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Tri Attack
 - Thunderbolt
-- Shadow Ball
+- Ice Beam
+- Recover
+
+Snorlax (M) @ Chesto Berry
+Ability: Thick Fat
+Level: 94
+Ball: Dream
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Body Slam
+- Heavy Slam
+- Rest
+- Recycle
+
+Slaking (M) @ Leftovers
+Ability: Truant
+Level: 94
+Ball: Cherish
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Impact
+- Throat Chop
+- Drain Punch
+- Skill Swap
 
 === TRAINER_NORMAN_4 ===
 Name: Norman
@@ -22029,45 +22511,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Green
 
-Slaking @ Sitrus Berry
-Level: 52
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
-
-Blissey
-Level: 52
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Light Screen
-- Sing
-- Skill Swap
-- Focus Punch
-
-Kangaskhan
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Dizzy Punch
-- Endure
-- Reversal
-
-Spinda
-Level: 53
+Spinda (M) @ Sitrus Berry
+Ability: Own Tempo
+Level: 97
+Ball: Friend
+Nature: Quirky
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
+- Drain Punch
+- Psychic
+- Water Pulse
 
-Slaking @ Sitrus Berry
-Level: 55
+Staraptor (M) @ Wacan Berry
+Ability: Intimidate
+Level: 97
+Ball: Premier
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hyper Beam
-- Flamethrower
+- Brave Bird
+- U-turn
+- Tailwind
+- Close Combat
+
+Exploud (M) @ Scope Lens
+Ability: Soundproof
+Level: 97
+Ball: Heal
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Boomburst
+- Overheat
+- Surf
+- Focus Blast
+
+Porygon-Z @ Chople Berry
+Ability: Download
+Level: 97
+Ball: Strange
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Tri Attack
 - Thunderbolt
-- Shadow Ball
+- Ice Beam
+- Recover
+
+Snorlax (M) @ Chesto Berry
+Ability: Thick Fat
+Level: 97
+Ball: Dream
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Body Slam
+- Heavy Slam
+- Rest
+- Recycle
+
+Slaking (M) @ Leftovers
+Ability: Truant
+Level: 97
+Ball: Cherish
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Impact
+- Throat Chop
+- Drain Punch
+- Skill Swap
 
 === TRAINER_NORMAN_5 ===
 Name: Norman
@@ -22079,53 +22587,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Green
 
-Slaking @ Sitrus Berry
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
-
-Blissey
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Sing
-- Skill Swap
-- Focus Punch
-
-Kangaskhan
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fake Out
-- Dizzy Punch
-- Endure
-- Reversal
-
-Tauros
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Take Down
-- Protect
-- Fire Blast
-- Earthquake
-
-Spinda
-Level: 58
+Spinda (M) @ Sitrus Berry
+Ability: Own Tempo
+Level: 100
+Ball: Friend
+Nature: Quirky
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
+- Drain Punch
+- Psychic
+- Water Pulse
 
-Slaking @ Sitrus Berry
-Level: 60
+Staraptor (M) @ Wacan Berry
+Ability: Intimidate
+Level: 100
+Ball: Premier
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hyper Beam
-- Flamethrower
+- Brave Bird
+- U-turn
+- Tailwind
+- Close Combat
+
+Exploud (M) @ Scope Lens
+Ability: Soundproof
+Level: 100
+Ball: Heal
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Boomburst
+- Overheat
+- Surf
+- Focus Blast
+
+Porygon-Z @ Chople Berry
+Ability: Download
+Level: 100
+Ball: Strange
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Tri Attack
 - Thunderbolt
-- Shadow Ball
+- Ice Beam
+- Recover
+
+Snorlax (M) @ Chesto Berry
+Ability: Thick Fat
+Level: 100
+Ball: Dream
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Body Slam
+- Heavy Slam
+- Rest
+- Recycle
+
+Slaking (M) @ Leftovers
+Ability: Truant
+Level: 100
+Ball: Cherish
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Impact
+- Throat Chop
+- Drain Punch
+- Skill Swap
 
 === TRAINER_WINONA_2 ===
 Name: Winona
@@ -22137,44 +22663,69 @@ Double Battle: Yes
 AI: Smart Trainer / Risky
 Mugshot: Light Blue
 
-Dratini @ Sitrus Berry
-Level: 40
+Skarmory (F) @ Rocky Helmet
+Ability: Sturdy
+Level: 92
+Ball: Heavy
+Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder Wave
-- Thunderbolt
-- Protect
-- Ice Beam
+- Roost
+- Spikes
+- Whirlwind
+- Brave Bird
 
-Tropius
-Level: 38
+Aerodactyl (M) @ King's Rock
+Ability: Rock Head
+Level: 92
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
+- Head Smash
+- Dual Wingbeat
+- Iron Head
 - Earthquake
 
-Pelipper
-Level: 41
+Tropius (F) @ Lum Berry
+Ability: Chlorophyll
+Level: 92
+Nature: Mild
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
+- Sunny Day
+- Solar Beam
+- Air Slash
+- Synthesis
 
-Skarmory
-Level: 43
+Charizard (M) @ Lum Berry
+Ability: Solar Power
+Level: 92
+Ball: Lava
+Nature: Naughty
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
-- Spikes
-- Steel Wing
-- Aerial Ace
+- Flare Blitz
+- Heat Wave
+- Solar Beam
+- Dragon Pulse
 
-Altaria @ Chesto Berry
-Level: 45
+Dragonite (M) @ Life Orb
+Ability: Inner Focus
+Level: 92
+Ball: Ultra
+Nature: Lonely
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rest
 - Dragon Dance
+- Dragon Claw
+- Fire Punch
+- Extreme Speed
+
+Altaria (F) @ Lum Berry
+Ability: Natural Cure
+Level: 92
+Ball: Park
+Nature: Hasty
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Sky Attack
+- Dragon Pulse
 - Earthquake
 
 === TRAINER_WINONA_3 ===
@@ -22187,52 +22738,69 @@ Double Battle: Yes
 AI: Smart Trainer / Risky
 Mugshot: Light Blue
 
-Hoothoot
-Level: 43
+Skarmory (F) @ Rocky Helmet
+Ability: Sturdy
+Level: 94
+Ball: Heavy
+Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Psychic
-- Reflect
-- Dream Eater
+- Roost
+- Spikes
+- Whirlwind
+- Brave Bird
 
-Tropius
-Level: 43
+Aerodactyl (M) @ King's Rock
+Ability: Rock Head
+Level: 94
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
+- Head Smash
+- Dual Wingbeat
+- Iron Head
 - Earthquake
 
-Dragonair @ Sitrus Berry
-Level: 45
+Tropius (F) @ Lum Berry
+Ability: Chlorophyll
+Level: 94
+Nature: Mild
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder Wave
-- Thunderbolt
-- Protect
-- Ice Beam
+- Sunny Day
+- Solar Beam
+- Air Slash
+- Synthesis
 
-Pelipper
-Level: 46
+Charizard (M) @ Lum Berry
+Ability: Solar Power
+Level: 94
+Ball: Lava
+Nature: Naughty
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
+- Flare Blitz
+- Heat Wave
+- Solar Beam
+- Dragon Pulse
 
-Skarmory
-Level: 48
+Dragonite (M) @ Life Orb
+Ability: Inner Focus
+Level: 94
+Ball: Ultra
+Nature: Lonely
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
-- Spikes
-- Steel Wing
-- Aerial Ace
-
-Altaria @ Chesto Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rest
 - Dragon Dance
+- Dragon Claw
+- Fire Punch
+- Extreme Speed
+
+Altaria (F) @ Lum Berry
+Ability: Natural Cure
+Level: 94
+Ball: Park
+Nature: Hasty
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Sky Attack
+- Dragon Pulse
 - Earthquake
 
 === TRAINER_WINONA_4 ===
@@ -22245,52 +22813,69 @@ Double Battle: Yes
 AI: Smart Trainer / Risky
 Mugshot: Light Blue
 
-Noctowl
-Level: 48
+Skarmory (F) @ Rocky Helmet
+Ability: Sturdy
+Level: 97
+Ball: Heavy
+Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Psychic
-- Reflect
-- Dream Eater
+- Roost
+- Spikes
+- Whirlwind
+- Brave Bird
 
-Tropius
-Level: 49
+Aerodactyl (M) @ King's Rock
+Ability: Rock Head
+Level: 97
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
+- Head Smash
+- Dual Wingbeat
+- Iron Head
 - Earthquake
 
-Dragonair @ Sitrus Berry
-Level: 50
+Tropius (F) @ Lum Berry
+Ability: Chlorophyll
+Level: 97
+Nature: Mild
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder Wave
-- Thunderbolt
-- Protect
-- Ice Beam
+- Sunny Day
+- Solar Beam
+- Air Slash
+- Synthesis
 
-Pelipper
-Level: 51
+Charizard (M) @ Lum Berry
+Ability: Solar Power
+Level: 97
+Ball: Lava
+Nature: Naughty
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
+- Flare Blitz
+- Heat Wave
+- Solar Beam
+- Dragon Pulse
 
-Skarmory
-Level: 53
+Dragonite (M) @ Life Orb
+Ability: Inner Focus
+Level: 97
+Ball: Ultra
+Nature: Lonely
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
-- Spikes
-- Steel Wing
-- Aerial Ace
-
-Altaria @ Chesto Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rest
 - Dragon Dance
+- Dragon Claw
+- Fire Punch
+- Extreme Speed
+
+Altaria (F) @ Lum Berry
+Ability: Natural Cure
+Level: 97
+Ball: Park
+Nature: Hasty
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Sky Attack
+- Dragon Pulse
 - Earthquake
 
 === TRAINER_WINONA_5 ===
@@ -22303,52 +22888,69 @@ Double Battle: Yes
 AI: Smart Trainer / Risky
 Mugshot: Light Blue
 
-Noctowl
-Level: 53
+Skarmory (F) @ Rocky Helmet
+Ability: Sturdy
+Level: 100
+Ball: Heavy
+Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Psychic
-- Reflect
-- Dream Eater
+- Roost
+- Spikes
+- Whirlwind
+- Brave Bird
 
-Tropius
-Level: 54
+Aerodactyl (M) @ King's Rock
+Ability: Rock Head
+Level: 100
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Head Smash
+- Dual Wingbeat
+- Iron Head
+- Earthquake
+
+Tropius (F) @ Lum Berry
+Ability: Chlorophyll
+Level: 100
+Nature: Mild
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sunny Day
-- Aerial Ace
 - Solar Beam
-- Earthquake
+- Air Slash
+- Synthesis
 
-Pelipper
-Level: 55
+Charizard (M) @ Lum Berry
+Ability: Solar Power
+Level: 100
+Ball: Lava
+Nature: Naughty
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
+- Flare Blitz
+- Heat Wave
+- Solar Beam
+- Dragon Pulse
 
-Dragonite @ Sitrus Berry
-Level: 55
+Dragonite (M) @ Life Orb
+Ability: Inner Focus
+Level: 100
+Ball: Ultra
+Nature: Lonely
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hyper Beam
-- Thunderbolt
-- Earthquake
-- Ice Beam
-
-Skarmory
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
-- Spikes
-- Steel Wing
-- Aerial Ace
-
-Altaria @ Chesto Berry
-Level: 60
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sky Attack
-- Rest
 - Dragon Dance
+- Dragon Claw
+- Fire Punch
+- Extreme Speed
+
+Altaria (F) @ Lum Berry
+Ability: Natural Cure
+Level: 100
+Ball: Park
+Nature: Hasty
+Shiny: Yes
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Sky Attack
+- Dragon Pulse
 - Earthquake
 
 === TRAINER_TATE_AND_LIZA_2 ===
@@ -22361,40 +22963,61 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Purple
 
-Slowpoke
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
-
-Claydol
-Level: 49
+Claydol @ Assault Vest
+Ability: Levitate
+Level: 92
+Nature: Sassy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
 - Ancient Power
 - Psychic
-- Light Screen
+- Ally Switch
 
-Xatu @ Chesto Berry
-Level: 49
+Bronzong @ Leftovers
+Ability: Levitate
+Level: 92
+Ball: Heavy
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stealth Rock
+- Will-O-Wisp
+- Psywave
+- Heavy Slam
+
+Xatu @ Focus Sash
+Ability: Magic Bounce
+Level: 92
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
+- Tailwind
+- Giga Drain
+- Heat Wave
 
-Lunatone @ Chesto Berry
-Level: 50
+Exeggutor @ Occa Berry
+Ability: Chlorophyll
+Level: 92
+Nature: Quiet
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Solar Beam
+- Psychic
 - Earthquake
+
+Lunatone @ Light Clay
+Ability: Levitate
+Level: 92
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Light Screen
+- Reflect
 - Psychic
-- Rest
-- Calm Mind
+- Icy Wind
 
 Solrock @ Sitrus Berry
-Level: 50
+Ability: Levitate
+Level: 92
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sunny Day
 - Solar Beam
@@ -22411,48 +23034,61 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Purple
 
-Drowzee
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
-
-Slowpoke
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
-
-Claydol
-Level: 54
+Claydol @ Assault Vest
+Ability: Levitate
+Level: 94
+Nature: Sassy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
-- Explosion
+- Ancient Power
 - Psychic
+- Ally Switch
+
+Bronzong @ Leftovers
+Ability: Levitate
+Level: 94
+Ball: Heavy
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stealth Rock
+- Will-O-Wisp
+- Psywave
+- Heavy Slam
+
+Xatu @ Focus Sash
+Ability: Magic Bounce
+Level: 94
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psychic
+- Tailwind
+- Giga Drain
+- Heat Wave
+
+Exeggutor @ Occa Berry
+Ability: Chlorophyll
+Level: 94
+Nature: Quiet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Solar Beam
+- Psychic
+- Earthquake
+
+Lunatone @ Light Clay
+Ability: Levitate
+Level: 94
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Light Screen
-
-Xatu @ Chesto Berry
-Level: 54
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Reflect
 - Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
+- Icy Wind
 
 Solrock @ Sitrus Berry
-Level: 55
+Ability: Levitate
+Level: 94
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sunny Day
 - Solar Beam
@@ -22469,48 +23105,61 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Purple
 
-Hypno
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
-
-Claydol
-Level: 59
+Claydol @ Assault Vest
+Ability: Levitate
+Level: 97
+Nature: Sassy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
-- Explosion
+- Ancient Power
 - Psychic
+- Ally Switch
+
+Bronzong @ Leftovers
+Ability: Levitate
+Level: 97
+Ball: Heavy
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stealth Rock
+- Will-O-Wisp
+- Psywave
+- Heavy Slam
+
+Xatu @ Focus Sash
+Ability: Magic Bounce
+Level: 97
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psychic
+- Tailwind
+- Giga Drain
+- Heat Wave
+
+Exeggutor @ Occa Berry
+Ability: Chlorophyll
+Level: 97
+Nature: Quiet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Solar Beam
+- Psychic
+- Earthquake
+
+Lunatone @ Light Clay
+Ability: Levitate
+Level: 97
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Light Screen
-
-Slowpoke
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
+- Reflect
 - Psychic
-- Calm Mind
-- Protect
-
-Xatu @ Chesto Berry
-Level: 59
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 60
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
+- Icy Wind
 
 Solrock @ Sitrus Berry
-Level: 60
+Ability: Levitate
+Level: 97
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sunny Day
 - Solar Beam
@@ -22527,48 +23176,61 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Purple
 
-Hypno
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
-
-Claydol
-Level: 64
+Claydol @ Assault Vest
+Ability: Levitate
+Level: 100
+Nature: Sassy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
-- Explosion
+- Ancient Power
 - Psychic
+- Ally Switch
+
+Bronzong @ Leftovers
+Ability: Levitate
+Level: 100
+Ball: Heavy
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stealth Rock
+- Will-O-Wisp
+- Psywave
+- Heavy Slam
+
+Xatu @ Focus Sash
+Ability: Magic Bounce
+Level: 100
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psychic
+- Tailwind
+- Giga Drain
+- Heat Wave
+
+Exeggutor @ Occa Berry
+Ability: Chlorophyll
+Level: 100
+Nature: Quiet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Solar Beam
+- Psychic
+- Earthquake
+
+Lunatone @ Light Clay
+Ability: Levitate
+Level: 100
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Light Screen
-
-Slowking
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
+- Reflect
 - Psychic
-- Calm Mind
-- Protect
-
-Xatu @ Chesto Berry
-Level: 64
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 65
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
+- Icy Wind
 
 Solrock @ Sitrus Berry
-Level: 65
+Ability: Levitate
+Level: 100
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sunny Day
 - Solar Beam
@@ -22585,45 +23247,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Blue
 
-Poliwag
-Level: 46
+Azumarill (M) @ Shell Bell
+Ability: Huge Power
+Level: 92
+Ball: Love
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
+- Aqua Jet
+- Belly Drum
+- Knock Off
+- Play Rough
 
-Whiscash
-Level: 46
+Whiscash (M) @ Rindo Berry
+Ability: Hydration
+Level: 92
+Ball: Lure
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
+- Dragon Dance
+- Waterfall
+- Earthquake
+- Zen Headbutt
 
-Walrein
-Level: 48
+Walrein (M) @ Leftovers
+Ability: Oblivious
+Level: 92
+Ball: Premier
+Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
+- Roar
+- Toxic
+- Surf
 - Ice Beam
 
-Crawdaunt @ Chesto Berry
-Level: 48
+Crawdaunt (M) @ Expert Belt
+Ability: Adaptability
+Level: 92
+Ball: Net
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
+- Swords Dance
 - Crabhammer
-- Taunt
-- Double Team
+- Knock Off
+- Aqua Jet
 
-Kingdra @ Chesto Berry
-Level: 51
+Basculegion (M) @ Mystic Water
+Ability: Adaptability
+Level: 92
+Ball: Ultra
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
+- Wave Crash
+- Flip Turn
+- Liquidation
+- Phantom Force
+
+Kingdra (M) @ Life Orb
+Ability: Swift Swim
+Level: 92
+Ball: Dive
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Draco Meteor
 - Ice Beam
-- Rest
+- Flash Cannon
 
 === TRAINER_JUAN_3 ===
 Name: Juan
@@ -22635,45 +23323,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Blue
 
-Poliwhirl
-Level: 50
+Azumarill (M) @ Shell Bell
+Ability: Huge Power
+Level: 94
+Ball: Love
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
+- Aqua Jet
+- Belly Drum
+- Knock Off
+- Play Rough
+
+Whiscash (M) @ Rindo Berry
+Ability: Hydration
+Level: 94
+Ball: Lure
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Waterfall
+- Earthquake
+- Zen Headbutt
+
+Walrein (M) @ Leftovers
+Ability: Oblivious
+Level: 94
+Ball: Premier
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Roar
+- Toxic
+- Surf
+- Ice Beam
+
+Crawdaunt (M) @ Expert Belt
+Ability: Adaptability
+Level: 94
+Ball: Net
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Swords Dance
+- Crabhammer
+- Knock Off
+- Aqua Jet
+
+Basculegion (M) @ Mystic Water
+Ability: Adaptability
+Level: 94
+Ball: Ultra
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wave Crash
+- Flip Turn
+- Liquidation
+- Phantom Force
+
+Kingdra (M) @ Life Orb
+Ability: Swift Swim
+Level: 94
+Ball: Dive
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hydro Pump
-
-Whiscash
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Walrein
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
+- Draco Meteor
 - Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
-- Ice Beam
-- Rest
+- Flash Cannon
 
 === TRAINER_JUAN_4 ===
 Name: Juan
@@ -22685,53 +23399,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Blue
 
-Lapras
-Level: 56
+Azumarill (M) @ Shell Bell
+Ability: Huge Power
+Level: 97
+Ball: Love
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Aqua Jet
+- Belly Drum
+- Knock Off
+- Play Rough
+
+Whiscash (M) @ Rindo Berry
+Ability: Hydration
+Level: 97
+Ball: Lure
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Waterfall
+- Earthquake
+- Zen Headbutt
+
+Walrein (M) @ Leftovers
+Ability: Oblivious
+Level: 97
+Ball: Premier
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Roar
+- Toxic
+- Surf
+- Ice Beam
+
+Crawdaunt (M) @ Expert Belt
+Ability: Adaptability
+Level: 97
+Ball: Net
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Swords Dance
+- Crabhammer
+- Knock Off
+- Aqua Jet
+
+Basculegion (M) @ Mystic Water
+Ability: Adaptability
+Level: 97
+Ball: Ultra
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wave Crash
+- Flip Turn
+- Liquidation
+- Phantom Force
+
+Kingdra (M) @ Life Orb
+Ability: Swift Swim
+Level: 97
+Ball: Dive
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hydro Pump
-- Perish Song
+- Draco Meteor
 - Ice Beam
-- Confuse Ray
-
-Whiscash
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Poliwhirl
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Walrein
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
-- Ice Beam
-- Rest
+- Flash Cannon
 
 === TRAINER_JUAN_5 ===
 Name: Juan
@@ -22743,53 +23475,71 @@ Double Battle: Yes
 AI: Smart Trainer
 Mugshot: Blue
 
-Lapras
-Level: 61
+Azumarill (M) @ Shell Bell
+Ability: Huge Power
+Level: 100
+Ball: Love
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Aqua Jet
+- Belly Drum
+- Knock Off
+- Play Rough
+
+Whiscash (M) @ Rindo Berry
+Ability: Hydration
+Level: 100
+Ball: Lure
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Waterfall
+- Earthquake
+- Zen Headbutt
+
+Walrein (M) @ Leftovers
+Ability: Oblivious
+Level: 100
+Ball: Premier
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Roar
+- Toxic
+- Surf
+- Ice Beam
+
+Crawdaunt (M) @ Expert Belt
+Ability: Adaptability
+Level: 100
+Ball: Net
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Swords Dance
+- Crabhammer
+- Knock Off
+- Aqua Jet
+
+Basculegion (M) @ Mystic Water
+Ability: Adaptability
+Level: 100
+Ball: Ultra
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wave Crash
+- Flip Turn
+- Liquidation
+- Phantom Force
+
+Kingdra (M) @ Life Orb
+Ability: Swift Swim
+Level: 100
+Ball: Dive
+Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hydro Pump
-- Perish Song
+- Draco Meteor
 - Ice Beam
-- Confuse Ray
-
-Whiscash
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Politoed
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Hydro Pump
-- Perish Song
-
-Walrein
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Sheer Cold
-
-Crawdaunt @ Chesto Berry
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
-Level: 66
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
-- Ice Beam
-- Rest
+- Flash Cannon
 
 === TRAINER_ANGELO ===
 Name: Angelo
