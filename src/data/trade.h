@@ -1064,6 +1064,22 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_BAGON
     },
+    [INGAME_TRADE_DEINO] =
+    {
+        .nickname = _("Schatten"),
+        .species = SPECIES_DEINO,
+        .ivs = {31, 10, 15, 31, 31, 15},
+        .abilityNum = 0,
+        .otId = 51423,
+        .conditions = {5, 30, 5, 5, 5},
+        .personality = 0x0000C8D7, // Shiny Modest Nature
+        .heldItem = ITEM_THROAT_SPRAY,
+        .mailNum = 0,
+        .otName = _("Gunther"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_ABSOL
+    },
     [INGAME_TRADE_MR_MIME] = 
     {
         .nickname = _("MIMIEN"),
