@@ -1032,7 +1032,7 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_SKITTY
     },
-        [INGAME_TRADE_DITTO] =
+    [INGAME_TRADE_DITTO] =
     {
         .nickname = _("Ditty"),
         .species = SPECIES_DITTO,
@@ -1047,6 +1047,22 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_PIKACHU
+    },
+    [INGAME_TRADE_BELDUM] =
+    {
+        .nickname = _("Meld"),
+        .species = SPECIES_BELDUM,
+        .ivs = {31, 31, 20, 15, 10, 31},
+        .abilityNum = 2,
+        .otId = 46285,
+        .conditions = {5, 5, 5, 5, 30},
+        .personality = 0xB6CF0202, // Shiny Adamant Nature
+        .heldItem = ITEM_ADRENALINE_ORB,
+        .mailNum = 0,
+        .otName = _("Skylar"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_BAGON
     },
     [INGAME_TRADE_MR_MIME] = 
     {
