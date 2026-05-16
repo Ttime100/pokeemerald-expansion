@@ -41,7 +41,7 @@ PacifidlogTown_House3_Text_WillingToTradeIt:
 	.string "to trade it for a {STR_VAR_1}.$"
 
 PacifidlogTown_House3_Text_ItsSubtlyDifferentThankYou:
-	.string "Oh, so this is a {STR_VAR_1}?\p"
+	.string "Oh, so this is a Bagon?\p"
 	.string "It's sort of like a {STR_VAR_2},\n"
 	.string "and yet it's subtly different.\p"
 	.string "Thank you!$"
