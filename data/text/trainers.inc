@@ -416,16 +416,17 @@ Route104_Text_CindyPostRematch:
 	.string "I hope we meet again.$"
 
 Route104_Text_DarianIntro:
-	.string "I fished up a tough-looking Pokémon!\p"
-	.string "It has this magical quality to it!\n"
-	.string "It surely looks tough, yes it does!$"
+	.string "I fished up some tough-looking Pokémon!\n"
+	.string "They have this magical quality to them!\p"
+	.string "They sure do look different, though!$"
 
 Route104_Text_DarianDefeat:
 	.string "What the…$"
 
 Route104_Text_DarianPostBattle:
-	.string "Hey, Magikarp, you sure don't live up\n"
-	.string "to your name, do you?$"
+	.string "These Magikarp sure don't live up\n"
+	.string "to their name, do they?\p"
+	.string "At least they look cool!$"
 
 Route105_Text_FosterIntro:
 	.string "There's supposed to be a mystical\n"

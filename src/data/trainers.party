@@ -19027,15 +19027,19 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Magikarp
+Magikarp (M)
 Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shiny: Yes
+IVs: 0 HP / 10 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
+- Aqua Jet
 
-Magikarp
+Magikarp (M)
 Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shiny: Yes
+IVs: 0 HP / 0 Atk / 0 Def / 10 SpA / 0 SpD / 0 Spe
 - Tackle
+- Hydro Pump
 
 === TRAINER_HAILEY ===
 Name: Hailey
