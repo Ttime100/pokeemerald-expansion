@@ -1,0 +1,73 @@
+raw`
+Shadespur_Isle_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Shadespur_Isle_OnTransition
+	.byte 0
+	
+Shadespur_Isle_OnTransition:
+	setflag FLAG_LANDMARK_SHADESPUR_ISLE
+	end
+`
+script Shadespur_Isle_EventScript_Trader {
+	lock
+	faceplayer
+	goto_if_set(FLAG_SHADESPUR_NPC_TRADE_COMPLETED, Shadespur_Isle_EventScript_TradeCompleted)
+	ingame_trade(INGAME_TRADE_DEINO, Shadespur_Isle_Text_WillingToTradeIt, Shadespur_Isle_EventScript_DeclineTrade, Shadespur_Isle_EventScript_NotRequestedMon, Shadespur_Isle_Text_TradeThankYou)
+    setflag(FLAG_SHADESPUR_NPC_TRADE_COMPLETED)
+	release
+	end
+}
+
+script Shadespur_Isle_EventScript_DeclineTrade {
+    lock
+    faceplayer
+	msgbox(Shadespur_Isle_Text_NotDesperateOrAnything, MSGBOX_DEFAULT)
+	release
+	end
+}
+
+script Shadespur_Isle_EventScript_NotRequestedMon {
+    lock
+    faceplayer
+	bufferspeciesname(STR_VAR_1, VAR_0x8009)
+	msgbox(Shadespur_Isle_Text_WontAcceptAnythingElse, MSGBOX_DEFAULT)
+    release
+	end
+}
+
+script Shadespur_Isle_EventScript_TradeCompleted {
+	lock
+    faceplayer
+    bufferspeciesname(STR_VAR_1, VAR_0x8009)
+	msgbox(Shadespur_Isle_Text_ReallyWantedToGetAbsol, MSGBOX_DEFAULT)
+	release
+	end
+}
+
+text Shadespur_Isle_Text_WillingToTradeIt {
+    format("I feel like I've been trying
+    to catch an {STR_VAR_1} forever,
+    but I've had absolutely zero luck.\p
+    Do you have one?\p
+    Would you be willing to trade it for my {STR_VAR_2}?")
+}
+
+text Shadespur_Isle_Text_NotDesperateOrAnything {
+    format("No??\n
+    That's fine...\p
+    I didn't want your {STR_VAR_1} anyway.")
+}
+
+text Shadespur_Isle_Text_WontAcceptAnythingElse {
+    format("That's not {STR_VAR_1}!\n
+    Come back if you actually find one.")
+}
+
+text Shadespur_Isle_Text_ReallyWantedToGetAbsol {
+    format("I am so glad that hunt is over.\n
+    I've spent way too long on this island.")
+}
+
+text Shadespur_Isle_Text_TradeThankYou {
+    format("Thank goodness. I can finally stop looking for this thing.\p
+    Hopefully my luck is on the upswing now!")
+}
