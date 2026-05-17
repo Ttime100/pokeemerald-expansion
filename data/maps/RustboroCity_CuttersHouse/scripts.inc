@@ -38,11 +38,9 @@ RustboroCity_CuttersHouse_Text_ExplainCut:
 	.string "short, is Cut.\p"
 	.string "An HM move is one that can be used\n"
 	.string "by Pokémon outside of battle.\p"
-	.string "Any Pokémon that's learned Cut can\n"
-	.string "chop down thin trees if the Trainer\l"
-	.string "has earned the Stone Badge.\p"
-	.string "And, unlike a TM, an HM can be used\n"
-	.string "more than once.$"
+	.string "Any Pokémon can use Cut to chop\n"
+	.string "down thin trees if their Trainer\l"
+	.string "has earned the Stone Badge.$"
 
 RustboroCity_CuttersHouse_Text_DadHelpedClearLandOfTrees:
 	.string "When they were expanding the city of\n"
@@ -50,3 +48,14 @@ RustboroCity_CuttersHouse_Text_DadHelpedClearLandOfTrees:
 	.string "He made his Pokémon use Cut to clear\n"
 	.string "the land of trees.$"
 
+@ Old Cut Explanation Text, new text is listed above, left here for reference:
+@ RustboroCity_CuttersHouse_Text_ExplainCut:
+@	.string "That Hidden Machine, or HM for\n"
+@	.string "short, is Cut.\p"
+@	.string "An HM move is one that can be used\n"
+@	.string "by Pokémon outside of battle.\p"
+@	.string "Any Pokémon that's learned Cut can\n"
+@	.string "chop down thin trees if the Trainer\l"
+@	.string "has earned the Stone Badge.\p"
+@	.string "And, unlike a TM, an HM can be used\n"
+@	.string "more than once.$"
