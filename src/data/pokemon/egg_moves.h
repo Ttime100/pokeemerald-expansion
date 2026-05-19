@@ -1337,6 +1337,7 @@ static const u16 sTaurosPaldeaAquaEggMoveLearnset[] = {
 #if P_FAMILY_MAGIKARP
 static const u16 sMagikarpEggMoveLearnset[] = {
     MOVE_AQUA_JET,
+    MOVE_BOUNCE,
     MOVE_FACADE,
     MOVE_HYDRO_PUMP,
     MOVE_UNAVAILABLE,
