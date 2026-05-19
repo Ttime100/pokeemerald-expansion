@@ -63,6 +63,28 @@ static const u8 sRoamerLocations[][6] =
 #define NUM_LOCATION_SETS (ARRAY_COUNT(sRoamerLocations) - 1)
 #define NUM_LOCATIONS_PER_SET (ARRAY_COUNT(sRoamerLocations[0]))
 
+// Returns TRUE if the map is a water route or ocean destination
+static bool8 IsWaterMap(u8 mapNum)
+{
+    switch (mapNum)
+    {
+        case MAP_NUM(MAP_ROUTE124):
+        case MAP_NUM(MAP_ROUTE125):
+        case MAP_NUM(MAP_ROUTE126):
+        case MAP_NUM(MAP_ROUTE127):
+        case MAP_NUM(MAP_ROUTE128):
+        case MAP_NUM(MAP_ROUTE129):
+        case MAP_NUM(MAP_ROUTE130):
+        case MAP_NUM(MAP_ROUTE131):
+        case MAP_NUM(MAP_ROUTE132):
+        case MAP_NUM(MAP_ROUTE133):
+        case MAP_NUM(MAP_ROUTE134):
+            return TRUE;
+        default:
+            return FALSE;
+    }
+}
+
 void DeactivateAllRoamers(void)
 {
     u32 i;
@@ -100,6 +122,7 @@ void MoveAllRoamers(void)
 
 static void CreateInitialRoamerMon(u8 index, u16 species, u8 level)
 {
+    u8 initialMap;
     ClearRoamerLocationHistory(index);
     u32 personality = GetMonPersonality(species,
         GetSynchronizedGender(ROAMER_ORIGIN, species),
@@ -121,8 +144,15 @@ static void CreateInitialRoamerMon(u8 index, u16 species, u8 level)
     ROAMER(index)->tough = GetMonData(&gEnemyParty[0], MON_DATA_TOUGH);
     ROAMER(index)->shiny = GetMonData(&gEnemyParty[0], MON_DATA_IS_SHINY);
     ROAMER(index)->active = TRUE;
+    
     sRoamerLocation[index][MAP_GRP] = ROAMER_MAP_GROUP;
-    sRoamerLocation[index][MAP_NUM] = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
+    
+    do
+    {
+        initialMap = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
+    } while (index >= 6 && IsWaterMap(initialMap));
+
+    sRoamerLocation[index][MAP_NUM] = initialMap;
 }
 
 static u8 GetFirstInactiveRoamerIndex(void)
@@ -152,13 +182,20 @@ bool8 TryAddRoamer(u16 species, u8 level)
     return FALSE;
 }
 
-// gSpecialVar_0x8004 here corresponds to the options in the multichoice MULTI_TV_LATI (0 for 'Red', 1 for 'Blue')
 void InitRoamer(void)
 {
-    if (gSpecialVar_0x8004 == 0) // Red
-        TryAddRoamer(SPECIES_LATIAS, 40);
-    else
-        TryAddRoamer(SPECIES_LATIOS, 40);
+    // Index 0-5: The Roamers (Spawned at Level 50, Land/Water)
+    TryAddRoamer(SPECIES_LATIAS, 50);
+    TryAddRoamer(SPECIES_LATIOS, 50);
+    TryAddRoamer(SPECIES_CRESSELIA, 50);
+    TryAddRoamer(SPECIES_LANDORUS, 50);
+    TryAddRoamer(SPECIES_THUNDURUS, 50);
+    TryAddRoamer(SPECIES_TORNADUS, 50);
+
+    // Index 6-8: The Legendary Beasts (Spawned at Level 50, Land-locked)
+    TryAddRoamer(SPECIES_RAIKOU, 50);
+    TryAddRoamer(SPECIES_ENTEI, 50);
+    TryAddRoamer(SPECIES_SUICUNE, 50);
 }
 
 void UpdateLocationHistoryForRoamer(void)
@@ -187,18 +224,20 @@ void RoamerMoveToOtherLocationSet(u32 roamerIndex)
 
     sRoamerLocation[roamerIndex][MAP_GRP] = ROAMER_MAP_GROUP;
 
-    // Choose a location set that starts with a map
-    // different from the roamer's current map
     do
     {
         mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
+        
+        // If it's a beast, reject water maps entirely
+        if (roamerIndex >= 6 && IsWaterMap(mapNum))
+            continue;
+
         if (sRoamerLocation[roamerIndex][MAP_NUM] != mapNum)
         {
             sRoamerLocation[roamerIndex][MAP_NUM] = mapNum;
             return;
         }
-    } while (sRoamerLocation[roamerIndex][MAP_NUM] == mapNum);
-    sRoamerLocation[roamerIndex][MAP_NUM] = mapNum;
+    } while (TRUE);
 }
 
 void RoamerMove(u32 roamerIndex)
@@ -216,19 +255,26 @@ void RoamerMove(u32 roamerIndex)
 
         while (locSet < NUM_LOCATION_SETS)
         {
-            // Find the location set that starts with the roamer's current map
             if (sRoamerLocation[roamerIndex][MAP_NUM] == sRoamerLocations[locSet][0])
             {
                 u8 mapNum;
-                // Choose a new map (excluding the first) within this set
-                // Also exclude a map if the roamer was there 2 moves ago
+                u32 attempts = 0;
                 do
                 {
                     mapNum = sRoamerLocations[locSet][(Random() % (NUM_LOCATIONS_PER_SET - 1)) + 1];
+                    attempts++;
+                    // Safety check to prevent infinite loops if trapped in a weird custom layout
+                    if (attempts > 20) break; 
                 } while ((sLocationHistory[roamerIndex][2][MAP_GRP] == ROAMER_MAP_GROUP
                         && sLocationHistory[roamerIndex][2][MAP_NUM] == mapNum)
-                        || mapNum == MAP_NUM(MAP_UNDEFINED));
-                sRoamerLocation[roamerIndex][MAP_NUM] = mapNum;
+                        || mapNum == MAP_NUM(MAP_UNDEFINED)
+                        || (roamerIndex >= 6 && IsWaterMap(mapNum))); // Prevent beasts moving to water
+                
+                // Only move if it's a valid land map for beasts
+                if (!(roamerIndex >= 6 && IsWaterMap(mapNum)))
+                {
+                    sRoamerLocation[roamerIndex][MAP_NUM] = mapNum;
+                }
                 return;
             }
             locSet++;
