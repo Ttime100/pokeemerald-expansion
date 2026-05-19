@@ -391,6 +391,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Crustle
 Level: 60
+Shiny: Yes
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Shiftry
@@ -8418,6 +8419,7 @@ Mismagius
 Ability: Levitate
 Level: 45
 Nature: Timid
+Shiny: Yes
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shadow Ball
 - Power Gem
@@ -10884,6 +10886,7 @@ IVs: 0 HP / 10 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Weezing @ Black Sludge
 Ability: Levitate
 Level: 39
+Shiny: Yes
 IVs: 0 HP / 0 Atk / 0 Def / 10 SpA / 0 SpD / 0 Spe
 - Sludge Bomb
 - Heat Wave
@@ -10943,6 +10946,7 @@ IVs: 1 HP / 15 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 Weezing @ Black Sludge
 Ability: Levitate
 Level: 52
+Shiny: Yes
 IVs: 1 HP / 10 Atk / 1 Def / 10 SpA / 1 SpD / 1 Spe
 - Gunk Shot
 - Heat Wave
@@ -10985,6 +10989,7 @@ IVs: 2 HP / 20 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Weezing @ Black Sludge
 Ability: Levitate
 Level: 55
+Shiny: Yes
 IVs: 2 HP / 15 Atk / 2 Def / 15 SpA / 2 SpD / 2 Spe
 - Gunk Shot
 - Heat Wave
@@ -11027,6 +11032,7 @@ IVs: 3 HP / 25 Atk / 3 Def / 10 SpA / 3 SpD / 3 Spe
 Weezing @ Black Sludge
 Ability: Levitate
 Level: 58
+Shiny: Yes
 IVs: 3 HP / 20 Atk / 3 Def / 20 SpA / 3 SpD / 3 Spe
 - Gunk Shot
 - Heat Wave
@@ -11069,6 +11075,7 @@ IVs: 4 HP / 30 Atk / 4 Def / 15 SpA / 4 SpD / 4 Spe
 Weezing @ Black Sludge
 Ability: Levitate
 Level: 61
+Shiny: Yes
 IVs: 4 HP / 25 Atk / 4 Def / 25 SpA / 4 SpD / 4 Spe
 - Gunk Shot
 - Heat Wave
@@ -11728,6 +11735,7 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 Luvdisc
 Level: 73
+Shiny: Yes
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 === TRAINER_DEBRA ===
@@ -12682,6 +12690,7 @@ AI: Basic Trainer / Assume Stab
 
 Absol
 Level: 47
+Shiny: Yes
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_JONAS ===
@@ -14915,6 +14924,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 
 Reuniclus
 Level: 56
+Shiny: Yes
 IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 
 === TRAINER_SOPHIA ===
@@ -24489,6 +24499,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Crustle
 Level: 62
+Shiny: Yes
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Shiftry
@@ -24522,6 +24533,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Crustle
 Level: 64
+Shiny: Yes
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Shiftry
@@ -24555,6 +24567,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Crustle
 Level: 67
+Shiny: Yes
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Shiftry
@@ -24588,6 +24601,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Crustle
 Level: 70
+Shiny: Yes
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Shiftry
