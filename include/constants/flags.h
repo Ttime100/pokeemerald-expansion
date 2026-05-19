@@ -1329,7 +1329,7 @@
 #define FLAG_DEFEATED_ELITE_4_ROB                                   0x4EB // New Elite 4
 #define FLAG_DEFEATED_ELITE_4_TYLER                                 0x4EC // New Elite 4
 
-#define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
+#define FLAG_RECEIVED_ROAMER_CALL                                   0x4FF // Ttime100 added, triggers after Rayquaza event
 
 // Trainer Flags
 // Trainer flags occupy 0x500 - 0x85F, the last 9 of which are unused
