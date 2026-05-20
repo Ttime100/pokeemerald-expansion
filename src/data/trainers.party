@@ -6624,6 +6624,7 @@ Ability: Intimidate
 Level: 95
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
 - Stealth Rock
 - Taunt
 - Knock Off
@@ -6634,6 +6635,7 @@ Ability: Speed Boost
 Level: 95
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Protect
 - Liquidation
 - Crunch
@@ -6644,6 +6646,7 @@ Ability: Inner Focus
 Level: 95
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
 - Foul Play
 - Wish
 - Protect
@@ -6654,6 +6657,7 @@ Ability: Super Luck
 Level: 95
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Night Slash
 - Brave Bird
 - Sucker Punch
@@ -6664,6 +6668,7 @@ Ability: Pressure
 Level: 95
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Fake Out
 - Icicle Crash
 - Knock Off
@@ -6674,6 +6679,7 @@ Ability: Super Luck
 Level: 95
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Night Slash
 - Psycho Cut
 - Play Rough
@@ -6694,6 +6700,7 @@ Ability: Prankster
 Level: 95
 Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
 - Will-O-Wisp
 - Recover
 - Taunt
@@ -6704,6 +6711,7 @@ Ability: Pressure
 Level: 95
 Nature: Relaxed
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 128 Def / 128 SpD
 - Night Shade
 - Pain Split
 - Curse
@@ -6714,6 +6722,7 @@ Ability: Water Absorb
 Level: 95
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
 - Scald
 - Strength Sap
 - Hex
@@ -6724,6 +6733,7 @@ Ability: Mummy
 Level: 95
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
 - Iron Defense
 - Body Press
 - Shadow Ball
@@ -6734,6 +6744,7 @@ Ability: Pressure
 Level: 95
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 128 Def / 128 SpD
 - Calm Mind
 - Dark Pulse
 - Rest
@@ -6744,6 +6755,7 @@ Ability: Pressure
 Level: 95
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
 - Shadow Sneak
 - Fire Punch
 - Earthquake
@@ -6764,6 +6776,7 @@ Ability: Cursed Body
 Level: 95
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Spikes
 - Taunt
 - Destiny Bond
@@ -6774,6 +6787,7 @@ Ability: Ice Body
 Level: 95
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Knock Off
 - Icicle Crash
 - Explosion
@@ -6784,6 +6798,7 @@ Ability: Ice Body
 Level: 95
 Nature: Bold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
 - Substitute
 - Protect
 - Blizzard
@@ -6794,6 +6809,7 @@ Ability: Snow Warning
 Level: 95
 Nature: Quiet
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
 - Wood Hammer
 - Blizzard
 - Ice Shard
@@ -6804,6 +6820,7 @@ Ability: Shell Armor
 Level: 95
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
 - Freeze-Dry
 - Surf
 - Thunderbolt
@@ -6814,6 +6831,7 @@ Ability: Thick Fat
 Level: 95
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Earthquake
 - Icicle Crash
 - Ice Shard
@@ -6834,6 +6852,7 @@ Ability: Intimidate
 Level: 95
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Dragon Dance
 - Dual Wingbeat
 - Earthquake
@@ -6844,6 +6863,7 @@ Ability: Levitate
 Level: 95
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Draco Meteor
 - Dark Pulse
 - Fire Blast
@@ -6854,6 +6874,7 @@ Ability: Rough Skin
 Level: 95
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Swords Dance
 - Earthquake
 - Dragon Claw
@@ -6864,6 +6885,7 @@ Ability: Swift Swim
 Level: 95
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Hydro Pump
 - Draco Meteor
 - Ice Beam
@@ -6874,6 +6896,7 @@ Ability: Levitate
 Level: 95
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Dragon Claw
 - Earthquake
 - U-turn
@@ -6884,6 +6907,7 @@ Ability: Mold Breaker
 Level: 95
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Dragon Dance
 - Outrage
 - Close Combat
@@ -6905,6 +6929,7 @@ Level: 100
 Ball: Heavy
 Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 Def
 - Stealth Rock
 - Toxic
 - Head Smash
@@ -6917,6 +6942,7 @@ Ball: Master
 Nature: Calm
 Shiny: Yes
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
 - Ice Beam
 - Toxic
 - Scald
@@ -6928,6 +6954,7 @@ Level: 100
 Ball: Great
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Fire Fang
 - Stone Edge
 - Swords Dance
@@ -6939,6 +6966,7 @@ Level: 100
 Ball: Premier
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpA
 - Air Slash
 - Roost
 - Aura Sphere
@@ -6950,6 +6978,7 @@ Level: 100
 Ball: Ultra
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Wild Charge
 - Ice Punch
 - Drain Punch
@@ -6961,6 +6990,7 @@ Level: 100
 Ball: Lava
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Drain Punch
 - Bullet Punch
 - Swords Dance
@@ -6981,6 +7011,7 @@ Ability: Sturdy
 Level: 100
 Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 128 Def / 128 SpD
 - Stealth Rock
 - Sticky Web
 - Encore
@@ -6991,6 +7022,7 @@ Ability: Competitive
 Level: 100
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 Spe
 - Flash Cannon
 - Roost
 - Surf
@@ -7002,6 +7034,7 @@ Level: 100
 Nature: Adamant
 Shiny: Yes
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
 - Bullet Punch
 - Swords Dance
 - Roost
@@ -7013,6 +7046,7 @@ Level: 100
 Ball: Dusk
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Shadow Ball
 - Trick
 - Dazzling Gleam
@@ -7023,6 +7057,7 @@ Ability: Natural Cure
 Level: 100
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Gunk Shot
 - Energy Ball
 - Synthesis
@@ -7034,6 +7069,7 @@ Level: 100
 Ball: Lava
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Quiver Dance
 - Roost
@@ -7054,6 +7090,7 @@ Ability: Levitate
 Level: 100
 Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Shadow Ball
 - Sludge Bomb
 - Focus Blast
@@ -7064,6 +7101,7 @@ Ability: Multiscale
 Level: 100
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Dragon Dance
 - Extreme Speed
 - Dual Wingbeat
@@ -7075,6 +7113,7 @@ Level: 100
 Ball: Moon
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
 - Foul Play
 - Wish
 - Protect
@@ -7085,6 +7124,7 @@ Ability: Thick Fat
 Level: 100
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
 - Giga Drain
 - Sludge Bomb
 - Earth Power
@@ -7095,6 +7135,7 @@ Ability: Water Absorb
 Level: 100
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Close Combat
 - Liquidation
 - Belly Drum
@@ -7105,6 +7146,7 @@ Ability: Lightning Rod
 Level: 100
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Thunderbolt
 - Surf
 - Nasty Plot
@@ -7125,6 +7167,7 @@ Ability: Blazing Soul
 Level: 100
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Eruption
 - Extrasensory
 - Focus Blast
@@ -7135,6 +7178,7 @@ Ability: Sand Stream
 Level: 100
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
 - Stone Edge
 - Thunder Wave
 - Stealth Rock
@@ -7145,6 +7189,7 @@ Ability: Thick Fat
 Level: 100
 Nature: Calm
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
 - Toxic
 - Protect
 - Leech Seed
@@ -7155,6 +7200,7 @@ Ability: Magic Guard
 Level: 100
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Shadow Ball
 - Nasty Plot
 - Psychic
@@ -7166,6 +7212,7 @@ Level: 100
 Nature: Adamant
 Shiny: Yes
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
 - Dragon Claw
 - Poison Jab
 - Dragon Dance
@@ -7176,6 +7223,7 @@ Ability: Levitate
 Level: 100
 Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
 - Dark Pulse
 - Draco Meteor
 - U-Turn
