@@ -54,7 +54,7 @@ enum __attribute__((__packed__)) Flavor
 // Named for whatever berry is initially planted there on a new game
 // Those with no initial berry are named "soil"
 #define BERRY_TREE_ROUTE_102_PECHA    1
-#define BERRY_TREE_ROUTE_102_ORAN     2
+#define BERRY_TREE_ROUTE_102_ORAN_1   2
 #define BERRY_TREE_ROUTE_104_SOIL_1   3
 #define BERRY_TREE_ROUTE_104_ORAN_1   4
 #define BERRY_TREE_ROUTE_103_CHERI_1  5
@@ -109,7 +109,7 @@ enum __attribute__((__packed__)) Flavor
 #define BERRY_TREE_ROUTE_121_SOIL_2   54
 #define BERRY_TREE_ROUTE_115_BLUK_1   55
 #define BERRY_TREE_ROUTE_115_BLUK_2   56
-#define BERRY_TREE_UNUSED             57
+#define BERRY_TREE_ROUTE_102_ORAN_2   57
 #define BERRY_TREE_ROUTE_123_POMEG_3  58
 #define BERRY_TREE_ROUTE_123_POMEG_4  59
 #define BERRY_TREE_ROUTE_123_GREPA_1  60
