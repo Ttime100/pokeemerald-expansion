@@ -12,12 +12,12 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": null,
   "object_events": [
     {
       "local_id": "LOCALID_SOOTOPOLIS_EXPERT",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 31,
+      "x": 32,
       "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -31,7 +31,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_WOMAN_2",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 47,
+      "x": 48,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -45,7 +45,7 @@
     {
       "local_id": "LOCALID_KIRI",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 9,
+      "x": 10,
       "y": 43,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -59,7 +59,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_NINJA_BOY",
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
-      "x": 51,
+      "x": 52,
       "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -73,7 +73,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_BOY_1",
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 43,
+      "x": 44,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -86,7 +86,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 26,
+      "x": 27,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -100,7 +100,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_STEVEN",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN",
-      "x": 20,
+      "x": 21,
       "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -114,7 +114,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_WOMAN_1",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 49,
+      "x": 50,
       "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -128,7 +128,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_GROUDON",
       "graphics_id": "OBJ_EVENT_GFX_GROUDON_SIDE",
-      "x": 28,
+      "x": 29,
       "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT",
@@ -142,7 +142,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_KYOGRE",
       "graphics_id": "OBJ_EVENT_GFX_KYOGRE_SIDE",
-      "x": 34,
+      "x": 35,
       "y": 44,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_LEFT",
@@ -156,7 +156,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_RAYQUAZA",
       "graphics_id": "OBJ_EVENT_GFX_RAYQUAZA",
-      "x": 31,
+      "x": 32,
       "y": 41,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -170,7 +170,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_MANIAC",
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 17,
+      "x": 18,
       "y": 44,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -184,7 +184,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_GIRL",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
-      "x": 14,
+      "x": 15,
       "y": 42,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -198,7 +198,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_BLACK_BELT",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 17,
+      "x": 18,
       "y": 40,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -212,7 +212,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_BOY_2",
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 19,
+      "x": 20,
       "y": 37,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -226,7 +226,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_MAXIE",
       "graphics_id": "OBJ_EVENT_GFX_MAXIE",
-      "x": 29,
+      "x": 30,
       "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -240,7 +240,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_ARCHIE",
       "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
-      "x": 31,
+      "x": 32,
       "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -254,7 +254,7 @@
     {
       "local_id": "LOCALID_SOOTOPOLIS_WALLACE",
       "graphics_id": "OBJ_EVENT_GFX_WALLACE",
-      "x": 31,
+      "x": 32,
       "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -264,95 +264,160 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SootopolisCity_EventScript_Wallace",
       "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 48,
+      "y": 41,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_SOOTOPOLIS_PASSHO_1",
+      "script": "BerryTreeScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 49,
+      "y": 41,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_SOOTOPOLIS_PASSHO_2",
+      "script": "BerryTreeScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 7,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_SOOTOPOLIS_GANLON",
+      "script": "BerryTreeScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 9,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_SOOTOPOLIS_APICOT",
+      "script": "BerryTreeScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 8,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_SOOTOPOLIS_LANSAT",
+      "script": "BerryTreeScript",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 43,
+      "x": 44,
       "y": 31,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 17,
+      "x": 18,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 31,
+      "x": 32,
       "y": 32,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_GYM_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 31,
+      "x": 32,
       "y": 16,
       "elevation": 3,
       "dest_map": "MAP_CAVE_OF_ORIGIN_ENTRANCE",
       "dest_warp_id": "0"
     },
     {
-      "x": 9,
+      "x": 10,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE1",
       "dest_warp_id": "0"
     },
     {
-      "x": 45,
+      "x": 46,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE2",
       "dest_warp_id": "0"
     },
     {
-      "x": 9,
+      "x": 10,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE3",
       "dest_warp_id": "0"
     },
     {
-      "x": 44,
+      "x": 45,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE4",
       "dest_warp_id": "0"
     },
     {
-      "x": 9,
+      "x": 10,
       "y": 26,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE5",
       "dest_warp_id": "0"
     },
     {
-      "x": 53,
+      "x": 54,
       "y": 28,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE6",
       "dest_warp_id": "0"
     },
     {
-      "x": 8,
+      "x": 9,
       "y": 35,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE7",
       "dest_warp_id": "0"
     },
     {
-      "x": 48,
+      "x": 49,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_LOTAD_AND_SEEDOT_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 51,
+      "x": 52,
       "y": 36,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_MYSTERY_EVENTS_HOUSE_1F",
@@ -363,11 +428,35 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 33,
+      "x": 34,
       "y": 34,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SootopolisCity_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 46,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
@@ -379,31 +468,7 @@
     },
     {
       "type": "sign",
-      "x": 44,
-      "y": 31,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "Common_EventScript_ShowPokemonCenterSign"
-    },
-    {
-      "type": "sign",
-      "x": 45,
-      "y": 31,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "Common_EventScript_ShowPokemonCenterSign"
-    },
-    {
-      "type": "sign",
-      "x": 18,
-      "y": 29,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "Common_EventScript_ShowPokemartSign"
-    },
-    {
-      "type": "sign",
-      "x": 41,
+      "x": 42,
       "y": 37,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

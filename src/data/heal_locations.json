@@ -79,7 +79,7 @@
     {
       "id": "HEAL_LOCATION_SOOTOPOLIS_CITY",
       "map": "MAP_SOOTOPOLIS_CITY",
-      "x": 43,
+      "x": 44,
       "y": 32,
       "respawn_map": "MAP_SOOTOPOLIS_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_SOOTOPOLIS_NURSE"
