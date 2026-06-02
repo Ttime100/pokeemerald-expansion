@@ -261,6 +261,7 @@
 #define FLAG_RECEIVED_TM_GIGA_DRAIN          0xE8
 #define FLAG_RECEIVED_GRACIDEA               0xE9
 #define FLAG_RECEIVED_MANAPHY_EGG            0x4D7 // Ttime100 added
+#define FLAG_RECEIVED_TM_SLEEP_TALK          0x2AD // Ttime100 added
 
 #define FLAG_RECEIVED_TM_REST                0xEA
 #define FLAG_RECEIVED_TM_ATTRACT             0xEB
@@ -752,7 +753,6 @@
 #define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
-#define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
