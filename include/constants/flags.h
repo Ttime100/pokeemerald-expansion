@@ -1244,8 +1244,8 @@
 #define FLAG_ITEM_RUSTURF_TUNNEL_TM_DRAINING_KISS                   0x49B // Ttime100 added
 #define FLAG_ITEM_SHADESPUR_POKEMON_CENTER_MASTER_BALL              0x49C // Ttime100 added
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_WEST_TM_X_SCISSOR               0x49D // Ttime100 added
+#define FLAG_ITEM_PETALBURG_WOODS_TM_GRASS_KNOT                     0x49E // Ttime100 added
 
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
