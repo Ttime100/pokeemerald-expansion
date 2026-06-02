@@ -39,7 +39,7 @@ PacifidlogTown_House2_EventScript_ClearReceivedFanClubTM::
 
 PacifidlogTown_House2_EventScript_GiveReturn::
 	msgbox PacifidlogTown_House2_Text_AdoringPokemonTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_TM_PLAY_ROUGH
+	@giveitem ITEM_TM_RETURN
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
 	special SetPacifidlogTMReceivedDay
@@ -54,7 +54,7 @@ PacifidlogTown_House2_EventScript_PutInEffort::
 
 PacifidlogTown_House2_EventScript_GiveFrustration::
 	msgbox PacifidlogTown_House2_Text_ViciousPokemonTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_TM_SNARL
+	@giveitem ITEM_TM_FRUSTRATION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
 	special SetPacifidlogTMReceivedDay
@@ -147,3 +147,33 @@ PacifidlogTown_House2_Text_DoesntLikeTrainerVeryMuch:
 	.string "very much.$"
 
 `
+script _PacifidlogTown_House2_EventScript_FanClubYoungerBrother {
+	lock
+	faceplayer
+	if (flag(FLAG_MET_FANCLUB_YOUNGER_BROTHER)) {
+		msgbox (PacifidlogTown_House2_Text_ExplainPlayRough)
+		release
+		end
+	} else {
+	msgbox (PacifidlogTown_House2_Text_ChairmansYoungerBrotherOnVacation)
+	msgbox (PacifidlogTown_House2_Text_RoughHousing)
+	giveitem (ITEM_TM_PLAY_ROUGH)
+	setflag (FLAG_MET_FANCLUB_YOUNGER_BROTHER)
+	msgbox (PacifidlogTown_House2_Text_ExplainPlayRough)
+	release
+	end
+	}
+}
+
+text PacifidlogTown_House2_Text_RoughHousing {
+	format("My brother and I used to roughhouse\na lot when we were kids.\p
+	We'd wrestle and play-fight,\nand I always won!\p
+	Don't tell my brother\nI said that, though.\p
+	Here, take this TM. It reminds me\nof the fun we had together.")
+}
+
+text PacifidlogTown_House2_Text_ExplainPlayRough {
+	format("Play Rough is a Fairy-type move that\n
+	can lower the target's Attack stat.\p
+	It's a great move for Pokémon\nthat like to play rough!")
+}
