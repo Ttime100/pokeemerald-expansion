@@ -66,15 +66,9 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	doweather
 # 34 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	special Script_FadeOutMapMusic
-# 35 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitstate
-# 36 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	msgbox SeafloorCavern_Room9_Text_RedOrbShinesByItself, MSGBOX_DEFAULT
 # 37 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	special WaitWeather
-# 38 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitstate
-# 39 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	setvar VAR_RESULT, 1
 # 40 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	playse SE_M_DETECT
@@ -114,9 +108,6 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	waitmovement 0
 # 58 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	special FadeOutOrbEffect
-# 59 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitstate
-# 60 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	setvar VAR_0x8004, 1  @ vertical pan
 # 61 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	setvar VAR_0x8005, 1  @ horizontal pan

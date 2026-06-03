@@ -25,8 +25,10 @@ Optional (but still recommended) fields for trainers:
           see "constants/battle_ai.h" for all flags)
     - Mugshot (enable Mugshots during battle transition
                set to one of Purple, Green, Pink, Blue or Yellow)
-            (Ttime100 added Brown, Gray, and Light Blue mugshots)
+            (Ttime100 added Brown and Gray mugshots)
     - Starting Status (see include/constants/battle.h for values)
+    - Multi Party   (Half reduces two-trainer battle sides to 3 Pokemon each)
+                    (defaults to Full but requires B_MULTI_HALF_TEAMS to be FALSE)
 
 Pokemon are then specified using the Showdown Export format.
 If a field is not specified, it will use it's default value.
@@ -47,7 +49,7 @@ Optional fields for Pokemon:
           (Order does not matter)
     - EVs (252 HP / 128 Spe / 48 Def, defaults to all 0, is not capped at 512 total)
           (Order does not matter)
-    - Ball (Poke Ball or ITEM_POKE_BALL, defaults to Poke Ball)
+    - Ball (Poke, Great, Master, Dive, etc.; defaults to Poke)
     - Happiness (Number between 1 and 255)
     - Nature (Rash or NATURE_RASH, defaults to Hardy)
     - Shiny (Yes/No, defaults to No)
@@ -7616,7 +7618,7 @@ Gender: Female
 Music: Female
 Double Battle: No
 AI: Smart Trainer / Risky
-Mugshot: Light Blue
+Mugshot: Blue
 
 Skarmory (F) @ Rocky Helmet
 Ability: Sturdy
@@ -12957,6 +12959,7 @@ Gender: Male
 Music: Magma
 Double Battle: No
 AI: Smart Trainer
+Multi Party: Half
 
 Magmortar (M) @ Wise Glasses
 Ability: Flame Body
@@ -20317,6 +20320,7 @@ Gender: Male
 Music: Magma
 Double Battle: No
 AI: Smart Trainer
+Multi Party: Half
 
 Krookodile (M) @ Life Orb
 Ability: Intimidate
@@ -22736,7 +22740,7 @@ Gender: Female
 Music: Female
 Double Battle: Yes
 AI: Smart Trainer / Risky
-Mugshot: Light Blue
+Mugshot: Blue
 
 Skarmory (F) @ Rocky Helmet
 Ability: Sturdy
@@ -22811,7 +22815,7 @@ Gender: Female
 Music: Female
 Double Battle: Yes
 AI: Smart Trainer / Risky
-Mugshot: Light Blue
+Mugshot: Blue
 
 Skarmory (F) @ Rocky Helmet
 Ability: Sturdy
@@ -22886,7 +22890,7 @@ Gender: Female
 Music: Female
 Double Battle: Yes
 AI: Smart Trainer / Risky
-Mugshot: Light Blue
+Mugshot: Blue
 
 Skarmory (F) @ Rocky Helmet
 Ability: Sturdy
@@ -22961,7 +22965,7 @@ Gender: Female
 Music: Female
 Double Battle: Yes
 AI: Smart Trainer / Risky
-Mugshot: Light Blue
+Mugshot: Blue
 
 Skarmory (F) @ Rocky Helmet
 Ability: Sturdy

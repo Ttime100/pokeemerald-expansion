@@ -382,9 +382,6 @@ SootopolisCity_EventScript_LegendariesSceneFromPokeCenter::
 	setvar VAR_0x8004, FALSE @ Just do Groudon/Kyogre fight scene
 # 192 "data/maps/SootopolisCity/scripts.pory"
 	special Script_DoRayquazaScene
-# 193 "data/maps/SootopolisCity/scripts.pory"
-	waitstate
-# 194 "data/maps/SootopolisCity/scripts.pory"
 	applymovement LOCALID_SOOTOPOLIS_KYOGRE, Common_Movement_WalkInPlaceFasterLeft
 # 195 "data/maps/SootopolisCity/scripts.pory"
 	applymovement LOCALID_SOOTOPOLIS_GROUDON, Common_Movement_WalkInPlaceFasterRight
@@ -582,9 +579,6 @@ SootopolisCity_EventScript_LegendariesSceneFromDive::
 	setvar VAR_0x8004, FALSE @ Just do Groudon/Kyogre fight scene
 # 292 "data/maps/SootopolisCity/scripts.pory"
 	special Script_DoRayquazaScene
-# 293 "data/maps/SootopolisCity/scripts.pory"
-	waitstate
-# 294 "data/maps/SootopolisCity/scripts.pory"
 	applymovement LOCALID_SOOTOPOLIS_KYOGRE, Common_Movement_WalkInPlaceFasterLeft
 # 295 "data/maps/SootopolisCity/scripts.pory"
 	applymovement LOCALID_SOOTOPOLIS_GROUDON, Common_Movement_WalkInPlaceFasterRight
@@ -966,9 +960,6 @@ SootopolisCity_EventScript_RayquazaSceneFromPokeCenter::
 	setvar VAR_0x8004, TRUE
 # 484 "data/maps/SootopolisCity/scripts.pory"
 	special Script_DoRayquazaScene
-# 485 "data/maps/SootopolisCity/scripts.pory"
-	waitstate
-# 486 "data/maps/SootopolisCity/scripts.pory"
 	playse SE_THUNDER
 # 487 "data/maps/SootopolisCity/scripts.pory"
 	special SpawnCameraObject
@@ -1022,9 +1013,6 @@ SootopolisCity_EventScript_RayquazaSceneFromPokeCenter::
 	removeobject LOCALID_SOOTOPOLIS_RAYQUAZA
 # 512 "data/maps/SootopolisCity/scripts.pory"
 	special WaitWeather
-# 513 "data/maps/SootopolisCity/scripts.pory"
-	waitstate
-# 514 "data/maps/SootopolisCity/scripts.pory"
 	clearflag FLAG_SYS_WEATHER_CTRL
 # 515 "data/maps/SootopolisCity/scripts.pory"
 	setvar VAR_SKY_PILLAR_STATE, 3
@@ -1072,9 +1060,6 @@ SootopolisCity_EventScript_RayquazaSceneFromDive::
 	setvar VAR_0x8004, TRUE
 # 537 "data/maps/SootopolisCity/scripts.pory"
 	special Script_DoRayquazaScene
-# 538 "data/maps/SootopolisCity/scripts.pory"
-	waitstate
-# 539 "data/maps/SootopolisCity/scripts.pory"
 	special SpawnCameraObject
 # 540 "data/maps/SootopolisCity/scripts.pory"
 	applymovement LOCALID_CAMERA, SootopolisCity_Movement_PanUp
@@ -1128,9 +1113,6 @@ SootopolisCity_EventScript_RayquazaSceneFromDive::
 	removeobject LOCALID_SOOTOPOLIS_RAYQUAZA
 # 565 "data/maps/SootopolisCity/scripts.pory"
 	special WaitWeather
-# 566 "data/maps/SootopolisCity/scripts.pory"
-	waitstate
-# 567 "data/maps/SootopolisCity/scripts.pory"
 	clearflag FLAG_SYS_WEATHER_CTRL
 # 568 "data/maps/SootopolisCity/scripts.pory"
 	setvar VAR_SKY_PILLAR_STATE, 2
@@ -1422,9 +1404,7 @@ SootopolisCity_EventScript_KiriRayquaza::
 	end
 # 712 "data/maps/SootopolisCity/scripts.pory"
 
-# 713 "data/maps/SootopolisCity/scripts.pory"
-@ Gives 2 berries daily. First ranges from FIRST_KIRI_BERRY to LAST_KIRI_BERRY, second is always Figy or Iapapa
-# 714 "data/maps/SootopolisCity/scripts.pory"
+@ Gives 2 berries daily. First ranges from BERRY_ID_POMEG to BERRY_ID_NOMEL, second is always Figy or Iapapa
 SootopolisCity_EventScript_KiriGiveBerry::
 # 715 "data/maps/SootopolisCity/scripts.pory"
 	dotimebasedevents
@@ -1434,15 +1414,7 @@ SootopolisCity_EventScript_KiriGiveBerry::
 	goto_if_set FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY, SootopolisCity_EventScript_KiriReceivedBerry
 # 718 "data/maps/SootopolisCity/scripts.pory"
 	msgbox SootopolisCity_Text_NameIsKiriHaveOneOfThese, MSGBOX_DEFAULT
-# 719 "data/maps/SootopolisCity/scripts.pory"
-	random NUM_KIRI_BERRIES
-# 720 "data/maps/SootopolisCity/scripts.pory"
-	addvar VAR_RESULT, NUM_KIRI_BERRIES_SKIPPED
-# 721 "data/maps/SootopolisCity/scripts.pory"
-	addvar VAR_RESULT, FIRST_BERRY_INDEX
-# 722 "data/maps/SootopolisCity/scripts.pory"
-	giveitem VAR_RESULT
-# 723 "data/maps/SootopolisCity/scripts.pory"
+	giverandomberry BERRY_ID_POMEG, BERRY_ID_NOMEL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 # 724 "data/maps/SootopolisCity/scripts.pory"
 	setflag FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY

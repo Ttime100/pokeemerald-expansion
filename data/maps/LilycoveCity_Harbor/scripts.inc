@@ -78,9 +78,6 @@ LilycoveCity_Harbor_EventScript_FerryRegularLocationSelect::
 	setvar VAR_0x8004, 0
 # 40 "data/maps/LilycoveCity_Harbor/scripts.pory"
 	special ScriptMenu_CreateLilycoveSSTidalMultichoice
-# 41 "data/maps/LilycoveCity_Harbor/scripts.pory"
-	waitstate
-# 42 "data/maps/LilycoveCity_Harbor/scripts.pory"
 	special GetLilycoveSSTidalSelection
 # 43 "data/maps/LilycoveCity_Harbor/scripts.pory"
 	switch VAR_RESULT
@@ -574,9 +571,6 @@ LilycoveCity_Harbor_EventScript_MultipleEventTicketsFirstTime::
 	setvar VAR_0x8004, 1
 # 288 "data/maps/LilycoveCity_Harbor/scripts.pory"
 	special ScriptMenu_CreateLilycoveSSTidalMultichoice
-# 289 "data/maps/LilycoveCity_Harbor/scripts.pory"
-	waitstate
-# 290 "data/maps/LilycoveCity_Harbor/scripts.pory"
 	special GetLilycoveSSTidalSelection
 # 291 "data/maps/LilycoveCity_Harbor/scripts.pory"
 	switch VAR_RESULT
