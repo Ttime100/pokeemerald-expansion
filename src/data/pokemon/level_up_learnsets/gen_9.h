@@ -3629,6 +3629,7 @@ static const struct LevelUpMove sScizorLevelUpLearnset[] = {
     LEVEL_UP_MOVE(36, MOVE_IRON_HEAD),
     LEVEL_UP_MOVE(40, MOVE_X_SCISSOR),
     LEVEL_UP_MOVE(44, MOVE_SWORDS_DANCE),
+    LEVEL_UP_MOVE(72, MOVE_DOUBLE_IRON_BASH), // Ttime100 added
     LEVEL_UP_END
 };
 #endif //P_GEN_2_CROSS_EVOS
