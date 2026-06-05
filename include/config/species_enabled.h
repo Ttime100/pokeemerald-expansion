@@ -167,7 +167,7 @@
 #define P_FAMILY_TEDDIURSA               P_GEN_2_POKEMON
 #define P_FAMILY_SLUGMA                  P_GEN_2_POKEMON
 #define P_FAMILY_SWINUB                  P_GEN_2_POKEMON
-#define P_FAMILY_CORSOLA                 P_GEN_2_POKEMON
+#define P_FAMILY_CORSOLA                 FALSE
 #define P_FAMILY_REMORAID                P_GEN_2_POKEMON
 #define P_FAMILY_DELIBIRD                P_GEN_2_POKEMON
 #define P_FAMILY_MANTINE                 P_GEN_2_POKEMON
@@ -369,8 +369,8 @@
 #define P_FAMILY_BOUFFALANT              P_GEN_5_POKEMON
 #define P_FAMILY_RUFFLET                 P_GEN_5_POKEMON
 #define P_FAMILY_VULLABY                 P_GEN_5_POKEMON
-#define P_FAMILY_HEATMOR                 FALSE
-#define P_FAMILY_DURANT                  FALSE
+#define P_FAMILY_HEATMOR                 P_GEN_5_POKEMON
+#define P_FAMILY_DURANT                  P_GEN_5_POKEMON
 #define P_FAMILY_DEINO                   P_GEN_5_POKEMON
 #define P_FAMILY_LARVESTA                P_GEN_5_POKEMON
 #define P_FAMILY_COBALION                FALSE
