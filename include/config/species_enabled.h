@@ -478,7 +478,7 @@
 #define P_FAMILY_STAKATAKA               P_GEN_7_POKEMON
 #define P_FAMILY_BLACEPHALON             P_GEN_7_POKEMON
 #define P_FAMILY_ZERAORA                 P_GEN_7_POKEMON
-#define P_FAMILY_MELTAN                  P_GEN_7_POKEMON
+#define P_FAMILY_MELTAN                  P_GEN_5_POKEMON // Changed to Gen 5 to avoid having to add a new generation for just one Pokemon
 
 #define P_FAMILY_GROOKEY                 P_GEN_8_POKEMON
 #define P_FAMILY_SCORBUNNY               P_GEN_8_POKEMON
