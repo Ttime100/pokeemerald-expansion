@@ -1521,6 +1521,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 - Sand Attack
 - Poison Sting
 
+Durant
+Level: 44
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
 === TRAINER_CHIP ===
 Name: Chip
 Class: Ruin Maniac
@@ -1584,6 +1588,14 @@ IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
 - Sand Attack
 - Poison Sting
 
+Durant
+Level: 48
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- Iron Head
+- X-Scissor
+- Crunch
+- Metal Sound
+
 === TRAINER_DUSTY_3 ===
 Name: Dusty
 Class: Ruin Maniac
@@ -1600,6 +1612,14 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 - Slash
 - Sand Attack
 - Poison Sting
+
+Durant
+Level: 51
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+- Iron Head
+- X-Scissor
+- Crunch
+- Metal Sound
 
 === TRAINER_DUSTY_4 ===
 Name: Dusty
@@ -1618,6 +1638,14 @@ IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 - Sand Attack
 - Poison Sting
 
+Durant
+Level: 54
+IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+- Iron Head
+- X-Scissor
+- Crunch
+- Iron Defense
+
 === TRAINER_DUSTY_5 ===
 Name: Dusty
 Class: Ruin Maniac
@@ -1634,6 +1662,14 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 - Slash
 - Sand Attack
 - Poison Sting
+
+Durant
+Level: 57
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Iron Head
+- X-Scissor
+- Crunch
+- Iron Defense
 
 === TRAINER_GABBY_AND_TY_1 ===
 Name: Gabby & Ty
@@ -5587,6 +5623,10 @@ Double Battle: No
 AI: Basic Trainer
 
 Breloom
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Heatmor
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13895,6 +13935,10 @@ Pinsir
 Level: 47
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
+Durant
+Level: 47
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
 === TRAINER_MITCHELL ===
 Name: Mitchell
 Class: Cooltrainer
@@ -16661,6 +16705,10 @@ Nincada
 Level: 11
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
+Durant
+Level: 11
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
 === TRAINER_DOUG ===
 Name: Doug
 Class: Bug Catcher
@@ -19370,9 +19418,13 @@ Hippopotas
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Numel
+Heatmor
 Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fire Lash
+- Giga Drain
+- Bug Bite
+- Scorching Sands
 
 === TRAINER_SOPHIE ===
 Name: Sophie
