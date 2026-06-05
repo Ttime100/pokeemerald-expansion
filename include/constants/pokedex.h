@@ -1176,8 +1176,6 @@ enum NationalDexOrder
     F(MEDICHAM) \
     F(ELECTRIKE) \
     F(MANECTRIC) \
-    F(PLUSLE) \
-    F(MINUN) \
     F(MAGNEMITE) \
     F(MAGNETON) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(MAGNEZONE)) \
@@ -1251,8 +1249,6 @@ enum NationalDexOrder
     F(DUSCLOPS) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(DUSKNOIR)) \
     F(TROPIUS) \
-    HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(CHINGLING)) \
-    F(CHIMECHO) \
     F(ABSOL) \
     F(VULPIX) \
     F(NINETALES) \
@@ -1265,8 +1261,6 @@ enum NationalDexOrder
     F(WOBBUFFET) \
     F(NATU) \
     F(XATU) \
-    F(GIRAFARIG) \
-    HOENN_DEX_IF(P_GEN_9_CROSS_EVOS, F(FARIGIRAF)) \
     F(PHANPY) \
     F(DONPHAN) \
     F(PINSIR) \
@@ -1308,7 +1302,13 @@ enum NationalDexOrder
     F(RAYQUAZA) \
     F(JIRACHI) \
     F(DEOXYS)
-
+// Moved Pokemon from their orginal spot so they do not show up in Pokedex order
+    //F(PLUSLE)
+    //F(MINUN)
+    //HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(CHINGLING))
+    //F(CHIMECHO)
+    //F(GIRAFARIG)
+    //HOENN_DEX_IF(P_GEN_9_CROSS_EVOS, F(FARIGIRAF))
 // Hoenn Pokédex order
 enum HoennDexOrder
 {
