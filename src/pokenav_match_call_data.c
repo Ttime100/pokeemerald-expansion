@@ -213,10 +213,10 @@ static const struct MatchCallStructTrainer sNormanMatchCallHeader =
         { MatchCall_Text_Norman3,                  FLAG_DEFEATED_LAVARIDGE_GYM,   NO_FLAG_TO_SET },
         { MatchCall_Text_Norman4,                  FLAG_DEFEATED_PETALBURG_GYM,   NO_FLAG_TO_SET },
         { MatchCall_Text_Norman5,                  FLAG_RECEIVED_RED_OR_BLUE_ORB, NO_FLAG_TO_SET },
-        { MatchCall_Text_Norman_Preparing,         REMATCH_CALL_START,            NO_FLAG_TO_SET },
-        { MatchCall_Text_Norman_PreparingPostGame, FLAG_SYS_GAME_CLEAR,           NO_FLAG_TO_SET },
-        { MatchCall_Text_Norman_RematchReady,      FLAG_SYS_GAME_CLEAR,           NO_FLAG_TO_SET },
-        { MatchCall_Text_Norman_PostRematch,       FLAG_SYS_GAME_CLEAR,           NO_FLAG_TO_SET },
+        { MatchCall_Text_Norman6,                  REMATCH_CALL_START,            NO_FLAG_TO_SET },
+        { MatchCall_Text_Norman7,                  ALWAYS_AVAILABLE,              NO_FLAG_TO_SET },
+        { MatchCall_Text_Norman8,                  ALWAYS_AVAILABLE,              NO_FLAG_TO_SET },
+        { MatchCall_Text_Norman9,                  FLAG_SYS_GAME_CLEAR,           NO_FLAG_TO_SET },
         MATCH_CALL_TEXT_END
     }
 };
@@ -380,10 +380,10 @@ static const struct MatchCallStructTrainer sRoxanneMatchCallHeader =
     .desc = COMPOUND_STRING("Rockin' Whiz"),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
-        { MatchCall_Text_Roxanne_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
-        { MatchCall_Text_Roxanne_PreparingPostGame, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Roxanne_RematchReady,      ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Roxanne_PostRematch,       FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
+        { MatchCall_Text_Roxanne1,  REMATCH_CALL_START,  NO_FLAG_TO_SET },
+        { MatchCall_Text_Roxanne2,  ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Roxanne3,  ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Roxanne4,  FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
         MATCH_CALL_TEXT_END
     }
 };
@@ -397,10 +397,10 @@ static const struct MatchCallStructTrainer sBrawlyMatchCallHeader =
     .desc = COMPOUND_STRING("The Big Hit"),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
-        { MatchCall_Text_Brawly_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
-        { MatchCall_Text_Brawly_PreparingPostGame, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Brawly_RematchReady,      ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Brawly_PostRematch,       FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
+        { MatchCall_Text_Brawly1,   REMATCH_CALL_START,  NO_FLAG_TO_SET },
+        { MatchCall_Text_Brawly2,   ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Brawly3,   ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Brawly4,   FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
         MATCH_CALL_TEXT_END
     }
 };
@@ -414,10 +414,10 @@ static const struct MatchCallStructTrainer sWattsonMatchCallHeader =
     .desc = COMPOUND_STRING("Swell Shock"),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
-        { MatchCall_Text_Wattson_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
-        { MatchCall_Text_Wattson_PreparingPostGame, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Wattson_RematchReady,      ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Wattson_PostRematch,       FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
+        { MatchCall_Text_Wattson1,  REMATCH_CALL_START,  NO_FLAG_TO_SET },
+        { MatchCall_Text_Wattson2,  ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Wattson3,  ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Wattson4,  FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
         MATCH_CALL_TEXT_END
     }
 };
@@ -431,10 +431,10 @@ static const struct MatchCallStructTrainer sFlanneryMatchCallHeader =
     .desc = COMPOUND_STRING("Passion Burn"),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
-        { MatchCall_Text_Flannery_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
-        { MatchCall_Text_Flannery_PreparingPostGame, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Flannery_RematchReady,      ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Flannery_PostRematch,       FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
+        { MatchCall_Text_Flannery1, REMATCH_CALL_START,  NO_FLAG_TO_SET },
+        { MatchCall_Text_Flannery2, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Flannery3, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Flannery4, FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
         MATCH_CALL_TEXT_END
     }
 };
@@ -448,10 +448,10 @@ static const struct MatchCallStructTrainer sWinonaMatchCallHeader =
     .desc = COMPOUND_STRING("Sky Tamer"),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
-        { MatchCall_Text_Winona_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
-        { MatchCall_Text_Winona_PreparingPostGame, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Winona_RematchReady,      ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Winona_PostRematch,       FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
+        { MatchCall_Text_Winona1,   REMATCH_CALL_START,  NO_FLAG_TO_SET },
+        { MatchCall_Text_Winona2,   ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Winona3,   ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Winona4,   FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
         MATCH_CALL_TEXT_END
     }
 };
@@ -465,10 +465,10 @@ static const struct MatchCallStructTrainer sTateLizaMatchCallHeader =
     .desc = COMPOUND_STRING("Mystic Duo"),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
-        { MatchCall_Text_TateLiza_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
-        { MatchCall_Text_TateLiza_PreparingPostGame, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_TateLiza_RematchReady,      ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_TateLiza_PostRematch,       FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
+        { MatchCall_Text_TateLiza1, REMATCH_CALL_START,  NO_FLAG_TO_SET },
+        { MatchCall_Text_TateLiza2, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_TateLiza3, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_TateLiza4, FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
         MATCH_CALL_TEXT_END
     }
 };
@@ -482,10 +482,10 @@ static const struct MatchCallStructTrainer sJuanMatchCallHeader =
     .desc = COMPOUND_STRING("Dandy Charm"),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
-        { MatchCall_Text_Juan_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
-        { MatchCall_Text_Juan_PreparingPostGame, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Juan_RematchReady,      ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
-        { MatchCall_Text_Juan_PostRematch,       FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
+        { MatchCall_Text_Juan1, REMATCH_CALL_START,  NO_FLAG_TO_SET },
+        { MatchCall_Text_Juan2, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Juan3, ALWAYS_AVAILABLE,    NO_FLAG_TO_SET },
+        { MatchCall_Text_Juan4, FLAG_SYS_GAME_CLEAR, NO_FLAG_TO_SET },
         MATCH_CALL_TEXT_END
     }
 };

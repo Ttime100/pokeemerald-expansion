@@ -981,7 +981,7 @@ MossdeepCity_EventScript_WhiteRockDeoxys_1:
 	compare VAR_RESULT, YES
 	goto_if_eq MossdeepCity_EventScript_WhiteRockDeoxys_5
 MossdeepCity_EventScript_WhiteRockDeoxys_4:
-# 550 "data/maps/MossdeepCity/scripts.pory"
+# 549 "data/maps/MossdeepCity/scripts.pory"
 	releaseall
 	end
 
@@ -997,36 +997,34 @@ MossdeepCity_EventScript_WhiteRockDeoxys_5:
 # 524 "data/maps/MossdeepCity/scripts.pory"
 	special ChoosePartyMon
 # 525 "data/maps/MossdeepCity/scripts.pory"
-	waitstate
-# 526 "data/maps/MossdeepCity/scripts.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_eq MossdeepCity_EventScript_WhiteRockDeoxys_10
 MossdeepCity_EventScript_WhiteRockDeoxys_9:
-# 529 "data/maps/MossdeepCity/scripts.pory"
+# 528 "data/maps/MossdeepCity/scripts.pory"
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
-# 530 "data/maps/MossdeepCity/scripts.pory"
+# 529 "data/maps/MossdeepCity/scripts.pory"
 	compare VAR_RESULT, SPECIES_DEOXYS
 	goto_if_ne MossdeepCity_EventScript_WhiteRockDeoxys_17
 MossdeepCity_EventScript_WhiteRockDeoxys_14:
-# 538 "data/maps/MossdeepCity/scripts.pory"
+# 537 "data/maps/MossdeepCity/scripts.pory"
 	message MossdeepCity_EventScript_WhiteRockDeoxys_Text_1
-# 539 "data/maps/MossdeepCity/scripts.pory"
+# 538 "data/maps/MossdeepCity/scripts.pory"
 	waitmessage
-# 540 "data/maps/MossdeepCity/scripts.pory"
+# 539 "data/maps/MossdeepCity/scripts.pory"
 	multichoice 0, 0, MULTI_DEOXYS_FORM, FALSE
-# 541 "data/maps/MossdeepCity/scripts.pory"
+# 540 "data/maps/MossdeepCity/scripts.pory"
 	compare VAR_RESULT, MULTI_B_PRESSED
 	goto_if_eq MossdeepCity_EventScript_WhiteRockDeoxys_26
 MossdeepCity_EventScript_WhiteRockDeoxys_25:
-# 544 "data/maps/MossdeepCity/scripts.pory"
+# 543 "data/maps/MossdeepCity/scripts.pory"
 	copyvar VAR_0x8005, VAR_RESULT
-# 545 "data/maps/MossdeepCity/scripts.pory"
+# 544 "data/maps/MossdeepCity/scripts.pory"
 	special DeoxysFormChange
-# 546 "data/maps/MossdeepCity/scripts.pory"
+# 545 "data/maps/MossdeepCity/scripts.pory"
 	fadescreenswapbuffers FADE_TO_WHITE
-# 547 "data/maps/MossdeepCity/scripts.pory"
+# 546 "data/maps/MossdeepCity/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_WHITE
-# 548 "data/maps/MossdeepCity/scripts.pory"
+# 547 "data/maps/MossdeepCity/scripts.pory"
 	msgbox MossdeepCity_Text_WhiteRock_DeoxysChanged
 	goto MossdeepCity_EventScript_WhiteRockDeoxys_4
 
@@ -1039,7 +1037,7 @@ MossdeepCity_EventScript_WhiteRockDeoxys_7:
 	goto MossdeepCity_EventScript_WhiteRockDeoxys_1
 
 MossdeepCity_EventScript_WhiteRockDeoxys_10:
-# 527 "data/maps/MossdeepCity/scripts.pory"
+# 526 "data/maps/MossdeepCity/scripts.pory"
 	goto MossdeepCity_EventScript_WhiteRock_Cancel
 	goto MossdeepCity_EventScript_WhiteRockDeoxys_9
 
@@ -1052,26 +1050,26 @@ MossdeepCity_EventScript_WhiteRockDeoxys_12:
 	goto MossdeepCity_EventScript_WhiteRockDeoxys_1
 
 MossdeepCity_EventScript_WhiteRockDeoxys_15:
-# 534 "data/maps/MossdeepCity/scripts.pory"
+# 533 "data/maps/MossdeepCity/scripts.pory"
 	msgbox MossdeepCity_EventScript_WhiteRockDeoxys_Text_0
-# 535 "data/maps/MossdeepCity/scripts.pory"
+# 534 "data/maps/MossdeepCity/scripts.pory"
 	releaseall
 	end
 
 MossdeepCity_EventScript_WhiteRockDeoxys_16:
-# 532 "data/maps/MossdeepCity/scripts.pory"
+# 531 "data/maps/MossdeepCity/scripts.pory"
 	compare VAR_RESULT, SPECIES_DEOXYS_DEFENSE
 	goto_if_ne MossdeepCity_EventScript_WhiteRockDeoxys_20
 	goto MossdeepCity_EventScript_WhiteRockDeoxys_14
 
 MossdeepCity_EventScript_WhiteRockDeoxys_17:
-# 531 "data/maps/MossdeepCity/scripts.pory"
+# 530 "data/maps/MossdeepCity/scripts.pory"
 	compare VAR_RESULT, SPECIES_DEOXYS_ATTACK
 	goto_if_ne MossdeepCity_EventScript_WhiteRockDeoxys_16
 	goto MossdeepCity_EventScript_WhiteRockDeoxys_14
 
 MossdeepCity_EventScript_WhiteRockDeoxys_20:
-# 533 "data/maps/MossdeepCity/scripts.pory"
+# 532 "data/maps/MossdeepCity/scripts.pory"
 	compare VAR_RESULT, SPECIES_DEOXYS_SPEED
 	goto_if_ne MossdeepCity_EventScript_WhiteRockDeoxys_15
 	goto MossdeepCity_EventScript_WhiteRockDeoxys_14
@@ -1084,25 +1082,25 @@ MossdeepCity_EventScript_WhiteRockDeoxys_23:
 	end
 
 MossdeepCity_EventScript_WhiteRockDeoxys_26:
-# 542 "data/maps/MossdeepCity/scripts.pory"
+# 541 "data/maps/MossdeepCity/scripts.pory"
 	goto MossdeepCity_EventScript_WhiteRock_Cancel
 	goto MossdeepCity_EventScript_WhiteRockDeoxys_25
 
 
 MossdeepCity_EventScript_WhiteRock_Cancel::
-# 555 "data/maps/MossdeepCity/scripts.pory"
+# 554 "data/maps/MossdeepCity/scripts.pory"
 	msgbox MossdeepCity_Text_WhiteRock_Cancel
-# 556 "data/maps/MossdeepCity/scripts.pory"
+# 555 "data/maps/MossdeepCity/scripts.pory"
 	releaseall
 	end
 
 
 MossdeepCity_EventScript_WhiteRockDeoxys_Text_0:
-# 534 "data/maps/MossdeepCity/scripts.pory"
+# 533 "data/maps/MossdeepCity/scripts.pory"
 	.string "The rock's glow fades...\nIt doesn't seem to react.$"
 
 MossdeepCity_EventScript_WhiteRockDeoxys_Text_1:
-# 538 "data/maps/MossdeepCity/scripts.pory"
+# 537 "data/maps/MossdeepCity/scripts.pory"
 	.string "Which form should it take?$"
 
 MossdeepCity_Text_DeoxysScientist::
@@ -1127,17 +1125,17 @@ MossdeepCity_Text_DeoxysScientistExit::
 	.string "don't let it go to waste!$"
 
 MossdeepCity_Text_WhiteRock_DeoxysGlow::
-# 560 "data/maps/MossdeepCity/scripts.pory"
+# 559 "data/maps/MossdeepCity/scripts.pory"
 	.string "The white rock is glowing with a faint,\n"
 	.string "purple light!\p"
 	.string "Would you like to bring a Pokémon closer\n"
 	.string "to the rock?$"
 
 MossdeepCity_Text_WhiteRock_DeoxysChanged::
-# 565 "data/maps/MossdeepCity/scripts.pory"
+# 564 "data/maps/MossdeepCity/scripts.pory"
 	.string "Deoxys reacted to the cosmic energy of\n"
 	.string "the rock and changed its form!$"
 
 MossdeepCity_Text_WhiteRock_Cancel::
-# 569 "data/maps/MossdeepCity/scripts.pory"
+# 568 "data/maps/MossdeepCity/scripts.pory"
 	.string "The glowing light faded away...$"

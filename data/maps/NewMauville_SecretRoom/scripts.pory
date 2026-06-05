@@ -41,7 +41,6 @@ script NewMauville_SecretRoom_BattleRotom {
     seteventmon(SPECIES_ROTOM,40)
     setflag(FLAG_SYS_CTRL_OBJ_DELETE)
     special(BattleSetup_StartLegendaryBattle)
-	waitstate
 	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
     setvar(VAR_LAST_TALKED, LOCALID_NEW_MAUVILLE_SECRET_ROOM_ROTOM)
     specialvar(VAR_RESULT, GetBattleOutcome)

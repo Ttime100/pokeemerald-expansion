@@ -351,7 +351,7 @@ bool8 CheckThreeRegis(void)
     bool8 hasRegisteel = FALSE;
     u8 i;
 
-    for (i = 0; i < gPlayerPartyCount; i++)
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
     {
         u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, 0);
         if (species == SPECIES_REGIROCK) hasRegirock = TRUE;

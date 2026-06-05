@@ -41,7 +41,6 @@ script IlexForest_BattleCelebi {
     seteventmon(SPECIES_CELEBI,40)
     setflag(FLAG_SYS_CTRL_OBJ_DELETE)
     special(BattleSetup_StartLegendaryBattle)
-	waitstate
 	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
 	setvar(VAR_CELEBI_STATE, 2) // Added to handle dynamic warps in Route 104
     setvar(VAR_LAST_TALKED, LOCALID_ILEX_FOREST_CELEBI)

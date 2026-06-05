@@ -45,7 +45,6 @@ AncientColonnade_EventScript_CaveEntranceMiddle::
     fadeoutbgm 0
     playse SE_BANG
     special DoSealedChamberShakingEffect_Long
-    waitstate
     delay 30
     special DoBrailleRegigigasEffect
     fadeinbgm 0
@@ -77,7 +76,6 @@ AncientColonnade_EventScript_Regigigas::
 	setwildbattle SPECIES_REGIGIGAS, 50
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AncientColonnade_EventScript_DefeatedRegigigas

@@ -93,44 +93,42 @@ AbandonedShip_Room_B1F_BattleSpiritomb::
 # 48 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
 # 49 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
-	waitstate
-# 50 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-# 51 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 50 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	setvar VAR_LAST_TALKED, LOCALID_ABANDONED_SHIP_ROOM_B1F_SPIRITOMB
-# 52 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 51 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 53 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 52 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AbandonedShip_Room_B1F_EventScript_DefeatedSpiritomb
-# 54 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 53 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AbandonedShip_Room_B1F_EventScript_RanFromSpiritomb
-# 55 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 54 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AbandonedShip_Room_B1F_EventScript_RanFromSpiritomb
-# 56 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 55 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	setflag FLAG_CAUGHT_SPIRITOMB
-# 57 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 56 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	release
 	end
 
 
 AbandonedShip_Room_B1F_EventScript_DefeatedSpiritomb::
-# 62 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 61 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	setflag FLAG_DEFEATED_SPIRITOMB
-# 63 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 62 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	setvar VAR_0x8004, SPECIES_SPIRITOMB
-# 64 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 63 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	call Common_EventScript_LegendaryFlewAway
-# 65 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 64 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	release
 	end
 
 
 AbandonedShip_Room_B1F_EventScript_RanFromSpiritomb::
-# 70 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 69 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	setvar VAR_0x8004, SPECIES_SPIRITOMB
-# 71 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 70 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	call Common_EventScript_LegendaryFlewAway
-# 72 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
+# 71 "data/maps/AbandonedShip_Room_B1F/scripts.pory"
 	release
 	end
 

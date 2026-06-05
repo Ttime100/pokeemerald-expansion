@@ -42,7 +42,6 @@ script LilycoveCity_CoveLilyMotel_DarkraiRoom_BattleDarkrai {
     seteventmon(SPECIES_DARKRAI,50)
     setflag(FLAG_SYS_CTRL_OBJ_DELETE)
     special(BattleSetup_StartLegendaryBattle)
-	waitstate
 	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
     setvar(VAR_LAST_TALKED, LOCALID_COVE_LILY_MOTEL_DARKRAI)
     specialvar(VAR_RESULT, GetBattleOutcome)

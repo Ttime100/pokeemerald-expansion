@@ -2486,4 +2486,5 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Blazing Soul"),
         .description = COMPOUND_STRING("Fire moves go first."),
         .aiRating = 9,
-    };
+    },
+};

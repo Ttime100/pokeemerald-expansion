@@ -42,7 +42,6 @@ script FlowerGarden_BattleShaymin {
     seteventmon(SPECIES_SHAYMIN,50)
     setflag(FLAG_SYS_CTRL_OBJ_DELETE)
     special(BattleSetup_StartLegendaryBattle)
-	waitstate
 	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
     setvar(VAR_LAST_TALKED, LOCALID_FLOWER_GARDEN_SHAYMIN)
     specialvar(VAR_RESULT, GetBattleOutcome)

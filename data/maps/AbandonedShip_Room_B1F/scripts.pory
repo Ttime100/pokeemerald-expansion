@@ -46,7 +46,6 @@ script AbandonedShip_Room_B1F_BattleSpiritomb {
     seteventmon(SPECIES_SPIRITOMB,50)
     setflag(FLAG_SYS_CTRL_OBJ_DELETE)
     special(BattleSetup_StartLegendaryBattle)
-    waitstate
     clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
     setvar(VAR_LAST_TALKED, LOCALID_ABANDONED_SHIP_ROOM_B1F_SPIRITOMB)
     specialvar(VAR_RESULT, GetBattleOutcome)

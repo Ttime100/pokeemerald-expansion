@@ -99,7 +99,6 @@ script Assistant_VersionInfo {
 script Assistant_SetMontoPrevLvlCap {
     msgbox(format("Which Pokémon should I level?"))
     special(ChoosePartyMon)
-    waitstate
     lock
     faceplayer
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
@@ -122,7 +121,6 @@ script Assistant_SetMontoPrevLvlCap {
 
 script Assistant_MaxFriendship {
     special(ChoosePartyMon)
-    waitstate
     lock
     faceplayer
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
@@ -141,7 +139,6 @@ script Assistant_MaxFriendship {
 script Assistant_HatchEgg {
     msgbox(format("Which Egg should I help hatch?"))
     special(ChoosePartyMon)
-    waitstate
     lock
     faceplayer
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
@@ -155,14 +152,12 @@ script Assistant_HatchEgg {
     }
     msgbox(format("One moment..."))
     special(EggHatch)
-    waitstate
     return
 }
 
 script Assistant_NatureChange {
     msgbox(format("Which Pokémon?"))
     special(ChoosePartyMon)
-    waitstate
     lock
     faceplayer
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
@@ -210,7 +205,6 @@ script Assistant_NatureChange {
 
 script Assistant_ResetEVs {
     special(ChoosePartyMon)
-    waitstate
     lock
     faceplayer
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
@@ -230,7 +224,6 @@ script Assistant_SwapGender { //TODO figure out if you want it to be species spe
     //    Which Pokémon should I change?"))
     msgbox(format("Which Pokémon should I change?"))
     special(ChoosePartyMon)
-    waitstate
     lock
     faceplayer
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
@@ -278,7 +271,6 @@ script Assistant_SwapGender { //TODO figure out if you want it to be species spe
 script Assistant_LowerIVs {
     msgbox(format("I can lower one of your Pokémon's IVs to 0. Which Pokémon should I modify?"))
     special(ChoosePartyMon)
-    waitstate
     lock
     faceplayer
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){

@@ -522,7 +522,6 @@ script MossdeepCity_EventScript_WhiteRockDeoxys {
     msgbox(MossdeepCity_Text_WhiteRock_DeoxysGlow, MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
         special(ChoosePartyMon)
-        waitstate
         if (var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
             goto(MossdeepCity_EventScript_WhiteRock_Cancel)
         }

@@ -280,17 +280,17 @@ const u16 gTrainerPalette_Leaf[] = INCGFX_U16("graphics/trainers/front_pics/leaf
 const u32 gTrainerFrontPic_RubySapphireBrendan[] = INCGFX_U32("graphics/trainers/front_pics/brendan_rs.png", ".4bpp.smol");
 const u16 gTrainerPalette_RubySapphireBrendan[] = INCGFX_U16("graphics/trainers/palettes/brendan_rs.pal", ".gbapal");
 
-const u32 gTrainerFrontPic_EliteFourTyler[] = INCGFX_U32("graphics/trainers/front_pics/Elite4_Tyler.4bpp.smol");
-const u16 gTrainerPalette_EliteFourTyler[] = INCGFX_U16("graphics/trainers/front_pics/Elite4_Tyler.gbapal");
+const u32 gTrainerFrontPic_EliteFourTyler[] = INCGFX_U32("graphics/trainers/front_pics/Elite4_Tyler.png", ".4bpp.smol");
+const u16 gTrainerPalette_EliteFourTyler[] = INCGFX_U16("graphics/trainers/front_pics/Elite4_Tyler.png", ".gbapal");
 
-const u32 gTrainerFrontPic_EliteFourRob[] = INCGFX_U32("graphics/trainers/front_pics/Elite4_Rob.4bpp.smol");
-const u16 gTrainerPalette_EliteFourRob[] = INCGFX_U16("graphics/trainers/front_pics/Elite4_Rob.gbapal");
+const u32 gTrainerFrontPic_EliteFourRob[] = INCGFX_U32("graphics/trainers/front_pics/Elite4_Rob.png", ".4bpp.smol");
+const u16 gTrainerPalette_EliteFourRob[] = INCGFX_U16("graphics/trainers/front_pics/Elite4_Rob.png", ".gbapal");
 
-const u32 gTrainerFrontPic_EliteFourAustin[] = INCGFX_U32("graphics/trainers/front_pics/Elite4_Austin.4bpp.smol");
-const u16 gTrainerPalette_EliteFourAustin[] = INCGFX_U16("graphics/trainers/front_pics/Elite4_Austin.gbapal");
+const u32 gTrainerFrontPic_EliteFourAustin[] = INCGFX_U32("graphics/trainers/front_pics/Elite4_Austin.png", ".4bpp.smol");
+const u16 gTrainerPalette_EliteFourAustin[] = INCGFX_U16("graphics/trainers/front_pics/Elite4_Austin.png", ".gbapal");
 
-const u32 gTrainerFrontPic_EliteFourParth[] = INCGFX_U32("graphics/trainers/front_pics/Elite4_Parth.4bpp.smol");
-const u16 gTrainerPalette_EliteFourParth[] = INCGFX_U16("graphics/trainers/front_pics/Elite4_Parth.gbapal");
+const u32 gTrainerFrontPic_EliteFourParth[] = INCGFX_U32("graphics/trainers/front_pics/Elite4_Parth.png", ".4bpp.smol");
+const u16 gTrainerPalette_EliteFourParth[] = INCGFX_U16("graphics/trainers/front_pics/Elite4_Parth.png", ".gbapal");
 
 const u32 gTrainerFrontPic_RubySapphireMay[] = INCGFX_U32("graphics/trainers/front_pics/may_rs.png", ".4bpp.smol");
 const u16 gTrainerPalette_RubySapphireMay[] = INCGFX_U16("graphics/trainers/palettes/may_rs.pal", ".gbapal");
