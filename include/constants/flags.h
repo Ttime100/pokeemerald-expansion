@@ -1245,8 +1245,8 @@
 #define FLAG_ITEM_SHADESPUR_POKEMON_CENTER_MASTER_BALL              0x49C // Ttime100 added
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_WEST_TM_X_SCISSOR               0x49D // Ttime100 added
 #define FLAG_ITEM_PETALBURG_WOODS_TM_GRASS_KNOT                     0x49E // Ttime100 added
+#define FLAG_ITEM_SOOTOPOLIS_CITY_TM_DAZZLING_GLEAM                 0x49F // Ttime100 added
 
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag

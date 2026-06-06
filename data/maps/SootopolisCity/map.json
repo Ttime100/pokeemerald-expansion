@@ -3,7 +3,6 @@
   "name": "SootopolisCity",
   "layout": "LAYOUT_SOOTOPOLIS_CITY",
   "music": "MUS_SOOTOPOLIS",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_SOOTOPOLIS_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -330,6 +329,19 @@
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_SOOTOPOLIS_LANSAT",
       "script": "BerryTreeScript",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 44,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_DAZZLING_GLEAM",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_SOOTOPOLIS_CITY_TM_DAZZLING_GLEAM"
     }
   ],
   "warp_events": [
@@ -475,5 +487,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SootopolisCity_EventScript_CitySign"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }
