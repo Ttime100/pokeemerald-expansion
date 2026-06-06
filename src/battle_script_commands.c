@@ -9709,7 +9709,7 @@ u8 GetCatchingBattler(void)
 
 static void FinalizeCapture(void)
 {
-    u32 ballId = ItemIdToBallId(gLastThrownBall);
+    enum PokeBall ballId = ItemIdToBallId(gLastThrownBall);
     enum NationalDexOrder natDexNo = SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species);
     if ((GetConfig(B_CRITICAL_CAPTURE_IF_OWNED) >= GEN_9 && GetSetPokedexFlag(natDexNo, FLAG_GET_CAUGHT))
         || IsCriticalCapture())
@@ -9756,7 +9756,7 @@ struct BallData
 static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallData *ball)
 {
     u32 i;
-    u32 ballId = ItemIdToBallId(gLastUsedItem);
+    enum PokeBall ballId = ItemIdToBallId(gLastUsedItem);
     struct BattlePokemon *battleMon = &gBattleMons[wildMonBattler];
 
     ball->multiplier = 100;
@@ -9941,6 +9941,7 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
     case BALL_LAVA:
         if (IS_BATTLER_ANY_TYPE(wildMonBattler, TYPE_FIRE, TYPE_ROCK, TYPE_GROUND))
             ball->multiplier = 350;
+    default:
         break;
     }
 
@@ -10095,7 +10096,7 @@ static void Cmd_handleballthrow(void)
         if (gTestRunnerEnabled)
             TestRunner_Battle_RecordCatchChance(odds);
 
-        u32 ballId = ItemIdToBallId(gLastUsedItem);
+        enum PokeBall ballId = ItemIdToBallId(gLastUsedItem);
         if (gBattleResults.catchAttempts[ballId] < 255)
             gBattleResults.catchAttempts[ballId]++;
 
