@@ -23728,53 +23728,71 @@ Double Battle: No
 AI: Smart Trainer
 Mugshot: Gray
 
-Skarmory
-Level: 77
+Skarmory @ Leftovers
+Ability: Sturdy
+Level: 100
+Nature: Impish
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Toxic
-- Aerial Ace
+EVs: 252 HP / 6 Atk / 252 SpD
+- Roost
 - Spikes
-- Steel Wing
+- Brave Bird
+- Whirlwind
 
-Claydol
-Level: 75
+Aggron @ Assault Vest
+Ability: Rock Head
+Level: 100
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Reflect
-- Light Screen
-- Ancient Power
+EVs: 252 Atk / 252 Def / 6 SpD
+- Head Smash
 - Earthquake
+- Heavy Slam
+- Superpower
 
-Aggron
-Level: 76
+Lucario @ Life Orb
+Ability: Inner Focus
+Level: 100
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Earthquake
-- Solar Beam
-- Dragon Claw
+EVs: 252 Atk / 4 Def / 252 Spe
+- Swords Dance
+- Close Combat
+- Extreme Speed
+- Bullet Punch
 
-Cradily
-Level: 76
+Kingambit @ Black Glasses
+Ability: Supreme Overlord
+Level: 100
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Giga Drain
-- Ancient Power
-- Ingrain
-- Confuse Ray
+EVs: 252 HP / 252 Atk / 4 SpD
+- Kowtow Cleave
+- Sucker Punch
+- Iron Head
+- Swords Dance
 
-Armaldo
-Level: 76
+Metagross @ Leftovers
+Ability: Clear Body
+Level: 100
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Ancient Power
-- Aerial Ace
-- Slash
-
-Metagross @ Sitrus Berry
-Level: 78
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
+EVs: 252 Atk / 252 Def / 6 SpA
+- Stealth Rock
 - Meteor Mash
-- Shadow Ball
+- Earthquake
+- Bullet Punch
+
+Melmetal @ Assault Vest
+Ability: Iron Fist
+Level: 100
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+- Double Iron Bash
+- Earthquake
+- Thunder Punch
+- Superpower
 
 === TRAINER_ANABEL ===
 Name: Anabel
