@@ -1720,7 +1720,7 @@ script SootopolisCity_EventScript_RoamerCallOnFrame {
 text SootopolisCity_Text_BirchRoamerCallPrompt {
     format("… … … … … …\n"
     "… … … … … BZZZT!\p"
-    "PROF. BIRCH: {PLAYER}!\n"
+    "Prof. Birch: {PLAYER}!\n"
     "Thank goodness!\p"
     "I watched the whole thing on TV!\p"
     "When Rayquaza roared, my equipment\n"
