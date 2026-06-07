@@ -1248,8 +1248,8 @@
 #define FLAG_ITEM_SOOTOPOLIS_CITY_TM_DAZZLING_GLEAM                 0x49F // Ttime100 added
 #define FLAG_ITEM_ROUTE_120_TM_BUG_BUZZ                             0x4A0 // Ttime100 added
 #define FLAG_ITEM_SLATEPORT_CITY_TM_GYRO_BALL                       0x4A1 // Ttime100 added
+#define FLAG_ITEM_UMBRA_INLET_TM_SHADOW_CLAW                        0x4A2 // Ttime100 added
 
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
