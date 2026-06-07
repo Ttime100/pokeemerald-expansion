@@ -257,7 +257,7 @@
 #define FLAG_REGI_DOORS_OPENED               0xE4
 #define FLAG_RECEIVED_TM_FLASH_CANNON        0xE5 // Changed from Return (no longer a TM)
 #define FLAG_RECEIVED_TM_SLUDGE_BOMB         0xE6
-#define FLAG_RECEIVED_TM_ROAR                0xE7
+#define FLAG_RECEIVED_TM_ROAR_AND_SNARL      0xE7 // Ttime100 changed it to include Snarl
 #define FLAG_RECEIVED_TM_GIGA_DRAIN          0xE8
 #define FLAG_RECEIVED_GRACIDEA               0xE9
 #define FLAG_RECEIVED_MANAPHY_EGG            0x4D7 // Ttime100 added
