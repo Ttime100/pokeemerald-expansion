@@ -3920,7 +3920,7 @@
     {
       "id": "LAYOUT_SOOTOPOLIS_CITY_LEGENDS_BATTLE",
       "name": "SootopolisCity_LegendsBattle_Layout",
-      "width": 60,
+      "width": 61,
       "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Sootopolis",

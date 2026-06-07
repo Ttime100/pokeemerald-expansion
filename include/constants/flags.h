@@ -750,7 +750,6 @@
 #define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
 #define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
 #define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
-#define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1057,6 +1056,7 @@
 #define FLAG_HIDE_RS_FEMALE                                         0x4DB // Ttime100 added
 #define FLAG_RECEIVED_MEMBER_CARD                                   0x4D9 // Ttime100 added
 #define FLAG_HIDE_DEOXYS_SCIENTIST                                  0x2BB // Ttime100 added
+#define FLAG_RECEIVED_MELTAN_CALL                                   0x2AA // Ttime100 added
 #define FLAG_RECEIVED_MELTAN                                        0x2AB // Ttime100 added
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_MELTAN_POKEBALL       0x2AC // Ttime100 added
 

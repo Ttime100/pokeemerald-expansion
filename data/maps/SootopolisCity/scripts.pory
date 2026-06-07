@@ -17,19 +17,19 @@ SootopolisCity_EventScript_LegendariesNotArrived::
 	end
 
 SootopolisCity_EventScript_LockHouseDoors::
-	setmetatile 9, 6, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 9, 17, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 9, 26, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 44, 17, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 8, 35, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 53, 28, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 45, 6, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 48, 25, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 51, 36, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 10, 6, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 10, 17, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 10, 26, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 45, 17, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 9, 35, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 54, 28, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 46, 6, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 49, 25, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 52, 36, METATILE_Sootopolis_Door_Closed, TRUE
 	return
 
 SootopolisCity_EventScript_LockGymDoor::
-	setmetatile 31, 32, METATILE_Sootopolis_GymDoor_Closed, TRUE
+	setmetatile 32, 32, METATILE_Sootopolis_GymDoor_Closed, TRUE
 	return
 
 SootopolisCity_OnTransition:
@@ -55,10 +55,10 @@ SootopolisCity_EventScript_HideMapNamePopup::
 	return
 
 SootopolisCity_EventScript_SetBattleSpectators::
-	setobjectxyperm LOCALID_KIRI, 13, 48
-	setobjectxyperm LOCALID_SOOTOPOLIS_BOY_1, 46, 32
-	setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 48, 41
-	setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 45, 43
+	setobjectxyperm LOCALID_KIRI, 14, 48
+	setobjectxyperm LOCALID_SOOTOPOLIS_BOY_1, 47, 32
+	setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 49, 41
+	setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 46, 43
 	setobjectmovementtype LOCALID_KIRI, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype LOCALID_SOOTOPOLIS_BOY_1, MOVEMENT_TYPE_FACE_LEFT
 	setobjectmovementtype LOCALID_SOOTOPOLIS_NINJA_BOY, MOVEMENT_TYPE_FACE_LEFT
@@ -102,43 +102,43 @@ SootopolisCity_EventScript_CheckSetEnterCaveOfOriginObjPos::
 	return
 
 SootopolisCity_EventScript_SetEnterCaveOfOriginObjPos::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 30, 18
-	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 32, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 31, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 33, 18
 	return
 
 SootopolisCity_EventScript_SetExitCaveOfOriginObjPos::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 30, 18
-	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 18
-	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 32, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 31, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 32, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 33, 18
 	end
 
 SootopolisCity_EventScript_SetOutsideGymObjPos::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 31, 18
-	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 29, 33
+	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 32, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 30, 33
 	setobjectxyperm LOCALID_SOOTOPOLIS_MAXIE, 33, 35
-	setobjectxyperm LOCALID_SOOTOPOLIS_ARCHIE, 34, 35
+	setobjectxyperm LOCALID_SOOTOPOLIS_ARCHIE, 35, 35
 	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 0, SootopolisCity_EventScript_SetWallaceMiddle
 	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 1, SootopolisCity_EventScript_SetWallaceRight
 	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 2, SootopolisCity_EventScript_SetWallaceLeft
 	return
 
 SootopolisCity_EventScript_SetWallaceMiddle::
-	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 33
-	setobjectmovementtype LOCALID_SOOTOPOLIS_WALLACE, MOVEMENT_TYPE_FACE_DOWN
-	return
-
-SootopolisCity_EventScript_SetWallaceRight::
 	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 32, 33
 	setobjectmovementtype LOCALID_SOOTOPOLIS_WALLACE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
+SootopolisCity_EventScript_SetWallaceRight::
+	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 33, 33
+	setobjectmovementtype LOCALID_SOOTOPOLIS_WALLACE, MOVEMENT_TYPE_FACE_DOWN
+	return
+
 SootopolisCity_EventScript_SetWallaceLeft::
-	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 30, 33
+	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 33
 	setobjectmovementtype LOCALID_SOOTOPOLIS_WALLACE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 SootopolisCity_EventScript_SetExpertBlockCaveEntrance::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 31, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 32, 18
 	return
 
 SootopolisCity_OnWarp:
@@ -167,6 +167,7 @@ SootopolisCity_OnFrame:
     map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 1, SootopolisCity_EventScript_StartLegendariesScene
     map_script_2 VAR_SKY_PILLAR_STATE, 1, SootopolisCity_EventScript_StartRayquazaScene
     map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 5, SootopolisCity_EventScript_RoamerCallOnFrame
+	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_TryStevenCallOnFrame
     .2byte 0
 
 @ If not at PokeCenter, assumed to have arrived via Dive
@@ -569,30 +570,30 @@ SootopolisCity_EventScript_RayquazaSceneFromDive::
 	end
 
 SootopolisCity_EventScript_SetRoughWater::
-	setmetatile 27, 43, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 28, 43, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 29, 43, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 30, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 27, 44, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 31, 43, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 28, 44, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 29, 44, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 30, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 27, 45, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 31, 44, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 28, 45, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 29, 45, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 30, 45, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 32, 43, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 31, 45, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 33, 43, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 34, 43, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 35, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 32, 44, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 36, 43, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 33, 44, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 34, 44, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 35, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 32, 45, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 36, 44, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 33, 45, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 34, 45, METATILE_Sootopolis_RoughWater, FALSE
 	setmetatile 35, 45, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 36, 45, METATILE_Sootopolis_RoughWater, FALSE
 	return
 
 SootopolisCity_Movement_RayquazaFlyOff:
@@ -1737,5 +1738,38 @@ text SootopolisCity_Text_BirchRoamerCallPrompt {
     "something magnificent out there!\p"
     "Good luck, and stay safe!\p"
     "… … … … … …\l"
+    "Click!$")
+}
+
+script SootopolisCity_EventScript_TryStevenCallOnFrame{
+	if (flag(FLAG_BADGE08_GET) && !flag(FLAG_RECEIVED_MELTAN_CALL)){
+		call(SootopolisCity_EventScript_StevenMeltanCall)
+	}
+	end
+}
+
+script SootopolisCity_EventScript_StevenMeltanCall {
+    if (!flag(FLAG_RECEIVED_MELTAN_CALL)) {
+        lockall
+        delay(60)
+        pokenavcall(SootopolisCity_Text_StevenMeltanCall)
+        waitmessage
+        closemessage
+        setflag(FLAG_RECEIVED_MELTAN_CALL)
+        releaseall
+    }
+    end
+}
+
+text SootopolisCity_Text_StevenMeltanCall {
+    format("… … … … … …\n"
+    "… … … … … BZZZT!\p"
+    "Steven: Hello, {PLAYER}?\nIt's Steven.\p"
+    "Congratulations on defeating\nthe Sootopolis Gym!\p"
+    "Listen, I've left something special\nat my home in Mossdeep City.\p"
+    "It's a bit unusual, but I think you're\njust the trainer to take care of it.\p"
+    "Please stop by my home\nwhen you have a moment.\p"
+	"I think you'll find it well worth the trip!\p"
+	"… … … … … …\l"
     "Click!$")
 }
