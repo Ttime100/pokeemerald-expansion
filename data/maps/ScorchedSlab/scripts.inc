@@ -9,12 +9,11 @@ ScorchedSlab_OnTransition:
 	end
 
 ScorchedSlab_OnResume:
-	call_if_eq VAR_SCORCHED_SLAB_STATE, 0, ScorchedSlab_EventScript_CheckHasHeatRock
+	call_if_eq VAR_SCORCHED_SLAB_STATE, 0, ScorchedSlab_EventScript_CheckRoamerFlag
 	end
 
-ScorchedSlab_EventScript_CheckHasHeatRock::
-	checkitem ITEM_HEAT_ROCK
-	goto_if_eq VAR_RESULT, TRUE, ScorchedSlab_EventScript_SetReadyToOpenHeatranWall
+ScorchedSlab_EventScript_CheckRoamerFlag::
+	goto_if_set FLAG_RECEIVED_ROAMER_CALL ScorchedSlab_EventScript_SetReadyToOpenHeatranWall
 	return
 
 ScorchedSlab_EventScript_SetReadyToOpenHeatranWall::
@@ -42,7 +41,7 @@ ScorchedSlab_EventScript_OpenHeatranWall::
 	setvar VAR_0x8007, 5  @ shake delay
 	special ShakeCamera
 	waitstate
-	msgbox ScorchedSlab_Text_WallShakingInResponseToHeatRock, MSGBOX_DEFAULT
+	msgbox ScorchedSlab_Text_WallShaking, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_0x8004, 1   @ vertical pan
 	setvar VAR_0x8005, 1   @ horizontal pan
@@ -64,6 +63,5 @@ ScorchedSlab_EventScript_OpenHeatranWall::
 	releaseall
 	end
 
-ScorchedSlab_Text_WallShakingInResponseToHeatRock:
-	.string "Oh! The walls are shaking in response\n"
-	.string "to your Heat Rock!$"
+ScorchedSlab_Text_WallShaking:
+	.string "What's happening?!$"
