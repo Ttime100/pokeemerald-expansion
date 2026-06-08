@@ -703,7 +703,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_111_METAL_COAT                0x278 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_MAUVILLE_GAME_CORNER_LOADED_DICE    0x279 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_ROUTE_111_SMOOTH_ROCK               0x27A // Ttime100 added
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE_119_DAMP_ROCK                 0x27B // Ttime100 added
 #define FLAG_UNUSED_0x27C  0x27C // Unused Flag
 #define FLAG_UNUSED_0x27D  0x27D // Unused Flag
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag
