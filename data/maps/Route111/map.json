@@ -3,7 +3,6 @@
   "name": "Route111",
   "layout": "LAYOUT_ROUTE111",
   "music": "MUS_ROUTE110",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_111",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -1207,6 +1206,15 @@
       "elevation": 0,
       "item": "ITEM_METAL_COAT",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_METAL_COAT"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 42,
+      "elevation": 0,
+      "item": "ITEM_SMOOTH_ROCK",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_SMOOTH_ROCK"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }
