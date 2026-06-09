@@ -748,8 +748,6 @@
 #define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
 #define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
 #define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
-#define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1059,7 +1057,8 @@
 #define FLAG_RECEIVED_MELTAN_CALL                                   0x2AA // Ttime100 added
 #define FLAG_RECEIVED_MELTAN                                        0x2AB // Ttime100 added
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_MELTAN_POKEBALL       0x2AC // Ttime100 added
-
+#define FLAG_DECLINED_EEVEE                                         0x2A8 // Ttime100 added
+#define FLAG_RECEIVED_EEVEE                                         0x2A9 // Ttime100 added
 
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
