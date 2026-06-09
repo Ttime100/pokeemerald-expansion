@@ -1251,8 +1251,8 @@
 #define FLAG_ITEM_UMBRA_INLET_TM_SHADOW_CLAW                        0x4A2 // Ttime100 added
 #define FLAG_ITEM_SHOAL_CAVE_STAIRS_ROOM_DOME_FOSSIL                0x4A3 // Ttime100 added
 #define FLAG_ITEM_SHOAL_CAVE_STAIRS_ROOM_HELIX_FOSSIL               0x4A4 // Ttime100 added
+#define FLAG_ITEM_SAFARI_ZONE_NORTH_OLD_AMBER                       0x4A5 // Ttime100 added
 
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
 #define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
 #define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
