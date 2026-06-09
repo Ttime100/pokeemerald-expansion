@@ -5,9 +5,17 @@ Umbra_Inlet_MapScripts::
 script Umbra_Inlet_EventScript_Sidney {
     lock
 	faceplayer
-	trainerbattle_single (TRAINER_SIDNEY, Sidney_Text_IntroSpeech, Sidney_Text_Defeat, Sidney_EventScript_PostbattleSpeech)
+	goto_if_set (FLAG_DEFEATED_ELITE_4_SIDNEY, Sidney_EventScript_PostbattleSpeech)
+	trainerbattle_single (TRAINER_SIDNEY, Sidney_Text_IntroSpeech, Sidney_Text_Defeat, Sidney_EventScript_Defeated)
 	msgbox (Sidney_Text_PostBattleSpeech, MSGBOX_AUTOCLOSE)
 	end
+}
+
+script Sidney_EventScript_Defeated {
+	setflag(FLAG_DEFEATED_ELITE_4_SIDNEY)
+    msgbox(Sidney_Text_PostBattleSpeech)
+    release
+    end
 }
 
 script Sidney_EventScript_PostbattleSpeech {

@@ -11,22 +11,34 @@ Umbra_Inlet_EventScript_Sidney::
 # 7 "data/maps/Umbra_Inlet/scripts.pory"
 	faceplayer
 # 8 "data/maps/Umbra_Inlet/scripts.pory"
-	trainerbattle_single TRAINER_SIDNEY, Sidney_Text_IntroSpeech, Sidney_Text_Defeat, Sidney_EventScript_PostbattleSpeech
+	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, Sidney_EventScript_PostbattleSpeech
 # 9 "data/maps/Umbra_Inlet/scripts.pory"
+	trainerbattle_single TRAINER_SIDNEY, Sidney_Text_IntroSpeech, Sidney_Text_Defeat, Sidney_EventScript_Defeated
+# 10 "data/maps/Umbra_Inlet/scripts.pory"
 	msgbox Sidney_Text_PostBattleSpeech, MSGBOX_AUTOCLOSE
 	end
 
 
-Sidney_EventScript_PostbattleSpeech::
-# 14 "data/maps/Umbra_Inlet/scripts.pory"
-	msgbox Sidney_Text_PostBattleSpeech
+Sidney_EventScript_Defeated::
 # 15 "data/maps/Umbra_Inlet/scripts.pory"
+	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
+# 16 "data/maps/Umbra_Inlet/scripts.pory"
+	msgbox Sidney_Text_PostBattleSpeech
+# 17 "data/maps/Umbra_Inlet/scripts.pory"
+	release
+	end
+
+
+Sidney_EventScript_PostbattleSpeech::
+# 22 "data/maps/Umbra_Inlet/scripts.pory"
+	msgbox Sidney_Text_PostBattleSpeech
+# 23 "data/maps/Umbra_Inlet/scripts.pory"
 	release
 	end
 
 
 Sidney_Text_IntroSpeech::
-# 19 "data/maps/Umbra_Inlet/scripts.pory"
+# 27 "data/maps/Umbra_Inlet/scripts.pory"
 	.string "Welcome... I'm Sidney,\n"
 	.string "formerly of the Elite Four.\p"
 	.string "I like that look you're giving me.\n"
@@ -37,12 +49,12 @@ Sidney_Text_IntroSpeech::
 	.string "the Pokémon League!$"
 
 Sidney_Text_Defeat::
-# 30 "data/maps/Umbra_Inlet/scripts.pory"
+# 38 "data/maps/Umbra_Inlet/scripts.pory"
 	.string "Well, how do you like that? I lost!\n"
 	.string "Eh, it was fun, so it doesn't matter.$"
 
 Sidney_Text_PostBattleSpeech::
-# 35 "data/maps/Umbra_Inlet/scripts.pory"
+# 43 "data/maps/Umbra_Inlet/scripts.pory"
 	.string "Well, listen to what this loser has\n"
 	.string "to say.\p"
 	.string "You've got what it takes to go far.\n"

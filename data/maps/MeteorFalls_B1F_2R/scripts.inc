@@ -11,22 +11,34 @@ MeteorFalls_B1F_2R_EventScript_Drake::
 # 8 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
 	faceplayer
 # 9 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
-	trainerbattle_single TRAINER_DRAKE, Drake_Text_IntroSpeech, Drake_Text_Defeat, Drake_EventScript_PostbattleSpeech
+	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, Drake_EventScript_PostbattleSpeech
 # 10 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
+	trainerbattle_single TRAINER_DRAKE, Drake_Text_IntroSpeech, Drake_Text_Defeat, Drake_EventScript_Defeated
+# 11 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
 	msgbox Drake_Text_PostBattleSpeech, MSGBOX_AUTOCLOSE
 	end
 
 
-Drake_EventScript_PostbattleSpeech::
-# 15 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
-	msgbox Drake_Text_PostBattleSpeech
+Drake_EventScript_Defeated::
 # 16 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
+	setflag FLAG_DEFEATED_ELITE_4_DRAKE
+# 17 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
+	msgbox Drake_Text_PostBattleSpeech
+# 18 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
+	release
+	end
+
+
+Drake_EventScript_PostbattleSpeech::
+# 23 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
+	msgbox Drake_Text_PostBattleSpeech
+# 24 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
 	release
 	end
 
 
 Drake_Text_IntroSpeech::
-# 20 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
+# 28 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
 	.string "I am formerly the last of the Pokémon\n"
 	.string "League Elite Four, Drake the Dragon\l"
 	.string "master!\p"
@@ -41,11 +53,11 @@ Drake_Text_IntroSpeech::
 	.string "prevail over me!$"
 
 Drake_Text_Defeat::
-# 34 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
+# 42 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
 	.string "Superb, it should be said.$"
 
 Drake_Text_PostBattleSpeech::
-# 38 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
+# 46 "data/maps/MeteorFalls_B1F_2R/scripts.pory"
 	.string "You deserve every credit for coming\n"
 	.string "this far as a Trainer of Pokémon.\p"
 	.string "You do seem to know what is needed.\p"

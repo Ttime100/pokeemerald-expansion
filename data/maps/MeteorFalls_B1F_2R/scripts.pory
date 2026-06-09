@@ -6,9 +6,17 @@ MeteorFalls_B1F_2R_MapScripts::
 script MeteorFalls_B1F_2R_EventScript_Drake {
     lock
 	faceplayer
-	trainerbattle_single (TRAINER_DRAKE, Drake_Text_IntroSpeech, Drake_Text_Defeat, Drake_EventScript_PostbattleSpeech)
+	goto_if_set (FLAG_DEFEATED_ELITE_4_DRAKE, Drake_EventScript_PostbattleSpeech)
+	trainerbattle_single (TRAINER_DRAKE, Drake_Text_IntroSpeech, Drake_Text_Defeat, Drake_EventScript_Defeated)
 	msgbox (Drake_Text_PostBattleSpeech, MSGBOX_AUTOCLOSE)
 	end
+}
+
+script Drake_EventScript_Defeated {
+	setflag(FLAG_DEFEATED_ELITE_4_DRAKE)
+    msgbox(Drake_Text_PostBattleSpeech)
+    release
+    end
 }
 
 script Drake_EventScript_PostbattleSpeech {

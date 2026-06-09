@@ -73,9 +73,17 @@ MtPyre_6F_Text_CedricPostBattle:
 script Mt_Pyre_6F_EventScript_Phoebe {
     lock
 	faceplayer
-	trainerbattle_single (TRAINER_PHOEBE, Phoebe_Text_IntroSpeech, Phoebe_Text_Defeat, Phoebe_EventScript_PostbattleSpeech)
+	goto_if_set (FLAG_DEFEATED_ELITE_4_PHOEBE, Phoebe_EventScript_PostbattleSpeech)
+	trainerbattle_single (TRAINER_PHOEBE, Phoebe_Text_IntroSpeech, Phoebe_Text_Defeat, Phoebe_EventScript_Defeated)
 	msgbox (Phoebe_Text_PostBattleSpeech, MSGBOX_AUTOCLOSE)
 	end
+}
+
+script Phoebe_EventScript_Defeated {
+    setflag(FLAG_DEFEATED_ELITE_4_PHOEBE)
+    msgbox(Phoebe_Text_PostBattleSpeech)
+    release
+    end
 }
 
 script Phoebe_EventScript_PostbattleSpeech {

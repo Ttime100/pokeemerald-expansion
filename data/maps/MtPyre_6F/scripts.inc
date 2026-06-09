@@ -143,22 +143,34 @@ Mt_Pyre_6F_EventScript_Phoebe::
 # 75 "data/maps/MtPyre_6F/scripts.pory"
 	faceplayer
 # 76 "data/maps/MtPyre_6F/scripts.pory"
-	trainerbattle_single TRAINER_PHOEBE, Phoebe_Text_IntroSpeech, Phoebe_Text_Defeat, Phoebe_EventScript_PostbattleSpeech
+	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, Phoebe_EventScript_PostbattleSpeech
 # 77 "data/maps/MtPyre_6F/scripts.pory"
+	trainerbattle_single TRAINER_PHOEBE, Phoebe_Text_IntroSpeech, Phoebe_Text_Defeat, Phoebe_EventScript_Defeated
+# 78 "data/maps/MtPyre_6F/scripts.pory"
 	msgbox Phoebe_Text_PostBattleSpeech, MSGBOX_AUTOCLOSE
 	end
 
 
-Phoebe_EventScript_PostbattleSpeech::
-# 82 "data/maps/MtPyre_6F/scripts.pory"
-	msgbox Phoebe_Text_PostBattleSpeech
+Phoebe_EventScript_Defeated::
 # 83 "data/maps/MtPyre_6F/scripts.pory"
+	setflag FLAG_DEFEATED_ELITE_4_PHOEBE
+# 84 "data/maps/MtPyre_6F/scripts.pory"
+	msgbox Phoebe_Text_PostBattleSpeech
+# 85 "data/maps/MtPyre_6F/scripts.pory"
+	release
+	end
+
+
+Phoebe_EventScript_PostbattleSpeech::
+# 90 "data/maps/MtPyre_6F/scripts.pory"
+	msgbox Phoebe_Text_PostBattleSpeech
+# 91 "data/maps/MtPyre_6F/scripts.pory"
 	release
 	end
 
 
 Phoebe_Text_IntroSpeech::
-# 87 "data/maps/MtPyre_6F/scripts.pory"
+# 95 "data/maps/MtPyre_6F/scripts.pory"
 	.string "Ahahaha!\p"
 	.string "I'm Phoebe, formerly of the Elite Four.\n"
 	.string "I did my training right here on Mt. Pyre.\p"
@@ -170,12 +182,12 @@ Phoebe_Text_IntroSpeech::
 	.string "even inflict damage on my Pokémon!$"
 
 Phoebe_Text_Defeat::
-# 99 "data/maps/MtPyre_6F/scripts.pory"
+# 107 "data/maps/MtPyre_6F/scripts.pory"
 	.string "Oh, darn.\n"
 	.string "I've gone and lost.$"
 
 Phoebe_Text_PostBattleSpeech::
-# 104 "data/maps/MtPyre_6F/scripts.pory"
+# 112 "data/maps/MtPyre_6F/scripts.pory"
 	.string "There's a definite bond between you\n"
 	.string "and your Pokémon, too.\p"
 	.string "I didn't recognize it, so it's only\n"

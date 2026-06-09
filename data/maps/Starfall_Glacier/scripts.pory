@@ -11,9 +11,17 @@ Starfall_Glacier_OnTransition:
 script Starfall_Glacier_EventScript_Glacia {
     lock
 	faceplayer
-	trainerbattle_single (TRAINER_GLACIA, Glacia_Text_IntroSpeech, Glacia_Text_Defeat, Glacia_EventScript_PostbattleSpeech)
+	goto_if_set(FLAG_DEFEATED_ELITE_4_GLACIA, Glacia_EventScript_PostbattleSpeech)
+	trainerbattle_single (TRAINER_GLACIA, Glacia_Text_IntroSpeech, Glacia_Text_Defeat, Glacia_EventScript_Defeated)
 	msgbox (Glacia_Text_PostBattleSpeech, MSGBOX_AUTOCLOSE)
 	end
+}
+
+script Glacia_EventScript_Defeated {
+    setflag(FLAG_DEFEATED_ELITE_4_GLACIA)
+    msgbox(Glacia_Text_PostBattleSpeech)
+    release
+    end
 }
 
 script Glacia_EventScript_PostbattleSpeech {
