@@ -3,7 +3,6 @@
   "name": "FallarborTown_MoveRelearnersHouse",
   "layout": "LAYOUT_HOUSE2",
   "music": "MUS_FALLARBOR",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_FALLARBOR_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -26,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner",
+      "script": "FallarborTown_MoveRelearner_EventScript_HeartScaleCollector",
       "flag": "0"
     }
   ],
@@ -47,5 +46,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

@@ -1,0 +1,225 @@
+raw`
+FallarborTown_MoveRelearnersHouse_MapScripts::
+	.byte 0
+
+FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner::
+	lockall
+	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
+	waitmovement 0
+	goto_if_set FLAG_TEMP_1, FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	msgbox FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_1
+	goto FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove::
+	checkitem ITEM_HEART_SCALE
+	goto_if_eq VAR_RESULT, FALSE, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
+	msgbox FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon, MSGBOX_DEFAULT
+	setmoverelearnerstate MOVE_RELEARNER_LEVEL_UP_MOVES @ Specifically supposed to teach level up moves
+	chooseboxmon SELECT_PC_MON_MOVE_RELEARNER
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
+	special IsSelectedMonEgg
+	goto_if_eq VAR_RESULT, TRUE, FallarborTown_MoveRelearnersHouse_EventScript_CantTeachEgg
+	special Special_HasMoveToRelearn
+	goto_if_eq VAR_RESULT, FALSE, FallarborTown_MoveRelearnersHouse_EventScript_NoMoveToTeachMon
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMove
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ChooseMove::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	goto_if_eq VAR_RESULT, FALSE, FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	msgbox FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale, MSGBOX_DEFAULT
+	removeitem ITEM_HEART_SCALE
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_NoMoveToTeachMon::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon, MSGBOX_DEFAULT
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_CantTeachEgg::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg, MSGBOX_DEFAULT
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale, MSGBOX_DEFAULT
+	releaseall
+	end
+
+FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
+	.string "I'm the Move Tutor.\p"
+	.string "I know all the moves that Pokémon\n"
+	.string "learn--every one of them--and I can\l"
+	.string "teach Pokémon those moves.\p"
+	.string "I can teach a move to a Pokémon\n"
+	.string "of yours if you'd like.\p"
+	.string "I'll do it for a Heart Scale.\n"
+	.string "I'm collecting those now.$"
+
+FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove:
+	.string "Oh! That's it! That's an honest to\n"
+	.string "goodness Heart Scale!\p"
+	.string "Let me guess, you want me to teach\n"
+	.string "a move?$"
+
+FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon:
+	.string "Which Pokémon needs tutoring?$"
+
+FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove:
+	.string "Which move should I teach?$"
+
+FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
+	.string "Sorry…\p"
+	.string "It doesn't appear as if I have any move\n"
+	.string "I can teach that Pokémon.$"
+
+FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale:
+	.string "{PLAYER} handed over one Heart Scale\n"
+	.string "in exchange.$"
+
+FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
+	.string "If your Pokémon need to learn a move,\n"
+	.string "come back with a Heart Scale.$"
+
+FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
+	.string "Hunh? There isn't a single move that\n"
+	.string "I can teach an egg.$"
+
+`
+const CHOSEN_MON		  = VAR_TEMP_2
+const HEART_SCALES_NEEDED = VAR_TEMP_3
+const WANT_SHINY		  = VAR_TEMP_4
+
+script FallarborTown_MoveRelearner_EventScript_HeartScaleCollector {
+    lock
+    faceplayer
+    if(flag(FLAG_TEMP_1)){
+        call(FallarborTown_MoveRelearner_EventScript_AskForTrade)
+    }
+    msgbox(FallarborTown_MoveRelearnersHouse_Text_HeartScalesForPokemon)
+	setflag(FLAG_TEMP_1)
+    call(FallarborTown_MoveRelearner_EventScript_AskForTrade)
+    release
+    end
+}
+
+script FallarborTown_MoveRelearner_EventScript_AskForTrade {
+    checkitem(ITEM_HEART_SCALE, 3)
+    if(var(VAR_RESULT) == FALSE) {
+        msgbox(FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScales)
+		release
+		end
+    }
+    msgbox(FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantARarePokemon, MSGBOX_YESNO)
+    if(var(VAR_RESULT) == FALSE) {
+        msgbox(FallarborTown_MoveRelearnersHouse_Text_OhThatsAShame)
+        release
+        end
+    }
+	PokemonSelectionMenu:
+	msgbox(format("Which Pokémon would you like?"))
+    dynmultipush("Bulbasaur", SPECIES_BULBASAUR)
+	dynmultipush("Charmander",SPECIES_CHARMANDER)
+	dynmultipush("Squirtle",  SPECIES_SQUIRTLE)
+	dynmultipush("Chikorita", SPECIES_CHIKORITA)
+	dynmultipush("Cyndaquil", SPECIES_CYNDAQUIL)
+	dynmultipush("Totodile",  SPECIES_TOTODILE)
+	dynmultistack(0, 0, FALSE, 6, FALSE, SPECIES_BULBASAUR, 0)
+	if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+		msgbox(FallarborTown_MoveRelearnersHouse_Text_OhThatsAShame)
+		release
+		end
+	}
+	copyvar(CHOSEN_MON, VAR_RESULT)
+	bufferspeciesname(STR_VAR_1, CHOSEN_MON)
+	msgbox("So your choice is {STR_VAR_1}?", MSGBOX_YESNO)
+	if (!var(VAR_RESULT)) {
+		goto(PokemonSelectionMenu)
+	}
+	msgbox(FallarborTown_MoveRelearnersHouse_Text_MakeItShiny, MSGBOX_YESNO)
+	waitmessage
+	copyvar(WANT_SHINY, VAR_RESULT)
+	if (var(WANT_SHINY)) {
+		setvar(HEART_SCALES_NEEDED, 4)
+	}
+	else {
+		setvar(HEART_SCALES_NEEDED, 3)
+	}
+	checkitem(ITEM_HEART_SCALE, HEART_SCALES_NEEDED)
+		if (var(VAR_RESULT) == FALSE) {
+			msgbox(FallarborTown_MoveRelearnersHouse_Text_NotEnough)
+			release
+			end
+		}
+		else {
+			removeitem(ITEM_HEART_SCALE, HEART_SCALES_NEEDED)
+		}
+	if (var(WANT_SHINY) == TRUE) {
+		givemon(CHOSEN_MON, 10, ITEM_LUM_BERRY, ITEM_CHERISH_BALL, shinyMode=SHINY_MODE_ALWAYS)
+	}
+	else {
+		givemon(CHOSEN_MON, 10, ITEM_LUM_BERRY, ITEM_CHERISH_BALL)
+	}
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(FallarborTown_MoveRelearnersHouse_Text_PlayerReceivedPokemon)
+    waitfanfare
+	buffernumberstring(STR_VAR_2, HEART_SCALES_NEEDED)
+	msgbox(FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScales)
+	waitmessage
+	msgbox(format("Enjoy your {STR_VAR_1}!"))
+	release
+	end
+}
+
+text FallarborTown_MoveRelearnersHouse_Text_HeartScalesForPokemon {
+    format("I'm a collector of rare Pokémon.\p"
+    "The only thing I enjoy collecting more\n"
+    "than rare Pokémon are Heart Scales.\p"
+    "You wouldn't happen to have any,\nwould you?\p"
+    "If you do, I might be willing\nto make a trade.")
+}
+
+text FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantARarePokemon {
+	format("Oh! That's it! Those are honest\n"
+	"to goodness Heart Scales!\p"
+    "I would be willing to give you one of\nmy rare Pokémon for three Heart Scales.\p"
+    "If you give me a forth one,\nI can even guarantee it to be shiny!\p"
+    "What do you say?")
+}
+
+text FallarborTown_MoveRelearnersHouse_Text_MakeItShiny {
+    format("Do you want to make it shiny\nfor one more Heart Scale?")
+}
+
+text FallarborTown_MoveRelearnersHouse_Text_OhThatsAShame {
+    format("Oh... That's a shame.\p"
+    "If you change your mind,\ncome back with some Heart Scales.")
+}
+
+text FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScales {
+    format("If you want some rare Pokémon, come\nback with at least three Heart Scales.")
+}
+
+text FallarborTown_MoveRelearnersHouse_Text_NotEnough {
+	format("You do not have enough Heart Scales for this option.")
+}
+
+text FallarborTown_MoveRelearnersHouse_Text_PlayerReceivedPokemon {
+	format("{PLAYER} received {STR_VAR_1}!")
+}
+
+text FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScales {
+	"{PLAYER} handed over {STR_VAR_2} Heart Scales."
+}
