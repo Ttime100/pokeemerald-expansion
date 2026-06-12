@@ -306,32 +306,34 @@ EverGrandeCity_PokemonLeague_EventScript_Gatekeeper_1:
 # 158 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	delay 30
 # 159 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
-	msgbox EverGrandeCity_PokemonLeague_EventScript_Gatekeeper_Text_0
-# 176 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	msgbox EverGrandeCity_PokemonLeague_Text_TylersChallenge
+# 160 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	clearflag FLAG_HIDE_EXILE_SIDNEY
-# 177 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 161 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	clearflag FLAG_HIDE_EXILE_PHOEBE
-# 178 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 162 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	clearflag FLAG_HIDE_EXILE_GLACIA
-# 179 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 163 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	clearflag FLAG_HIDE_EXILE_DRAKE
-# 180 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 164 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	clearflag FLAG_HIDE_HINT_GIVER
+# 165 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	setflag FLAG_MET_GATEKEEPERS
-# 181 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 166 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	applymovement 5, Common_Movement_FaceUp
-# 182 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 167 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	waitmovement 5
-# 183 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 168 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	delay 20
-# 184 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 169 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	removeobject 5
-# 185 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 170 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	playse SE_DOOR
-# 186 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 171 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	setflag FLAG_HIDE_TYLER_LEAGUE
-# 187 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 172 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	fadedefaultbgm
-# 188 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 173 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	release
 	end
 
@@ -342,39 +344,204 @@ EverGrandeCity_PokemonLeague_EventScript_Gatekeeper_2:
 
 
 EverGrandeCity_PokemonLeague_CheckProgress::
-# 193 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 178 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_PokemonLeague_CheckProgress_5
 EverGrandeCity_PokemonLeague_CheckProgress_3:
-# 198 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 183 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	msgbox EverGrandeCity_PokemonLeague_CheckProgress_Text_0
 EverGrandeCity_PokemonLeague_CheckProgress_1:
-# 201 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 186 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	release
 	end
 
 EverGrandeCity_PokemonLeague_CheckProgress_2:
-# 195 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 180 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	call EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard
 	goto EverGrandeCity_PokemonLeague_CheckProgress_1
 
 EverGrandeCity_PokemonLeague_CheckProgress_4:
-# 194 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 179 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_PokemonLeague_CheckProgress_8
 	goto EverGrandeCity_PokemonLeague_CheckProgress_3
 
 EverGrandeCity_PokemonLeague_CheckProgress_5:
-# 193 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 178 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PokemonLeague_CheckProgress_4
 	goto EverGrandeCity_PokemonLeague_CheckProgress_3
 
 EverGrandeCity_PokemonLeague_CheckProgress_8:
-# 194 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+# 179 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_PokemonLeague_CheckProgress_2
 	goto EverGrandeCity_PokemonLeague_CheckProgress_3
 
 
-EverGrandeCity_PokemonLeague_EventScript_Gatekeeper_Text_0:
-# 159 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+EverGrandeCity_PokemonLeague_HintGiver::
+# 191 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	lock
+# 192 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	faceplayer
+# 193 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_set FLAG_TEMP_1, EverGrandeCity_PokemonLeague_HintGiver_2
+# 196 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	msgbox EverGrandeCity_PokemonLeague_HintGiver_Text_1
+# 199 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	setflag FLAG_TEMP_1
+EverGrandeCity_PokemonLeague_HintGiver_1:
+# 201 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	setvar VAR_TEMP_5, 0
+# 202 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_unset FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_PokemonLeague_HintGiver_6
+EverGrandeCity_PokemonLeague_HintGiver_5:
+# 203 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_unset FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PokemonLeague_HintGiver_9
+EverGrandeCity_PokemonLeague_HintGiver_8:
+# 204 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_unset FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_PokemonLeague_HintGiver_12
+EverGrandeCity_PokemonLeague_HintGiver_11:
+# 205 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_unset FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_PokemonLeague_HintGiver_15
+EverGrandeCity_PokemonLeague_HintGiver_14:
+# 206 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	compare VAR_TEMP_5, 0
+	goto_if_eq EverGrandeCity_PokemonLeague_HintGiver_18
+# 211 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	random VAR_TEMP_5
+# 212 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	setvar VAR_TEMP_6, 0
+# 213 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_unset FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_PokemonLeague_HintGiver_21
+EverGrandeCity_PokemonLeague_HintGiver_20:
+# 221 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_unset FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PokemonLeague_HintGiver_24
+EverGrandeCity_PokemonLeague_HintGiver_23:
+# 229 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_unset FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_PokemonLeague_HintGiver_30
+EverGrandeCity_PokemonLeague_HintGiver_29:
+# 237 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	goto_if_unset FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_PokemonLeague_HintGiver_36
+EverGrandeCity_PokemonLeague_HintGiver_35:
+# 245 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	release
+	end
+
+EverGrandeCity_PokemonLeague_HintGiver_2:
+# 194 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	msgbox EverGrandeCity_PokemonLeague_HintGiver_Text_0
+	goto EverGrandeCity_PokemonLeague_HintGiver_1
+
+EverGrandeCity_PokemonLeague_HintGiver_6:
+# 202 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	addvar VAR_TEMP_5, 1
+	goto EverGrandeCity_PokemonLeague_HintGiver_5
+
+EverGrandeCity_PokemonLeague_HintGiver_9:
+# 203 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	addvar VAR_TEMP_5, 1
+	goto EverGrandeCity_PokemonLeague_HintGiver_8
+
+EverGrandeCity_PokemonLeague_HintGiver_12:
+# 204 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	addvar VAR_TEMP_5, 1
+	goto EverGrandeCity_PokemonLeague_HintGiver_11
+
+EverGrandeCity_PokemonLeague_HintGiver_15:
+# 205 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	addvar VAR_TEMP_5, 1
+	goto EverGrandeCity_PokemonLeague_HintGiver_14
+
+EverGrandeCity_PokemonLeague_HintGiver_18:
+# 207 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	msgbox EverGrandeCity_PokemonLeague_HintGiver_Text_2
+# 208 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	release
+	end
+
+EverGrandeCity_PokemonLeague_HintGiver_21:
+# 214 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	compare VAR_TEMP_6, VAR_RESULT
+	goto_if_eq EverGrandeCity_PokemonLeague_HintGiver_27
+# 219 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	addvar VAR_TEMP_6, 1
+	goto EverGrandeCity_PokemonLeague_HintGiver_20
+
+EverGrandeCity_PokemonLeague_HintGiver_24:
+# 222 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	compare VAR_TEMP_6, VAR_RESULT
+	goto_if_eq EverGrandeCity_PokemonLeague_HintGiver_33
+# 227 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	addvar VAR_TEMP_6, 1
+	goto EverGrandeCity_PokemonLeague_HintGiver_23
+
+EverGrandeCity_PokemonLeague_HintGiver_27:
+# 215 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	msgbox EverGrandeCity_PokemonLeague_Text_SidneyHint
+# 216 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	release
+	end
+
+EverGrandeCity_PokemonLeague_HintGiver_30:
+# 230 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	compare VAR_TEMP_6, VAR_RESULT
+	goto_if_eq EverGrandeCity_PokemonLeague_HintGiver_39
+# 235 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	addvar VAR_TEMP_6, 1
+	goto EverGrandeCity_PokemonLeague_HintGiver_29
+
+EverGrandeCity_PokemonLeague_HintGiver_33:
+# 223 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	msgbox EverGrandeCity_PokemonLeague_Text_PhoebeHint
+# 224 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	release
+	end
+
+EverGrandeCity_PokemonLeague_HintGiver_36:
+# 238 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	compare VAR_TEMP_6, VAR_RESULT
+	goto_if_eq EverGrandeCity_PokemonLeague_HintGiver_42
+# 243 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	addvar VAR_TEMP_6, 1
+	goto EverGrandeCity_PokemonLeague_HintGiver_35
+
+EverGrandeCity_PokemonLeague_HintGiver_39:
+# 231 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	msgbox EverGrandeCity_PokemonLeague_Text_GlaciaHint
+# 232 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	release
+	end
+
+EverGrandeCity_PokemonLeague_HintGiver_42:
+# 239 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	msgbox EverGrandeCity_PokemonLeague_Text_DrakeHint
+# 240 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_CheckProgress_Text_0:
+# 183 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	.string "I'm sorry {PLAYER}.\p"
+	.string "It sounds like you need to defeat the\n"
+	.string "former members before returning.$"
+
+EverGrandeCity_PokemonLeague_HintGiver_Text_0:
+# 194 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	.string "Back for another lead?$"
+
+EverGrandeCity_PokemonLeague_HintGiver_Text_1:
+# 196 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	.string "The League has been taken over.\n"
+	.string "It's a mess.\p"
+	.string "The original Elite Four have scattered\n"
+	.string "across Hoenn, but thankfully there are\l"
+	.string "murmurings on where they disappeared.$"
+
+EverGrandeCity_PokemonLeague_HintGiver_Text_2:
+# 207 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	.string "You've found them all!\n"
+	.string "Go reclaim the League!$"
+
+EverGrandeCity_PokemonLeague_Text_TylersChallenge::
+# 249 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	.string "I'll handle this.\p"
 	.string "So, this is the challenger\n"
 	.string "I've been hearing about?\p"
@@ -392,8 +559,30 @@ EverGrandeCity_PokemonLeague_EventScript_Gatekeeper_Text_0:
 	.string "Only then will I consider you\n"
 	.string "as a legitimate challenger.$"
 
-EverGrandeCity_PokemonLeague_CheckProgress_Text_0:
-# 198 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
-	.string "I'm sorry {PLAYER}.\p"
-	.string "It sounds like you need to defeat the\n"
-	.string "former members before returning.$"
+EverGrandeCity_PokemonLeague_Text_SidneyHint::
+# 269 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	.string "Sidney was last spotted near the coast,\n"
+	.string "somewhere where shadows never fade.\p"
+	.string "If you look for the place where light is\n"
+	.string "swallowed by the sea, you'll find him.$"
+
+EverGrandeCity_PokemonLeague_Text_PhoebeHint::
+# 275 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	.string "Phoebe hasn't been seen for a while.\n"
+	.string "They say she's returned to the tower\l"
+	.string "where spirits gather, waiting at the\l"
+	.string "highest point to pay her respects.$"
+
+EverGrandeCity_PokemonLeague_Text_GlaciaHint::
+# 281 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	.string "There's a strange chill lingering in the\n"
+	.string "northern waters. Look for the place\l"
+	.string "where the land turns to permafrost.\l"
+	.string "That is where Glacia is keeping watch.$"
+
+EverGrandeCity_PokemonLeague_Text_DrakeHint::
+# 287 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
+	.string "Drake has retreated to his training\n"
+	.string "grounds deep within the caves.\p"
+	.string "He dwells where Dragon Pokémon raise\n"
+	.string "their young amongst ancient meteors.$"

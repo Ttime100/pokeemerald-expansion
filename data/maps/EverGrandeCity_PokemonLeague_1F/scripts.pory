@@ -156,27 +156,12 @@ script EverGrandeCity_PokemonLeague_EventScript_Gatekeeper {
     clearflag(FLAG_HIDE_TYLER_LEAGUE)
     addobject(5)
     delay(30)
-    msgbox(format("I'll handle this.\p
-           So, this is the challenger\n
-           I've been hearing about?\p
-           You look rather ordinary.\p
-           You think a few gym badges make you worthy
-           of standing in our presence?\p
-           We replaced the former Elite Four\n
-           because they didn't have what it takes.\p
-           If you want us to even
-           consider opening these doors,
-           you'll have to prove you're
-           at least better than them.\p
-           They have retreated to the\n
-           far corners of Hoenn.\p
-           Defeat them. All of them.\p
-           Only then will I consider you\n
-           as a legitimate challenger."))
+    msgbox(EverGrandeCity_PokemonLeague_Text_TylersChallenge)
     clearflag(FLAG_HIDE_EXILE_SIDNEY)
     clearflag(FLAG_HIDE_EXILE_PHOEBE)
     clearflag(FLAG_HIDE_EXILE_GLACIA)
     clearflag(FLAG_HIDE_EXILE_DRAKE)
+	clearflag(FLAG_HIDE_HINT_GIVER)
     setflag(FLAG_MET_GATEKEEPERS)
     applymovement(5, Common_Movement_FaceUp)
     waitmovement(5)
@@ -201,3 +186,107 @@ script EverGrandeCity_PokemonLeague_CheckProgress {
     release
     end
 }
+
+script EverGrandeCity_PokemonLeague_HintGiver {
+	lock
+	faceplayer
+	if(flag(FLAG_TEMP_1)) {
+		msgbox(format("Back for another lead?"))
+	} else {
+		msgbox(format("The League has been taken over.\nIt's a mess.\p
+		The original Elite Four have scattered across Hoenn,
+		but thankfully there are murmurings on where they disappeared."))
+		setflag(FLAG_TEMP_1)
+	}
+	setvar(VAR_TEMP_5, 0)
+    if (!flag(FLAG_DEFEATED_ELITE_4_SIDNEY)) { addvar(VAR_TEMP_5, 1) }
+    if (!flag(FLAG_DEFEATED_ELITE_4_PHOEBE)) { addvar(VAR_TEMP_5, 1) }
+    if (!flag(FLAG_DEFEATED_ELITE_4_GLACIA)) { addvar(VAR_TEMP_5, 1) }
+    if (!flag(FLAG_DEFEATED_ELITE_4_DRAKE))  { addvar(VAR_TEMP_5, 1) }
+	if(var(VAR_TEMP_5) == 0) {
+		msgbox(format("You've found them all!\nGo reclaim the League!"))
+		release
+		end
+	}
+	random(VAR_TEMP_5)
+	setvar(VAR_TEMP_6, 0)
+    if (!flag(FLAG_DEFEATED_ELITE_4_SIDNEY)) {
+        if (var(VAR_TEMP_6) == VAR_RESULT) {
+            msgbox(EverGrandeCity_PokemonLeague_Text_SidneyHint)
+            release
+            end
+        }
+        addvar(VAR_TEMP_6, 1)
+    }
+    if (!flag(FLAG_DEFEATED_ELITE_4_PHOEBE)) {
+        if (var(VAR_TEMP_6) == VAR_RESULT) {
+            msgbox(EverGrandeCity_PokemonLeague_Text_PhoebeHint)
+            release
+            end
+        }
+        addvar(VAR_TEMP_6, 1)
+    }
+    if (!flag(FLAG_DEFEATED_ELITE_4_GLACIA)) {
+        if (var(VAR_TEMP_6) == VAR_RESULT) {
+            msgbox(EverGrandeCity_PokemonLeague_Text_GlaciaHint)
+            release
+            end
+        }
+        addvar(VAR_TEMP_6, 1)
+    }
+    if (!flag(FLAG_DEFEATED_ELITE_4_DRAKE)) {
+        if (var(VAR_TEMP_6) == VAR_RESULT) {
+            msgbox(EverGrandeCity_PokemonLeague_Text_DrakeHint)
+            release
+            end
+        }
+        addvar(VAR_TEMP_6, 1)
+    }
+	release
+	end
+}
+
+text EverGrandeCity_PokemonLeague_Text_TylersChallenge {
+	format("I'll handle this.\p
+           So, this is the challenger\n
+           I've been hearing about?\p
+           You look rather ordinary.\p
+           You think a few gym badges make you worthy
+           of standing in our presence?\p
+           We replaced the former Elite Four\n
+           because they didn't have what it takes.\p
+           If you want us to even
+           consider opening these doors,
+           you'll have to prove you're
+           at least better than them.\p
+           They have retreated to the\n
+           far corners of Hoenn.\p
+           Defeat them. All of them.\p
+           Only then will I consider you\n
+           as a legitimate challenger.")
+}
+
+text EverGrandeCity_PokemonLeague_Text_SidneyHint {
+	format("Sidney was last spotted near the coast,\n
+	somewhere where shadows never fade.\p
+	If you look for the place where light is swallowed by the sea, you'll find him.")
+}
+
+text EverGrandeCity_PokemonLeague_Text_PhoebeHint {
+	format("Phoebe hasn't been seen for a while.\n
+	They say she's returned to the tower where spirits gather,
+	waiting at the highest point to pay her respects.")
+}
+
+text EverGrandeCity_PokemonLeague_Text_GlaciaHint {
+	format("There's a strange chill lingering in the northern waters.
+	Look for the place where the land turns to permafrost.
+	That is where Glacia is keeping watch.")
+}
+
+text EverGrandeCity_PokemonLeague_Text_DrakeHint {
+	format("Drake has retreated to his training grounds deep within the caves.\p
+	He dwells where Dragon Pokémon raise their young amongst ancient meteors.")
+}
+
+
