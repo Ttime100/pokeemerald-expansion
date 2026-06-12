@@ -3,7 +3,6 @@
   "name": "FieryPath",
   "layout": "LAYOUT_FIERY_PATH",
   "music": "MUS_PETALBURG_WOODS",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_FIERY_PATH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -17,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 8,
+      "x": 17,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -30,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 10,
+      "x": 19,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -43,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 17,
+      "x": 26,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -56,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 8,
+      "x": 17,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -69,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 3,
+      "x": 12,
       "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -82,7 +81,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 6,
+      "x": 15,
       "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -95,7 +94,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 5,
+      "x": 14,
       "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -108,7 +107,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 7,
+      "x": 16,
       "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -118,33 +117,62 @@
       "trainer_sight_or_berry_tree_id": "ITEM_FIRE_STONE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_FIERY_PATH_FIRE_STONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 3,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_FLAME_ORB",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_FIERY_PATH_FLAME_ORB"
     }
   ],
   "warp_events": [
     {
-      "x": 26,
+      "x": 35,
       "y": 36,
       "elevation": 3,
       "dest_map": "MAP_ROUTE112",
       "dest_warp_id": "4"
     },
     {
-      "x": 26,
+      "x": 35,
       "y": 4,
       "elevation": 3,
       "dest_map": "MAP_ROUTE112",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_FIERY_PATH_ROOM",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 4,
+      "x": 13,
       "y": 21,
       "elevation": 0,
       "item": "ITEM_TOXIC_PLATE",
       "flag": "FLAG_HIDDEN_ITEM_FIERY_PATH_TOXIC_PLATE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 28,
+      "elevation": 0,
+      "item": "ITEM_IRON_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_FIERY_PATH_IRON_BALL"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

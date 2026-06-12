@@ -485,7 +485,8 @@
     "SeafloorRuins",
     "NewMauville_SecretRoom",
     "IlexForest",
-    "AncientColonnade"
+    "AncientColonnade",
+    "FieryPath_Room"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

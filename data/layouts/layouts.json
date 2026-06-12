@@ -3216,7 +3216,7 @@
     {
       "id": "LAYOUT_FIERY_PATH",
       "name": "FieryPath_Layout",
-      "width": 35,
+      "width": 42,
       "height": 38,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
@@ -9532,6 +9532,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/AncientColonnade/border.bin",
       "blockdata_filepath": "data/layouts/AncientColonnade/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIERY_PATH_ROOM",
+      "name": "FieryPath_Room_Layout",
+      "width": 42,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/FieryPath_Room/border.bin",
+      "blockdata_filepath": "data/layouts/FieryPath_Room/map.bin"
     }
   ]
 }

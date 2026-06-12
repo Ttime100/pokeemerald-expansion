@@ -1,0 +1,77 @@
+{
+  "id": "MAP_FIERY_PATH_ROOM",
+  "name": "FieryPath_Room",
+  "layout": "LAYOUT_FIERY_PATH_ROOM",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_FIERY_PATH",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 9,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_LAGGING_TAIL",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_FIERY_PATH_ROOM_LAGGING_TAIL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 17,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TOXIC_ORB",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_FIERY_PATH_ROOM_TOXIC_ORB"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 5,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_11"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 35,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_FIERY_PATH",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 20,
+      "y": 25,
+      "elevation": 0,
+      "item": "ITEM_BIG_NUGGET",
+      "flag": "FLAG_HIDDEN_ITEM_FIERY_PATH_ROOM_BIG_NUGGET"
+    }
+  ]
+}

@@ -705,8 +705,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_111_SMOOTH_ROCK               0x27A // Ttime100 added
 #define FLAG_HIDDEN_ITEM_ROUTE_119_DAMP_ROCK                 0x27B // Ttime100 added
 #define FLAG_HIDDEN_ITEM_MT_CHIMNEY_HEAT_ROCK                0x27C // Ttime100 added
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
+#define FLAG_HIDDEN_ITEM_FIERY_PATH_IRON_BALL                0x27D // Ttime100 added
+#define FLAG_HIDDEN_ITEM_FIERY_PATH_ROOM_BIG_NUGGET          0x27E // Ttime100 added
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
 #define FLAG_UNUSED_0x280  0x280 // Unused Flag
 #define FLAG_UNUSED_0x281  0x281 // Unused Flag
@@ -1251,10 +1251,10 @@
 #define FLAG_ITEM_SHOAL_CAVE_STAIRS_ROOM_DOME_FOSSIL                0x4A3 // Ttime100 added
 #define FLAG_ITEM_SHOAL_CAVE_STAIRS_ROOM_HELIX_FOSSIL               0x4A4 // Ttime100 added
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_OLD_AMBER                       0x4A5 // Ttime100 added
+#define FLAG_ITEM_FIERY_PATH_FLAME_ORB                              0x4A6 // Ttime100 added
+#define FLAG_ITEM_FIERY_PATH_ROOM_TOXIC_ORB                         0x4A7 // Ttime100 added
+#define FLAG_ITEM_FIERY_PATH_ROOM_LAGGING_TAIL                      0x4A8 // Ttime100 added
 
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
 #define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
