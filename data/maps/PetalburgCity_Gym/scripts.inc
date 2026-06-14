@@ -3275,32 +3275,28 @@ _PetalburgCity_Gym_EventScript_BeginWallyTutorial::
 # 1640 "data/maps/PetalburgCity_Gym/scripts.pory"
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 # 1641 "data/maps/PetalburgCity_Gym/scripts.pory"
-	special InitBirchState
-# 1642 "data/maps/PetalburgCity_Gym/scripts.pory"
 	playse MUS_OBTAIN_ITEM
-# 1643 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1642 "data/maps/PetalburgCity_Gym/scripts.pory"
 	msgbox _PetalburgCity_Gym_EventScript_BeginWallyTutorial_Text_0
-# 1644 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1643 "data/maps/PetalburgCity_Gym/scripts.pory"
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-# 1645 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1644 "data/maps/PetalburgCity_Gym/scripts.pory"
 	setvar VAR_PETALBURG_CITY_STATE, 3
-# 1646 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1645 "data/maps/PetalburgCity_Gym/scripts.pory"
 	fadedefaultbgm
-# 1647 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1646 "data/maps/PetalburgCity_Gym/scripts.pory"
 	clearflag FLAG_DONT_TRANSITION_MUSIC
-# 1648 "data/maps/PetalburgCity_Gym/scripts.pory"
-	special LoadPlayerParty
-# 1649 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1647 "data/maps/PetalburgCity_Gym/scripts.pory"
 	setvar VAR_PETALBURG_GYM_STATE, 1
-# 1650 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1648 "data/maps/PetalburgCity_Gym/scripts.pory"
 	warp MAP_PETALBURG_CITY_GYM, 4, 108
-# 1651 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1649 "data/maps/PetalburgCity_Gym/scripts.pory"
 	waitstate
-# 1652 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1650 "data/maps/PetalburgCity_Gym/scripts.pory"
 	release
 	end
 
 
 _PetalburgCity_Gym_EventScript_BeginWallyTutorial_Text_0:
-# 1643 "data/maps/PetalburgCity_Gym/scripts.pory"
+# 1642 "data/maps/PetalburgCity_Gym/scripts.pory"
 	.string "{PLAYER} helped Wally catch a Ralts!$"

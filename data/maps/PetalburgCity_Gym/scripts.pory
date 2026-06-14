@@ -1638,14 +1638,12 @@ script _PetalburgCity_Gym_EventScript_BeginWallyTutorial {
 	clearflag (FLAG_HIDE_PETALBURG_CITY_WALLY)
 	clearflag (FLAG_HIDE_PETALBURG_GYM_WALLY)
 	setflag (FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL)
-	special (InitBirchState)
     playse(MUS_OBTAIN_ITEM)
     msgbox (format("{PLAYER} helped Wally catch a Ralts!"))
     clearflag (FLAG_HIDE_MAP_NAME_POPUP)
 	setvar(VAR_PETALBURG_CITY_STATE, 3)
 	fadedefaultbgm
 	clearflag (FLAG_DONT_TRANSITION_MUSIC)
-	special (LoadPlayerParty)
 	setvar (VAR_PETALBURG_GYM_STATE, 1)
 	warp (MAP_PETALBURG_CITY_GYM, 4, 108)
 	waitstate
