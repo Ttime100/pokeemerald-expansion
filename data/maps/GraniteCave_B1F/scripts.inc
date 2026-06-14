@@ -9,3 +9,8 @@ GraniteCave_B1F_SetHoleWarp:
 	setholewarp MAP_GRANITE_CAVE_B2F
 	end
 
+@ Moved from Route 105
+GraniteCave_B1F_EventScript_Foster::
+	trainerbattle_single TRAINER_FOSTER, Route105_Text_FosterIntro, Route105_Text_FosterDefeated
+	msgbox Route105_Text_FosterPostBattle, MSGBOX_AUTOCLOSE
+	end

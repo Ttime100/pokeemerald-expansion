@@ -707,7 +707,7 @@
 #define FLAG_HIDDEN_ITEM_MT_CHIMNEY_HEAT_ROCK                0x27C // Ttime100 added
 #define FLAG_HIDDEN_ITEM_FIERY_PATH_IRON_BALL                0x27D // Ttime100 added
 #define FLAG_HIDDEN_ITEM_FIERY_PATH_ROOM_BIG_NUGGET          0x27E // Ttime100 added
-#define FLAG_UNUSED_0x27F  0x27F // Unused Flag
+#define FLAG_HIDDEN_ITEM_GRANITE_CAVE_B1F_ROCK_INCENSE       0x27F // Ttime100 added
 #define FLAG_UNUSED_0x280  0x280 // Unused Flag
 #define FLAG_UNUSED_0x281  0x281 // Unused Flag
 #define FLAG_UNUSED_0x282  0x282 // Unused Flag

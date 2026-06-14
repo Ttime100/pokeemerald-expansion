@@ -1555,21 +1555,29 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Gastrodon_West
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Dig
-- Slash
+Cubone
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Headbutt
+- Detect
+- Mud Slap
+- Aerial Ace
+
+Sandshrew
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bulldoze
+- Rapid Spin
 - Sand Attack
 - Poison Sting
 
-Sandslash
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Dig
-- Slash
+Diglett
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bulldoze
+- Mud Slap
+- Rock Tomb
 - Sand Attack
-- Poison Jab
 
 === TRAINER_DUSTY_2 ===
 Name: Dusty

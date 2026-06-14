@@ -429,7 +429,7 @@ Route104_Text_DarianPostBattle:
 	.string "At least they look cool!$"
 
 Route105_Text_FosterIntro:
-	.string "There's supposed to be a mystical\n"
+	.string "There's supposed to be a cool\n"
 	.string "rock around here.\l"
 	.string "Do you know anything about it?$"
 
