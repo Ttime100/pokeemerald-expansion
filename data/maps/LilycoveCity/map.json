@@ -3,7 +3,6 @@
   "name": "LilycoveCity",
   "layout": "LAYOUT_LILYCOVE_CITY",
   "music": "MUS_LILYCOVE",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_LILYCOVE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -165,9 +164,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_MAX_REPEL",
+      "trainer_sight_or_berry_tree_id": "ITEM_WAVE_INCENSE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL"
+      "flag": "FLAG_ITEM_LILYCOVE_CITY_WAVE_INCENSE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -568,5 +567,6 @@
       "item": "ITEM_COVERT_CLOAK",
       "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_COVERT_CLOAK"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

@@ -1103,7 +1103,7 @@
 #define FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE                         0x40F
 #define FLAG_ITEM_PETALBURG_CITY_ETHER                              0x410
 #define FLAG_ITEM_RUSTBORO_CITY_TM_FALSE_SWIPE                      0x411
-#define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
+#define FLAG_ITEM_LILYCOVE_CITY_WAVE_INCENSE                        0x412 // Ttime100 replaced Max Repel
 #define FLAG_ITEM_MOSSDEEP_CITY_MIND_PLATE                          0x413 // Ttime100 switched Net Ball
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_TM_IRON_TAIL                   0x414
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_FULL_HEAL                      0x415
