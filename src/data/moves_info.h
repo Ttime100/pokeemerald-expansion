@@ -2386,7 +2386,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_ROCK,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_2 ? 90 : 65,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_2 ? 100 : 65, //CHANGE FROM 90
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -4287,7 +4287,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_ROCK,
-        .accuracy = 90,
+        .accuracy = 95, //CHANGE FROM 90
         .pp = 10,
         .target = TARGET_BOTH,
         .priority = 0,
@@ -9572,7 +9572,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 25,
         .type = TYPE_ROCK,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 90 : 80,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 95 : 80, //CHANGE FROM 90
         .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -11604,7 +11604,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_ROCK, // CHANGE FROM NORMAL
-        .accuracy = 85,
+        .accuracy = 95, // CHANGE FROM 85
         .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -11937,7 +11937,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_ROCK,
-        .accuracy = 80,
+        .accuracy = 90, // CHANGE FROM 80
         .criticalHitStage = B_UPDATED_MOVE_DATA >= GEN_3 ? 1 : 2,
         .pp = 5,
         .target = TARGET_SELECTED,
