@@ -100,7 +100,7 @@ mart _Common_Pokemart_ZeroBadges {
 mart _Common_Pokemart_OneBadge {
   ITEM_POKE_BALL
   ITEM_POTION
-  ITEM_REPEL         // new
+  //ITEM_REPEL         // new
 }
 
 mart _Common_Pokemart_TwoBadges {
@@ -109,7 +109,7 @@ mart _Common_Pokemart_TwoBadges {
   ITEM_SUPER_POTION  // new
   ITEM_FULL_HEAL     // new
   ITEM_REVIVE        // new
-  ITEM_REPEL
+  //ITEM_REPEL
 
 }
 
@@ -120,8 +120,8 @@ mart _Common_Pokemart_ThreeBadges {
   ITEM_SUPER_POTION
   ITEM_FULL_HEAL
   ITEM_REVIVE
-  ITEM_REPEL
-  ITEM_SUPER_REPEL   // new
+  //ITEM_REPEL
+  //ITEM_SUPER_REPEL   // new
 }
 
 mart _Common_Pokemart_FourBadges {
@@ -132,8 +132,8 @@ mart _Common_Pokemart_FourBadges {
   ITEM_HYPER_POTION  // new
   ITEM_FULL_HEAL
   ITEM_REVIVE
-  ITEM_REPEL
-  ITEM_SUPER_REPEL
+  //ITEM_REPEL
+  //ITEM_SUPER_REPEL
   ITEM_POTION        // demoted
 }
 
@@ -146,9 +146,9 @@ mart _Common_Pokemart_FiveBadges {
   ITEM_HYPER_POTION
   ITEM_FULL_HEAL
   ITEM_REVIVE
-  ITEM_REPEL
-  ITEM_SUPER_REPEL
-  ITEM_MAX_REPEL     // new
+  //ITEM_REPEL
+  //ITEM_SUPER_REPEL
+  //ITEM_MAX_REPEL     // new
   ITEM_POTION
 }
 
@@ -161,9 +161,9 @@ mart _Common_Pokemart_SixBadges {
   ITEM_MAX_POTION    // new
   ITEM_FULL_HEAL
   ITEM_REVIVE
-  ITEM_REPEL
-  ITEM_SUPER_REPEL
-  ITEM_MAX_REPEL
+  //ITEM_REPEL
+  //ITEM_SUPER_REPEL
+  //ITEM_MAX_REPEL
   ITEM_POTION
   ITEM_SUPER_POTION  // demoted
 }
@@ -177,9 +177,9 @@ mart _Common_Pokemart_SevenBadges {
   ITEM_MAX_POTION
   ITEM_FULL_HEAL
   ITEM_REVIVE
-  ITEM_REPEL
-  ITEM_SUPER_REPEL
-  ITEM_MAX_REPEL
+  //ITEM_REPEL
+  //ITEM_SUPER_REPEL
+  //ITEM_MAX_REPEL
   ITEM_POTION
   ITEM_SUPER_POTION
 }
@@ -194,9 +194,9 @@ mart _Common_Pokemart_EightBadges {
   ITEM_FULL_RESTORE  // new
   ITEM_FULL_HEAL
   ITEM_REVIVE
-  ITEM_REPEL
-  ITEM_SUPER_REPEL
-  ITEM_MAX_REPEL
+  //ITEM_REPEL
+  //ITEM_SUPER_REPEL
+  //ITEM_MAX_REPEL
   ITEM_POTION
   ITEM_SUPER_POTION
 }
@@ -213,9 +213,9 @@ mart _Common_Pokemart_Postgame {
   ITEM_REVIVE
   ITEM_MAX_REVIVE    // new
   ITEM_PP_MAX        // new
-  ITEM_REPEL
-  ITEM_SUPER_REPEL
-  ITEM_MAX_REPEL
+  //ITEM_REPEL
+  //ITEM_SUPER_REPEL
+  //ITEM_MAX_REPEL
   ITEM_POTION
   ITEM_SUPER_POTION
 }

@@ -1324,6 +1324,20 @@ Text_AutoRunDisabled:
 Text_AutoRunEnabled:
     .string "Auto-Run enabled.$"
 
+EventScript_DisableRepel::
+    msgbox Text_RepelDisabled, MSGBOX_AUTOCLOSE
+    end
+
+EventScript_EnableRepel::
+    msgbox Text_RepelEnabled, MSGBOX_AUTOCLOSE
+    end
+
+Text_RepelDisabled:
+    .string "Infinite Repel {COLOR RED}{SHADOW LIGHT_RED}disabled{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.$"
+
+Text_RepelEnabled:
+    .string "Infinite Repel {COLOR GREEN}{SHADOW LIGHT_GREEN}enabled{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.$"
+
 EventScript_UnusedBoardFerry::
 	delay 30
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp

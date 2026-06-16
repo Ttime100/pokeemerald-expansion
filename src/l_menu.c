@@ -60,6 +60,8 @@ enum
     MENU_ACTION_POKEVIAL,
     MENU_ACTION_PC_BOX,
     //MENU_ACTION_DEXNAV,
+    MENU_ACTION_REPEL_ON,
+    MENU_ACTION_REPEL_OFF,
     MENU_ACTION_AUTO_RUN_ON,
     MENU_ACTION_AUTO_RUN_OFF,
     MENU_ACTION_EXIT,
@@ -81,6 +83,7 @@ static bool8 LMenuExitCallback(void);
 //static bool8 LMenuDexNavCallback(void);
 static bool8 LMenuPCBoxCallback(void);
 static bool8 LMenuAutoRunCallback(void);
+static bool8 LMenuRepelCallback(void);
 
 // Menu callbacks
 static bool8 HandleLMenuInput(void);
@@ -94,6 +97,8 @@ static const struct MenuAction sLMenuItems[] =
     [MENU_ACTION_POKEVIAL]    = {gText_MenuPokeVial, {.u8_void = LMenuPokeVialCallback}},
     [MENU_ACTION_PC_BOX]      = {gText_MenuPC,           {.u8_void = LMenuPCBoxCallback}},
     //[MENU_ACTION_DEXNAV]    = {gText_MenuDexNav,  {.u8_void = LMenuDexNavCallback}},
+    [MENU_ACTION_REPEL_ON]    = {gText_MenuRepelOn, {.u8_void = LMenuRepelCallback}},
+    [MENU_ACTION_REPEL_OFF]   = {gText_MenuRepelOff, {.u8_void = LMenuRepelCallback}},
     [MENU_ACTION_AUTO_RUN_ON] = {gText_AutoRunOn,  {.u8_void = LMenuAutoRunCallback}},
     [MENU_ACTION_AUTO_RUN_OFF]= {gText_AutoRunOff,  {.u8_void = LMenuAutoRunCallback}},
     [MENU_ACTION_EXIT]        = {gText_MenuExit,    {.u8_void = LMenuExitCallback}},
@@ -115,6 +120,7 @@ static bool32 InitLMenuStep(void);
 static void CreateLMenuTask(TaskFunc followupFunc);
 static void HideLMenuWindow(void);
 static void HideLMenuWindowAutoRun(void);
+static void HideLMenuWindowRepel(void);
 
 
 static void BuildLMenuActions(void)
@@ -175,6 +181,14 @@ static void BuildNormalLMenu(void)
     {
         AddLMenuAction(MENU_ACTION_POKEVIAL);
         AddLMenuAction(MENU_ACTION_PC_BOX);
+        if (gSaveBlock2Ptr->repel)
+        {
+            AddLMenuAction(MENU_ACTION_REPEL_ON);
+        }
+        else
+        {
+            AddLMenuAction(MENU_ACTION_REPEL_OFF);
+        }
     }
     //if (FlagGet(FLAG_SYS_DEXNAV_GET))
     //{
@@ -524,13 +538,14 @@ bool8 TryUsePokeVial(void)
 
 void RefillPokeVial(void)
 {
-    u8 maxCharges = 1;
+    u8 maxCharges = 2;
 
     if (FlagGet(FLAG_BADGE02_GET)) maxCharges++;
     if (FlagGet(FLAG_BADGE03_GET)) maxCharges++;
     if (FlagGet(FLAG_BADGE05_GET)) maxCharges++;
     if (FlagGet(FLAG_BADGE06_GET)) maxCharges++;
     if (FlagGet(FLAG_BADGE07_GET)) maxCharges++;
+    if (FlagGet(FLAG_BADGE08_GET)) maxCharges++;
 
     gSaveBlock2Ptr->pokeVialMaxCharges = maxCharges;
     gSaveBlock2Ptr->pokeVialCharges = gSaveBlock2Ptr->pokeVialMaxCharges;
@@ -655,6 +670,40 @@ void HideLMenuAutoRun(void)
     PlaySE(SE_SELECT);
     HideLMenuWindowAutoRun();
 }
+
+extern const u8 EventScript_DisableRepel[];
+extern const u8 EventScript_EnableRepel[];
+static bool8 LMenuRepelCallback(void)
+{
+    HideLMenuRepel(); // Hide start menu
+    return TRUE;
+}
+
+static void HideLMenuWindowRepel(void)
+{
+    ClearStdWindowAndFrame(GetLMenuWindowId(), TRUE);
+    RemoveLMenuWindow();
+    ScriptUnfreezeObjectEvents();
+    UnlockPlayerFieldControls();
+    PlaySE(SE_SELECT);
+    if (gSaveBlock2Ptr->repel)
+    {
+        gSaveBlock2Ptr->repel = FALSE;
+        ScriptContext_SetupScript(EventScript_DisableRepel);
+    }
+    else
+    {
+        gSaveBlock2Ptr->repel = TRUE;
+        ScriptContext_SetupScript(EventScript_EnableRepel);
+    }
+}
+
+void HideLMenuRepel(void)
+{
+    PlaySE(SE_SELECT);
+    HideLMenuWindowRepel();
+}
+
 
 static bool8 LMenuExitCallback(void)
 {

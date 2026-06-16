@@ -167,6 +167,8 @@ extern const u8 gText_MenuExit[];
 extern const u8 gText_MenuRetire[];
 extern const u8 gText_MenuRest[];
 extern const u8 gText_MenuDexNav[];
+extern const u8 gText_MenuRepelOn[]; // L-Menu
+extern const u8 gText_MenuRepelOff[]; // L-Menu
 extern const u8 gText_AutoRunOn[]; // L-Menu
 extern const u8 gText_AutoRunOff[]; // L-Menu
 extern const u8 gText_Floor1[];
