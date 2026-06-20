@@ -7935,22 +7935,22 @@
               },
               {
                 "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_DODRIO"
-              },
-              {
-                "min_level": 27,
-                "max_level": 27,
-                "species": "SPECIES_PINSIR"
-              },
-              {
-                "min_level": 31,
                 "max_level": 31,
                 "species": "SPECIES_BOUFFALANT"
               },
               {
-                "min_level": 29,
+                "min_level": 27,
                 "max_level": 29,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SNORLAX"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
                 "species": "SPECIES_PINSIR"
               }
             ]
