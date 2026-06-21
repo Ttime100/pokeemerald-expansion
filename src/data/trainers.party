@@ -5522,7 +5522,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Lickilicky @ Sitrus Berry
 Ability: Oblivious
@@ -5546,7 +5546,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Donphan @ Assault Vest
 Ability: Sturdy
-Level: 40
+Level: 39
 Nature: Adamant
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Stone Edge
@@ -5645,11 +5645,11 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Hippowdon @ Smooth Rock
 Ability: Sand Stream
-Level: 39
+Level: 38
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Yawn
 - Protect
@@ -5658,7 +5658,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Excadrill @ Life Orb
 Ability: Sand Rush
-Level: 39
+Level: 38
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Iron Head
 - Protect
@@ -5667,7 +5667,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Jolteon @ Magnet
 Ability: Volt Absorb
-Level: 40
+Level: 39
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 16 Spe
 - Thunderbolt
 - Hidden Power
@@ -9781,15 +9781,15 @@ Double Battle: No
 AI: Basic Trainer
 
 Voltorb
-Level: 6
+Level: 30
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Voltorb
-Level: 6
+Ferroseed
+Level: 31
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Magnemite
-Level: 14
+Magneton
+Level: 32
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_ANTHONY ===
@@ -9801,12 +9801,16 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Magnemite
-Level: 14
+Blitzle
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magnemite
-Level: 14
+Magneton
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ponyta
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BENJAMIN_1 ===
@@ -9819,7 +9823,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Magnemite
-Level: 16
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Klink
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BENJAMIN_2 ===
@@ -9831,8 +9839,12 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Magnemite
-Level: 30
+Magneton
+Level: 44
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Klang
+Level: 44
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_BENJAMIN_3 ===
@@ -9844,8 +9856,12 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Magnemite
-Level: 33
+Magneton
+Level: 47
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Klang
+Level: 47
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_BENJAMIN_4 ===
@@ -9858,7 +9874,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Magneton
-Level: 36
+Level: 50
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Klinklang
+Level: 50
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_BENJAMIN_5 ===
@@ -9870,8 +9890,12 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Magneton
-Level: 39
+Magnezone
+Level: 60
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Klinklang
+Level: 60
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_ABIGAIL_1 ===
@@ -9884,7 +9908,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Magnemite
-Level: 16
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Durant
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JASMINE ===
@@ -9897,16 +9925,16 @@ Double Battle: No
 AI: Basic Trainer
 
 Magnemite
-Level: 14
+Level: 29
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Magnemite
-Level: 14
+Blitzle
+Level: 30
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Voltorb
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Electrode
+Level: 30
+IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
 === TRAINER_ABIGAIL_2 ===
 Name: Abigail
@@ -9917,8 +9945,12 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Magnemite
-Level: 28
+Magneton
+Level: 44
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Durant
+Level: 44
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_ABIGAIL_3 ===
@@ -9930,8 +9962,12 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Magnemite
-Level: 31
+Magneton
+Level: 47
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Durant
+Level: 47
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_ABIGAIL_4 ===
@@ -9944,7 +9980,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Magneton
-Level: 34
+Level: 50
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Durant
+Level: 50
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_ABIGAIL_5 ===
@@ -9956,8 +9996,12 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Magneton
-Level: 37
+Magnezone
+Level: 60
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Durant
+Level: 60
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_DYLAN_1 ===
@@ -12064,7 +12108,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Vileplume @ Occa Berry
 Ability: Effect Spore
@@ -12088,7 +12132,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Miltank @ Leftovers
 Ability: Thick Fat
-Level: 40
+Level: 39
 Nature: Impish
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Milk Drink
@@ -12219,11 +12263,11 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
 Gastrodon_West @ Rindo Berry
 Ability: Storm Drain
-Level: 39
+Level: 38
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Earth Power
 - Recover
@@ -12232,7 +12276,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Hitmontop @ Lum Berry
 Ability: Intimidate
-Level: 39
+Level: 38
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Fake Out
 - Wide Guard
@@ -12241,7 +12285,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Clefairy @ Eviolite
 Ability: Friend Guard
-Level: 40
+Level: 39
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Follow Me
 - Helping Hand
@@ -19336,7 +19380,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Sandslash
-Level: 38
+Level: 36
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Slash
 - Bulldoze
@@ -19345,7 +19389,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Krokorok
 Ability: Moxie
-Level: 38
+Level: 36
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Knock Off
 - Bulldoze
@@ -19354,7 +19398,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Crustle
 Ability: Weak Armor
-Level: 38
+Level: 36
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - X-Scissor
 - Rock Slide
@@ -19372,7 +19416,7 @@ AI: Basic Trainer
 
 Roselia
 Ability: Poison Point
-Level: 38
+Level: 36
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Giga Drain
 - Toxic Spikes
@@ -19381,7 +19425,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Maractus
 Ability: Storm Drain
-Level: 38
+Level: 36
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Giga Drain
 - Synthesis
@@ -19389,7 +19433,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Cotton Spore
 
 Ferroseed
-Level: 38
+Level: 36
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 - Protect
 - Toxic
@@ -19406,11 +19450,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Shroomish
-Level: 39
+Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Pansage
-Level: 39
+Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HAYDEN ===
@@ -19423,11 +19467,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Hippopotas
-Level: 39
+Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Heatmor
-Level: 39
+Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Fire Lash
 - Giga Drain
@@ -20638,7 +20682,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer / Powerful Status
+AI: Basic Trainer / Powerful Status / Smart Switching / Assume Stab
 
 Torkoal @ Focus Sash
 Ability: White Smoke
@@ -20674,7 +20718,7 @@ Pic: Aroma Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer / Powerful Status
+AI: Basic Trainer / Powerful Status / Smart Switching / Assume Stab
 
 Clefable @ Life Orb
 Ability: Magic Guard
