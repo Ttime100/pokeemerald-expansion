@@ -637,7 +637,7 @@
 #define TRAINER_ALAN                        630
 #define TRAINER_CLARK                       631
 #define TRAINER_ERIC                        632
-#define TRAINER_LUCAS_2                     633
+#define TRAINER_GRANT                       633 // Replaced Lucas_2 as it was unused
 #define TRAINER_MIKE_1                      634
 #define TRAINER_MIKE_2                      635
 #define TRAINER_TRENT_2                     636

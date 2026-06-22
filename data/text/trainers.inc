@@ -4781,6 +4781,19 @@ Route134_Text_HudsonPostBattle:
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
 
+GraniteCave_B1F_Text_Grant_Intro:
+	.string "Help! I wondered too deep into the cave!\n"
+	.string "I'm scared of the dark!$"
+
+GraniteCave_B1F_Text_Grant_Defeated:
+	.string "How are you not afraid?$"
+
+GraniteCave_B1F_Text_Grant_PostBattle:
+	.string "Well, I need to find my way back\n"
+	.string "to the entrance somehow.\p"
+	.string "I wish I listened to the Hiker on the\n"
+	.string "way in about Flash and the Escape Rope.$"
+
 VSSeeker_Text_BatteryNotChargedNeedXSteps::
 	.string "The battery isn't charged enough.\p"
 	.string "No. of steps required to fully\n"

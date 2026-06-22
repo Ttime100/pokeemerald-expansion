@@ -17117,54 +17117,26 @@ Crustle
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LUCAS_2 ===
-Name: Lucas
+=== TRAINER_GRANT ===
+Name: Grant
 Class: Hiker
 Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer
 
-Armaldo @ Assault Vest
-Ability: Battle Armor
-Level: 70
-Nature: Adamant
-IVs: 25 HP / 25 Atk / 25 Def / 0 SpA / 25 SpD / 25 Spe
-- X-Scissor
-- Stone Edge
-- Aqua Jet
-- Earthquake
+Dwebble
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Gliscor @ Toxic Orb
-Ability: Poison Heal
-Level: 70
-Nature: Impish
-IVs: 25 HP / 25 Atk / 25 Def / 0 SpA / 25 SpD / 25 Spe
-- Ice Fang
-- Roost
-- Earthquake
-- Swords Dance
+Nosepass
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zebstrika @ Life Orb
-Ability: Motor Drive
-Level: 70
-Nature: Jolly
-IVs: 25 HP / 25 Atk / 25 Def / 0 SpA / 25 SpD / 25 Spe
-- Megahorn
-- Wild Charge
-- Bulldoze
-- Quick Attack
-
-Swampert @ Leftovers
-Ability: Torrent
-Level: 70
-Nature: Adamant
-IVs: 25 HP / 25 Atk / 25 Def / 0 SpA / 25 SpD / 25 Spe
-- Waterfall
-- Ice Punch
-- Earthquake
-- Swords Dance
+Volbeat
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 
 === TRAINER_MIKE_1 ===

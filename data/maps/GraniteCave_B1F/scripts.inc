@@ -14,3 +14,9 @@ GraniteCave_B1F_EventScript_Foster::
 	trainerbattle_single TRAINER_FOSTER, Route105_Text_FosterIntro, Route105_Text_FosterDefeated
 	msgbox Route105_Text_FosterPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+@ Ttime100 added
+GraniteCave_B1F_EventScript_Grant::
+	trainerbattle_single TRAINER_GRANT, GraniteCave_B1F_Text_Grant_Intro, GraniteCave_B1F_Text_Grant_Defeated
+	msgbox GraniteCave_B1F_Text_Grant_PostBattle, MSGBOX_AUTOCLOSE
+	end
