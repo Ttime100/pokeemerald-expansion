@@ -565,6 +565,7 @@ static void Task_WaitAndCloseVialMessage(u8 taskId)
         if (gMain.newKeys & (A_BUTTON | B_BUTTON))
         {
             HideFieldMessageBox();
+            UnlockPlayerFieldControls();
             task->data[0]++;
         }
         break;
@@ -595,8 +596,8 @@ static bool8 LMenuPokeVialCallback(void)
         }
 
         HideLMenu();
+        LockPlayerFieldControls();
         CreateTask(Task_WaitAndCloseVialMessage, 0x1);
-        //HideFieldMessageBox();
         return TRUE;
     }
     return FALSE;
