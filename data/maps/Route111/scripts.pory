@@ -765,3 +765,31 @@ text Route111_Text_BattleOurFamilyNew {
 	on our family of four in a series of\l
 	Pokémon battles?")
 }
+
+script Route111_EventScript_EvoItemsMan {
+	lock
+	faceplayer
+	if(flag(FLAG_RECEIVED_EVO_ITEMS_ROUTE_111)){
+		msgbox(Route111_Text_ToughToKeepWinningUpTheRanks)
+	} else{
+		msgbox(Route111_Text_GiveEvoItems)
+		giveitem(ITEM_WATER_STONE)
+		giveitem(ITEM_FIRE_STONE)
+		giveitem(ITEM_LEAF_STONE)
+		giveitem(ITEM_LINKING_CORD, 2)
+		setflag(FLAG_RECEIVED_EVO_ITEMS_ROUTE_111)
+	}
+	release
+	end
+}
+
+text Route111_Text_GiveEvoItems {
+	format("The battles ahead are no joke.\n"
+	"If you don't raise your Pokémon some\l"
+    "more, it could be tough to keep winning.\p"
+    "I've seen many trainers stumble\n"
+    "because their partners weren't quite\l"
+    "ready for the challenges ahead.\p"
+    "Here, take these. They might just be\n"
+    "the push your Pokémon need to win.")
+}
