@@ -9965,6 +9965,9 @@ static const struct LevelUpMove sMonfernoLevelUpLearnset[] = {
 
 static const struct LevelUpMove sInfernapeLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_CLOSE_COMBAT),
+    LEVEL_UP_MOVE( 0, MOVE_FIRE_PUNCH),     //Ttime100 added
+    LEVEL_UP_MOVE( 1, MOVE_SHADOW_PUNCH),   //Ttime100 added
+    LEVEL_UP_MOVE( 1, MOVE_THUNDER_PUNCH),  //Ttime100 added
     LEVEL_UP_MOVE( 1, MOVE_TAUNT),
     LEVEL_UP_MOVE( 1, MOVE_SLACK_OFF),
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
