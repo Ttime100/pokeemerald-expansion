@@ -1657,6 +1657,31 @@ static enum CancelerResult CancelerProtean(struct BattleCalcValues *cv)
     return CANCELER_RESULT_SUCCESS;
 }
 
+extern u16 CastformTriggerWeatherChange(u32 battler, u16 move);
+
+static enum CancelerResult CancelerCastform(struct BattleCalcValues *cv)
+{
+    u16 weatherResult = CastformTriggerWeatherChange(cv->battlerAtk, cv->move);
+    if (weatherResult != 0)
+    {
+        if (weatherResult == B_WEATHER_RAIN_NORMAL)
+            TryChangeBattleWeather(cv->battlerAtk, BATTLE_WEATHER_RAIN, ABILITY_FORECAST);
+        else if (weatherResult == B_WEATHER_SUN_NORMAL)
+            TryChangeBattleWeather(cv->battlerAtk, BATTLE_WEATHER_SUN, ABILITY_FORECAST);
+        else if (weatherResult == B_WEATHER_HAIL)
+            TryChangeBattleWeather(cv->battlerAtk, BATTLE_WEATHER_HAIL, ABILITY_FORECAST);
+        else if (weatherResult == B_WEATHER_SANDSTORM)
+            TryChangeBattleWeather(cv->battlerAtk, BATTLE_WEATHER_SANDSTORM, ABILITY_FORECAST);
+
+        gBattlerAbility = cv->battlerAtk;
+        BattleScriptCall(BattleScript_WeatherAbilityActivates);
+        AbilityBattleEffects(ABILITYEFFECT_ON_WEATHER, 0, ABILITY_NONE, 0, 0);
+        gProtectStructs[cv->battlerAtk].castformForecastDone = TRUE;
+        return CANCELER_RESULT_RUN_SCRIPT_AND_INCREMENT;
+    }
+    return CANCELER_RESULT_SUCCESS;
+}
+
 static bool32 CanTwoTurnMoveFireThisTurn(struct BattleCalcValues *cv)
 {
     if (cv->moveEffect == EFFECT_GEOMANCY || gBattleMoveEffects[cv->moveEffect].semiInvulnerableEffect)
@@ -2432,6 +2457,7 @@ static enum CancelerResult (*const sMoveSuccessOrderCancelers[])(struct BattleCa
     [CANCELER_EXPLODING_DAMP] = CancelerExplodingDamp,
     [CANCELER_INTERRUPTIBLE_MOVES] = CancelerInterruptibleMoves,
     [CANCELER_PROTEAN] = CancelerProtean,
+    [CANCELER_CASTFORM] = CancelerCastform,
     [CANCELER_CHARGING] = CancelerCharging,
     [CANCELER_SNATCH] = CancelerSnatch,
     [CANCELER_EXPLOSION] = CancelerExplosion,
@@ -4263,7 +4289,7 @@ static enum MoveEndResult MoveEndClearBits(struct BattleCalcValues *cv)
     gBattleStruct->toxicChainPriority = FALSE;
     gBattleStruct->flungItem = FLUNG_ITEM_NONE;
     gBattleStruct->blunderPolicy = FALSE;
-
+    
     if (gBattleStruct->pledgeState == PLEDGE_COMBO_ATTACK)
         gBattleStruct->pledgeState = PLEDGE_COMBO_NONE;
 

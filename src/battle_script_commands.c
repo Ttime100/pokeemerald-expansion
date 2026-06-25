@@ -348,9 +348,7 @@ static void ResetValuesForCalledMove(void);
 //static void TryClearChargeVolatile(u32 moveType);
 //static bool32 IsAnyTargetAffected(void);
 static bool32 IsCastform(u32 battler);
-static bool32 CastformTriggerWeatherChange(u32 battler, u16 move);
-void CastformWeatherVisualUpdate(u16 weatherToApply);
-void CastformFormChangeVisualUpdate(void);
+u16 CastformTriggerWeatherChange(u32 battler, u16 move);
 static bool32 CanAbilityShieldActivateForBattler(enum BattlerId battler);
 static void PlayAnimation(enum BattlerId battler, u8 animId, const u16 *argPtr, const u8 *nextInstr);
 static u32 GetPossibleNextTarget(u32 currTarget);
@@ -1105,18 +1103,6 @@ static void Cmd_accuracycheck(void)
 
 static void Cmd_printattackstring(void)
 {
-    if (IsCastform(gBattlerAttacker))
-    {
-        gProtectStructs[gBattlerAttacker].castformForecastDone = FALSE;
-        u16 weatherResult = CastformTriggerWeatherChange(gBattlerAttacker, gCurrentMove);
-        if (weatherResult !=0)
-        {
-            CastformWeatherVisualUpdate(weatherResult);
-            CastformFormChangeVisualUpdate();
-            gProtectStructs[gBattlerAttacker].castformForecastDone = TRUE;
-        }
-    }
-
     CMD_ARGS();
 
     if (gBattleControllerExecFlags)
@@ -13839,7 +13825,7 @@ static bool32 IsCastform(u32 battler)
             species == SPECIES_CASTFORM_SANDY);
 }
 
-static bool32 CastformTriggerWeatherChange(u32 battler, u16 move)
+u16 CastformTriggerWeatherChange(u32 battler, u16 move)
 {
     u32 ability = GetBattlerAbility(battler);
     u32 moveType = GetBattleMoveType(move);
@@ -13871,32 +13857,6 @@ static bool32 CastformTriggerWeatherChange(u32 battler, u16 move)
         }
     }
     return FALSE;
-}
-
-void CastformWeatherVisualUpdate(u16 weatherToApply)
-{
-    if (weatherToApply == B_WEATHER_RAIN_NORMAL)
-    {
-        TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_RAIN, ABILITY_FORECAST);
-    }
-    else if (weatherToApply == B_WEATHER_SUN_NORMAL)
-    {
-        TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_SUN, ABILITY_FORECAST);
-    }
-    else if (weatherToApply == B_WEATHER_HAIL)
-    {
-        TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_HAIL, ABILITY_FORECAST);
-    }
-    else if (weatherToApply == B_WEATHER_SANDSTORM){
-        TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_SANDSTORM, ABILITY_FORECAST);
-    }
-
-    BattleScriptCall(BattleScript_WeatherAbilityActivates);
-}
-
-void CastformFormChangeVisualUpdate(void)
-{
-    AbilityBattleEffects(ABILITYEFFECT_ON_WEATHER, 0, ABILITY_NONE, 0, 0);
 }
 
 // Updates Dynamax HP multipliers and healthboxes.
