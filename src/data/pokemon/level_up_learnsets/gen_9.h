@@ -7026,7 +7026,7 @@ static const struct LevelUpMove sMarshtompLevelUpLearnset[] = {
 
 static const struct LevelUpMove sSwampertLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SURF),
-    LEVEL_UP_MOVE( 1, MOVE_EARTHQUAKE),
+    LEVEL_UP_MOVE( 0, MOVE_EARTHQUAKE),
     LEVEL_UP_MOVE( 1, MOVE_ROCK_SMASH),
     LEVEL_UP_MOVE( 1, MOVE_HAMMER_ARM),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
