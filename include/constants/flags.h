@@ -1221,7 +1221,7 @@
 #define FLAG_ITEM_ROUTE_133_MAX_REVIVE                              0x485
 #define FLAG_ITEM_ROUTE_134_CARBOS                                  0x486
 #define FLAG_ITEM_ROUTE_134_STAR_PIECE                              0x487
-#define FLAG_ITEM_ROUTE_114_EVIOLITE                                0x488 // Ttime changed from Energy Powder
+#define FLAG_ITEM_ROUTE_114_TM_LIQUIDATION                          0x488 // Ttime changed from Energy Powder
 #define FLAG_ITEM_ROUTE_115_PP_UP                                   0x489
 #define FLAG_ITEM_ARTISAN_CAVE_B1F_HP_UP                            0x48A
 #define FLAG_ITEM_ARTISAN_CAVE_1F_CARBOS                            0x48B
