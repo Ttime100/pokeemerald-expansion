@@ -7045,6 +7045,7 @@ static const struct LevelUpMove sSwampertLevelUpLearnset[] = {
     LEVEL_UP_MOVE(49, MOVE_SCREECH),
     LEVEL_UP_MOVE(56, MOVE_ENDEAVOR),
     LEVEL_UP_MOVE(63, MOVE_HYDRO_PUMP),
+    LEVEL_UP_MOVE(66, MOVE_WAVE_CRASH),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_MUDKIP
