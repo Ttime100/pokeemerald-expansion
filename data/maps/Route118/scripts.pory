@@ -334,6 +334,7 @@ script Route118_EventScript_Wally {
     trainerbattle_no_intro(TRAINER_WALLY_ROUTE_118, Route118_Wally_Defeat)
     msgbox(Route118_Wally_PostBattle)
 	giveitem(ITEM_HYPER_POTION, 10)
+	giveitem(ITEM_RARE_CANDY, 10)
 	giveitem(ITEM_TM_LOW_SWEEP)
 	giveitem(ITEM_TM_POISON_JAB)
 	giveitem(ITEM_TM_AIR_SLASH)
