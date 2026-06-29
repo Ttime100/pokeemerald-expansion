@@ -109,11 +109,11 @@ Route111_CarePackageLady::
 # 57 "data/maps/Route111_OldLadysRestStop/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_CARE_PACKAGE_ROUTE_111, Route111_CarePackageLady_2
 Route111_CarePackageLady_1:
-# 66 "data/maps/Route111_OldLadysRestStop/scripts.pory"
-	msgbox Route111_CarePackageLady_Text_BeCareful
 # 67 "data/maps/Route111_OldLadysRestStop/scripts.pory"
-	closemessage
+	msgbox Route111_CarePackageLady_Text_BeCareful
 # 68 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	closemessage
+# 69 "data/maps/Route111_OldLadysRestStop/scripts.pory"
 	release
 	end
 
@@ -129,14 +129,16 @@ Route111_CarePackageLady_2:
 # 62 "data/maps/Route111_OldLadysRestStop/scripts.pory"
 	giveitem ITEM_REVIVE, 5
 # 63 "data/maps/Route111_OldLadysRestStop/scripts.pory"
-	giveitem ITEM_BIG_NUGGET
+	giveitem ITEM_RARE_CANDY, 10
 # 64 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	giveitem ITEM_BIG_NUGGET
+# 65 "data/maps/Route111_OldLadysRestStop/scripts.pory"
 	setflag FLAG_RECEIVED_CARE_PACKAGE_ROUTE_111
 	goto Route111_CarePackageLady_1
 
 
 Route111_CarePackageLady_Text_Intro::
-# 72 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+# 73 "data/maps/Route111_OldLadysRestStop/scripts.pory"
 	.string "Oh, my! You look like you’ve walked\n"
 	.string "halfway across Hoenn.\p"
 	.string "Between the steep ridges and the soot\n"
@@ -147,7 +149,7 @@ Route111_CarePackageLady_Text_Intro::
 	.string "strength.$"
 
 Route111_CarePackageLady_Text_BeCareful::
-# 79 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+# 80 "data/maps/Route111_OldLadysRestStop/scripts.pory"
 	.string "The road to Fallarbor is a long one. The\n"
 	.string "air gets quite chilly near the craters.\p"
 	.string "Keep your Pokémon warm, dear.$"

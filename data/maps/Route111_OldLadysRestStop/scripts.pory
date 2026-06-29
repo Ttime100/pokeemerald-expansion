@@ -60,6 +60,7 @@ script Route111_CarePackageLady {
     giveitem(ITEM_LEMONADE, 10)
     giveitem(ITEM_PEWTER_CRUNCHIES, 10)
     giveitem(ITEM_REVIVE, 5)
+	giveitem(ITEM_RARE_CANDY, 10)
     giveitem(ITEM_BIG_NUGGET)
     setflag(FLAG_RECEIVED_CARE_PACKAGE_ROUTE_111)
     }
