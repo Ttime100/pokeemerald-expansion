@@ -9,7 +9,7 @@ Route109_SeashoreHouse_OnTransition:
 Route109_SeashoreHouse_EventScript_Owner::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_6_SODA_POP, Route109_SeashoreHouse_EventScript_AlreadyReceivedSodaPop
+	goto_if_set FLAG_RECEIVED_SEASHORE_PRIZES, Route109_SeashoreHouse_EventScript_AlreadyReceivedSodaPop
 	goto_if_set FLAG_DEFEATED_SEASHORE_HOUSE, Route109_SeashoreHouse_EventScript_DefeatedTrainers
 	goto_if_set FLAG_TEMP_2, Route109_SeashoreHouse_EventScript_AlreadyGaveIntroduction
 	msgbox Route109_SeashoreHouse_Text_SeashoreHouseIntro, MSGBOX_DEFAULT
@@ -26,11 +26,12 @@ Route109_SeashoreHouse_EventScript_DefeatedTrainers::
 	msgbox Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles, MSGBOX_DEFAULT
 	giveitem ITEM_QUICK_BALL, 10
 	giveitem ITEM_CHERISH_BALL, 10
-	giveitem ITEM_PP_MAX, 4
+	giveitem ITEM_PP_MAX, 3
 	giveitem ITEM_BOTTLE_CAP, 2
+	giveitem ITEM_RARE_CANDY, 3
 	giveitem ITEM_BIG_NUGGET, 1
 	goto_if_eq VAR_RESULT, FALSE, Route109_SeashoreHouse_EventScript_BagFull
-	setflag FLAG_RECEIVED_6_SODA_POP
+	setflag FLAG_RECEIVED_SEASHORE_PRIZES
 	release
 	end
 
