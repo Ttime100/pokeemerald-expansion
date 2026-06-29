@@ -13409,14 +13409,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_SWAGGER] =
+    [ITEM_TM_LIQUIDATION] =
     {
         .name = ITEM_NAME("TM87"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Confuses the foe,\n"
-            "but also sharply\n"
-            "raises its Attack."),
+            "Slams the foe\n"
+            "with water. Can\n"
+            "lower Defense."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

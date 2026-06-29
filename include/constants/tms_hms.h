@@ -88,7 +88,7 @@
     F(POISON_JAB)\
     F(TRAILBLAZE)\
     F(GRASS_KNOT)\
-    F(SWAGGER)\
+    F(LIQUIDATION)\
     F(PLUCK)\
     F(U_TURN)\
     F(DRAINING_KISS)\
