@@ -708,8 +708,8 @@
 #define FLAG_HIDDEN_ITEM_FIERY_PATH_IRON_BALL                0x27D // Ttime100 added
 #define FLAG_HIDDEN_ITEM_FIERY_PATH_ROOM_BIG_NUGGET          0x27E // Ttime100 added
 #define FLAG_HIDDEN_ITEM_GRANITE_CAVE_B1F_ROCK_INCENSE       0x27F // Ttime100 added
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
+#define FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_WEST_BOTTLE_CAP   0x280 // Ttime100 added
+#define FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_BOTTLE_CAP        0x281 // Ttime100 added
 #define FLAG_UNUSED_0x282  0x282 // Unused Flag
 #define FLAG_UNUSED_0x283  0x283 // Unused Flag
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag

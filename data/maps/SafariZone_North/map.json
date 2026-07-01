@@ -163,6 +163,15 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 21,
+      "elevation": 0,
+      "item": "ITEM_BOTTLE_CAP",
+      "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_BOTTLE_CAP"
+    }
+  ],
   "region": "REGION_HOENN"
 }
