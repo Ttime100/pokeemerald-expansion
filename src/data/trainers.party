@@ -703,14 +703,14 @@ IVs: 15 HP / 20 Atk / 15 Def / 0 SpA / 20 SpD / 15 Spe
 - Spike Cannon
 
 Octillery @ Assault Vest
-Ability: Sniper
+Ability: Mega Launcher
 Level: 52
-Nature: Adamant
-IVs: 15 HP / 15 Atk / 15 Def / 0 SpA / 20 SpD / 15 Spe
-- Waterfall
-- Gunk Shot
-- Seed Bomb
-- Bounce
+Nature: Modest
+IVs: 15 HP / 0 Atk / 15 Def / 15 SpA / 20 SpD / 15 Spe
+- Octazooka
+- Sludge Bomb
+- Energy Ball
+- Flash Cannon
 
 Kingler @ Scope Lens
 Ability: Sheer Force
@@ -9542,7 +9542,7 @@ Nature: Quiet
 IVs: 10 HP / 0 Atk / 10 Def / 5 SpA / 10 SpD / 5 Spe
 - Energy Ball
 - Ice Beam
-- Scald
+- Octazooka
 - Fire Blast
 
 Carracosta @ Expert Belt
