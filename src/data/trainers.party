@@ -21108,26 +21108,6 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Superpower
 - Crunch
 
-Tropius (M) @ Sitrus Berry
-Ability: Harvest
-Level: 63
-Nature: Bold
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Leech Seed
-- Air Slash
-- Substitute
-- Knock Off
-
-Linoone (M) @ Focus Sash
-Ability: Gluttony
-Level: 63
-Nature: Jolly
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Belly Drum
-- Extreme Speed
-- Shadow Claw
-- Seed Bomb
-
 Simisear (M) @ Life Orb
 Ability: Blaze
 Level: 63
@@ -21166,26 +21146,6 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Play Rough
 - Belly Drum
 - Protect
-
-Manectric (F) @ Expert Belt
-Ability: Lightning Rod
-Level: 63
-Nature: Timid
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Thunderbolt
-- Volt Switch
-- Flamethrower
-- Signal Beam
-
-Mightyena (F) @ Black Glasses
-Ability: Intimidate
-Level: 63
-Nature: Adamant
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Crunch
-- Play Rough
-- Sucker Punch
-- Fire Fang
 
 Sandslash (F) @ Leftovers
 Ability: Sand Veil
