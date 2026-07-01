@@ -116,6 +116,8 @@ script Route111_WinstrateFamilysHouse_EventScript_VictoriaNew {
     goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
     giveitem(ITEM_RAZOR_FANG)
     goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+	giveitem(ITEM_BOTTLE_CAP,2)
+	goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
 	setflag(FLAG_RECEIVED_MACHO_BRACE)
 	goto(Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection)
 	end

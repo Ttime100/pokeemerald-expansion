@@ -233,14 +233,18 @@ Route111_WinstrateFamilysHouse_EventScript_VictoriaNew::
 # 118 "data/maps/Route111_WinstrateFamilysHouse/scripts.pory"
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 # 119 "data/maps/Route111_WinstrateFamilysHouse/scripts.pory"
-	setflag FLAG_RECEIVED_MACHO_BRACE
+	giveitem ITEM_BOTTLE_CAP, 2
 # 120 "data/maps/Route111_WinstrateFamilysHouse/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+# 121 "data/maps/Route111_WinstrateFamilysHouse/scripts.pory"
+	setflag FLAG_RECEIVED_MACHO_BRACE
+# 122 "data/maps/Route111_WinstrateFamilysHouse/scripts.pory"
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 
 
 Route111_WinstrateFamilysHouse_Text_AlsoHaveTheseEvoItems::
-# 124 "data/maps/Route111_WinstrateFamilysHouse/scripts.pory"
+# 126 "data/maps/Route111_WinstrateFamilysHouse/scripts.pory"
 	.string "We would also like you to have\n"
 	.string "these evolutionary items.\p"
 	.string "They are what we use to ensure\n"
