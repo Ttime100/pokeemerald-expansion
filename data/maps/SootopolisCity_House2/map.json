@@ -3,7 +3,6 @@
   "name": "SootopolisCity_House2",
   "layout": "LAYOUT_SOOTOPOLIS_CITY_HOUSE2",
   "music": "MUS_SOOTOPOLIS",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_SOOTOPOLIS_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -27,6 +26,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SootopolisCity_House2_EventScript_ExpertF",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ULTIMATE_TUTOR",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SootopolisCity_House2_EventScript_UltimateMoveTutor",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -46,5 +59,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

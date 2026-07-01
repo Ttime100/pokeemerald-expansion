@@ -1,0 +1,196 @@
+raw`
+SootopolisCity_House2_MapScripts::
+	.byte 0
+
+SootopolisCity_House2_EventScript_ExpertF::
+	lock
+	faceplayer
+	msgbox SootopolisCity_House2_Text_DidYouKnowAboutMtPyreOrbs, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, SootopolisCity_House2_EventScript_KnowAboutOrbs
+	call_if_eq VAR_RESULT, NO, SootopolisCity_House2_EventScript_DontKnowAboutOrbs
+	release
+	end
+
+SootopolisCity_House2_EventScript_KnowAboutOrbs::
+	msgbox SootopolisCity_House2_Text_YesTwoOrbsSideBySide, MSGBOX_DEFAULT
+	return
+
+SootopolisCity_House2_EventScript_DontKnowAboutOrbs::
+	msgbox SootopolisCity_House2_Text_OughtToVisitAndSee, MSGBOX_DEFAULT
+	return
+
+SootopolisCity_House2_Text_DidYouKnowAboutMtPyreOrbs:
+	.string "Mt. Pyre…\p"
+	.string "At its peak are two orbs placed side\n"
+	.string "by side. Did you know?$"
+
+SootopolisCity_House2_Text_YesTwoOrbsSideBySide:
+	.string "Yes, two orbs side by side…\p"
+	.string "The sight of them together…\n"
+	.string "It is somehow soothing…$"
+
+SootopolisCity_House2_Text_OughtToVisitAndSee:
+	.string "Is that so?\n"
+	.string "Perhaps you ought to visit and see…$"
+
+`
+// This script is needed so the compiler recognizes this file as having a move tutor.
+// It does nothing other than that, but it is required for the move tutor to work properly.
+script DummyScript {
+	special(ChooseMonForMoveTutor)
+	release
+	end
+}
+
+script SootopolisCity_House2_EventScript_UltimateMoveTutor {
+    lock
+    faceplayer
+    if(flag(FLAG_TEMP_2) == TRUE){
+        msgbox(SootopolisCity_House2_Text_MakeBestUseOfMove)
+        release
+        end
+    }
+    msgbox(SootopolisCity_House2_Text_UltimateMoveTutorIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT) == FALSE){
+        msgbox(SootopolisCity_House2_Text_UltimateMoveTutorJustMistaken)
+        release
+        end
+    }
+	call_if_eq(VAR_FACING, DIR_NORTH, UltimateTutor_EventScript_JumpInPlaceDown)
+	call_if_eq(VAR_FACING, DIR_SOUTH, UltimateTutor_EventScript_JumpInPlaceUp)
+	call_if_eq(VAR_FACING, DIR_EAST, UltimateTutor_EventScript_JumpInPlaceLeft)
+	call_if_eq(VAR_FACING, DIR_WEST, UltimateTutor_EventScript_JumpInPlaceRight)
+	msgbox(format("You mean it?\n"
+	"You will let me teach the ultimate move?\p"
+	"Which move would you like to teach?"))
+	call(SootopolisCity_House2_EventScript_ChooseMove)
+    if(var(VAR_RESULT) == MULTI_B_PRESSED){
+        goto(SootopolisCity_House2_EventScript_YouRejectIt)
+    }
+	buffermovename(STR_VAR_2, VAR_0x8005)
+    if(var(VAR_0x8005) == MOVE_BLAST_BURN){
+        move_tutor(MOVE_BLAST_BURN, SootopolisCity_House2_Text_WhichPokemonToTeach, SootopolisCity_House2_Text_ChooseAPokemon, SootopolisCity_House2_EventScript_YouRejectIt, SootopolisCity_House2_EventScript_TaughtMove)
+    } elif(var(VAR_0x8005) == MOVE_FRENZY_PLANT){
+        move_tutor(MOVE_FRENZY_PLANT, SootopolisCity_House2_Text_WhichPokemonToTeach, SootopolisCity_House2_Text_ChooseAPokemon, SootopolisCity_House2_EventScript_YouRejectIt, SootopolisCity_House2_EventScript_TaughtMove)
+    } elif(var(VAR_0x8005) == MOVE_HYDRO_CANNON){
+        move_tutor(MOVE_HYDRO_CANNON, SootopolisCity_House2_Text_WhichPokemonToTeach, SootopolisCity_House2_Text_ChooseAPokemon, SootopolisCity_House2_EventScript_YouRejectIt, SootopolisCity_House2_EventScript_TaughtMove)
+    }
+    release
+    end
+}
+
+script SootopolisCity_House2_EventScript_YouRejectIt {
+        msgbox(SootopolisCity_House2_Text_YouRejectIt)
+        release
+        end 
+}
+
+script SootopolisCity_House2_EventScript_ChooseMove {
+	dynmultipush("Frenzy Plant",0)
+	dynmultipush("Blast Burn",	1)
+	dynmultipush("Hydro Cannon",2)
+	dynmultistack(0, 0, FALSE, 3, TRUE, 0, 0)
+	switch(var(VAR_RESULT)){
+		case 0:
+			setvar(VAR_0x8005, MOVE_FRENZY_PLANT)
+			break
+		case 1:
+			setvar(VAR_0x8005, MOVE_BLAST_BURN)
+			break
+		case 2:
+			setvar(VAR_0x8005, MOVE_HYDRO_CANNON)
+			break
+	}
+	return
+}
+
+script SootopolisCity_House2_EventScript_TaughtMove {
+	msgbox (SootopolisCity_House2_Text_TaughtMove)
+	setflag(FLAG_TEMP_2)
+	release
+	end
+}
+
+script UltimateTutor_EventScript_JumpInPlaceDown {
+	applymovement(LOCALID_ULTIMATE_TUTOR, Movement_JumpInPlaceDown)
+	waitmovement(0)
+	return
+}
+
+script UltimateTutor_EventScript_JumpInPlaceUp {
+	applymovement(LOCALID_ULTIMATE_TUTOR, Movement_JumpInPlaceUp)
+	waitmovement(0)
+	return
+}
+
+script UltimateTutor_EventScript_JumpInPlaceLeft {
+	applymovement(LOCALID_ULTIMATE_TUTOR, Movement_JumpInPlaceLeft)
+	waitmovement(0)
+	return
+}
+
+script UltimateTutor_EventScript_JumpInPlaceRight {
+	applymovement(LOCALID_ULTIMATE_TUTOR, Movement_JumpInPlaceRight)
+	waitmovement(0)
+	return
+}
+
+movement Movement_JumpInPlaceDown {
+	jump_in_place_down
+	step_end
+}
+
+movement Movement_JumpInPlaceUp {
+	jump_in_place_up
+	step_end
+}
+
+movement Movement_JumpInPlaceLeft {
+	jump_in_place_left
+	step_end
+}
+
+movement Movement_JumpInPlaceRight {
+	jump_in_place_right
+	step_end
+}
+
+text SootopolisCity_House2_Text_UltimateMoveTutorIntro {
+    format("I perfected the ultimate move of\n"
+	    "its type…\p"
+	    "But will no one take it for\n"
+	    "future use?\p"
+	    "Will you allow it?\p"
+	    "Will you allow your Pokémon to\n"
+	    "learn my ultimate move?")
+}
+
+text SootopolisCity_House2_Text_UltimateMoveTutorJustMistaken {
+    format("…No…\n"
+	    "I was just mistaken.")
+}
+
+text SootopolisCity_House2_Text_YouRejectIt {
+	format("Gaah! You reject it?\n"
+	    "No, I won't be dissuaded!")
+}
+
+text SootopolisCity_House2_Text_WhichPokemonToTeach {
+	format("Will you teach your Pokémon\n"
+	"{STR_VAR_2}?")
+}
+
+text SootopolisCity_House2_Text_ChooseAPokemon {
+	format("Please chose a Pokémon to learn {STR_VAR_2}.")
+}
+
+text SootopolisCity_House2_Text_TaughtMove {
+	format("Gasp, gasp, gasp…\p"
+	"I didn't think I could teach that\n"
+	"move while I still lived…")
+}
+
+text SootopolisCity_House2_Text_MakeBestUseOfMove {
+	format("I implore you to make the best\n"
+	"use of that move and gain power!")
+}
