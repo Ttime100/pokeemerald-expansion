@@ -432,7 +432,6 @@ const u32 gObjectEventPic_BeastBall[] = INCGFX_U32("graphics/object_events/pics/
 const u32 gObjectEventPic_StrangeBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_strange.png", ".4bpp", "-mwidth 2 -mheight 4");
 #endif //ITEM_STRANGE_BALL
 const u32 gObjectEventPic_LavaBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_lava.png", ".4bpp", "-mwidth 2 -mheight 4");
-#endif //OW_FOLLOWERS_POKEBALLS
 
 #if OW_FOLLOWERS_POKEBALLS
 // Palettes are small, so always include all of the palettes (no #ifdef)
