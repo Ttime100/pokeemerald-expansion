@@ -655,3 +655,4 @@ gSpecials::
 	def_special GetSpeciesFromFossil
 	def_special GetSpeciesFromFossilIndex
 	def_special GetHasMultipleFossils
+	def_special StartSinglePlayerPokemonJump

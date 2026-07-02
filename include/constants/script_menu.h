@@ -19,7 +19,7 @@ enum
     MULTI_BASE_PC_WITH_REGISTRY,
     MULTI_REGISTER_MENU,
     MULTI_SSTIDAL_LILYCOVE,             // Exit only, populated by CreateLilycoveSSTidalMultichoice
-    MULTI_UNUSED_9,
+    MULTI_SOLO_OR_MULTI,                // Ttime100 added this for the Pokemon Jump and Dodrio Berry Picking minigames
     MULTI_UNUSED_10,
     MULTI_FRONTIER_PASS_INFO,
     MULTI_BIKE,

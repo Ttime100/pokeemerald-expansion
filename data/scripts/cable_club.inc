@@ -1264,6 +1264,26 @@ MossdeepCity_GameCorner_1F_EventScript_OldMan2::
 	faceplayer
 	message MossdeepCity_GameCorner_1F_Text_WelcomeCanYouWait
 	waitmessage
+	multichoice 0, 0, MULTI_SOLO_OR_MULTI, FALSE
+    switch VAR_RESULT
+    case 0, MossdeepCity_GameCorner_1F_EventScript_PlaySoloMode
+    case 1, MossdeepCity_GameCorner_1F_EventScript_CheckAdapterForMulti
+    case 2, MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+    case MULTI_B_PRESSED, MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+    end
+
+MossdeepCity_GameCorner_1F_EventScript_PlaySoloMode::
+    message MossdeepCity_GameCorner_1F_Text_PlayWhichGame
+    waitmessage
+    multichoice 0, 0, MULTI_WIRELESS_MINIGAME, FALSE
+    switch VAR_RESULT
+    case 0, MossdeepCity_GameCorner_1F_EventScript_SoloPokemonJump
+    @case 1, MossdeepCity_GameCorner_1F_EventScript_SoloDodrioPicking
+    case 2, MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+    case MULTI_B_PRESSED, MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+    end
+
+MossdeepCity_GameCorner_1F_EventScript_CheckAdapterForMulti::
 	specialvar VAR_RESULT, IsWirelessAdapterConnected
 	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_GameCorner_1F_EventScript_AdapterNotConnected
 	delay 60
@@ -1276,6 +1296,19 @@ MossdeepCity_GameCorner_1F_EventScript_OldMan2::
 	case 2, MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
 	case MULTI_B_PRESSED, MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
 	end
+
+MossdeepCity_GameCorner_1F_EventScript_SoloPokemonJump::
+    setvar VAR_0x8005, 0
+    special IsPokemonJumpSpeciesInParty
+    goto_if_eq VAR_RESULT, FALSE, MossdeepCity_GameCorner_1F_EventScript_DontHaveRequiredMon
+    msgbox MossdeepCity_GameCorner_1F_Text_EnterWhichPokemon, MSGBOX_DEFAULT
+    fadescreen FADE_TO_BLACK
+    setvar VAR_0x8005, 0
+    special ChooseMonForWirelessMinigame
+    goto_if_ge VAR_0x8004, PARTY_SIZE, MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+    special StartSinglePlayerPokemonJump
+    waitstate
+    end
 
 MossdeepCity_GameCorner_1F_EventScript_PlayPokemonJump::
 	setvar VAR_0x8005, 0
