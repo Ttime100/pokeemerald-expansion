@@ -1255,9 +1255,9 @@
 #define FLAG_ITEM_FIERY_PATH_ROOM_TOXIC_ORB                         0x4A7 // Ttime100 added
 #define FLAG_ITEM_FIERY_PATH_ROOM_LAGGING_TAIL                      0x4A8 // Ttime100 added
 #define FLAG_ITEM_MOSSDEEP_CITY_ODD_INCENSE                         0x4A9 // Ttime100 added
+#define FLAG_ITEM_ROUTE_114_ABILITY_CAPSULE                         0x4AA // Ttime100 added
+#define FLAG_ITEM_ROUTE_114_ABILITY_PATCH                           0x4AB // Ttime100 added
 
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
 #define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
