@@ -714,7 +714,7 @@
 #define FLAG_HIDDEN_MOSSDEEP_CITY_BOTTLE_CAP                 0x283 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_ROUTE_113_BOTTLE_CAP                0x284 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_BOTTLE_CAP            0x285 // Ttime100 added
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE_124_BOTTLE_CAP                0x286 // Ttime100 added
 #define FLAG_UNUSED_0x287  0x287 // Unused Flag
 #define FLAG_UNUSED_0x288  0x288 // Unused Flag
 #define FLAG_UNUSED_0x289  0x289 // Unused Flag
@@ -1258,8 +1258,8 @@
 #define FLAG_ITEM_ROUTE_114_ABILITY_CAPSULE                         0x4AA // Ttime100 added
 #define FLAG_ITEM_ROUTE_114_ABILITY_PATCH                           0x4AB // Ttime100 added
 #define FLAG_ITEM_ROUTE_115_ABILITY_PATCH                           0x4AC // Ttime100 added
+#define FLAG_ITEM_ROUTE_124_ABILITY_CAPSULE                         0x4AD // Ttime100 added
 
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
 #define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
