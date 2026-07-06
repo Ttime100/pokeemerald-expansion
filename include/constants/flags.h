@@ -1257,8 +1257,8 @@
 #define FLAG_ITEM_MOSSDEEP_CITY_ODD_INCENSE                         0x4A9 // Ttime100 added
 #define FLAG_ITEM_ROUTE_114_ABILITY_CAPSULE                         0x4AA // Ttime100 added
 #define FLAG_ITEM_ROUTE_114_ABILITY_PATCH                           0x4AB // Ttime100 added
+#define FLAG_ITEM_ROUTE_115_ABILITY_PATCH                           0x4AC // Ttime100 added
 
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
