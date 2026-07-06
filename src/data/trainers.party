@@ -4821,12 +4821,12 @@ Music: Intense
 Double Battle: No
 AI: Basic Trainer
 
-Machop
-Level: 24
+Machoke
+Level: 50
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Machoke
-Level: 28
+Machamp
+Level: 52
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_NOB_1 ===
@@ -8729,7 +8729,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Hariyama
-Level: 27
+Level: 49
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Gurdurr
+Level: 49
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_TIMOTHY_2 ===
@@ -8742,12 +8746,20 @@ Double Battle: No
 AI: Basic Trainer
 
 Hariyama
-Level: 33
+Level: 55
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 - Arm Thrust
 - Knock Off
 - Sand Attack
 - Dig
+
+Gurdurr
+Level: 55
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- Drain Punch
+- Bulk Up
+- Rock Slide
+- Ice Punch
 
 === TRAINER_TIMOTHY_3 ===
 Name: Timothy
@@ -8759,12 +8771,20 @@ Double Battle: No
 AI: Basic Trainer
 
 Hariyama
-Level: 36
+Level: 59
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 - Arm Thrust
 - Knock Off
 - Sand Attack
 - Dig
+
+Conkeldurr
+Level: 59
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Drain Punch
+- Bulk Up
+- Rock Slide
+- Ice Punch
 
 === TRAINER_TIMOTHY_4 ===
 Name: Timothy
@@ -8776,12 +8796,20 @@ Double Battle: No
 AI: Basic Trainer
 
 Hariyama
-Level: 39
+Level: 63
 IVs: 27 HP / 27 Atk / 27 Def / 27 SpA / 27 SpD / 27 Spe
 - Arm Thrust
 - Belly Drum
 - Sand Attack
 - Dig
+
+Conkeldurr
+Level: 63
+IVs: 27 HP / 27 Atk / 27 Def / 27 SpA / 27 SpD / 27 Spe
+- Drain Punch
+- Bulk Up
+- Rock Slide
+- Ice Punch
 
 === TRAINER_TIMOTHY_5 ===
 Name: Timothy
@@ -8793,12 +8821,20 @@ Double Battle: No
 AI: Basic Trainer
 
 Hariyama
-Level: 42
+Level: 68
 IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
 - Arm Thrust
 - Belly Drum
 - Sand Attack
 - Dig
+
+Conkeldurr
+Level: 68
+IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
+- Drain Punch
+- Bulk Up
+- Rock Slide
+- Ice Punch
 
 === TRAINER_VICKY ===
 Name: Vicky
@@ -20729,13 +20765,21 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Doduo
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Chatot
+Level: 49
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Chatter
+- Roost
+- Hyper Voice
+- Parting Shot
 
 Dodrio
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 49
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Drill Peck
+- Drill Run
+- Lunge
+- Swords Dance
 
 === TRAINER_JAIDEN ===
 Name: Jaiden
@@ -20747,11 +20791,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Ninjask
-Level: 26
+Level: 49
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Gulpin
-Level: 26
+Swalot
+Level: 49
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALIX ===
@@ -20761,15 +20805,37 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
-Kadabra
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kadabra (M) @ Eviolite
+Ability: Magic Guard
+Level: 50
+Nature: Timid
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Psychic
+- Shadow Ball
+- Signal Beam
+- Reflect
 
-Kirlia
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Gallade (M) @ Expert Belt
+Ability: Justified
+Level: 50
+Nature: Adamant
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Psycho Cut
+- Close Combat
+- Night Slash
+- Leaf Blade
+
+Gardevoir (F) @ Wise Glasses
+Ability: Synchronize
+Level: 50
+Nature: Modest
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Psychic
+- Moonblast
+- Calm Mind
+- Will-O-Wisp
 
 === TRAINER_HELENE ===
 Name: Helene
@@ -20778,15 +20844,37 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Smart Switching / Assume Stab
 
-Meditite
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Medicham (M) @ Muscle Band
+Ability: Pure Power
+Level: 50
+Nature: Jolly
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Thunder Punch
 
-Makuhita
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Hariyama (M) @ Sitrus Berry
+Ability: Thick Fat
+Level: 50
+Nature: Brave
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Close Combat
+- Knock Off
+- Bullet Punch
+- Fake Out
+
+Lucario (M) @ Life Orb
+Ability: Inner Focus
+Level: 50
+Nature: Naive
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aura Sphere
+- Flash Cannon
+- Extreme Speed
+- Dark Pulse
 
 === TRAINER_MARLENE ===
 Name: Marlene
