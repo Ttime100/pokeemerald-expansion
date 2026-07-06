@@ -566,6 +566,14 @@
       "elevation": 0,
       "item": "ITEM_COVERT_CLOAK",
       "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_COVERT_CLOAK"
+    },
+    {
+      "type": "hidden_item",
+      "x": 58,
+      "y": 28,
+      "elevation": 0,
+      "item": "ITEM_BOTTLE_CAP",
+      "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_BOTTLE_CAP"
     }
   ],
   "region": "REGION_HOENN"
