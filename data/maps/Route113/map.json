@@ -460,6 +460,14 @@
       "elevation": 3,
       "item": "ITEM_NUGGET",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_NUGGET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 47,
+      "y": 14,
+      "elevation": 0,
+      "item": "ITEM_BOTTLE_CAP",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_BOTTLE_CAP"
     }
   ],
   "region": "REGION_HOENN"
