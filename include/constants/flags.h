@@ -715,8 +715,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_113_BOTTLE_CAP                0x284 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_BOTTLE_CAP            0x285 // Ttime100 added
 #define FLAG_HIDDEN_ITEM_ROUTE_124_BOTTLE_CAP                0x286 // Ttime100 added
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
+#define FLAG_HIDDEN_ITEM_OBSIDIAN_SHORES_BOTTLE_CAP          0x287 // Ttime100 added
+#define FLAG_HIDDEN_ITEM_OBSIDIAN_SHORES_HEART_SCALE         0x288 // Ttime100 added
 #define FLAG_UNUSED_0x289  0x289 // Unused Flag
 #define FLAG_UNUSED_0x28A  0x28A // Unused Flag
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
