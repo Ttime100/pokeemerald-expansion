@@ -15,60 +15,62 @@ ShadespurPokemonCenter_EventScript_Nurse::
 	release
 	end
 `
-script Aqua_Grunt_Chats {
+script ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats {
     lock
     faceplayer
     random (3)
     switch (var(VAR_RESULT)){
-    case 0: msgbox (format("Well look what the tide dragged in. A fresh face.
-        Don't worry, kid, we won't steal your Pokémon.
-        We're done with all that. We just...
+    case 0: msgbox (format("Well look what the tide dragged in.\nA fresh face.\p
+        Don't worry, kid, we won't steal your Pokémon.\p
+        We're done with all that. We just…\n
         ran out of oceans to conquer."))
-    case 1: msgbox (format("The hardest part of leaving? The quiet.
+    case 1: msgbox (format("The hardest part of leaving?\nThe quiet.\p
         No more yelling, no more rushed orders,
-        no more bosses treating you like a spare anchor.
+        no being treated like a spare anchor.\p
         This island is cold, but at least the cold is honest."))
-    case 2: msgbox (format("I heard the boss is still out there,
-        pushing for the Eternal Tide. Good luck to him.
+    case 2: msgbox (format("I heard the boss is still out there,\n
+        pushing for the Eternal Tide.\pGood luck to him.\p
         I just needed a place where I didn't have
-        to choose between a life jacket and a jail cell.
-        This place, Shadespur Isle, it's far enough from everyone."))
+        to choose between a life jacket and a jail cell.\p
+        This place is far enough from everyone."))
     }
     release
     end
 }
 
-script Magma_Grunt_Chats {
+script ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats {
     lock
     faceplayer
     random (3)
     switch (var(VAR_RESULT)){
-    case 0: msgbox (format("You startled me.
-        Yeah, I’m Magma. He's Aqua.
+    case 0: msgbox (format("You startled me.\n
+        Yeah, I’m Magma. He's Aqua.\p
         We found this spot and called a truce.
-        Out here, we're not teams, we're just... outcasts.
+        Out here, we're not teams, we're just… outcasts.\p
         Nothing worse than being a grunt without a team to back you up."))
     case 1: msgbox (format("The boss always talked about
-        the perfect land, the perfect world.
-        But the only perfect thing I ever found
-        was a cot that didn't smell like volcanic sulfur.
+        the perfect land, the perfect world.\p
+        But the only perfect thing I ever\n
+        found was a cot that didn't smell\l
+        like volcanic sulfur.\p
         We’re all refugees from our own bad decisions, kid."))
     case 2: msgbox (format("You see that computer?
-        It's rigged for basic healing and storage.
+        It's rigged for basic healing and storage.\p
         No network. No calls back to headquarters.
-        We made sure of that. This isn't just a hideout;
-        it's a dead zone. If you want peace,
-        this is where you go when the fighting gets too loud."))
+        We made sure of that.\p
+        This isn't just a hideout;\n
+        it's a dead zone.\p
+        This is where to go when the fighting gets too loud."))
     }
     release
     end
 }
 
-script OldManWarning {
+script ShadespurPokemonCenter_EventScript_OldManWarning {
     lock
     faceplayer
-    msgbox (format("They call this place a refuge.
-    But the shore is where you bury your debts, not pay them.
+    msgbox (format("They call this place a refuge.\p
+    But the shore is where you bury your debts, not pay them.\p
     Be careful who you owe, young one."))
     release
     end
