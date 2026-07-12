@@ -1044,10 +1044,10 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 #define FLAG_HIDE_GRACIDEA_GIRL                                     0x4E1 // Ttime100 added
-#define FLAG_HIDE_EXILE_SIDNEY                                      0x4E2 // Ttime100 added
-#define FLAG_HIDE_EXILE_PHOEBE                                      0x4E3 // Ttime100 added
-#define FLAG_HIDE_EXILE_GLACIA                                      0x4E4 // Ttime100 added
-#define FLAG_HIDE_EXILE_DRAKE                                       0x4E5 // Ttime100 added
+#define FLAG_HIDE_EXILED_ELITE_FOUR                                 0x4E2 // Ttime100 added
+#define FLAG_UNUSED_0x4E3                                           0x4E3
+#define FLAG_UNUSED_0x4E4                                           0x4E4
+#define FLAG_UNUSED_0x4E5                                           0x4E5
 #define FLAG_HIDE_MOTEL_OWNER                                       0x4DC // Ttime100 added
 #define FLAG_HIDE_MOTEL_GUEST                                       0x4DD // Ttime100 added
 #define FLAG_HIDE_RS_MALE                                           0x4DA // Ttime100 added

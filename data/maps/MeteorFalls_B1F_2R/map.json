@@ -3,7 +3,6 @@
   "name": "MeteorFalls_B1F_2R",
   "layout": "LAYOUT_METEOR_FALLS_B1F_2R",
   "music": "MUS_CAVE_OF_ORIGIN",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_METEOR_FALLS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -39,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MeteorFalls_B1F_2R_EventScript_Drake",
-      "flag": "FLAG_HIDE_EXILE_DRAKE"
+      "flag": "FLAG_HIDE_EXILED_ELITE_FOUR"
     }
   ],
   "warp_events": [
@@ -52,5 +51,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }
