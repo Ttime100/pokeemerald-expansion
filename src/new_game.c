@@ -238,8 +238,6 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
-    FlagSet(FLAG_HIDE_EXILED_ELITE_FOUR); //Ttime100 added
-    FlagSet(FLAG_HIDE_TYLER_LEAGUE);
 }
 
 static void ResetMiniGamesRecords(void)
