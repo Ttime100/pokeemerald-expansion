@@ -324,6 +324,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	setflag FLAG_HIDE_EXILED_ELITE_FOUR
 	setflag FLAG_HIDE_TYLER_LEAGUE
+	setflag FLAG_HIDE_EXILED_TEAM_MEMBERS
 	call EventScript_ResetAllBerries
 	end
 
