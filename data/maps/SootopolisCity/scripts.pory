@@ -57,8 +57,8 @@ SootopolisCity_EventScript_HideMapNamePopup::
 SootopolisCity_EventScript_SetBattleSpectators::
 	setobjectxyperm LOCALID_KIRI, 14, 48
 	setobjectxyperm LOCALID_SOOTOPOLIS_BOY_1, 47, 32
-	setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 49, 41
-	setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 46, 43
+	setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 51, 42
+	setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 46, 44
 	setobjectmovementtype LOCALID_KIRI, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype LOCALID_SOOTOPOLIS_BOY_1, MOVEMENT_TYPE_FACE_LEFT
 	setobjectmovementtype LOCALID_SOOTOPOLIS_NINJA_BOY, MOVEMENT_TYPE_FACE_LEFT
@@ -174,7 +174,7 @@ SootopolisCity_OnFrame:
 SootopolisCity_EventScript_StartLegendariesScene::
 	lockall
 	special StorePlayerCoordsInVars
-	goto_if_ne VAR_0x8004, 43, SootopolisCity_EventScript_LegendariesSceneFromDive
+	goto_if_ne VAR_0x8004, 44, SootopolisCity_EventScript_LegendariesSceneFromDive
 	goto_if_ne VAR_0x8005, 32, SootopolisCity_EventScript_LegendariesSceneFromDive
 	goto SootopolisCity_EventScript_LegendariesSceneFromPokeCenter
 	end
@@ -461,7 +461,7 @@ SootopolisCity_Movement_GroudonIdle:
 SootopolisCity_EventScript_StartRayquazaScene::
 	lockall
 	special StorePlayerCoordsInVars
-	goto_if_ne VAR_0x8004, 43, SootopolisCity_EventScript_RayquazaSceneFromDive
+	goto_if_ne VAR_0x8004, 44, SootopolisCity_EventScript_RayquazaSceneFromDive
 	goto_if_ne VAR_0x8005, 32, SootopolisCity_EventScript_RayquazaSceneFromDive
 	goto SootopolisCity_EventScript_RayquazaSceneFromPokeCenter
 	end
@@ -514,7 +514,7 @@ SootopolisCity_EventScript_RayquazaSceneFromPokeCenter::
 	fadenewbgm MUS_SOOTOPOLIS
 	delay 120
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	warpwhitefade MAP_SOOTOPOLIS_CITY, 43, 32
+	warpwhitefade MAP_SOOTOPOLIS_CITY, 44, 32
 	waitstate
 	end
 
@@ -1366,7 +1366,7 @@ SootopolisCity_EventScript_MaxieArchieLeave::
 	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
 	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
 	setvar VAR_MT_PYRE_STATE, 2
-	warpsilent MAP_SOOTOPOLIS_CITY, 31, 34
+	warpsilent MAP_SOOTOPOLIS_CITY, 32, 34
 	waitstate
 	releaseall
 	end

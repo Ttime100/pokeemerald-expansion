@@ -117,9 +117,9 @@ SootopolisCity_EventScript_SetBattleSpectators::
 # 59 "data/maps/SootopolisCity/scripts.pory"
 	setobjectxyperm LOCALID_SOOTOPOLIS_BOY_1, 47, 32
 # 60 "data/maps/SootopolisCity/scripts.pory"
-	setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 49, 41
+	setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 51, 42
 # 61 "data/maps/SootopolisCity/scripts.pory"
-	setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 46, 43
+	setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 46, 44
 # 62 "data/maps/SootopolisCity/scripts.pory"
 	setobjectmovementtype LOCALID_KIRI, MOVEMENT_TYPE_FACE_UP
 # 63 "data/maps/SootopolisCity/scripts.pory"
@@ -351,7 +351,7 @@ SootopolisCity_EventScript_StartLegendariesScene::
 # 176 "data/maps/SootopolisCity/scripts.pory"
 	special StorePlayerCoordsInVars
 # 177 "data/maps/SootopolisCity/scripts.pory"
-	goto_if_ne VAR_0x8004, 43, SootopolisCity_EventScript_LegendariesSceneFromDive
+	goto_if_ne VAR_0x8004, 44, SootopolisCity_EventScript_LegendariesSceneFromDive
 # 178 "data/maps/SootopolisCity/scripts.pory"
 	goto_if_ne VAR_0x8005, 32, SootopolisCity_EventScript_LegendariesSceneFromDive
 # 179 "data/maps/SootopolisCity/scripts.pory"
@@ -925,7 +925,7 @@ SootopolisCity_EventScript_StartRayquazaScene::
 # 463 "data/maps/SootopolisCity/scripts.pory"
 	special StorePlayerCoordsInVars
 # 464 "data/maps/SootopolisCity/scripts.pory"
-	goto_if_ne VAR_0x8004, 43, SootopolisCity_EventScript_RayquazaSceneFromDive
+	goto_if_ne VAR_0x8004, 44, SootopolisCity_EventScript_RayquazaSceneFromDive
 # 465 "data/maps/SootopolisCity/scripts.pory"
 	goto_if_ne VAR_0x8005, 32, SootopolisCity_EventScript_RayquazaSceneFromDive
 # 466 "data/maps/SootopolisCity/scripts.pory"
@@ -1031,7 +1031,7 @@ SootopolisCity_EventScript_RayquazaSceneFromPokeCenter::
 # 516 "data/maps/SootopolisCity/scripts.pory"
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 # 517 "data/maps/SootopolisCity/scripts.pory"
-	warpwhitefade MAP_SOOTOPOLIS_CITY, 43, 32
+	warpwhitefade MAP_SOOTOPOLIS_CITY, 44, 32
 # 518 "data/maps/SootopolisCity/scripts.pory"
 	waitstate
 # 519 "data/maps/SootopolisCity/scripts.pory"
@@ -2735,7 +2735,7 @@ SootopolisCity_EventScript_MaxieArchieLeave::
 # 1368 "data/maps/SootopolisCity/scripts.pory"
 	setvar VAR_MT_PYRE_STATE, 2
 # 1369 "data/maps/SootopolisCity/scripts.pory"
-	warpsilent MAP_SOOTOPOLIS_CITY, 31, 34
+	warpsilent MAP_SOOTOPOLIS_CITY, 32, 34
 # 1370 "data/maps/SootopolisCity/scripts.pory"
 	waitstate
 # 1371 "data/maps/SootopolisCity/scripts.pory"
