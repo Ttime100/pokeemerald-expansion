@@ -1,7 +1,16 @@
-raw`ShadespurPokemonCenter_MapScripts::
+raw`
+ShadespurPokemonCenter_MapScripts::
+    map_script MAP_SCRIPT_ON_LOAD, ShadespurPokemonCenter_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, ShadespurPokemonCenter_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
+
+ShadespurPokemonCenter_OnLoad:
+    call_if_set FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, ShadespurPokemonCenter_ShowMasterBall
+    end
+
+ShadespurPokemonCenter_ShowMasterBall::
+    clearflag FLAG_HIDE_SHADESPUR_POKEMON_CENTER_MASTER_BALL
+    return
 
 ShadespurPokemonCenter_OnTransition:
 	setrespawn HEAL_LOCATION_SHADESPUR_ISLE
@@ -72,6 +81,14 @@ script ShadespurPokemonCenter_EventScript_OldManWarning {
     msgbox (format("They call this place a refuge.\p
     But the shore is where you bury your debts, not pay them.\p
     Be careful who you owe, young one."))
+    release
+    end
+}
+
+script ShadespurPokemonCenter_EventScript_FindMasterBall {
+    lock
+    finditem (ITEM_MASTER_BALL)
+    setflag (FLAG_ITEM_SHADESPUR_POKEMON_CENTER_MASTER_BALL)
     release
     end
 }

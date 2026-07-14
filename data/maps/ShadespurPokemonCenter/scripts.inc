@@ -1,122 +1,152 @@
 # 1 "data/maps/ShadespurPokemonCenter/scripts.pory"
-ShadespurPokemonCenter_MapScripts::
+
 # 2 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, ShadespurPokemonCenter_OnTransition
+ShadespurPokemonCenter_MapScripts::
 # 3 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+    map_script MAP_SCRIPT_ON_LOAD, ShadespurPokemonCenter_OnLoad
 # 4 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	.byte 0
+	map_script MAP_SCRIPT_ON_TRANSITION, ShadespurPokemonCenter_OnTransition
 # 5 "data/maps/ShadespurPokemonCenter/scripts.pory"
-
+	.byte 0
 # 6 "data/maps/ShadespurPokemonCenter/scripts.pory"
-ShadespurPokemonCenter_OnTransition:
-# 7 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	setrespawn HEAL_LOCATION_SHADESPUR_ISLE
-# 8 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	end
-# 9 "data/maps/ShadespurPokemonCenter/scripts.pory"
 
+# 7 "data/maps/ShadespurPokemonCenter/scripts.pory"
+ShadespurPokemonCenter_OnLoad:
+# 8 "data/maps/ShadespurPokemonCenter/scripts.pory"
+    call_if_set FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, ShadespurPokemonCenter_ShowMasterBall
+# 9 "data/maps/ShadespurPokemonCenter/scripts.pory"
+    end
 # 10 "data/maps/ShadespurPokemonCenter/scripts.pory"
-ShadespurPokemonCenter_EventScript_Nurse::
+
 # 11 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	setvar VAR_0x800B, LOCALID_SHADESPUR_NURSE
+ShadespurPokemonCenter_ShowMasterBall::
 # 12 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	call Common_EventScript_PkmnCenterNurse
+    clearflag FLAG_HIDE_SHADESPUR_POKEMON_CENTER_MASTER_BALL
 # 13 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	waitmessage
+    return
 # 14 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	waitbuttonpress
+
 # 15 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	release
+ShadespurPokemonCenter_OnTransition:
 # 16 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	setrespawn HEAL_LOCATION_SHADESPUR_ISLE
+# 17 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	end
+# 18 "data/maps/ShadespurPokemonCenter/scripts.pory"
+
+# 19 "data/maps/ShadespurPokemonCenter/scripts.pory"
+ShadespurPokemonCenter_EventScript_Nurse::
+# 20 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	setvar VAR_0x800B, LOCALID_SHADESPUR_NURSE
+# 21 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	call Common_EventScript_PkmnCenterNurse
+# 22 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	waitmessage
+# 23 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	waitbuttonpress
+# 24 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	release
+# 25 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	end
 
 ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats::
-# 19 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 28 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	lock
-# 20 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 29 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	faceplayer
-# 21 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 30 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	random 3
-# 22 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	switch VAR_RESULT
-# 23 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	case 0, ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_3
-# 27 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	case 1, ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_4
 # 31 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	switch VAR_RESULT
+# 32 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	case 0, ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_3
+# 36 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	case 1, ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_4
+# 40 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	case 2, ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_5
 ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_1:
-# 37 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 46 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	release
 	end
 
 ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_3:
-# 23 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 32 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	msgbox ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_0
 	goto ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_1
 
 ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_4:
-# 27 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 36 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	msgbox ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_1
 	goto ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_1
 
 ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_5:
-# 31 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 40 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	msgbox ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_2
 	goto ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_1
 
 
 ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats::
-# 42 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	lock
-# 43 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	faceplayer
-# 44 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	random 3
-# 45 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	switch VAR_RESULT
-# 46 "data/maps/ShadespurPokemonCenter/scripts.pory"
-	case 0, ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_3
 # 51 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	lock
+# 52 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	faceplayer
+# 53 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	random 3
+# 54 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	switch VAR_RESULT
+# 55 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	case 0, ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_3
+# 60 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	case 1, ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_4
-# 57 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 66 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	case 2, ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_5
 ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_1:
-# 65 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 74 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	release
 	end
 
 ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_3:
-# 46 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 55 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	msgbox ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_0
 	goto ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_1
 
 ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_4:
-# 51 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 60 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	msgbox ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_1
 	goto ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_1
 
 ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_5:
-# 57 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 66 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	msgbox ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_2
 	goto ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_1
 
 
 ShadespurPokemonCenter_EventScript_OldManWarning::
-# 70 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 79 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	lock
-# 71 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 80 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	faceplayer
-# 72 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 81 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	msgbox ShadespurPokemonCenter_EventScript_OldManWarning_Text_0
-# 75 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 84 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	release
+	end
+
+
+ShadespurPokemonCenter_EventScript_FindMasterBall::
+# 89 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	lock
+# 90 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	finditem ITEM_MASTER_BALL
+# 91 "data/maps/ShadespurPokemonCenter/scripts.pory"
+	setflag FLAG_ITEM_SHADESPUR_POKEMON_CENTER_MASTER_BALL
+# 92 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	release
 	end
 
 
 ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_0:
-# 23 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 32 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	.string "Well look what the tide dragged in.\n"
 	.string "A fresh face.\p"
 	.string "Don't worry, kid, we won't steal your\n"
@@ -125,7 +155,7 @@ ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_0:
 	.string "ran out of oceans to conquer.$"
 
 ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_1:
-# 27 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 36 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	.string "The hardest part of leaving?\n"
 	.string "The quiet.\p"
 	.string "No more yelling, no more rushed orders,\n"
@@ -134,7 +164,7 @@ ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_1:
 	.string "cold is honest.$"
 
 ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_2:
-# 31 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 40 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	.string "I heard the boss is still out there,\n"
 	.string "pushing for the Eternal Tide.\p"
 	.string "Good luck to him.\p"
@@ -144,7 +174,7 @@ ShadespurPokemonCenter_EventScript_Aqua_Grunt_Chats_Text_2:
 	.string "This place is far enough from everyone.$"
 
 ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_0:
-# 46 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 55 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	.string "You startled me.\n"
 	.string "Yeah, I’m Magma. He's Aqua.\p"
 	.string "We found this spot and called a truce.\n"
@@ -154,7 +184,7 @@ ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_0:
 	.string "without a team to back you up.$"
 
 ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_1:
-# 51 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 60 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	.string "The boss always talked about the\n"
 	.string "perfect land, the perfect world.\p"
 	.string "But the only perfect thing I ever\n"
@@ -164,7 +194,7 @@ ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_1:
 	.string "decisions, kid.$"
 
 ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_2:
-# 57 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 66 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	.string "You see that computer? It's rigged for\n"
 	.string "basic healing and storage.\p"
 	.string "No network. No calls back to\n"
@@ -175,7 +205,7 @@ ShadespurPokemonCenter_EventScript_Magma_Grunt_Chats_Text_2:
 	.string "gets too loud.$"
 
 ShadespurPokemonCenter_EventScript_OldManWarning_Text_0:
-# 72 "data/maps/ShadespurPokemonCenter/scripts.pory"
+# 81 "data/maps/ShadespurPokemonCenter/scripts.pory"
 	.string "They call this place a refuge.\p"
 	.string "But the shore is where you bury your\n"
 	.string "debts, not pay them.\p"

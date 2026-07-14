@@ -1046,7 +1046,7 @@
 #define FLAG_HIDE_GRACIDEA_GIRL                                     0x4E1 // Ttime100 added
 #define FLAG_HIDE_EXILED_ELITE_FOUR                                 0x4E2 // Ttime100 added
 #define FLAG_HIDE_EXILED_TEAM_MEMBERS                               0x4E3 // Ttime100 added
-#define FLAG_UNUSED_0x4E4                                           0x4E4
+#define FLAG_HIDE_SHADESPUR_POKEMON_CENTER_MASTER_BALL              0x4E4 // Ttime100 added
 #define FLAG_UNUSED_0x4E5                                           0x4E5
 #define FLAG_HIDE_MOTEL_OWNER                                       0x4DC // Ttime100 added
 #define FLAG_HIDE_MOTEL_GUEST                                       0x4DD // Ttime100 added
