@@ -159,6 +159,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_OLD_AMBER",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_SAFARI_ZONE_NORTH_OLD_AMBER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "x": 28,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SafariZone_North_EventScript_HeavyDutyBootsAndRockyHelmet",
+      "flag": "0"
     }
   ],
   "warp_events": [],

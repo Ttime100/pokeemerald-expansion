@@ -1,0 +1,38 @@
+raw`
+SafariZone_North_MapScripts::
+	.byte 0
+
+SafariZone_North_EventScript_Fisherman::
+	msgbox SafariZone_North_Text_Fisherman, MSGBOX_NPC
+	end
+
+SafariZone_North_EventScript_Man::
+	msgbox SafariZone_North_Text_Man, MSGBOX_NPC
+	end
+
+`
+script SafariZone_North_EventScript_HeavyDutyBootsAndRockyHelmet {
+    lock
+    faceplayer
+    if (!flag(FLAG_RECEIVED_BOOTS_AND_HELMET)) {
+        msgbox(SafariZone_North_Text_GiveBootsAndHelmet)
+        giveitem(ITEM_HEAVY_DUTY_BOOTS)
+        giveitem(ITEM_ROCKY_HELMET)
+        setflag(FLAG_RECEIVED_BOOTS_AND_HELMET)
+    }
+    msgbox(SafariZone_North_Text_TakeGoodCareOfMyEquipment)
+    release
+    end
+}
+
+text SafariZone_North_Text_GiveBootsAndHelmet {
+    format("Phew!\nClearing the area out here is brutal.\p
+    Your Pokémon will need protection from this rough terrain and hostile wildlife.\p
+    Here, take these.")
+}
+
+text SafariZone_North_Text_TakeGoodCareOfMyEquipment {
+    format("Heavy-Duty Boots shield your Pokémon from spikes and field hazards,\l
+    while a Rocky Helmet deals payback damage on contact.\p
+    Use them well!")
+}

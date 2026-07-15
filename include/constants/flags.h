@@ -221,7 +221,7 @@
 #define FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1   0xC2 // Leftover from the RS version of Puzzle Room 7, functionally unused
 #define FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2   0xC3 //
 #define FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_3   0xC4 //
-#define FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4   0xC5 //
+#define FLAG_RECEIVED_BOOTS_AND_HELMET       0xC5 // Ttime100 added (was FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4)
 #define FLAG_RECEIVED_EVO_ITEMS_ROUTE_111    0xC6 // Ttime100 added (was FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5)
 #define FLAG_RUSTURF_TUNNEL_OPENED           0xC7
 #define FLAG_RECEIVED_RED_SCARF              0xC8
