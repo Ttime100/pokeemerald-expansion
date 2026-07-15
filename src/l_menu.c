@@ -214,6 +214,17 @@ static void BuildSafariZoneLMenu(void)
     //{
     //    AddLMenuAction(MENU_ACTION_DEXNAV);
     //}
+    if(FlagGet(FLAG_SYS_POKEMON_GET))
+    {
+        if (gSaveBlock2Ptr->repel)
+        {
+            AddLMenuAction(MENU_ACTION_REPEL_ON);
+        }
+        else
+        {
+            AddLMenuAction(MENU_ACTION_REPEL_OFF);
+        }
+    }
     if (FlagGet(FLAG_SYS_B_DASH))
     {
         if (gSaveBlock2Ptr->autoRun)
