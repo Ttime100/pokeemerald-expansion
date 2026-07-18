@@ -80,21 +80,21 @@ MoveTutor_EventScript_MetronomeTaught::
 	release
 	end
 
-FortreeCity_House2_EventScript_SleepTalkTutor::
-	lock
-	faceplayer
-	move_tutor MOVE_SLEEP_TALK, MoveTutor_Text_SleepTalkTeach, MoveTutor_Text_SleepTalkWhichMon, MoveTutor_EventScript_SleepTalkDeclined, MoveTutor_EventScript_SleepTalkTaught, FLAG_MOVE_TUTOR_TAUGHT_SLEEP_TALK
-	end
-
-MoveTutor_EventScript_SleepTalkDeclined::
-	msgbox MoveTutor_Text_SleepTalkDeclined, MSGBOX_DEFAULT
-	release
-	end
-
-MoveTutor_EventScript_SleepTalkTaught::
-	msgbox MoveTutor_Text_SleepTalkTaught, MSGBOX_DEFAULT
-	release
-	end
+@FortreeCity_House2_EventScript_SleepTalkTutor::
+@	lock
+@	faceplayer
+@	move_tutor MOVE_SLEEP_TALK, MoveTutor_Text_SleepTalkTeach, MoveTutor_Text_SleepTalkWhichMon, MoveTutor_EventScript_SleepTalkDeclined, MoveTutor_EventScript_SleepTalkTaught, FLAG_MOVE_TUTOR_TAUGHT_SLEEP_TALK
+@	end
+@
+@MoveTutor_EventScript_SleepTalkDeclined::
+@	msgbox MoveTutor_Text_SleepTalkDeclined, MSGBOX_DEFAULT
+@	release
+@	end
+@
+@MoveTutor_EventScript_SleepTalkTaught::
+@	msgbox MoveTutor_Text_SleepTalkTaught, MSGBOX_DEFAULT
+@	release
+@	end
 
 LilycoveCity_DepartmentStoreRooftop_EventScript_SubstituteTutor::
 	lock
@@ -157,6 +157,22 @@ MoveTutor_EventScript_ExplosionDeclined::
 
 MoveTutor_EventScript_ExplosionTaught::
 	msgbox MoveTutor_Text_ExplosionTaught, MSGBOX_DEFAULT
+	release
+	end
+
+FortreeCity_House2_EventScript_KnockOffTutor::
+	lock
+	faceplayer
+	move_tutor MOVE_KNOCK_OFF, MoveTutor_Text_KnockOffTeach, MoveTutor_Text_KnockOffWhichMon, MoveTutor_EventScript_KnockOffDeclined, MoveTutor_EventScript_KnockOffTaught, FLAG_MOVE_TUTOR_TAUGHT_KNOCK_OFF
+	end
+
+MoveTutor_EventScript_KnockOffDeclined::
+	msgbox MoveTutor_Text_KnockOffDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_EventScript_KnockOffTaught::
+	msgbox MoveTutor_Text_KnockOffTaught, MSGBOX_DEFAULT
 	release
 	end
 

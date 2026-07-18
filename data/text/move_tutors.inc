@@ -235,3 +235,25 @@ MoveTutor_Text_ExplosionTaught:
 	.string "to ignite my own Explosion…\p"
 	.string "Maybe it's because deep down,\n"
 	.string "I would rather stay here…$"
+
+MoveTutor_Text_KnockOffTeach:
+	.string "I've never once gotten my wife's\n"
+    .string "coin trick right.\p"
+    .string "Some days I wish I could just knock\n"
+    .string "those coins right out of her hands!\p"
+    .string "Oh! Maybe I can teach your\n"
+    .string "Pokémon Knock Off instead?$"
+
+MoveTutor_Text_KnockOffDeclined:
+	.string "Oh, fine, fine. I suppose you prefer\n"
+    .string "watching her coin trick…$"
+
+MoveTutor_Text_KnockOffWhichMon:
+	.string "Ah, an appreciative child!\n"
+    .string "Which Pokémon should I teach?$"
+
+MoveTutor_Text_KnockOffTaught:
+	.string "Seeing you succeed where I fail\n"
+    .string "brings me some small satisfaction.\p"
+    .string "At least your Pokémon can now\n"
+    .string "use Knock Off to settle the score.$"
