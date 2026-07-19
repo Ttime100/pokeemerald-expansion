@@ -718,6 +718,10 @@ enum FaintedActions
     F(STARTING_STATUS_WEATHER_SNOW_TEMPORARY,         weatherSnowTemporary,       (u32, 1)) /* Temporary Snow */                           \
     F(STARTING_STATUS_WEATHER_FOG,                    weatherFog,                 (u32, 1)) /* Permanent Fog */                            \
     F(STARTING_STATUS_WEATHER_FOG_TEMPORARY,          weatherFogTemporary,        (u32, 1)) /* Temporary Fog */                            \
+    /* Primal Weather*/                                                                                                                    \
+    F(STARTING_STATUS_SUN_PRIMAL,                     sunPrimal,                  (u32, 1)) /* Sets Primal Sun*/                           \
+    F(STARTING_STATUS_RAIN_PRIMAL,                    rainPrimal,                 (u32, 1)) /* Sets Primal Rain*/                          \
+    F(STARTING_STATUS_STRONG_WINDS,                   strongWinds,                (u32, 1)) /* Sets Strong Winds*/                         \
 
 #define UNPACK_STARTING_STATUS_ENUMS(_enum, ...) _enum,
 

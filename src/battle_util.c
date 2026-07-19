@@ -2883,6 +2883,30 @@ bool32 TryFieldEffects(enum FieldEffectCases caseId)
             gStartingStatuses.weatherFog = gStartingStatuses.weatherFogTemporary = FALSE;
             return effect;
         }
+                else if (gStartingStatuses.sunPrimal)
+        {
+            gBattleWeather = B_WEATHER_SUN_PRIMAL;
+            gBattleScripting.animArg1 = B_ANIM_SUN_CONTINUES; 
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_PRIMAL_SUN;
+            gStartingStatuses.sunPrimal = FALSE;
+            effect = TRUE;
+        }
+        else if (gStartingStatuses.rainPrimal)
+        {
+            gBattleWeather = B_WEATHER_RAIN_PRIMAL;
+            gBattleScripting.animArg1 = B_ANIM_RAIN_CONTINUES;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_PRIMAL_RAIN;
+            gStartingStatuses.rainPrimal = FALSE;
+            effect = TRUE;
+        }
+        else if (gStartingStatuses.strongWinds)
+        {
+            gBattleWeather = B_WEATHER_STRONG_WINDS;
+            gBattleScripting.animArg1 = B_ANIM_STRONG_WINDS; 
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_STRONG_WINDS;
+            gStartingStatuses.strongWinds = FALSE;
+            effect = TRUE;
+        }
         break;
     case FIELD_EFFECT_OVERWORLD_TERRAIN:   // terrain starting from overworld weather
         if (B_THUNDERSTORM_TERRAIN == TRUE
