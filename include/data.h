@@ -122,6 +122,9 @@ struct StartingStatuses
     // u32 seaOfFireOpponent:1;
     // u32 swampPlayer:1;
     // u32 swampOpponent:1;
+    // u32 sunPrimal:1;
+    // u32 rainPrimal:1;
+    // u32 strongWinds:1;
 };
 
 struct Trainer

@@ -823,6 +823,10 @@ enum FaintedActions
     F(STARTING_STATUS_STEALTH_ROCK_OPPONENT,          stealthRockOpponent,        (u32, 1)) /* Stealth Rock Opponent */                    \
     F(STARTING_STATUS_SHARP_STEEL_PLAYER,             sharpSteelPlayer,           (u32, 1)) /* Sharp Steel Player */                       \
     F(STARTING_STATUS_SHARP_STEEL_OPPONENT,           sharpSteelOpponent,         (u32, 1)) /* Sharp Steel Opponent */                     \
+    /* Primal Weather*/                                                                                                                    \
+    F(STARTING_STATUS_SUN_PRIMAL,                     sunPrimal,                  (u32, 1)) /* Sets Primal Sun*/                           \
+    F(STARTING_STATUS_RAIN_PRIMAL,                    rainPrimal,                 (u32, 1)) /* Sets Primal Rain*/                          \
+    F(STARTING_STATUS_STRONG_WINDS,                   strongWinds,                (u32, 1)) /* Sets Strong Winds*/                         \
 
 #define UNPACK_STARTING_STATUS_ENUMS(_enum, ...) _enum,
 
