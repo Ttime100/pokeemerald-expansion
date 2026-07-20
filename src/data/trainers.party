@@ -1217,7 +1217,7 @@ Gender: Female
 Music: Aqua
 Double Battle: No
 AI: Smart Trainer
-Starting Status: Weather Rain
+Starting Status: RAIN_PRIMAL
 
 Sharpedo (M) @ Muscle Band
 Ability: Speed Boost
@@ -1277,7 +1277,7 @@ Gender: Male
 Music: Aqua
 Double Battle: No
 AI: Smart Trainer
-Starting Status: Weather Rain
+Starting Status: RAIN_PRIMAL
 
 Mightyena (M) @ Muscle Band
 Ability: Intimidate
@@ -11402,6 +11402,7 @@ Music: Suspicious
 Double Battle: No
 AI: Basic Trainer / Try To Faint
 
+
 Ninjask
 Level: 52
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
@@ -16742,7 +16743,7 @@ Gender: Male
 Music: Magma
 Double Battle: No
 AI: Smart Trainer
-Starting Status: Weather Sun
+Starting Status: SUN_PRIMAL
 
 Houndoom (M) @ Wise Glasses
 Ability: Flash Fire
@@ -20629,7 +20630,7 @@ Gender: Male
 Music: Magma
 Double Battle: No
 AI: Smart Trainer
-Starting Status: Weather Sun
+Starting Status: Sun_Primal
 
 Steelix @ Leftovers
 Ability: Sturdy
@@ -20874,7 +20875,7 @@ Gender: Male
 Music: Magma
 Double Battle: No
 AI: Smart Trainer
-Starting Status: Weather Sun
+Starting Status: Sun_Primal
 
 Mightyena (M) @ Expert Belt
 Ability: Intimidate
