@@ -907,7 +907,10 @@ enum __attribute__((packed)) Move
 
     // Add any custom moves here, not further down!
 
-    MOVES_COUNT = MOVES_COUNT_GEN9,
+    MOVE_FROST_KICK = 848,
+    MOVES_COUNT_CUSTOM,
+
+    MOVES_COUNT = MOVES_COUNT_CUSTOM,
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

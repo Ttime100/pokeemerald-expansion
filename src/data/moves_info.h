@@ -21995,6 +21995,40 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MalignantChain,
     },
 
+    // Custom Moves
+    [MOVE_FROST_KICK] =
+    {
+        .name = COMPOUND_STRING("Frost Kick"),
+        .description = COMPOUND_STRING(
+            "A high critical-hit ratio\n"
+            "kick. May"
+        #if B_USE_FROSTBITE == TRUE
+            " cause frostbite."),
+        #else
+            " freeze the foe."),
+        #endif
+        .effect = EFFECT_HIT,
+        .power = 85,
+        .type = TYPE_ICE,
+        .accuracy = 90,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .criticalHitStage = B_UPDATED_MOVE_DATA >= GEN_3 ? 1 : 2,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+            .chance = 10,
+        }),
+        .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_REPETITION_NOT_BORING : CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = C_UPDATED_MOVE_CATEGORIES >= GEN_6 ? CONTEST_CATEGORY_COOL : CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_HAIL, COMBO_STARTER_FOCUS_ENERGY},
+        .battleAnimScript = gBattleAnimMove_FrostKick,
+        .validApprenticeMove = TRUE,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

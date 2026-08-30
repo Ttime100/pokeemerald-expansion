@@ -35604,3 +35604,28 @@ gBattleAnimGeneral_DynamaxGrowth:: @ PORTED FROM CFRU
 	createvisualtask AnimTask_DynamaxGrowth, 5, 1, 0
 	waitforvisualfinish
 	end
+
+@@@ CUSTOM MOVES
+gBattleAnimMove_FrostKick::
+    monbg ANIM_TARGET
+    setalpha 12, 8
+    simple_palette_blend selector=F_PAL_BG, delay=1, initial_blend_y=0, target_blend_y=7, color=RGB_BLACK
+    createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 0, 9, RGB(12, 26, 31)
+    playsewithpan SE_M_STRING_SHOT, SOUND_PAN_TARGET
+    createsprite gIceCrystalSpiralInwardSmall, ANIM_ATTACKER, 2, 0
+    createsprite gIceCrystalSpiralInwardSmall, ANIM_ATTACKER, 2, 128
+    createsprite gIceCrystalSpiralInwardLarge, ANIM_ATTACKER, 2, 64
+    createsprite gIceCrystalSpiralInwardLarge, ANIM_ATTACKER, 2, 192
+    createsprite gSpinningHandOrFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 1, 30
+    delay 30
+    playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+    create_basic_hitsplat_sprite ANIM_TARGET, 2, x=0, y=0, relative_to=ANIM_TARGET, animation=1
+    createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 14, 1
+    call IceCrystalEffectShort
+    waitforvisualfinish
+    createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 9, 0, RGB(12, 26, 31)
+    simple_palette_blend selector=F_PAL_BG, delay=0, initial_blend_y=7, target_blend_y=0, color=RGB_BLACK
+    waitforvisualfinish
+    clearmonbg ANIM_TARGET
+    blendoff
+    end
