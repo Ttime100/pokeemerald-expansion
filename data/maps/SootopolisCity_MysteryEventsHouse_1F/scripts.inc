@@ -4,7 +4,8 @@ SootopolisCity_MysteryEventsHouse_1F_MapScripts::
 	.byte 0
 
 SootopolisCity_MysteryEventsHouse_1F_OnTransition:
-	frontier_checkvisittrainer
+	@frontier_checkvisittrainer
+	setvar VAR_RESULT, 1 @ Ttime100 temporarily set to 1 to prevent mystery events
 	call_if_eq VAR_RESULT, 0, SootopolisCity_MysteryEventsHouse_1F_EventScript_SetTrainerVisitingLayout
 	call_if_ne VAR_SOOTOPOLIS_MYSTERY_EVENTS_STATE, 0, SootopolisCity_MysteryEventsHouse_1F_EventScript_MoveOldManToDoor
 	end
