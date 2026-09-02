@@ -1,0 +1,88 @@
+raw`
+RustboroCity_Flat2_3F_MapScripts::
+	.byte 0
+
+RustboroCity_Flat2_3F_EventScript_DevonEmployee::
+	msgbox RustboroCity_Flat2_3F_Text_PresidentCollectsRareStones, MSGBOX_NPC
+	end
+
+RustboroCity_Flat2_3F_EventScript_Woman::
+	msgbox RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones, MSGBOX_NPC
+	end
+
+RustboroCity_Flat2_3F_Text_PresidentCollectsRareStones:
+	.string "Devon's President likes to collect\n"
+	.string "rare stones.$"
+
+RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones:
+	.string "I think the President's son also\n"
+	.string "collects rare stones.$"
+
+`
+script _RustboroCity_Flat2_3F_EventScript_DevonEmployee {
+    lock
+    faceplayer
+    msgbox(RustboroCity_Flat2_3F_Text_PresidentCollectsRareStones)
+	msgbox(RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones)
+    release
+    end
+}
+
+script RustboroCity_Flat2_3F_EventScript_ElementalMonkeyTrader {
+	lock
+	faceplayer
+	goto_if_set(FLAG_MONKEY_TRADE_COMPLETE, RustboroCity_Flat2_3F_EventScript_TradeCompleted)
+	switch(var(VAR_STARTER_MON)) {
+		case 0: ingame_trade_for_anything(INGAME_TRADE_PANSEAR, RustboroCity_Flat2_3F_Text_WantThisMonkey, RustboroCity_Flat2_3F_EventScript_DeclineTrade, RustboroCity_Flat2_3F_Text_TradeThankYou)
+		case 1: ingame_trade_for_anything(INGAME_TRADE_PANPOUR, RustboroCity_Flat2_3F_Text_WantThisMonkey, RustboroCity_Flat2_3F_EventScript_DeclineTrade, RustboroCity_Flat2_3F_Text_TradeThankYou)
+		case 2: ingame_trade_for_anything(INGAME_TRADE_PANSAGE, RustboroCity_Flat2_3F_Text_WantThisMonkey, RustboroCity_Flat2_3F_EventScript_DeclineTrade, RustboroCity_Flat2_3F_Text_TradeThankYou)
+	}
+	setflag(FLAG_MONKEY_TRADE_COMPLETE)
+	release
+	end
+}
+
+script RustboroCity_Flat2_3F_EventScript_DeclineTrade {
+	lock
+	faceplayer
+	msgbox(RustboroCity_Flat2_3F_Text_IfYouChangeYourMind)
+	release
+	end
+}
+
+script RustboroCity_Flat2_3F_EventScript_TradeCompleted {
+	lock
+	faceplayer
+	switch(var(VAR_STARTER_MON)) {
+		case 0: bufferspeciesname(STR_VAR_1, SPECIES_PANSEAR)
+		case 1: bufferspeciesname(STR_VAR_1, SPECIES_PANPOUR)
+		case 2: bufferspeciesname(STR_VAR_1, SPECIES_PANSAGE)
+	}
+	msgbox(RustboroCity_Flat2_3F_Text_GreatCompanion)
+	release
+	end
+}
+
+text RustboroCity_Flat2_3F_Text_WantThisMonkey {
+	format("Hi there!\nAre you a new trainer?\p
+	I love seeing new trainers\nget started on their adventure.\p
+	Have you tried trading\nwith anyone yet?\p
+	Trading is a great way to make friends and get new Pokémon!\p
+	Oh! I have a {STR_VAR_2} that\nI could trade you.\p
+	Would you like to trade with me?")
+}
+
+text RustboroCity_Flat2_3F_Text_IfYouChangeYourMind {
+	format("That's okay! If you change your mind,\n"
+	"come back and see me!")
+}
+
+text RustboroCity_Flat2_3F_Text_TradeThankYou {
+	format("Thank you for the trade!\p
+	Try trading with other trainers too!\n
+	It's a great way to make friends and get new Pokémon!")
+}
+
+text RustboroCity_Flat2_3F_Text_GreatCompanion {
+	format("I hope {STR_VAR_1} is a great companion for you on your journey!")
+}

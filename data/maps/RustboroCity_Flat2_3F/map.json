@@ -3,7 +3,6 @@
   "name": "RustboroCity_Flat2_3F",
   "layout": "LAYOUT_RUSTBORO_CITY_FLAT2_3F",
   "music": "MUS_RUSTBORO",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_RUSTBORO_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -25,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_Flat2_3F_EventScript_DevonEmployee",
+      "script": "_RustboroCity_Flat2_3F_EventScript_DevonEmployee",
       "flag": "0"
     },
     {
@@ -38,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_Flat2_3F_EventScript_Woman",
+      "script": "RustboroCity_Flat2_3F_EventScript_ElementalMonkeyTrader",
       "flag": "0"
     }
   ],
@@ -52,5 +51,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

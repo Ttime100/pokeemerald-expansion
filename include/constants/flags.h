@@ -219,7 +219,7 @@
 #define FLAG_RECEIVED_SUN_STONE_MOSSDEEP     0xC0
 #define FLAG_WALLY_SPEECH                    0xC1
 #define FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1   0xC2 // Leftover from the RS version of Puzzle Room 7, functionally unused
-#define FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_2   0xC3 //
+#define FLAG_MONKEY_TRADE_COMPLETE           0xC3 // Ttime100 added
 #define FLAG_SPOKE_TO_STEVEN_ROUTE_120       0xC4 // Ttime100 added from queggs
 #define FLAG_RECEIVED_BOOTS_AND_HELMET       0xC5 // Ttime100 added (was FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4)
 #define FLAG_RECEIVED_EVO_ITEMS_ROUTE_111    0xC6 // Ttime100 added (was FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_5)
