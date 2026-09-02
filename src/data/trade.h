@@ -1052,7 +1052,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("Meld"),
         .species = SPECIES_BELDUM,
-        .ivs = {31, 31, 20, 15, 10, 31},
+        .ivs = {31, 31, 20, 15, 10, 31}, // HP, ATK, DEF, SPEED, SPATK, SPDEF
         .abilityNum = 2,
         .otId = 46285,
         .conditions = {5, 5, 5, 5, 30},
@@ -1068,7 +1068,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("Schatten"),
         .species = SPECIES_DEINO,
-        .ivs = {31, 10, 15, 31, 31, 15},
+        .ivs = {31, 10, 15, 31, 31, 15}, // HP, ATK, DEF, SPEED, SPATK, SPDEF
         .abilityNum = 0,
         .otId = 51423,
         .conditions = {5, 30, 5, 5, 5},
@@ -1079,6 +1079,54 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_ABSOL
+    },
+    [INGAME_TRADE_PANSAGE] =
+    {
+        .nickname = _("Sage"),
+        .species = SPECIES_PANSAGE,
+        .ivs = {20, 20, 20, 31, 20, 20}, // HP, ATK, DEF, SPEED, SPATK, SPDEF
+        .abilityNum = 0,
+        .otId = 51985,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x0000CB15, // Shiny Naive Nature
+        .heldItem = ITEM_ORAN_BERRY,
+        .mailNum = 0,
+        .otName = _("Jane"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_NONE
+    },
+    [INGAME_TRADE_PANSEAR] =
+    {
+        .nickname = _("Sear"),
+        .species = SPECIES_PANSEAR,
+        .ivs = {20, 20, 20, 31, 20, 20}, // HP, ATK, DEF, SPEED, SPATK, SPDEF
+        .abilityNum = 0,
+        .otId = 51985,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x0000CB15, // Shiny Naive Nature
+        .heldItem = ITEM_ORAN_BERRY,
+        .mailNum = 0,
+        .otName = _("Jane"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_NONE
+    },
+    [INGAME_TRADE_PANPOUR] =
+    {
+        .nickname = _("Pour"),
+        .species = SPECIES_PANPOUR,
+        .ivs = {20, 20, 20, 31, 20, 20}, // HP, ATK, DEF, SPEED, SPATK, SPDEF
+        .abilityNum = 0,
+        .otId = 51985,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x0000CB15, // Shiny Naive Nature
+        .heldItem = ITEM_ORAN_BERRY,
+        .mailNum = 0,
+        .otName = _("Jane"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_NONE
     },
     [INGAME_TRADE_MR_MIME] = 
     {
