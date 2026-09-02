@@ -2709,6 +2709,21 @@
 	msgbox \tradeCompleteMsg, MSGBOX_DEFAULT
 	.endm
 
+	.macro ingame_trade_for_anything tradeId:req wantTradeMsg:req, declineTradeJump:req, tradeCompleteMsg:req
+	setvar VAR_0x8005, \tradeId
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox \wantTradeMsg, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, \declineTradeJump
+	chooseboxmon SELECT_PC_MON_NORMAL
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, \declineTradeJump
+	specialvar VAR_0x800B, GetTradeSpecies
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox \tradeCompleteMsg, MSGBOX_DEFAULT
+	.endm
+
 	.macro move_tutor moveId:req, wantTeachingMsg:req, monSelectMsg:req, declinedJmp:req, taughtJmp:req, flagId=0
 	.if \flagId
 		goto_if_set \flagId, \taughtJmp
