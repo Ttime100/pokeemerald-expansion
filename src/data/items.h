@@ -909,6 +909,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "Defrosts a frozen\n"
             "Pokémon."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
