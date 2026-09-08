@@ -83,11 +83,11 @@ MauvilleCity_GameCorner_EventScript_Buy5000Coins::
 	addcoins 5000
 	removemoney COINS_PRICE_5000
 	updatemoneybox
-	updatecoinsbox 1, 6
+	updatecoinsbox
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins, MSGBOX_DEFAULT
 	hidemoneybox
-	hidecoinsbox 0, 5
+	hidecoinsbox
 	release
 	end
 
@@ -839,14 +839,14 @@ script _MauvilleCity_GameCorner_EventScript_PrizeCornerTMs {
   dynmultistack(0, 4, FALSE, 5, FALSE, ITEM_TM_DOUBLE_TEAM, DYN_MULTICHOICE_CB_SHOW_ITEM)
   if (var(VAR_RESULT) == MULTI_B_PRESSED) {
     msgbox(MauvilleCity_GameCorner_Text_OhIsThatSo)
-    hidecoinsbox(0, 0)
+    hidecoinsbox
     release
     end
   }
   copyvar(PRIZE_CHOSEN, VAR_RESULT)
   if (var(PRIZE_CHOSEN) == 0) {
  	msgbox(format("Sorry, that item is no longer available."))
-	hidecoinsbox(0, 0)
+	hidecoinsbox
 	release
 	end
 	}
@@ -854,7 +854,7 @@ script _MauvilleCity_GameCorner_EventScript_PrizeCornerTMs {
   msgbox(format("So your choice is {STR_VAR_1}?"), MSGBOX_YESNO)
   if (!var(VAR_RESULT)) {
     msgbox(MauvilleCity_GameCorner_Text_OhIsThatSo)
-    hidecoinsbox(0, 0)
+    hidecoinsbox
     release
     end
   }
@@ -868,7 +868,7 @@ script _MauvilleCity_GameCorner_EventScript_PrizeCornerTMs {
   	}
   if (var(COINS_OWNED) < VAR_TEMP_3) {
     msgbox(MauvilleCity_GameCorner_Text_NotEnoughCoins)
-    hidecoinsbox(0, 0)
+    hidecoinsbox
     release
     end
   }
@@ -876,10 +876,10 @@ script _MauvilleCity_GameCorner_EventScript_PrizeCornerTMs {
   goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_BagIsFull)
   removecoins(COINS_REQUIRED)
   additem(PRIZE_CHOSEN)
-  updatecoinsbox(1, 1)
+  updatecoinsbox
   playse(SE_SHOP)
   msgbox(MauvilleCity_GameCorner_Text_HereYouGo)
-  hidecoinsbox(0, 0)
+  hidecoinsbox
   release
   end
 }
