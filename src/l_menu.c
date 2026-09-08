@@ -143,7 +143,7 @@ static void BuildLMenuActions(void)
     {
         BuildBattlePikeLMenu();
     }
-    else if (InBattlePyramid_())
+    else if (InBattlePyramid())
     {
         BuildBattlePyramidLMenu();
     }
