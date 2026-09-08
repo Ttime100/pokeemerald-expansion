@@ -184,7 +184,7 @@ DOUBLE_BATTLE_TEST("Forecast transforms all Castforms present in weather")
 
 SINGLE_BATTLE_TEST("Forecast transforms Castform in weather from an ability")
 {
-    u32 species;
+    enum Species species;
     enum Ability ability;
     PARAMETRIZE { species = SPECIES_KYOGRE; ability = ABILITY_DRIZZLE; }
     PARAMETRIZE { species = SPECIES_GROUDON; ability = ABILITY_DROUGHT; }
@@ -222,7 +222,8 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform in weather from an ability")
 
 SINGLE_BATTLE_TEST("Forecast transforms Castform in primal weather")
 {
-    u32 species, item;
+    enum Species species;
+    enum Item item;
     enum Ability ability;
     PARAMETRIZE { species = SPECIES_KYOGRE; ability = ABILITY_PRIMORDIAL_SEA; item = ITEM_BLUE_ORB; }
     PARAMETRIZE { species = SPECIES_GROUDON; ability = ABILITY_DESOLATE_LAND; item = ITEM_RED_ORB; }
@@ -302,7 +303,7 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform back to normal when Sandstorm i
 
 SINGLE_BATTLE_TEST("Forecast transforms Castform back to normal under Cloud Nine/Air Lock")
 {
-    u32 species = 0;
+    enum Species species = SPECIES_NONE;
     enum Ability ability = ABILITY_NONE;
     PARAMETRIZE { species = SPECIES_PSYDUCK;  ability = ABILITY_CLOUD_NINE; }
     PARAMETRIZE { species = SPECIES_RAYQUAZA; ability = ABILITY_AIR_LOCK; }
@@ -437,7 +438,7 @@ SINGLE_BATTLE_TEST("Forecast transforms Castform back when it uses a move that f
 
 SINGLE_BATTLE_TEST("Forecast transforms Castform when Cloud Nine ability user leaves the field")
 {
-    u32 species = 0;
+    enum Species species = SPECIES_NONE;
     enum Ability ability = ABILITY_NONE;
     PARAMETRIZE { species = SPECIES_PSYDUCK;  ability = ABILITY_CLOUD_NINE; }
     PARAMETRIZE { species = SPECIES_RAYQUAZA; ability = ABILITY_AIR_LOCK; }
