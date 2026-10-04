@@ -3734,7 +3734,7 @@
               {
                 "min_level": 28,
                 "max_level": 29,
-                "species": "SPECIES_RUFFLET"
+                "species": "SPECIES_MONFERNO"
               },
               {
                 "min_level": 28,
@@ -4556,14 +4556,14 @@
                 "species": "SPECIES_KARRABLAST"
               },
               {
-                "min_level": 33,
+                "min_level": 32,
                 "max_level": 33,
-                "species": "SPECIES_MILTANK"
+                "species": "SPECIES_GROTLE"
               },
               {
-                "min_level": 33,
+                "min_level": 32,
                 "max_level": 33,
-                "species": "SPECIES_CHANSEY"
+                "species": "SPECIES_SERVINE"
               }
             ]
           },
@@ -39567,7 +39567,7 @@
               {
                 "min_level": 27,
                 "max_level": 28,
-                "species": "SPECIES_HEATMOR"
+                "species": "SPECIES_PIGNITE"
               },
               {
                 "min_level": 27,
