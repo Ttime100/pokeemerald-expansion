@@ -340,7 +340,8 @@ enum __attribute__((packed)) Ability
     ABILITY_FIRE_MANE = 316,
     ABILITY_317 = 317,
     ABILITY_SPICY_SPRAY = 318,
-    ABILITY_BLAZING_SOUL = 319, // Ttime100 added custom ability
+    ABILITY_AURA_GUARD = 319,
+    ABILITY_BLAZING_SOUL = 320, // Ttime100 added custom ability
     ABILITIES_COUNT_GEN9,
     ABILITIES_COUNT = ABILITIES_COUNT_GEN9,
 };
