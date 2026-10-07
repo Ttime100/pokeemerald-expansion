@@ -5032,7 +5032,7 @@
               {
                 "min_level": 29,
                 "max_level": 29,
-                "species": "SPECIES_SHUPPET"
+                "species": "SPECIES_VULPIX"
               },
               {
                 "min_level": 29,
@@ -5045,14 +5045,14 @@
                 "species": "SPECIES_VULPIX"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_VULPIX"
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_MEDITITE"
               },
               {
-                "min_level": 25,
-                "max_level": 25,
-                "species": "SPECIES_DRIFLOON"
+                "min_level": 27,
+                "max_level": 29,
+                "species": "SPECIES_MEDITITE"
               },
               {
                 "min_level": 27,
