@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from collections import defaultdict
 
@@ -8,6 +9,7 @@ from collections import defaultdict
 WILD_JSON_PATH = 'src/data/wild_encounters.json'
 TRAINER_PARTY_PATH = 'src/data/trainers.party'
 POKEDEX_LIST_PATH = '/home/tyler/decomps/pokeemerald-expansion/src/data/custom_pokedex_list.txt'
+MAPS_DIR_PATH = "/home/tyler/decomps/pokeemerald-expansion/data/maps"
 OUTPUT_HTML = 'Master_Strategy_Guide.html'
 
 CURRENT_LEAGUE_IDS = [
@@ -105,7 +107,12 @@ def format_map_name(label):
         label = label[1:]
     label = re.sub(r'_(Land|Water|Fishing|RockSmash)Mons$', '', label)
     label = label.replace('_', ' ')
+    label = re.sub(r'\bSS\b', 'S.S. ', label)
+    label = re.sub(r'\bSS([A-Z])', r'S.S. \1', label)
+    label = re.sub(r'([a-z])([A-Z])', r'\1 \2', label)
     label = re.sub(r'([a-zA-Z])(\d)', r'\1 \2', label)
+    label = re.sub(r'\bB\s+(\d+\s*F)\b', r'B\1', label, flags=re.IGNORECASE)
+    label = re.sub(r'\bMt\b', 'Mt.', label)
     return label.strip()
 
 
@@ -185,6 +192,87 @@ def parse_trainers(path):
         trainers[t_id] = t_data
     return trainers
 
+def consolidate_rival_trainers(trainers_list):
+
+    consolidated = []
+    seen_ids = set()
+
+    for t in trainers_list:
+        tid = t['id']
+        if tid in seen_ids:
+            continue
+        if 'TRAINER_MAY_' in tid or 'TRAINER_BRENDAN_' in tid:
+            counterpart_id = tid.replace('TRAINER_MAY_', 'TRAINER_BRENDAN_') if 'TRAINER_MAY_' in tid else tid.replace('TRAINER_BRENDAN_', 'TRAINER_MAY_')
+            counterpart = next((other for other in trainers_list if other['id'] == counterpart_id), None)
+            if counterpart:
+                seen_ids.add(tid)
+                seen_ids.add(counterpart_id)
+                rival_card = dict(t)
+                rival_card['class'] = 'Rival'
+                rival_card['name'] = ''
+                if 'TREECKO' in tid:
+                    rival_card['class'] = 'Rival (Treecko Starter)'
+                elif 'TORCHIC' in tid:
+                    rival_card['class'] = 'Rival (Torchic Starter)'
+                elif 'MUDKIP' in tid:
+                    rival_card['class'] = 'Rival (Mudkip Starter)'
+                consolidated.append(rival_card)
+                continue
+        seen_ids.add(tid)
+        consolidated.append(t)
+
+    return consolidated
+
+def build_trainer_location_map(maps_directory="data/maps"):
+    trainer_locations = {}
+    if not os.path.exists(maps_directory):
+        print(f"Warning: Maps directory not found at {maps_directory}")
+        return trainer_locations
+    # 1. Loop through every folder inside data/maps
+    for map_name in os.listdir(maps_directory):
+        map_path = os.path.join(maps_directory, map_name)
+        
+        if os.path.isdir(map_path):
+            # 2. Check for Poryscript or standard script files
+            script_path_pory = os.path.join(map_path, "scripts.pory")
+            script_path_inc = os.path.join(map_path, "scripts.inc")
+            
+            target_script = None
+            if os.path.exists(script_path_pory):
+                target_script = script_path_pory
+            elif os.path.exists(script_path_inc):
+                target_script = script_path_inc
+                
+            if target_script:
+                with open(target_script, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    
+                    # 3. Search for any word starting with TRAINER_ followed by uppercase letters/numbers/underscores
+                    # This captures things like TRAINER_GRUNT_PETALBURG_WOODS
+                    found_trainers = re.findall(r'(TRAINER_[A-Z0-9_]+)', content)
+                    
+                    # 4. Map each found trainer to this map folder
+                    for trainer_id in found_trainers:
+                        trainer_locations[trainer_id] = map_name
+                        
+    return trainer_locations
+
+def group_trainers_by_location(trainers_data, maps_directory="data/maps"):
+    trainer_locations = build_trainer_location_map(MAPS_DIR_PATH)
+    trainers_by_map = {}
+    for trainer in trainers_data:
+        trainer_id = trainer.get("id")
+        if trainer_id in trainer_locations:
+            map_name = trainer_locations[trainer_id]
+            if map_name not in trainers_by_map:
+                trainers_by_map[map_name] = []     
+            trainers_by_map[map_name].append(trainer)
+        else:
+            # The trainer was in trainers.party but not found in any map script.
+            # These are your rematches, Battle Frontier teams, or unused trainers.
+            pass        
+    return trainers_by_map
+
 def generate_master_guide():
     try:
         with open(WILD_JSON_PATH, 'r', encoding='utf-8') as f:
@@ -193,6 +281,7 @@ def generate_master_guide():
         wild_data = {'wild_encounter_groups': []}
 
     trainers_dict = parse_trainers(TRAINER_PARTY_PATH)
+    grouped_trainers = group_trainers_by_location(trainers_dict.values(), MAPS_DIR_PATH)
     pokedex_order, pokedex_species_list = load_pokedex_order(POKEDEX_LIST_PATH)
 
     pokemon_encounters = defaultdict(list)
@@ -589,9 +678,15 @@ def generate_master_guide():
         return f'<div class="card"><h3>{t.get("class","Trainer")} {t.get("name","Unknown")}</h3>{party_html}</div>'
 
     html += '<div id="trainers-view" class="tab-content">'
-    for tid, t in trainers_dict.items():
-        if tid not in CURRENT_LEAGUE_IDS + GYM_LEADER_IDS + FORMER_LEAGUE_IDS:
-            html += create_detailed_card(t, use_gen5=False)
+    for map_folder, map_trainer_list in grouped_trainers.items():
+        regular_trainers = [t for t in map_trainer_list if t['id'] not in CURRENT_LEAGUE_IDS + GYM_LEADER_IDS + FORMER_LEAGUE_IDS]
+        regular_trainers = consolidate_rival_trainers(regular_trainers)
+        if regular_trainers:
+            display_map = format_map_name(map_folder)
+            html += f'<div class="section-title"> {display_map}</div>'
+            for t in regular_trainers:
+                html += create_detailed_card(t, use_gen5=False)
+                
     html += '</div>'
 
     html += '<div id="bosses-view" class="tab-content">'
