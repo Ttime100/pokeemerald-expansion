@@ -43,6 +43,116 @@ GOOD_ROD_RATES = [60, 20, 20]
 SUPER_ROD_RATES = [40, 40, 15, 4, 1]
 ROCK_RATES = [60, 30, 5, 4, 1]
 
+STORY_ORDER = [
+    "LittlerootTown",
+    "Route101",
+    "OldaleTown",
+    "Route102",
+    "Route104South",
+    "PetalburgWoods",
+    "Route104North",
+    "RustboroCity",
+    "Route116",
+    "RusturfTunnel",
+    "DewfordTown",
+    "GraniteCave",
+    "Route109",
+    "SlateportCity",
+    "Route110",
+    "Route110_TrickHousePuzzle1",
+    "Route110_TrickHousePuzzle2",
+    "Route110_TrickHousePuzzle3",
+    "Route110_TrickHousePuzzle4",
+    "Route110_TrickHousePuzzle5",
+    "Route110_TrickHousePuzzle6",
+    "Route110_TrickHousePuzzle7",
+    "Route110_TrickHousePuzzle8",
+    "Route103",
+    "MauvilleCity",
+    "MauvilleCity_Gym",
+    "Route117",
+    "Route111",
+    "Route112",
+    "FieryPath",
+    "Route113",
+    "FallarborTown",
+    "Route114",
+    "MeteorFalls",
+    "Route115",
+    "MtChimney",
+    "JaggedPass",
+    "LavaridgeTown",
+    "PetalburgCity",
+    "Route118",
+    "Route119",
+    "Route119_WeatherInstitute",
+    "FortreeCity",
+    "Route120",
+    "Route121",
+    "Route122",
+    "MtPyre_1F",
+    "MtPyre_2F",
+    "MtPyre_3F",
+    "MtPyre_4F",
+    "MtPyre_5F",
+    "MtPyre_6F",
+    "MtPyre_Exterior",
+    "MtPyre_Summit",
+    "Route123",
+    "LilycoveCity",
+    "MagmaHideout",
+    "AquaHideout",
+    "Route124",
+    "MossdeepCity_Gym",
+    "MossdeepCity_SpaceCenter",
+    "Route125",
+    "Route126",
+    "Route127",
+    "Route128",
+    "SeafloorCavern",
+    "SootopolisCity",
+    "Route129",
+    "Route130",
+    "Route131",
+    "PacifidlogTown",
+    "Route132",
+    "Route133",
+    "Route134",
+    "EverGrandeCity",
+    "VictoryRoad_1F",
+    "VictoryRoad_B1F",
+    "VictoryRoad_B2F",
+    "Route105",
+    "Route106",
+    "Route107",
+    "Route108",
+    "AbandonedShip",
+]
+
+NON_TRAINER_FLAGS = {
+    'TRAINER_BATTLE_TOWER_ON',
+    'TRAINER_HILL_IS_ACTIVE',
+    'TRAINER_TOWER',
+    'TRAINER_TOWER_LOBBY',
+}
+
+LOCATION_OVERRIDES = {
+    'TRAINER_BILLY': 'Route104South',
+    'TRAINER_DARIAN': 'Route104South',
+    'TRAINER_CINDY_1': 'Route104South',
+
+    'TRAINER_WINSTON_1': 'Route104North',
+    'TRAINER_HALEY_1': 'Route104North',
+    'TRAINER_GINA_AND_MIA_1': 'Route104North',
+    'TRAINER_IVAN': 'Route104North',
+    'TRAINER_BRENDAN_RUSTBORO_MUDKIP': 'Route104North',
+    'TRAINER_BRENDAN_RUSTBORO_TREECKO': 'Route104North',
+    'TRAINER_BRENDAN_RUSTBORO_TORCHIC': 'Route104North',
+    'TRAINER_MAY_RUSTBORO_MUDKIP': 'Route104North',
+    'TRAINER_MAY_RUSTBORO_TREECKO': 'Route104North',
+    'TRAINER_MAY_RUSTBORO_TORCHIC': 'Route104North',
+}
+
 # ==========================================
 
 def is_ignored_entry(entry: dict) -> bool:
@@ -108,6 +218,8 @@ def format_map_name(label):
     label = re.sub(r'_(Land|Water|Fishing|RockSmash)Mons$', '', label)
     label = label.replace('_', ' ')
     label = re.sub(r'\bSS\b', 'S.S. ', label)
+    label = label.replace('Route104South', 'Route 104 (South)')
+    label = label.replace('Route104North', 'Route 104 (North)')
     label = re.sub(r'\bSS([A-Z])', r'S.S. \1', label)
     label = re.sub(r'([a-z])([A-Z])', r'\1 \2', label)
     label = re.sub(r'([a-zA-Z])(\d)', r'\1 \2', label)
@@ -119,8 +231,7 @@ def format_map_name(label):
 def get_sprite_url(species_name, is_shiny=False, use_icon=True):
     name_clean = species_name.lower().replace('_', '-').replace(' ', '-').replace("'", '').replace('.', '')
     if use_icon:
-        prefix = 'shiny' if is_shiny else 'sun-moon'
-        return f'https://img.pokemondb.net/sprites/{prefix}/icon/{name_clean}.png'
+        return f'https://img.pokemondb.net/sprites/sun-moon/icon/{name_clean}.png'
     else:
         folder = 'shiny' if is_shiny else 'normal'
         return f'https://img.pokemondb.net/sprites/black-white/{folder}/{name_clean}.png'
@@ -230,6 +341,9 @@ def build_trainer_location_map(maps_directory="data/maps"):
         return trainer_locations
     # 1. Loop through every folder inside data/maps
     for map_name in os.listdir(maps_directory):
+        if "_Frlg" in map_name or "FIRERED" in map_name.upper() or "LEAFGREEN" in map_name.upper():
+            continue
+        normalized_map = normalize_map_name(map_name)
         map_path = os.path.join(maps_directory, map_name)
         
         if os.path.isdir(map_path):
@@ -253,7 +367,12 @@ def build_trainer_location_map(maps_directory="data/maps"):
                     
                     # 4. Map each found trainer to this map folder
                     for trainer_id in found_trainers:
-                        trainer_locations[trainer_id] = map_name
+                        if trainer_id in NON_TRAINER_FLAGS:
+                            continue
+                        if 'LOCATION_OVERRIDES' in globals() and trainer_id in LOCATION_OVERRIDES:
+                            trainer_locations[trainer_id] = LOCATION_OVERRIDES[trainer_id]
+                        else:
+                            trainer_locations[trainer_id] = normalized_map
                         
     return trainer_locations
 
@@ -262,6 +381,8 @@ def group_trainers_by_location(trainers_data, maps_directory="data/maps"):
     trainers_by_map = {}
     for trainer in trainers_data:
         trainer_id = trainer.get("id")
+        if trainer_id in LOCATION_OVERRIDES:
+            map_name = LOCATION_OVERRIDES[trainer_id]
         if trainer_id in trainer_locations:
             map_name = trainer_locations[trainer_id]
             if map_name not in trainers_by_map:
@@ -269,9 +390,48 @@ def group_trainers_by_location(trainers_data, maps_directory="data/maps"):
             trainers_by_map[map_name].append(trainer)
         else:
             # The trainer was in trainers.party but not found in any map script.
-            # These are your rematches, Battle Frontier teams, or unused trainers.
+            # These are rematches, Battle Frontier teams, or unused trainers.
             pass        
     return trainers_by_map
+
+def normalize_map_name(map_name: str) -> str:
+    if map_name.startswith('SSTidal'):
+        return 'SSTidal'
+    if map_name.startswith('LavaridgeTown_Gym'):
+        return 'LavaridgeTown_Gym'
+    if map_name.startswith('TrainerHill'):
+        return 'TrainerHill'
+    return map_name
+
+def check_duplicate_trainer_locations(maps_directory="data/maps"):
+    trainer_to_maps = defaultdict(set)
+    if not os.path.exists(maps_directory):
+        return
+    for map_name in os.listdir(maps_directory):
+        if "_Frlg" in map_name or "FIRERED" in map_name.upper() or "LEAFGREEN" in map_name.upper():
+            continue
+        normalized_map = normalize_map_name(map_name)
+        map_path = os.path.join(maps_directory, map_name)
+        if os.path.isdir(map_path):
+            for script_file in ("scripts.pory", "scripts.inc"):
+                script_path = os.path.join(map_path, script_file)
+                if os.path.exists(script_path):
+                    with open(script_path, "r", encoding="utf-8") as f:
+                        content = clean_comments(f.read())
+                        found_trainers = re.findall(r'(TRAINER_[A-Z0-9_]+)', content)
+                        for trainer_id in found_trainers:
+                            if trainer_id in NON_TRAINER_FLAGS:
+                                continue
+                            trainer_to_maps[trainer_id].add(normalized_map)
+    duplicates = {t_id: maps for t_id, maps in trainer_to_maps.items() if len(maps) > 1}
+    print("\n================ TRAINER LOCATION DUPLICATES ================")
+    if not duplicates:
+        print("No duplicate trainer IDs found across map files!")
+    else:
+        for t_id, maps in sorted(duplicates.items()):
+            maps_str = ", ".join(sorted(maps))
+            print(f"⚠️  {t_id} found in: {maps_str}")
+    print("============================================================\n")
 
 def generate_master_guide():
     try:
@@ -286,6 +446,8 @@ def generate_master_guide():
 
     pokemon_encounters = defaultdict(list)
     route_cards_data = []
+
+    check_duplicate_trainer_locations(MAPS_DIR_PATH)
 
     for group in wild_data.get('wild_encounter_groups', []):
         for enc in group.get('encounters', []):
@@ -678,7 +840,17 @@ def generate_master_guide():
         return f'<div class="card"><h3>{t.get("class","Trainer")} {t.get("name","Unknown")}</h3>{party_html}</div>'
 
     html += '<div id="trainers-view" class="tab-content">'
-    for map_folder, map_trainer_list in grouped_trainers.items():
+    def get_story_rank(map_folder):
+        if map_folder in STORY_ORDER:
+            return STORY_ORDER.index(map_folder)
+        for idx, story_map in enumerate(STORY_ORDER):
+            if map_folder.startswith(story_map):
+                return idx
+        return 9999
+    map_keys = list(grouped_trainers.keys())
+    sorted_map_keys = sorted(map_keys, key=get_story_rank)
+    for map_folder in sorted_map_keys:
+        map_trainer_list = grouped_trainers[map_folder]
         regular_trainers = [t for t in map_trainer_list if t['id'] not in CURRENT_LEAGUE_IDS + GYM_LEADER_IDS + FORMER_LEAGUE_IDS]
         regular_trainers = consolidate_rival_trainers(regular_trainers)
         if regular_trainers:
