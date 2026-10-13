@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import base64
 from collections import defaultdict
 
 # ==========================================
@@ -8,8 +9,8 @@ from collections import defaultdict
 # ==========================================
 WILD_JSON_PATH = 'src/data/wild_encounters.json'
 TRAINER_PARTY_PATH = 'src/data/trainers.party'
-POKEDEX_LIST_PATH = '/home/tyler/decomps/pokeemerald-expansion/src/data/custom_pokedex_list.txt'
-MAPS_DIR_PATH = "/home/tyler/decomps/pokeemerald-expansion/data/maps"
+POKEDEX_LIST_PATH = 'src/data/custom_pokedex_list.txt'
+MAPS_DIR_PATH = "data/maps"
 OUTPUT_HTML = 'Master_Strategy_Guide.html'
 
 CURRENT_LEAGUE_IDS = [
@@ -158,6 +159,9 @@ LOCATION_OVERRIDES = {
 def is_ignored_entry(entry: dict) -> bool:
     base_label = entry.get("base_label", "")
     map_name = entry.get("map", "")
+
+    if base_label == "gRoute104" or map_name == "MAP_ROUTE104":
+        return True
     
     ignored_keywords = (
         "FireRed", "LeafGreen", "FIRERED", "LEAFGREEN",
@@ -168,12 +172,9 @@ def is_ignored_entry(entry: dict) -> bool:
     return any(kw in base_label for kw in ignored_keywords) or any(kw in map_name for kw in ignored_keywords)
 
 def get_base_species_name(species_name: str) -> str:
-    # Fix punctuation mismatches first
-    if species_name == "Mr Mime": return "Mr. Mime"
-    if species_name == "Mime Jr": return "Mime Jr."
-    if species_name == "Farfetchd": return "Farfetch'D"
+    if not species_name:
+        return ""
     name_clean = species_name.strip()
-    # List of base species that have form suffixes in decomp data
     multi_form_bases = [
         'Burmy', 'Wormadam', 'Shellos', 'Gastrodon', 'Basculin', 
         'Deoxys', 'Giratina', 'Shaymin', 'Rotom', 'Castform', 
@@ -184,11 +185,29 @@ def get_base_species_name(species_name: str) -> str:
             return base
     return name_clean
 
+def format_display_name(name: str) -> str:
+    if not name:
+        return ""
+    clean = str(name).replace("SPECIES_", "").replace("_", " ").strip()
+    lower_clean = clean.lower()
+    if "farfetch" in lower_clean:
+        return clean.title().replace("Farfetchd", "Farfetch'd").replace("Farfetch'D", "Farfetch'd")
+    if lower_clean == "mr mime":
+        return "Mr. Mime"
+    if lower_clean in ["mime jr", "mime jr."]:
+        return "Mime Jr."
+    if lower_clean in ["nidoran m", "nidoran_m", "nidoran♂"]:
+        return "Nidoran♂"
+    if lower_clean in ["nidoran f", "nidoran_f", "nidoran♀"]:
+        return "Nidoran♀"
+    return clean.title()
+
 def clean_comments(text):
     text = re.sub(r'/\*[\s\S]*?\*/', '', text)
     text = re.sub(r'//.*', '', text)
     return text
-
+    
+    return replacements.get(clean, clean)
 
 def load_pokedex_order(path):
     pokedex_order = {}
@@ -199,7 +218,7 @@ def load_pokedex_order(path):
             for line in f:
                 line = line.strip()
                 if line:
-                    clean_name = line.replace('SPECIES_', '').replace('_', ' ').title().strip()
+                    clean_name = format_display_name(line)
                     lower_name = clean_name.lower()
                     if lower_name not in pokedex_order:
                         pokedex_order[lower_name] = index
@@ -227,14 +246,43 @@ def format_map_name(label):
     label = re.sub(r'\bMt\b', 'Mt.', label)
     return label.strip()
 
+def normalize_name(name):
+    if not name:
+        return ""
+    return (str(name).lower()
+            .replace('♀', '_f')
+            .replace('♂', '_m')
+            .replace('-', '_')
+            .replace(' ', '_')
+            .replace('(', '')
+            .replace(')', '')
+            .replace("'", '')
+            .replace('.', '')
+            .replace(':', ''))
 
 def get_sprite_url(species_name, is_shiny=False, use_icon=True):
-    name_clean = species_name.lower().replace('_', '-').replace(' ', '-').replace("'", '').replace('.', '')
+    norm_name = normalize_name(species_name)
+    variant = 'shiny' if is_shiny else 'normal'
+    candidates = []
+    
     if use_icon:
-        return f'https://img.pokemondb.net/sprites/sun-moon/icon/{name_clean}.png'
+        candidates.append(f"{norm_name}_icon.png")
     else:
-        folder = 'shiny' if is_shiny else 'normal'
-        return f'https://img.pokemondb.net/sprites/black-white/{folder}/{name_clean}.png'
+        candidates.append(f"{norm_name}_{variant}.png")
+    if '_' in norm_name:
+        base_name = norm_name.split('_')[0]
+        if use_icon:
+            candidates.append(f"{base_name}_icon.png")
+        else:
+            candidates.append(f"{base_name}_{variant}.png")
+    img_dir = "src/data/master_guide/images/pokemon"
+    for filename in candidates:
+        img_path = os.path.join(img_dir, filename)
+        if os.path.exists(img_path):
+            with open(img_path, "rb") as img_file:
+                encoded_string = base64.b64encode(img_file.read()).decode('utf-8')
+                return f"data:image/png;base64,{encoded_string}"
+    return ""
 
 
 def parse_trainers(path):
@@ -290,7 +338,7 @@ def parse_trainers(path):
             clean_name = first_line.replace("(M)", "").replace("(F)", "").strip()
             paren_match = re.search(r'\(([^)]+)\)', clean_name)
             species = paren_match.group(1) if paren_match else clean_name
-            species = get_base_species_name(species.replace("SPECIES_", "").strip().replace("_", " ").title())
+            species = format_display_name(species)
             mon = {"species": species, "gender": gender, "item": item, "level": "??", "ivs": "31/31/31/31/31/31", "nature": "Hardy", "ability": "Any", "is_shiny": False, "moves": []}
             for line in mon_lines[1:]:
                 if line.startswith("Level:"): mon['level'] = line.split(":")[1].strip()
@@ -461,8 +509,7 @@ def generate_master_guide():
                 mons_data = []
                 species_agg = {}
                 for i, m in enumerate(mons_slice):
-                    raw_species = m['species'].replace('SPECIES_', '').replace('_', ' ').title().strip()
-                    species = raw_species  # Keep full name (e.g., Shellos East) for precise tracking
+                    species = format_display_name(m['species'])
                     min_lvl = int(m.get('min_level', 1))
                     max_lvl = int(m.get('max_level', min_lvl))
                     rate = rates_slice[i] if i < len(rates_slice) else 0
@@ -562,7 +609,7 @@ def generate_master_guide():
 
     .mon-row { display: flex; background: white; border: 1px solid #eee; padding: 10px; border-radius: 8px; align-items: center; }
     .mon-img { width: 32px; height: 32px; margin-right: 10px; flex-shrink: 0; }
-    .boss-row .mon-img { width: 80px; height: 80px; }
+    .boss-row .mon-img { width: 64px; height: 64px; }
     .mon-data { flex: 1; font-size: 0.9em; overflow: hidden; }
     .mon-header { display: flex; justify-content: space-between; font-weight: bold; }
     .move-list { margin: 5px 0 0 0; padding-left: 15px; columns: 2; font-size: 0.85em; color: #444; list-style-type: disc; }
@@ -701,7 +748,7 @@ def generate_master_guide():
                         if mons:
                             html += f'<div class="rod-subheading">🎣 {rod_name}</div>'
                             for m in mons:
-                                species = m['species']
+                                species = format_display_name(m['species'])
                                 rate_str = f"{m['rate']}%" if m['rate'] > 0 else ''
                                 html += f"""<div style="display:flex; align-items:center; margin-bottom:6px; background:#f9f9f9; padding:6px; border-radius:6px;">
                                     <img src="{get_sprite_url(species)}" style="width:32px;">
@@ -747,8 +794,7 @@ def generate_master_guide():
         total_locs = sum(len(enc_list) for enc_list in forms_dict.values())
         header_sprite = get_sprite_url(base_species)
         
-        # added to fix Farfetch'd display name issue
-        display_name = base_species.replace("Farfetch'D", "Farfetch'd")
+        display_name = format_display_name(base_species)
 
         html += f"""<div class="pkmn-card" data-name="{base_species.lower()}">
             <div class="pkmn-header">
@@ -810,11 +856,11 @@ def generate_master_guide():
 
     html += """</div></div></div>"""
 
-    def create_detailed_card(t, use_gen5=False):
+    def create_detailed_card(t, use_sprite=False):
         party_html = '<div class="mon-grid">'
-        row_class = 'boss-row' if use_gen5 else 'standard-row'
+        row_class = 'boss-row' if use_sprite else 'standard-row'
         for p in t['party']:
-            sprite_url = get_sprite_url(p['species'], p['is_shiny'], use_icon=(not use_gen5))
+            sprite_url = get_sprite_url(p['species'], p['is_shiny'], use_icon=(not use_sprite))
             moves = ''.join([f'<li>{m}</li>' for m in p['moves']])
             held_item = p.get('item', 'None')
             iv_display = p.get('ivs', '31/31/31/31/31/31')
@@ -826,10 +872,12 @@ def generate_master_guide():
             elif p.get('gender') == '♀':
                 gender_str = ' <span style="color: #e84393; font-weight: bold;">♀</span>'
 
+            display_species_name = format_display_name(p['species'])
+
             party_html += f"""<div class="mon-row {row_class}">
                 <img class="mon-img" src="{sprite_url}">
                 <div class="mon-data">
-                    <div class="mon-header"><span>{p['species']}{gender_str}</span> <span>Lv.{p['level']}</span></div>
+                    <div class="mon-header"><span>{display_species_name}{gender_str}</span> <span>Lv.{p['level']}</span></div>
                     <div style="color: #666; font-size: 0.9em;"><b>{p['nature']}</b> | {p['ability']}</div>
                     <div style="color: #2c3e50; font-size: 0.85em; margin-top: 2px;"><b>Item:</b> {held_item}</div>
                     <div style="color: #7f8c8d; font-size: 0.8em; margin-top: 1px;"><b>IVs:</b> {iv_display}</div>
@@ -857,7 +905,7 @@ def generate_master_guide():
             display_map = format_map_name(map_folder)
             html += f'<div class="section-title"> {display_map}</div>'
             for t in regular_trainers:
-                html += create_detailed_card(t, use_gen5=False)
+                html += create_detailed_card(t, use_sprite=True)
                 
     html += '</div>'
 
@@ -870,8 +918,10 @@ def generate_master_guide():
         html += f'<div class="section-title">{title}</div>'
         for tid in id_list:
             if tid in trainers_dict:
-                html += create_detailed_card(trainers_dict[tid], use_gen5=True)
+                html += create_detailed_card(trainers_dict[tid], use_sprite=True)
     html += '</div></body></html>'
+
+    OUTPUT_HTML = "src/data/master_guide/Master_Strategy_Guide.html"
 
     with open(OUTPUT_HTML, 'w', encoding='utf-8') as f:
         f.write(html)
