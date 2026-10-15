@@ -1,4 +1,3 @@
-from ast import pattern
 import re
 import os
 import base64
@@ -141,9 +140,9 @@ def extract_species_data(const, block, defines, macros):
         elif clean_stat.lower() == 'speed': clean_stat = 'Speed'
         
         if resolved_val and str(resolved_val).isdigit() and int(resolved_val) > 0:
-            ev_yields.append(f"+{resolved_val} {clean_stat}")
+            ev_yields.append(f"{resolved_val} {clean_stat}")
     
-    ev_yield_str = ", ".join(ev_yields) if ev_yields else "None"
+    ev_yield_list = ev_yields if ev_yields else ["None"]
     catch_rate = get_val(r'\.catchRate\s*=\s*([^,]+),')
     friendship = get_val(r'\.friendship\s*=\s*([^,]+),')
     growth_rate = get_val(r'\.growthRate\s*=\s*([^,]+),').replace('GROWTH_', '').replace('_', ' ').title()
@@ -181,7 +180,7 @@ def extract_species_data(const, block, defines, macros):
             gender_ratio_str = gender_raw.replace('MON_', '').title()
 
     extras = {
-        "ev_yield": ev_yield_str,
+        "ev_yield": ev_yield_list,
         "catch_rate": catch_rate,
         "friendship": friendship,
         "growth_rate": growth_rate,
@@ -228,10 +227,68 @@ def extract_species_data(const, block, defines, macros):
 
     return stats, types, (abilities if abilities else ["None"]), extras
 
+def format_stat_cell(stat_name, new_val_str, vanilla_stats):
+    try:
+        new_val = int(new_val_str)
+    except ValueError:
+        return f"<b>{new_val_str}</b>" if stat_name == 'hp' else new_val_str
+
+    stat_map = {
+        'hp': 'hp',
+        'atk': 'at',
+        'def': 'de',
+        'spa': 'sa',
+        'spd': 'sd',
+        'spe': 'sp'
+    }
+    json_key = stat_map.get(stat_name, stat_name)
+
+    vanilla_val = None
+    if vanilla_stats and json_key in vanilla_stats:
+        try:
+            vanilla_val = int(vanilla_stats[json_key])
+        except (ValueError, TypeError):
+            pass
+
+    prefix = "<b>" if stat_name == 'hp' else ""
+    suffix = "</b>" if stat_name == 'hp' else ""
+
+    if vanilla_val is not None and new_val != vanilla_val:
+        diff = new_val - vanilla_val
+        cls = "stat-buff" if diff > 0 else "stat-nerf"
+        diff_str = f"+{diff}" if diff > 0 else str(diff)
+        return f'<span class="{cls}">{prefix}{new_val}{suffix}</span><span class="stat-note {cls}">({diff_str})</span>'
+    else:
+        return f'{prefix}{new_val}{suffix}'
+
 def get_pokedex_data():
     custom_list_path = 'src/data/custom_pokedex_list.txt'
     ordered_constants = []
     dex_numbers = {}
+    vanilla_path = 'src/data/vanilla_library.json'
+    vanilla_db = {}
+    
+    if os.path.exists(vanilla_path):
+        with open(vanilla_path, 'r', encoding='utf-8') as f:
+            raw_vanilla = json.load(f)
+            vanilla_db = {k.upper(): v for k, v in raw_vanilla.items()}
+
+    def get_vanilla_stats(form_key, base_id):
+        keys_to_try = [
+            form_key,
+            f"SPECIES_{form_key}",
+            base_id,
+            f"SPECIES_{base_id}",
+            base_id.split('_')[0],
+            f"SPECIES_{base_id.split('_')[0]}",
+            form_key.split('_')[0],
+            f"SPECIES_{form_key.split('_')[0]}"
+        ]
+        for k in keys_to_try:
+            k_upper = k.upper()
+            if k_upper in vanilla_db:
+                return vanilla_db[k_upper]
+        return None
     
     if os.path.exists(custom_list_path):
         with open(custom_list_path, 'r', encoding='utf-8') as f:
@@ -382,6 +439,7 @@ def get_pokedex_data():
         if target_key in pokemon_db and const not in species_form_blacklist.get(const, []):
             form_data = pokemon_db[target_key].copy()
             form_data["name"] = const.replace('_', ' ').title()
+            form_data["vanilla_stats"] = get_vanilla_stats(target_key, const)
             forms[const] = form_data
             seen_species.add(target_key)
             seen_species.add(const)
@@ -398,7 +456,10 @@ def get_pokedex_data():
                 and not any(tag in f"_{k}" for tag in unwanted_form_tags)
             }
             if sub_forms:
-                forms.update(sub_forms)
+                for sub_k, sub_v in sub_forms.items(): # <--- LOOP TO ATTACH VANILLA STATS
+                    fd = sub_v.copy()
+                    fd["vanilla_stats"] = get_vanilla_stats(sub_k, const)
+                    forms[sub_k] = fd
             
         if not forms:
             for suffix in ["_NORMAL", "_LAND", "_ALTERED", "_PLANT", "_SINGLE", "_A"]:
@@ -454,6 +515,27 @@ def generate_master_guide():
             border-bottom: 2px solid #2c3e50;
         }}
 
+        td[class^="s-"] {{
+            position: relative;
+            vertical-align: middle; 
+        }}
+        .stat-buff {{ color: #27ae60; font-weight: bold; }}
+        .stat-nerf {{ color: #c0392b; font-weight: bold; }}
+        .stat-note {{ 
+            font-size: 10px; 
+            font-weight: bold; 
+            position: absolute; 
+            top: 50%;
+            left: 0; 
+            right: 0;
+            transform: translateY(6px);
+            text-align: center; 
+            line-height: 1; 
+        }}
+        .stat-note-empty {{
+            visibility: hidden; 
+        }}
+
         td {{ padding: 10px; border-bottom: 1px solid #eee; text-align: center; font-size: 0.9em; }}
         [class^="s-"] {{ font-size: 1.15em; font-weight: bold; font-family: monospace; }}
         
@@ -461,6 +543,7 @@ def generate_master_guide():
         
         .type-pill {{ display: inline-block; padding: 4px 6px; border-radius: 4px; color: white; font-size: 11px; font-weight: bold; text-transform: uppercase; margin: 2px; min-width: 72px; text-align: center; box-sizing: border-box; }}
         .ab-row {{ display: block; font-size: 12px; color: #2980b9; font-weight: bold; margin-bottom: 2px; }}
+        .ev-row {{ display: block; font-size: 12px; color: #2c3e50; font-weight: bold; line-height: 1.3; }}
         .form-btn {{ background: #ecf0f1; border: 1px solid #bdc3c7; padding: 5px 8px; margin: 2px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 10px; }}
         .form-btn:hover {{ background: #3498db; color: white; }}
         .gender-male {{ color: #3498db; font-weight: bold; font-size: 0.95em; }}
@@ -468,6 +551,9 @@ def generate_master_guide():
         .gender-symbol {{ font-size: 1.3em; font-weight: 900; }}
         .gender-none {{ color: #7f8c8d; font-style: italic; }}
         .gender-row {{ line-height: 1.3; text-align: center; }}
+        .stat-buff {{ color: #27ae60; font-weight: bold; }}
+        .stat-nerf {{ color: #c0392b; font-weight: bold; }}
+        .stat-note {{ font-size: 10px; font-weight: bold; display: block; margin-top: 1px; line-height: 1; }}
 
         #topBtn {{ display: none; position: fixed; bottom: 20px; right: 30px; z-index: 1100; background-color: #2c3e50; color: white; border: none; padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px; width: 50px; height: 50px; }}
     </style></head><body>
@@ -502,21 +588,20 @@ def generate_master_guide():
             <td><img id="img-{rid}" src="{f['img']}" class="pk-img"></td>
             <td><b id="name-{rid}" style="font-size: 1.1em;">{f['name']}</b><br><div style="margin-top:6px;">{f_btns}</div></td>
             <td id="types-{rid}">{" ".join([f'<span class="type-pill" style="background:{type_colors.get(t,"#AAA")}">{t}</span>' for t in f['types']])}</td>
-            <td id="abils-{rid}" style="min-width: 140px;">{" ".join([f'<span class="ab-row">{a}</span>' for a in f['abilities']])}</td>
-            <td id="ev-{rid}">{ext['ev_yield']}</td>
+            <td id="abils-{rid}" style="min-width: 130px;">{" ".join([f'<span class="ab-row">{a}</span>' for a in f['abilities']])}</td>
+            <td id="ev-{rid}" style="min-width: 100px;">{"".join([f'<span class="ev-row">{e}</span>' for e in ext['ev_yield']])}</td>
             <td id="catch-{rid}">{ext['catch_rate']}</td>
             <td id="friend-{rid}">{ext['friendship']}</td>
             <td id="growth-{rid}">{ext['growth_rate']}</td>
             <td id="egg-{rid}">{ext['egg_groups']}</td>
             <td id="gender-{rid}">{format_gender_html(ext['gender_ratio'])}</td>
-            <td class="s-hp" id="hp-{rid}"><b>{f['stats']['hp']}</b></td>
-            <td class="s-atk" id="atk-{rid}">{f['stats']['atk']}</td>
-            <td class="s-def" id="def-{rid}">{f['stats']['def']}</td>
-            <td class="s-spa" id="spa-{rid}">{f['stats']['spa']}</td>
-            <td class="s-spd" id="spd-{rid}">{f['stats']['spd']}</td>
-            <td class="s-spe" id="spe-{rid}">{f['stats']['spe']}</td>
+            <td class="s-hp" id="hp-{rid}">{format_stat_cell('hp', f['stats']['hp'], f.get('vanilla_stats'))}</td>
+            <td class="s-atk" id="atk-{rid}">{format_stat_cell('atk', f['stats']['atk'], f.get('vanilla_stats'))}</td>
+            <td class="s-def" id="def-{rid}">{format_stat_cell('def', f['stats']['def'], f.get('vanilla_stats'))}</td>
+            <td class="s-spa" id="spa-{rid}">{format_stat_cell('spa', f['stats']['spa'], f.get('vanilla_stats'))}</td>
+            <td class="s-spd" id="spd-{rid}">{format_stat_cell('spd', f['stats']['spd'], f.get('vanilla_stats'))}</td>
+            <td class="s-spe" id="spe-{rid}">{format_stat_cell('spe', f['stats']['spe'], f.get('vanilla_stats'))}</td>
             <td class="s-bst" id="bst-{rid}" style="color: #d35400;"><b>{bst}</b></td></tr>"""
-
     html += """</tbody></table>
     <script>
         const typeColors = """ + json.dumps(type_colors) + """;
@@ -537,6 +622,38 @@ def generate_master_guide():
             }
             return gStr;
         }
+    
+        function formatStatJS(statName, newValStr, vanillaStats) {
+            let newVal = parseInt(newValStr);
+            let vanillaVal = null;
+            
+            const statMap = {
+                'hp': 'hp',
+                'atk': 'at',
+                'def': 'de',
+                'spa': 'sa',
+                'spd': 'sd',
+                'spe': 'sp'
+            };
+            let jsonKey = statMap[statName] || statName;
+
+            if (vanillaStats && vanillaStats[jsonKey] !== undefined) {
+                vanillaVal = parseInt(vanillaStats[jsonKey]);
+            }
+            
+            let isHp = (statName === 'hp');
+            let prefix = isHp ? '<b>' : '';
+            let suffix = isHp ? '</b>' : '';
+            
+            if (!isNaN(newVal) && vanillaVal !== null && !isNaN(vanillaVal) && newVal !== vanillaVal) {
+                let diff = newVal - vanillaVal;
+                let cls = diff > 0 ? 'stat-buff' : 'stat-nerf';
+                let diffStr = diff > 0 ? '+' + diff : diff;
+                return `<span class="${cls}">${prefix}${newVal}${suffix}</span><span class="stat-note ${cls}">(${diffStr})</span>`;
+            } else {
+                return `${prefix}${newVal}${suffix}`;
+            }
+        }
 
         function sw(rid, key, formsData) {
             const f = formsData[key];
@@ -546,7 +663,7 @@ def generate_master_guide():
             document.getElementById('types-' + rid).innerHTML = f.types.map(t => `<span class="type-pill" style="background:${typeColors[t] || '#AAA'}">${t}</span> `).join('');
             document.getElementById('abils-' + rid).innerHTML = f.abilities.map(a => `<span class="ab-row">${a}</span>`).join('');
             
-            document.getElementById('ev-' + rid).innerText = ext.ev_yield;
+            document.getElementById('ev-' + rid).innerHTML = ext.ev_yield.map(e => `<span class="ev-row">${e}</span>`).join('');
             document.getElementById('catch-' + rid).innerText = ext.catch_rate;
             document.getElementById('friend-' + rid).innerText = ext.friendship;
             document.getElementById('growth-' + rid).innerText = ext.growth_rate;
@@ -557,7 +674,7 @@ def generate_master_guide():
             for (const [stat, value] of Object.entries(f.stats)) {
                 const el = document.getElementById(stat + '-' + rid);
                 if (el) {
-                    el.innerHTML = (stat === 'hp') ? `<b>${value}</b>` : value;
+                    el.innerHTML = formatStatJS(stat, value, f.vanilla_stats);
                     bst += parseInt(value) || 0;
                 }
             }
