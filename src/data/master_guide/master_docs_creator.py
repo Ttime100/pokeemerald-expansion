@@ -11,6 +11,7 @@ WILD_JSON_PATH = 'src/data/wild_encounters.json'
 TRAINER_PARTY_PATH = 'src/data/trainers.party'
 POKEDEX_LIST_PATH = 'src/data/custom_pokedex_list.txt'
 MAPS_DIR_PATH = "data/maps"
+SPECIES_INFO_DIR = 'src/data/pokemon/species_info/'
 OUTPUT_HTML = 'Master_Strategy_Guide.html'
 
 CURRENT_LEAGUE_IDS = [
@@ -246,6 +247,31 @@ def format_map_name(label):
     label = re.sub(r'\bMt\b', 'Mt.', label)
     return label.strip()
 
+def format_gender_html(gender_str):
+    if not gender_str or "Genderless" in gender_str or "255" in gender_str:
+        return '<span class="gender-none">Genderless</span>'
+    if "♂" in gender_str and "♀" in gender_str:
+        parts = gender_str.split('/')
+        m_pct = parts[0].replace('♂', '').strip()
+        f_pct = parts[1].replace('♀', '').strip()
+        return (f'<div class="gender-row"><span class="gender-male">'
+                f'<span class="gender-symbol">♂</span> {m_pct}'
+                f'</span></div>'
+                f'<div class="gender-row"><span class="gender-female">'
+                f'<span class="gender-symbol">♀</span> {f_pct}'
+                f'</span></div>')
+    elif "♂" in gender_str:
+        m_pct = gender_str.replace('♂', '').strip()
+        return (f'<div class="gender-row"><span class="gender-male">'
+                f'<span class="gender-symbol">♂</span> {m_pct}'
+                f'</span></div>')
+    elif "♀" in gender_str:
+        f_pct = gender_str.replace('♀', '').strip()
+        return (f'<div class="gender-row"><span class="gender-female">'
+                f'<span class="gender-symbol">♀</span> {f_pct}'
+                f'</span></div>')
+    return gender_str
+
 def normalize_name(name):
     if not name:
         return ""
@@ -284,6 +310,408 @@ def get_sprite_url(species_name, is_shiny=False, use_icon=True):
                 return f"data:image/png;base64,{encoded_string}"
     return ""
 
+def resolve_c_value(value, defines):
+    value = value.strip()
+    if 'STANDARD_FRIENDSHIP' in value:
+        return "50"
+    if '?' in value:
+        match = re.search(r'\?\s*([^:]+):', value)
+        if match:
+            value = match.group(1).strip('() ')
+    if value.startswith('{'):
+        return [v.strip() for v in value.strip('{}').split(',')]
+    if value in defines:
+        return resolve_c_value(defines[value], defines)
+    return value
+
+def extract_species_data(const, block, defines, macros):
+    active_block = block
+    if block.strip() in macros:
+        params, body = macros[block.strip()]
+        active_block = body
+
+    def get_val(pattern):
+        raw = re.search(pattern, active_block)
+        if not raw: return "0"
+        return resolve_c_value(raw.group(1), defines)
+
+    abilities = []
+    a_m = re.search(r'\.abilities\s*=\s*(?:\{([^}]+)\}|(\w+))', active_block, re.DOTALL)
+    if a_m:
+        raw_abil_str = a_m.group(1) or a_m.group(2)
+        if raw_abil_str:
+            resolved_abils = resolve_c_value(raw_abil_str, defines)
+            if isinstance(resolved_abils, str):
+                tokens = [t.strip() for t in resolved_abils.strip('{}').split(',')]
+            elif isinstance(resolved_abils, list):
+                tokens = resolved_abils
+            else:
+                tokens = [str(resolved_abils)]
+
+            for i, token in enumerate(tokens):
+                raw_val = resolve_c_value(token.strip(), defines)
+                if isinstance(raw_val, list):
+                    raw_val = raw_val[0] if raw_val else ""
+                raw_val = str(raw_val).strip()
+                
+                if not raw_val or raw_val in ['ABILITY_NONE', 'NONE', '0']:
+                    continue
+                
+                clean = raw_val.replace('ABILITY_', '').replace('_', ' ').title()
+                if clean and clean != "None":
+                    # Mark index 2 as Hidden Ability (H)
+                    abilities.append(f"{clean} (H)" if i == 2 else clean)
+
+    ev_yields = []
+    ev_matches = re.findall(r'\.evYield_(\w+)\s*=\s*([^,]+),', active_block)
+    for stat_name, val in ev_matches:
+        resolved_val = resolve_c_value(val, defines)
+        clean_stat = stat_name
+        if clean_stat.lower() == 'hp': clean_stat = 'HP'
+        elif clean_stat.lower() == 'attack': clean_stat = 'Atk'
+        elif clean_stat.lower() == 'defense': clean_stat = 'Def'
+        elif clean_stat.lower() == 'spattack': clean_stat = 'Sp. Atk'
+        elif clean_stat.lower() == 'spdefense': clean_stat = 'Sp. Def'
+        elif clean_stat.lower() == 'speed': clean_stat = 'Speed'
+        
+        if resolved_val and str(resolved_val).isdigit() and int(resolved_val) > 0:
+            ev_yields.append(f"{resolved_val} {clean_stat}")
+    
+    ev_yield_list = ev_yields if ev_yields else ["None"]
+    catch_rate = get_val(r'\.catchRate\s*=\s*([^,]+),')
+    friendship = get_val(r'\.friendship\s*=\s*([^,]+),')
+    growth_rate = get_val(r'\.growthRate\s*=\s*([^,]+),').replace('GROWTH_', '').replace('_', ' ').title()
+    
+    egg_groups = []
+    eg_m = re.search(r'\.eggGroups\s*=\s*(?:MON_EGG_GROUPS\(([^)]+)\)|\{([^}]+)\})', active_block, re.DOTALL)
+    if eg_m:
+        raw_eg_match = eg_m.group(1) or eg_m.group(2)
+        resolved_egs = resolve_c_value(raw_eg_match, defines)
+        
+        if isinstance(resolved_egs, str):
+            resolved_egs = [resolved_egs]
+            
+        for eg in resolved_egs:
+            clean_eg = eg.strip().replace('EGG_GROUP_', '').replace('_', ' ').title()
+            if clean_eg and clean_eg != "None": 
+                egg_groups.append(clean_eg)
+            
+    gender_raw = get_val(r'\.genderRatio\s*=\s*([^,]+),')
+    if 'GENDERLESS' in gender_raw or '255' in gender_raw:
+        gender_ratio_str = "Genderless"
+    elif 'MON_MALE' in gender_raw:
+        gender_ratio_str = "♂ 100%"
+    elif 'MON_FEMALE' in gender_raw:
+        gender_ratio_str = "♀ 100%"
+    else:
+        match_f = re.search(r'PERCENT_FEMALE\(([\d.]+)\)', gender_raw)
+        if match_f:
+            f_pct = float(match_f.group(1))
+            m_pct = 100.0 - f_pct
+            m_str = f"{int(m_pct)}%" if m_pct.is_integer() else f"{m_pct}%"
+            f_str = f"{int(f_pct)}%" if f_pct.is_integer() else f"{f_pct}%"
+            gender_ratio_str = f"♂ {m_str} / ♀ {f_str}"
+        else:
+            gender_ratio_str = gender_raw.replace('MON_', '').title()
+
+    extras = {
+        "ev_yield": ev_yield_list,
+        "catch_rate": catch_rate,
+        "friendship": friendship,
+        "growth_rate": growth_rate,
+        "egg_groups": ", ".join(egg_groups) if egg_groups else "None",
+        "gender_ratio": gender_ratio_str
+    }
+
+    def get_stat_val(pattern):
+        raw_val = get_val(pattern)
+        if '?' in raw_val:
+            parts = raw_val.split('?')
+            if len(parts) > 1:
+                options = parts[1].split(':')
+                if len(options) > 0:
+                    return resolve_c_value(options[0].strip(), defines)
+        return raw_val
+
+    stats = {
+        'hp': get_stat_val(r'\.baseHP\s*=\s*(.*?),'),
+        'atk': get_stat_val(r'\.baseAttack\s*=\s*(.*?),'),
+        'def': get_stat_val(r'\.baseDefense\s*=\s*(.*?),'),
+        'spa': get_stat_val(r'\.baseSpAttack?\s*=\s*(.*?),'),
+        'spd': get_stat_val(r'\.baseSpDefense?\s*=\s*(.*?),'),
+        'spe': get_stat_val(r'\.baseSpeed\s*=\s*(.*?),'),
+    }
+
+    types = []
+    t_m = re.search(r'\.types\s*=\s*(?:MON_TYPES\((.*?)\)|\{([^}]+)\}|(\w+_TYPES))', active_block, re.DOTALL)
+    if t_m:
+        raw_type_match = t_m.group(1) or t_m.group(2) or t_m.group(3)
+        if raw_type_match:
+            type_args = [arg.strip() for arg in raw_type_match.split(',')]
+            for arg in type_args:
+                resolved = resolve_c_value(arg, defines)
+                if isinstance(resolved, list):
+                    for st in resolved:
+                        clean_t = st.strip().replace('TYPE_', '').title()
+                        if clean_t and clean_t != "None": types.append(clean_t)
+                else:
+                    clean_t = str(resolved).strip().replace('TYPE_', '').title()
+                    if clean_t and clean_t != "None": types.append(clean_t)
+
+    types = [t for t in list(dict.fromkeys(types)) if t != "None"]
+
+    return stats, types, (abilities if abilities else ["None"]), extras
+
+def format_stat_cell(stat_name, new_val_str, vanilla_stats):
+    try:
+        new_val = int(new_val_str)
+    except ValueError:
+        return f"<b>{new_val_str}</b>" if stat_name == 'hp' else new_val_str
+
+    stat_map = {
+        'hp': 'hp',
+        'atk': 'at',
+        'def': 'de',
+        'spa': 'sa',
+        'spd': 'sd',
+        'spe': 'sp'
+    }
+    json_key = stat_map.get(stat_name, stat_name)
+
+    vanilla_val = None
+    if vanilla_stats and json_key in vanilla_stats:
+        try:
+            vanilla_val = int(vanilla_stats[json_key])
+        except (ValueError, TypeError):
+            pass
+
+    prefix = "<b>" if stat_name == 'hp' else ""
+    suffix = "</b>" if stat_name == 'hp' else ""
+
+    if vanilla_val is not None and new_val != vanilla_val:
+        diff = new_val - vanilla_val
+        cls = "stat-buff" if diff > 0 else "stat-nerf"
+        diff_str = f"+{diff}" if diff > 0 else str(diff)
+        return f'<span class="{cls}">{prefix}{new_val}{suffix}</span><span class="stat-note {cls}">({diff_str})</span>'
+    else:
+        return f'{prefix}{new_val}{suffix}'
+
+def get_pokedex_data():
+    custom_list_path = 'src/data/custom_pokedex_list.txt'
+    ordered_constants = []
+    dex_numbers = {}
+    vanilla_path = 'src/data/vanilla_library.json'
+    vanilla_db = {}
+    
+    if os.path.exists(vanilla_path):
+        with open(vanilla_path, 'r', encoding='utf-8') as f:
+            raw_vanilla = json.load(f)
+            vanilla_db = {k.upper(): v for k, v in raw_vanilla.items()}
+
+    def get_vanilla_stats(form_key, base_id):
+        keys_to_try = [
+            form_key,
+            f"SPECIES_{form_key}",
+            base_id,
+            f"SPECIES_{base_id}",
+            base_id.split('_')[0],
+            f"SPECIES_{base_id.split('_')[0]}",
+            form_key.split('_')[0],
+            f"SPECIES_{form_key.split('_')[0]}"
+        ]
+        for k in keys_to_try:
+            k_upper = k.upper()
+            if k_upper in vanilla_db:
+                return vanilla_db[k_upper]
+        return None
+    
+    if os.path.exists(custom_list_path):
+        with open(custom_list_path, 'r', encoding='utf-8') as f:
+            counter = 1
+            for line in f:
+                name = line.strip()
+                if name:
+                    const = name.upper().replace(' ', '_').replace('-', '_').replace('.', '').replace("'", '')
+                    ordered_constants.append(const)
+                    dex_numbers[const] = counter
+                    counter += 1
+    else:
+        print(f"Warning: Custom list not found at {custom_list_path}. Falling back to empty order.")
+
+    unwanted_form_tags = [
+        "_MEGA", "_GMAX", "_GIGAMAX", "_PRIMAL", 
+        "_ALOLA", "_ALOLAN", "_GALAR", "_GALARIAN", 
+        "_HISUI", "_HISUIAN", "_PALDEA", "_PALDEAN",
+        "_COSPLAY", "_ROCK_STAR", "_BELLE", "_POP_STAR", "_PHD", "_LIBRE",
+        "_CAP", "_ORIGINAL", "_HOENN", "_SINNOH", "_UNOVA", 
+        "_KALOS", "_ALOLA", "_PARTNER", "_WORLD", "_STARTER",
+        "_SPIKY_EARED", "_SPIKY", "_THERIAN"
+    ]
+
+    species_form_blacklist = {
+        "KYUREM": ["KYUREM_BLACK", "KYUREM_WHITE"],
+        "DIALGA": ["DIALGA_ORIGIN"],
+        "PALKIA": ["PALKIA_ORIGIN"]
+    }
+
+    pokemon_db = {}
+    for root, _, files in os.walk(SPECIES_INFO_DIR):
+        for file in files:
+            if file.endswith('.h'):
+                with open(os.path.join(root, file), 'r', encoding='utf-8') as f:
+                    content = clean_comments(f.read())
+                    defines = {}
+                    for match in re.finditer(r'(?:#if[^\n]*\n\s*)?#define\s+(\w+_(?:TYPES|TYPE[12]|ABILITIES))\s+(.*)', content):
+                        mac_name = match.group(1)
+                        mac_val = match.group(2).strip()
+                        if mac_name not in defines or any(g in match.group(0) for g in ['GEN_2', 'GEN_4', 'GEN_5', 'GEN_6', 'GEN_8']):
+                            defines[mac_name] = mac_val
+                    for m in re.finditer(r'#define\s+(\w+)\s+(.*)', content):
+                        if m.group(1) not in defines:
+                            defines[m.group(1)] = m.group(2).strip()
+                    macros = {}
+                    macro_def_pattern = re.compile(r'#define\s+(\w+)(?:\(([^)]*)\))?\s*(?:\\\s*)?\{', re.DOTALL)
+                    for match in macro_def_pattern.finditer(content):
+                        mac_name = match.group(1)
+                        mac_params = [p.strip() for p in m_params.split(',')] if (m_params := match.group(2)) else []
+                        
+                        start_idx = match.end() - 1
+                        brace_count = 1
+                        curr_idx = start_idx + 1
+                        while curr_idx < len(content) and brace_count > 0:
+                            if content[curr_idx] == '{':
+                                brace_count += 1
+                            elif content[curr_idx] == '}':
+                                brace_count -= 1
+                            curr_idx += 1
+                        
+                        mac_body = content[start_idx+1:curr_idx-1]
+                        mac_body = re.sub(r'\\\s*$', '', mac_body, flags=re.MULTILINE)
+                        macros[mac_name] = (mac_params, mac_body)
+                    pos = 0
+                    while True:
+                        match = re.search(r'\[\s*SPECIES_(\w+)\s*\]\s*=\s*\{', content[pos:])
+                        if not match: 
+                            break
+                        s_name = match.group(1)
+                        start_idx = pos + match.end()
+                        brace_count = 1
+                        curr_idx = start_idx
+                        while curr_idx < len(content) and brace_count > 0:
+                            if content[curr_idx] == '{':
+                                brace_count += 1
+                            elif content[curr_idx] == '}':
+                                brace_count -= 1
+                            curr_idx += 1
+                        
+                        s_block = content[start_idx:curr_idx-1]
+                        pos = curr_idx
+
+                        if any(tag in f"_{s_name}" for tag in unwanted_form_tags): 
+                            continue
+                        
+                        stats, types, abils, extras = extract_species_data(s_name, s_block, defines, macros)
+                        pokemon_db[s_name] = {
+                            "name": s_name.replace('_', ' ').title(),
+                            "stats": stats, "types": types, "abilities": abils,
+                            "extras": extras, "img": get_sprite_url(s_name, use_icon=False)
+                        }
+                    for m_alias in re.finditer(r'\[\s*SPECIES_(\w+)\s*\]\s*=\s*([A-Z_]+)(?:\((.*?)\))?', content):
+                        s_name = m_alias.group(1)
+                        macro_prefix = m_alias.group(2)
+                        args_str = m_alias.group(3)
+                        
+                        matched_body = None
+                        if macro_prefix in macros:
+                            params, body = macros[macro_prefix]
+                            active_body = body
+                            if args_str:
+                                macro_args = [arg.strip() for arg in args_str.split(',')]
+                                for param, arg in zip(params, macro_args):
+                                    active_body = re.sub(r'\b' + param + r'\b', arg, active_body)
+                            matched_body = active_body
+                        
+                        if s_name not in pokemon_db and matched_body:
+                            if any(tag in f"_{s_name}" for tag in unwanted_form_tags):
+                                continue
+                            stats, types, abils, extras = extract_species_data(s_name, matched_body, defines, macros)
+                            pokemon_db[s_name] = {
+                                "name": s_name.replace('_', ' ').title(),
+                                "stats": stats, 
+                                "types": types, 
+                                "abilities": abils,
+                                "extras": extras,
+                                "img": get_sprite_url(s_name, use_icon=False)
+                            }
+
+    final_data = []
+    seen_species = set()
+    
+    for const in ordered_constants:
+        if const in seen_species: 
+            continue
+        
+        forms = {}
+        target_key = const
+
+        base_mappings = {
+            "LANDORUS": "LANDORUS_INCARNATE",
+            "TORNADUS": "TORNADUS_INCARNATE",
+            "THUNDURUS": "THUNDURUS_INCARNATE",
+            "MOTHIM": "MOTHIM",
+            "UNOWN": "UNOWN",
+            "GENESECT": "GENESECT",
+            "ARCEUS": "ARCEUS",
+        }
+
+        single_form_only = ["ARCEUS", "GENESECT", "UNOWN", "MOTHIM"]
+
+        if const in base_mappings:
+            mapped_key = base_mappings[const]
+            if mapped_key in pokemon_db:
+                target_key = mapped_key
+
+        if target_key in pokemon_db and const not in species_form_blacklist.get(const, []):
+            form_data = pokemon_db[target_key].copy()
+            form_data["name"] = const.replace('_', ' ').title()
+            form_data["vanilla_stats"] = get_vanilla_stats(target_key, const)
+            forms[const] = form_data
+            seen_species.add(target_key)
+            seen_species.add(const)
+        
+        blacklisted_forms = species_form_blacklist.get(const, [])
+        
+        if const not in single_form_only:
+            sub_forms = {
+                k: v for k, v in pokemon_db.items() 
+                if k.startswith(const + "_") 
+                and k not in seen_species 
+                and k not in ordered_constants
+                and k not in blacklisted_forms
+                and not any(tag in f"_{k}" for tag in unwanted_form_tags)
+            }
+            if sub_forms:
+                for sub_k, sub_v in sub_forms.items(): # <--- LOOP TO ATTACH VANILLA STATS
+                    fd = sub_v.copy()
+                    fd["vanilla_stats"] = get_vanilla_stats(sub_k, const)
+                    forms[sub_k] = fd
+            
+        if not forms:
+            for suffix in ["_NORMAL", "_LAND", "_ALTERED", "_PLANT", "_SINGLE", "_A"]:
+                candidate = f"{const}{suffix}"
+                if candidate in pokemon_db and candidate not in blacklisted_forms and not any(tag in f"_{candidate}" for tag in unwanted_form_tags):
+                    form_data = pokemon_db[candidate].copy()
+                    form_data["name"] = const.replace('_', ' ').title()
+                    forms[const] = form_data
+                    seen_species.add(candidate)
+                    break
+
+        if forms:
+            for k in forms: 
+                seen_species.add(k)
+            final_data.append({"base": const, "dex": dex_numbers.get(const, 0), "forms": forms})
+            
+    return final_data
 
 def parse_trainers(path):
     try:
@@ -570,15 +998,17 @@ def generate_master_guide():
     body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; margin: 0; color: #333; overflow-x: hidden; }
     
     .tab-radio { display: none; }
-    .nav { background: #2c3e50; padding: 12px; position: sticky; top: 0; text-align: center; z-index: 1000; display: flex; justify-content: center; gap: 8px; position: relative; }
+    .nav { background: #2c3e50; padding: 10px 20px; position: sticky; top: 0; z-index: 1000; display: grid; grid-template-columns: 220px 1fr 220px; align-items: center; }
     .nav label { padding: 10px 18px; font-size: 14px; cursor: pointer; background: #34495e; color: white; border-radius: 6px; transition: 0.2s; -webkit-tap-highlight-color: transparent; }
+    .nav-tabs { display: flex; justify-content: center; gap: 8px; margin: auto;}
+   .tab-content { display: none; padding: 15px; max-width: 1400px; margin: auto; }
     
-    .tab-content { display: none; padding: 15px; max-width: 1400px; margin: auto; }
-    
+    #radio-pokedex:checked ~ .nav label[for="radio-pokedex"] { background: #3498db; font-weight: bold; }
     #radio-wild:checked ~ .nav label[for="radio-wild"],
     #radio-trainers:checked ~ .nav label[for="radio-trainers"],
     #radio-bosses:checked ~ .nav label[for="radio-bosses"] { background: #3498db; font-weight: bold; }
     
+    #radio-pokedex:checked ~ #pokedex-view { display: block; }
     #radio-wild:checked ~ #wild-view,
     #radio-trainers:checked ~ #trainers-view,
     #radio-bosses:checked ~ #bosses-view { display: block; }
@@ -594,13 +1024,26 @@ def generate_master_guide():
     #radio-wild-pokemon:checked ~ #wild-pokemon-view { display: block; }
     .sub-tab-content { display: none; }
 
-    .search-container { margin-bottom: 15px; text-align: center; }
+    .search-container { margin-bottom: 15px; text-align: center; position: sticky; top: 52px;background: #f0f2f5;padding: 10px 0; z-index: 950; max-width: 400px; margin-left: auto; margin-right: auto; }
     .search-input { width: 100%; max-width: 400px; padding: 10px 14px; font-size: 0.95em; border: 2px solid #cbd5e1; border-radius: 8px; outline: none; transition: 0.2s; }
     .search-input:focus { border-color: #3498db; }
 
     .card { background: white; padding: 15px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 6px solid #3498db; }
     .card h3 { margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 8px; text-transform: capitalize; font-size: 1.2em; color: #2c3e50; }
     
+    #pokedex-view {
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+    table.pokedex-table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /* Responsive Pokémon Grid - Max 3 columns on wide screens */
     .mon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
     @media (min-width: 992px) {
@@ -635,6 +1078,38 @@ def generate_master_guide():
     .badge-water { background: #e3f2fd; color: #1565c0; }
     .badge-fishing { background: #e0f2f1; color: #00695c; }
     .badge-rock { background: #fff8e1; color: #f57f17; }
+
+    /* Master Pokedex Styles & Stat Deltas */
+    table.pokedex-table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    table.pokedex-table thead th { background: #34495e; color: white; padding: 12px; position: sticky; top: 50px; z-index: 900; font-size: 1.1em; border-bottom: 2px solid #2c3e50; }
+    table.pokedex-table td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; font-size: 0.9em; }
+    table.pokedex-table td[class^="s-"] { position: relative; vertical-align: middle; font-size: 1.15em; font-weight: bold; font-family: monospace; }
+    
+    .stat-buff { color: #27ae60; font-weight: bold; }
+    .stat-nerf { color: #c0392b; font-weight: bold; }
+    .stat-note { 
+        font-size: 10px; 
+        font-weight: bold; 
+        position: absolute; 
+        top: 50%; 
+        left: 0; 
+        right: 0; 
+        transform: translateY(6px); 
+        text-align: center; 
+        line-height: 1; 
+    }
+    
+    .pk-img { width: 64px; height: 64px; image-rendering: pixelated; object-fit: contain; }
+    .type-pill { display: inline-block; padding: 4px 6px; border-radius: 4px; color: white; font-size: 11px; font-weight: bold; text-transform: uppercase; margin: 2px; min-width: 72px; text-align: center; box-sizing: border-box; }
+    .ab-row { display: block; font-size: 12px; color: #2980b9; font-weight: bold; margin-bottom: 2px; }
+    .ev-row { display: block; font-size: 12px; color: #2c3e50; font-weight: bold; line-height: 1.3; }
+    .form-btn { background: #ecf0f1; border: 1px solid #bdc3c7; padding: 5px 8px; margin: 2px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 10px; }
+    .form-btn:hover { background: #3498db; color: white; }
+    .gender-male { color: #3498db; font-weight: bold; font-size: 0.95em; }
+    .gender-female { color: #e84393; font-weight: bold; font-size: 0.95em; }
+    .gender-symbol { font-size: 1.3em; font-weight: 900; }
+    .gender-none { color: #7f8c8d; font-style: italic; }
+    .gender-row { line-height: 1.3; text-align: center; }
     
     /* Dark Mode Theme */
     body.dark-mode { background: #121212; color: #e0e0e0; }
@@ -650,6 +1125,12 @@ def generate_master_guide():
     body.dark-mode .enc-table td { border-top-color: #333; }
     body.dark-mode .pkmn-count { background: #2a2a2a; color: #aaa; }
     body.dark-mode div[style*="background:#f9f9f9"] { background: #282828 !important; }
+    body.dark-mode table.pokedex-table { background: #1e1e1e; color: #e0e0e0; border-color: #333; }
+    body.dark-mode table.pokedex-table thead th { background: #252525; color: #aaa; }
+    body.dark-mode table.pokedex-table td { border-bottom-color: #333; }
+    body.dark-mode .form-btn { background: #2d2d2d; color: #fff; border-color: #444; }
+    body.dark-mode .form-btn:hover { background: #3498db; }
+    body.dark-mode .search-container { background: #121212; }
     
     /* Dark Mode Toggle Switch */
     .theme-switch-wrapper { display: flex; align-items: center; position: absolute; right: 40px; top: 50%; transform: translateY(-50%); }
@@ -666,22 +1147,102 @@ def generate_master_guide():
     }
     </style>
     <script>
-    function filterRoutes() {
-        var input = document.getElementById('route-search').value.toLowerCase();
-        var cards = document.querySelectorAll('.route-card');
-        cards.forEach(function(card) {
-            var name = card.getAttribute('data-name') || '';
-            card.style.display = name.includes(input) ? '' : 'none';
-        });
+
+    function universalSearchFilter() {
+        let input = document.getElementById("universal-search").value.toLowerCase();
+        let clearBtn = document.getElementById("clearBtn");
+        if (clearBtn) clearBtn.style.display = input ? "block" : "none";
+
+        let isPokedexActive = document.getElementById("radio-pokedex").checked;
+        let isWildActive = document.getElementById("radio-wild").checked;
+        let isTrainersActive = document.getElementById("radio-trainers").checked;
+        let isBossesActive = document.getElementById("radio-bosses").checked;
+
+        if (isPokedexActive) {
+            let rows = document.getElementsByClassName("pokemon-row");
+            for (let i = 0; i < rows.length; i++) {
+                rows[i].style.display = rows[i].innerText.toLowerCase().includes(input) ? "" : "none";
+            }
+        } 
+        else if (isWildActive) {
+            let isRouteView = document.getElementById("radio-wild-route").checked;
+            if (isRouteView) {
+                var cards = document.querySelectorAll('.route-card');
+                cards.forEach(function(card) {
+                    var name = card.getAttribute('data-name') || '';
+                    card.style.display = name.includes(input) ? '' : 'none';
+                });
+            } else {
+                var cards = document.querySelectorAll('.pkmn-card');
+                cards.forEach(function(card) {
+                    var name = card.getAttribute('data-name') || '';
+                    card.style.display = name.includes(input) ? '' : 'none';
+                });
+            }
+        }
+        else if (isTrainersActive) {
+            let cards = document.querySelectorAll('#trainers-view .card');
+            cards.forEach(function(card) {
+                card.style.display = card.innerText.toLowerCase().includes(input) ? '' : 'none';
+            });
+        }
+        else if (isBossesActive) {
+            let cards = document.querySelectorAll('#bosses-view .card');
+            cards.forEach(function(card) {
+                card.style.display = card.innerText.toLowerCase().includes(input) ? '' : 'none';
+            });
+        }
     }
 
-    function filterPokemon() {
-        var input = document.getElementById('pkmn-search').value.toLowerCase();
-        var cards = document.querySelectorAll('.pkmn-card');
-        cards.forEach(function(card) {
-            var name = card.getAttribute('data-name') || '';
-            card.style.display = name.includes(input) ? '' : 'none';
-        });
+    function clearUniversalSearch() { 
+        document.getElementById("universal-search").value = ""; 
+        universalSearchFilter(); 
+    }
+
+    function formatStatJS(statName, newValStr, vanillaStats) {
+        let newVal = parseInt(newValStr);
+        let vanillaVal = null;
+        const statMap = {'hp': 'hp', 'atk': 'at', 'def': 'de', 'spa': 'sa', 'spd': 'sd', 'spe': 'sp'};
+        let jsonKey = statMap[statName] || statName;
+        if (vanillaStats && vanillaStats[jsonKey] !== undefined) {
+            vanillaVal = parseInt(vanillaStats[jsonKey]);
+        }
+        let isHp = (statName === 'hp');
+        let prefix = isHp ? '<b>' : '';
+        let suffix = isHp ? '</b>' : '';
+        if (!isNaN(newVal) && vanillaVal !== null && !isNaN(vanillaVal) && newVal !== vanillaVal) {
+            let diff = newVal - vanillaVal;
+            let cls = diff > 0 ? 'stat-buff' : 'stat-nerf';
+            let diffStr = diff > 0 ? '+' + diff : diff;
+            return `<span class="${cls}">${prefix}${newVal}${suffix}</span><span class="stat-note ${cls}">(${diffStr})</span>`;
+        } else {
+            return `${prefix}${newVal}${suffix}`;
+        }
+    }
+
+    function sw(rid, key, formsData) {
+        const f = formsData[key];
+        const ext = f.extras;
+        document.getElementById('img-' + rid).src = f.img;
+        document.getElementById('name-' + rid).innerText = f.name;
+        document.getElementById('types-' + rid).innerHTML = f.types.map(t => `<span class="type-pill" style="background:${typeColors[t] || '#AAA'}">${t}</span> `).join('');
+        document.getElementById('abils-' + rid).innerHTML = f.abilities.map(a => `<span class="ab-row">${a}</span>`).join('');
+        document.getElementById('ev-' + rid).innerHTML = ext.ev_yield.map(e => `<span class="ev-row">${e}</span>`).join('');
+        document.getElementById('catch-' + rid).innerText = ext.catch_rate;
+        document.getElementById('friend-' + rid).innerText = ext.friendship;
+        document.getElementById('growth-' + rid).innerText = ext.growth_rate;
+        document.getElementById('egg-' + rid).innerText = ext.egg_groups;
+        document.getElementById('gender-' + rid).innerHTML = formatGenderJS(ext.gender_ratio);
+
+        let bst = 0;
+        for (const [stat, value] of Object.entries(f.stats)) {
+            const el = document.getElementById(stat + '-' + rid);
+            if (el) {
+                el.innerHTML = formatStatJS(stat, value, f.vanilla_stats);
+                bst += parseInt(value) || 0;
+            }
+        }
+        document.getElementById('bst-' + rid).innerHTML = `<b>${bst}</b>`;
     }
 
     function toggleDarkMode() {
@@ -700,14 +1261,23 @@ def generate_master_guide():
     </script>
     </head><body>
 
-    <input type="radio" name="tabs" id="radio-wild" class="tab-radio" checked>
+    <input type="radio" name="tabs" id="radio-pokedex" class="tab-radio" checked>
+    <input type="radio" name="tabs" id="radio-wild" class="tab-radio">
     <input type="radio" name="tabs" id="radio-trainers" class="tab-radio">
     <input type="radio" name="tabs" id="radio-bosses" class="tab-radio">
 
     <div class="nav">
-        <label for="radio-wild">Wild Encounters</label>
-        <label for="radio-trainers">Trainers</label>
-        <label for="radio-bosses">Bosses</label>
+        <div class="nav-search-container" style="position: relative; display: flex; align-items: center;">
+            <input type="text" id="universal-search" class="search-input" onkeyup="universalSearchFilter()" placeholder="Search..." style="padding: 6px 10px; font-size: 0.85em; width: 180px; border-radius: 6px; border: 1px solid #475569; background: #334155; color: white;">
+            <button id="clearBtn" onclick="clearUniversalSearch()" style="position: absolute; right: 22px; top: 50%; transform: translateY(-50%); background: transparent; color: #94a3b8; border: none; border-radius: 50%; width: 18px; height: 18px; cursor: pointer; display: none; font-size: 10px; font-weight: bold; padding: 0;">✕</button>
+        </div>
+
+        <div class="nav-tabs" style="display: flex; gap: 8px;">
+            <label for="radio-pokedex">Pokedex</label>
+            <label for="radio-wild">Wild Encounters</label>
+            <label for="radio-trainers">Trainers</label>
+            <label for="radio-bosses">Bosses</label>
+        </div>
         
         <div class="theme-switch-wrapper">
             <span style="color: #fff; font-size: 12px; margin-right: 8px;">🌙</span>
@@ -727,10 +1297,7 @@ def generate_master_guide():
             <label for="radio-wild-pokemon">🐾 Pokémon View</label>
         </div>
 
-        <div id="wild-route-view" class="sub-tab-content">
-            <div class="search-container">
-                <input type="text" id="route-search" class="search-input" placeholder="Search route or location name..." onkeyup="filterRoutes()">
-            </div>"""
+        <div id="wild-route-view" class="sub-tab-content">"""
 
     for r in route_cards_data:
         map_name = r['map_name']
@@ -770,9 +1337,6 @@ def generate_master_guide():
     html += """</div>
 
         <div id="wild-pokemon-view" class="sub-tab-content">
-            <div class="search-container">
-                <input type="text" id="pkmn-search" class="search-input" placeholder="Search Pokémon by name..." onkeyup="filterPokemon()">
-            </div>
             <div class="pkmn-grid">"""
 
     all_species_set = set(pokedex_species_list)
@@ -920,6 +1484,52 @@ def generate_master_guide():
             if tid in trainers_dict:
                 html += create_detailed_card(trainers_dict[tid], use_sprite=True)
     html += '</div></body></html>'
+
+    type_colors = {"Normal": "#A8A77A", "Fire": "#EE8130", "Water": "#6390F0", "Electric": "#F7D02C", "Grass": "#7AC74C", "Ice": "#96D9D6", "Fighting": "#C22E28", "Poison": "#A33EA1", "Ground": "#E2BF65", "Flying": "#A98FF3", "Psychic": "#F95587", "Bug": "#A6B91A", "Rock": "#B6A136", "Ghost": "#735797", "Dragon": "#6F35FC", "Steel": "#B7B7CE", "Dark": "#705746", "Fairy": "#D685AD"}
+    
+    pokedex_data = get_pokedex_data()
+
+    html += '<div id="pokedex-view" class="tab-content">'
+    html += '<table class="pokedex-table">'
+    html += """<thead>
+            <tr>
+                <th>#</th><th>Sprite</th><th>Name</th><th>Type</th><th>Abilities</th>
+                <th>EV Yield</th><th>Catch Rate</th><th>Base Friendship</th><th>Growth Rate</th><th>Egg Groups</th><th>Gender</th>
+                <th>HP</th><th>Atk</th><th>Def</th><th>SpA</th><th>SpD</th><th>Spe</th><th>BST</th>
+            </tr>
+        </thead>
+        <tbody>"""
+
+    for entry in pokedex_data:
+        base_id = entry['base']
+        f = next(iter(entry['forms'].values()))
+        rid = f"row-{base_id}"
+        ext = f['extras']
+        bst = sum(int(v) for v in f['stats'].values() if str(v).isdigit())
+        f_btns = "".join([f'<button class="form-btn" onclick=\'sw("{rid}","{k}",{json.dumps(entry["forms"]).replace("\"", "&quot;")})\'>{k.replace(base_id + "_", "") if k != base_id else "BASE"}</button>' for k in entry['forms']]) if len(entry['forms']) > 1 else ""
+
+        html += f"""<tr id="{rid}" class="pokemon-row">
+            <td>#{str(entry['dex']).zfill(3)}</td>
+            <td><img id="img-{rid}" src="{f['img']}" class="pk-img"></td>
+            <td><b id="name-{rid}" style="font-size: 1.1em;">{f['name']}</b><br><div style="margin-top:6px;">{f_btns}</div></td>
+            <td id="types-{rid}">{" ".join([f'<span class="type-pill" style="background:{type_colors.get(t,"#AAA")}">{t}</span>' for t in f['types']])}</td>
+            <td id="abils-{rid}" style="min-width: 130px;">{" ".join([f'<span class="ab-row">{a}</span>' for a in f['abilities']])}</td>
+            <td id="ev-{rid}" style="min-width: 100px;">{"".join([f'<span class="ev-row">{e}</span>' for e in ext['ev_yield']])}</td>
+            <td id="catch-{rid}">{ext['catch_rate']}</td>
+            <td id="friend-{rid}">{ext['friendship']}</td>
+            <td id="growth-{rid}">{ext['growth_rate']}</td>
+            <td id="egg-{rid}">{ext['egg_groups']}</td>
+            <td id="gender-{rid}">{format_gender_html(ext['gender_ratio'])}</td>
+            <td class="s-hp" id="hp-{rid}">{format_stat_cell('hp', f['stats']['hp'], f.get('vanilla_stats'))}</td>
+            <td class="s-atk" id="atk-{rid}">{format_stat_cell('atk', f['stats']['atk'], f.get('vanilla_stats'))}</td>
+            <td class="s-def" id="def-{rid}">{format_stat_cell('def', f['stats']['def'], f.get('vanilla_stats'))}</td>
+            <td class="s-spa" id="spa-{rid}">{format_stat_cell('spa', f['stats']['spa'], f.get('vanilla_stats'))}</td>
+            <td class="s-spd" id="spd-{rid}">{format_stat_cell('spd', f['stats']['spd'], f.get('vanilla_stats'))}</td>
+            <td class="s-spe" id="spe-{rid}">{format_stat_cell('spe', f['stats']['spe'], f.get('vanilla_stats'))}</td>
+            <td class="s-bst" id="bst-{rid}" style="color: #d35400;"><b>{bst}</b></td>
+        </tr>"""
+
+    html += "</tbody></table></div>"
 
     OUTPUT_HTML = "src/data/master_guide/Master_Strategy_Guide.html"
 
