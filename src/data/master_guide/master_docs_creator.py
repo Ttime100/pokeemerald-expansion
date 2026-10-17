@@ -72,8 +72,11 @@ STORY_ORDER = [
     "Route103",
     "MauvilleCity",
     "MauvilleCity_Gym",
+    "NewMauville",
     "Route117",
+    "VerdanturfTown",
     "Route111",
+    "MirageTower",
     "Route112",
     "FieryPath",
     "Route113",
@@ -105,21 +108,32 @@ STORY_ORDER = [
     "MagmaHideout",
     "AquaHideout",
     "Route124",
+    "Underwater_Route124",
+    "MossdeepCity",
     "MossdeepCity_Gym",
     "MossdeepCity_SpaceCenter",
     "Route125",
+    "ShoalCave",
+    "Starfall_Glacier",
     "Route126",
+    "Underwater_Route126",
     "Route127",
+    "Underwater_Route127",
     "Route128",
     "SeafloorCavern",
     "SootopolisCity",
+    "CaveOfOrigin",
     "Route129",
     "Route130",
     "Route131",
     "PacifidlogTown",
+    "SkyPillar",
     "Route132",
     "Route133",
     "Route134",
+    "ObsidianShores",
+    "Shadespur_Isle",
+    "Umbra_Inlet",
     "EverGrandeCity",
     "VictoryRoad_1F",
     "VictoryRoad_B1F",
@@ -129,7 +143,13 @@ STORY_ORDER = [
     "Route107",
     "Route108",
     "AbandonedShip",
+    "SafariZone",
 ]
+
+WILD_ORDER_OVERRIDES = {
+    'Route103': 3,
+    'PetalburgCity': 3,
+}
 
 NON_TRAINER_FLAGS = {
     'TRAINER_BATTLE_TOWER_ON',
@@ -933,7 +953,27 @@ def generate_master_guide():
                 continue
             raw_label = enc.get('base_label', enc.get('map', ''))
             map_name = format_map_name(raw_label)
-            route_info = {'map_name': map_name, 'methods': {}}
+            route_info = {'map_name': map_name,'raw_label': raw_label, 'methods': {}}
+
+            def get_wild_story_rank(raw_label):
+                if not raw_label:
+                    return 9999
+                clean = raw_label[1:] if raw_label.startswith('g') else raw_label
+                clean = re.sub(r'_(Land|Water|Fishing|RockSmash)Mons$', '', clean)
+                if clean in WILD_ORDER_OVERRIDES:
+                    return WILD_ORDER_OVERRIDES[clean]
+
+                if clean in STORY_ORDER:
+                    return STORY_ORDER.index(clean)
+                for idx, story_map in enumerate(STORY_ORDER):
+                    if clean.startswith(story_map):
+                        return idx
+                return 9999
+
+            route_cards_data.sort(key=lambda r: get_wild_story_rank(r.get('raw_label', '')))
+
+            for r in route_cards_data:
+                map_name = r['map_name']
 
             def process_slice(sub_method_name, mons_slice, rates_slice):
                 mons_data = []
