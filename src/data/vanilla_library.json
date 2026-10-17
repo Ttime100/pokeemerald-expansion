@@ -3887,7 +3887,7 @@
         "sd": 110,
         "sp": 100
     },
-    "SPECIES_GIRATINA_ALTERED": {
+    "SPECIES_GIRATINA": {
         "hp": 150,
         "at": 100,
         "de": 120,
@@ -3927,7 +3927,7 @@
         "sd": 90,
         "sp": 125
     },
-    "SPECIES_SHAYMIN_LAND": {
+    "SPECIES_SHAYMIN": {
         "hp": 100,
         "at": 100,
         "de": 100,
@@ -4727,7 +4727,7 @@
         "sd": 80,
         "sp": 30
     },
-    "SPECIES_FRILLISH": {
+    "SPECIES_FRILLISH_MALE": {
         "hp": 55,
         "at": 40,
         "de": 50,
@@ -4735,7 +4735,7 @@
         "sd": 85,
         "sp": 40
     },
-    "SPECIES_JELLICENT": {
+    "SPECIES_JELLICENT_MALE": {
         "hp": 100,
         "at": 60,
         "de": 70,
@@ -5335,7 +5335,7 @@
         "sd": 54,
         "sp": 72
     },
-    "SPECIES_PYROAR": {
+    "SPECIES_PYROAR_MALE": {
         "hp": 86,
         "at": 68,
         "de": 72,
@@ -8198,5 +8198,85 @@
         "sa": 88,
         "sd": 88,
         "sp": 88
+    },
+    "SPECIES_DEOXYS_ATTACK": {
+        "hp": 50,
+        "at": 180,
+        "de": 20,
+        "sa": 180,
+        "sd": 20,
+        "sp": 150
+    },
+    "SPECIES_DEOXYS_DEFENSE": {
+        "hp": 50,
+        "at": 70,
+        "de": 160,
+        "sa": 70,
+        "sd": 160,
+        "sp": 90
+    },
+    "SPECIES_DEOXYS_SPEED": {
+        "hp": 50,
+        "at": 95,
+        "de": 90,
+        "sa": 95,
+        "sd": 90,
+        "sp": 180
+    },
+    "SPECIES_ROTOM_HEAT": {
+        "hp": 50,
+        "at": 65,
+        "de": 107,
+        "sa": 105,
+        "sd": 107,
+        "sp": 86
+    },
+    "SPECIES_ROTOM_WASH": {
+        "hp": 50,
+        "at": 65,
+        "de": 107,
+        "sa": 105,
+        "sd": 107,
+        "sp": 86
+    },
+    "SPECIES_ROTOM_FROST": {
+        "hp": 50,
+        "at": 65,
+        "de": 107,
+        "sa": 105,
+        "sd": 107,
+        "sp": 86
+    },
+    "SPECIES_ROTOM_FAN": {
+        "hp": 50,
+        "at": 65,
+        "de": 107,
+        "sa": 105,
+        "sd": 107,
+        "sp": 86
+    },
+    "SPECIES_ROTOM_MOW": {
+        "hp": 50,
+        "at": 65,
+        "de": 107,
+        "sa": 105,
+        "sd": 107,
+        "sp": 86
+    },
+    "SPECIES_GIRATINA_ORIGIN": {
+        "hp": 150,
+        "at": 120,
+        "de": 100,
+        "sa": 120,
+        "sd": 100,
+        "sp": 90
+    },
+    "SPECIES_SHAYMIN_SKY": {
+        "hp": 100,
+        "at": 103,
+        "de": 75,
+        "sa": 120,
+        "sd": 75,
+        "sp": 127
     }
 }

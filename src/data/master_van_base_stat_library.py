@@ -12,6 +12,18 @@ NAME_TO_CONSTANT = {
     "porygon2": "PORYGON2",
     "porygon-z": "PORYGON_Z",
     "deoxys-normal": "DEOXYS",
+    "deoxys-attack": "DEOXYS_ATTACK",
+    "deoxys-defense": "DEOXYS_DEFENSE",
+    "deoxys-speed": "DEOXYS_SPEED",
+    "rotom-heat": "ROTOM_HEAT",
+    "rotom-wash": "ROTOM_WASH",
+    "rotom-frost": "ROTOM_FROST",
+    "rotom-fan": "ROTOM_FAN",
+    "rotom-mow": "ROTOM_MOW",
+    "giratina-altered": "GIRATINA",
+    "giratina-origin": "GIRATINA_ORIGIN",
+    "shaymin-land": "SHAYMIN",
+    "shaymin-sky": "SHAYMIN_SKY",
 }
 
 def update_vanilla_library():
@@ -43,7 +55,29 @@ def update_vanilla_library():
         except Exception as e:
             print(f"Error on ID {i}: {e}")
 
-    with open('vanilla_library.json', 'w') as f:
+    # Fetch alternate forms directly by their PokeAPI slug name
+    print("Fetching alternate forms by name...")
+    for api_name, const_name in NAME_TO_CONSTANT.items():
+        if "-" in api_name: # Targets form variants
+            try:
+                response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{api_name}")
+                if response.status_code == 200:
+                    data = response.json()
+                    stats = data['stats']
+                    vanilla_library[f"SPECIES_{const_name}"] = {
+                        "hp": stats[0]['base_stat'],
+                        "at": stats[1]['base_stat'],
+                        "de": stats[2]['base_stat'],
+                        "sa": stats[3]['base_stat'],
+                        "sd": stats[4]['base_stat'],
+                        "sp": stats[5]['base_stat']
+                    }
+                    print(f"Loaded vanilla stats for form: {api_name} -> SPECIES_{const_name}")
+                time.sleep(0.02)
+            except Exception:
+                pass
+
+    with open('src/data/vanilla_library.json', 'w') as f:
         json.dump(vanilla_library, f, indent=4)
     print("Success! 'vanilla_library.json' created.")
 

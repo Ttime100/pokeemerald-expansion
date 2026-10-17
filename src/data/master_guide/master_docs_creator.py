@@ -919,6 +919,8 @@ def generate_master_guide():
     trainers_dict = parse_trainers(TRAINER_PARTY_PATH)
     grouped_trainers = group_trainers_by_location(trainers_dict.values(), MAPS_DIR_PATH)
     pokedex_order, pokedex_species_list = load_pokedex_order(POKEDEX_LIST_PATH)
+    pokedex_data = get_pokedex_data()
+    type_colors = {"Normal": "#A8A77A", "Fire": "#EE8130", "Water": "#6390F0", "Electric": "#F7D02C", "Grass": "#7AC74C", "Ice": "#96D9D6", "Fighting": "#C22E28", "Poison": "#A33EA1", "Ground": "#E2BF65", "Flying": "#A98FF3", "Psychic": "#F95587", "Bug": "#A6B91A", "Rock": "#B6A136", "Ghost": "#735797", "Dragon": "#6F35FC", "Steel": "#B7B7CE", "Dark": "#705746", "Fairy": "#D685AD"}
 
     pokemon_encounters = defaultdict(list)
     route_cards_data = []
@@ -1219,6 +1221,26 @@ def generate_master_guide():
             return `${prefix}${newVal}${suffix}`;
         }
     }
+    const typeColors = """ + json.dumps(type_colors) + """;
+    function formatGenderJS(genderStr) {
+        if (!genderStr || genderStr.includes("Genderless") || genderStr.includes("255")) {
+            return '<span class="gender-none">Genderless</span>';
+        }
+        if (genderStr.includes("♂") && genderStr.includes("♀")) {
+            let parts = genderStr.split('/');
+            let m_pct = parts[0].replace('♂', '').trim();
+            let f_pct = parts[1].replace('♀', '').trim();
+            return `<div class="gender-row"><span class="gender-male"><span class="gender-symbol">♂</span> ${m_pct}</span></div>` +
+                   `<div class="gender-row"><span class="gender-female"><span class="gender-symbol">♀</span> ${f_pct}</span></div>`;
+        } else if (genderStr.includes("♂")) {
+            let m_pct = genderStr.replace('♂', '').trim();
+            return `<div class="gender-row"><span class="gender-male"><span class="gender-symbol">♂</span> ${m_pct}</span></div>`;
+        } else if (genderStr.includes("♀")) {
+            let f_pct = genderStr.replace('♀', '').trim();
+            return `<div class="gender-row"><span class="gender-female"><span class="gender-symbol">♀</span> ${f_pct}</span></div>`;
+        }
+        return genderStr;
+    }
 
     function sw(rid, key, formsData) {
         const f = formsData[key];
@@ -1484,10 +1506,6 @@ def generate_master_guide():
             if tid in trainers_dict:
                 html += create_detailed_card(trainers_dict[tid], use_sprite=True)
     html += '</div></body></html>'
-
-    type_colors = {"Normal": "#A8A77A", "Fire": "#EE8130", "Water": "#6390F0", "Electric": "#F7D02C", "Grass": "#7AC74C", "Ice": "#96D9D6", "Fighting": "#C22E28", "Poison": "#A33EA1", "Ground": "#E2BF65", "Flying": "#A98FF3", "Psychic": "#F95587", "Bug": "#A6B91A", "Rock": "#B6A136", "Ghost": "#735797", "Dragon": "#6F35FC", "Steel": "#B7B7CE", "Dark": "#705746", "Fairy": "#D685AD"}
-    
-    pokedex_data = get_pokedex_data()
 
     html += '<div id="pokedex-view" class="tab-content">'
     html += '<table class="pokedex-table">'
