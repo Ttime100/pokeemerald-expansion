@@ -955,50 +955,32 @@ def generate_master_guide():
                 continue
             raw_label = enc.get('base_label', enc.get('map', ''))
             map_name = format_map_name(raw_label)
-            route_info = {'map_name': map_name,'raw_label': raw_label, 'methods': {}}
+            route_info = {'map_name': map_name, 'raw_label': raw_label, 'methods': {}}
 
-            def get_wild_story_rank(raw_label):
-                if not raw_label:
-                    return 9999
-                clean = raw_label[1:] if raw_label.startswith('g') else raw_label
-                clean = re.sub(r'_(Land|Water|Fishing|RockSmash)Mons$', '', clean)
-                if clean in WILD_ORDER_OVERRIDES:
-                    return WILD_ORDER_OVERRIDES[clean]
-
-                if clean in STORY_ORDER:
-                    return STORY_ORDER.index(clean)
-                for idx, story_map in enumerate(STORY_ORDER):
-                    if clean.startswith(story_map):
-                        return idx
-                return 9999
-
-            route_cards_data.sort(key=lambda r: get_wild_story_rank(r.get('raw_label', '')))
-
-            for r in route_cards_data:
-                map_name = r['map_name']
-
-            def process_slice(sub_method_name, mons_slice, rates_slice):
+            def process_slice(sub_method_name, mons_slice, rates_slice, curr_map):
                 mons_data = []
                 species_agg = {}
                 for i, m in enumerate(mons_slice):
-                    species = format_display_name(m['species'])
+                    raw_species = m['species']
+                    display_species = format_display_name(raw_species)
+
                     min_lvl = int(m.get('min_level', 1))
                     max_lvl = int(m.get('max_level', min_lvl))
                     rate = rates_slice[i] if i < len(rates_slice) else 0
 
                     lvl_str = f'Lv.{min_lvl}' if min_lvl == max_lvl else f'Lv.{min_lvl}-{max_lvl}'
                     mons_data.append({
-                        'species': species,
+                        'species': display_species,
                         'level_str': lvl_str,
                         'rate': rate,
                     })
 
-                    # Key MUST include species to avoid overwriting lower slots in the same table
-                    agg_key = (species, map_name, sub_method_name)
+                    agg_key = (display_species, curr_map, sub_method_name)
                     if agg_key not in species_agg:
                         species_agg[agg_key] = {
-                            'species': species,
-                            'map_name': map_name,
+                            'species': display_species,
+                            'raw_species': raw_species,
+                            'map_name': curr_map,
                             'method': sub_method_name,
                             'min_level': min_lvl,
                             'max_level': max_lvl,
@@ -1010,32 +992,54 @@ def generate_master_guide():
 
                 for entry in species_agg.values():
                     pokemon_encounters[entry['species']].append(entry)
+                    if 'raw_species' in entry:
+                        pokemon_encounters[entry['raw_species']].append(entry)
 
                 return mons_data
 
             if 'land_mons' in enc and 'mons' in enc['land_mons']:
-                route_info['methods']['Land'] = process_slice('Land', enc['land_mons']['mons'], LAND_RATES)
+                route_info['methods']['Land'] = process_slice('Land', enc['land_mons']['mons'], LAND_RATES, map_name)
 
             if 'water_mons' in enc and 'mons' in enc['water_mons']:
-                route_info['methods']['Water'] = process_slice('Water', enc['water_mons']['mons'], WATER_RATES)
+                route_info['methods']['Water'] = process_slice('Water', enc['water_mons']['mons'], WATER_RATES, map_name)
 
             if 'fishing_mons' in enc and 'mons' in enc['fishing_mons']:
                 all_fishing = enc['fishing_mons']['mons']
                 fishing_groups = {}
                 if len(all_fishing) >= 2:
-                    fishing_groups['Old Rod'] = process_slice('Old Rod', all_fishing[0:2], OLD_ROD_RATES)
+                    fishing_groups['Old Rod'] = process_slice('Old Rod', all_fishing[0:2], OLD_ROD_RATES, map_name)
                 if len(all_fishing) >= 5:
-                    fishing_groups['Good Rod'] = process_slice('Good Rod', all_fishing[2:5], GOOD_ROD_RATES)
+                    fishing_groups['Good Rod'] = process_slice('Good Rod', all_fishing[2:5], GOOD_ROD_RATES, map_name)
                 if len(all_fishing) >= 10:
-                    fishing_groups['Super Rod'] = process_slice('Super Rod', all_fishing[5:10], SUPER_ROD_RATES)
+                    fishing_groups['Super Rod'] = process_slice('Super Rod', all_fishing[5:10], SUPER_ROD_RATES, map_name)
                 if fishing_groups:
                     route_info['methods']['Fishing'] = fishing_groups
 
             if 'rock_smash_mons' in enc and 'mons' in enc['rock_smash_mons']:
-                route_info['methods']['Rock Smash'] = process_slice('Rock Smash', enc['rock_smash_mons']['mons'], ROCK_RATES)
+                route_info['methods']['Rock Smash'] = process_slice('Rock Smash', enc['rock_smash_mons']['mons'], ROCK_RATES, map_name)
 
             if route_info['methods']:
                 route_cards_data.append(route_info)
+
+    def get_wild_story_rank(raw_label):
+        if not raw_label:
+            return 9999
+        clean = raw_label[1:] if raw_label.startswith('g') else raw_label
+        clean = re.sub(r'_(Land|Water|Fishing|RockSmash)Mons$', '', clean)
+        if clean in WILD_ORDER_OVERRIDES:
+            return WILD_ORDER_OVERRIDES[clean]
+
+        if clean in STORY_ORDER:
+            return STORY_ORDER.index(clean)
+        for idx, story_map in enumerate(STORY_ORDER):
+            if clean.startswith(story_map):
+                return idx
+        return 9999
+
+    route_cards_data.sort(key=lambda r: get_wild_story_rank(r.get('raw_label', '')))
+
+    for r in route_cards_data:
+        map_name = r['map_name']
 
     html = """<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
