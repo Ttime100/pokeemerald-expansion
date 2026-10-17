@@ -627,7 +627,9 @@ def get_pokedex_data():
                         s_block = content[start_idx:curr_idx-1]
                         pos = curr_idx
 
-                        if any(tag in f"_{s_name}" for tag in unwanted_form_tags): 
+                        if s_name == "MEGANIUM":
+                            pass
+                        elif any(tag in f"_{s_name}" for tag in unwanted_form_tags):
                             continue
                         
                         stats, types, abils, extras = extract_species_data(s_name, s_block, defines, macros)
