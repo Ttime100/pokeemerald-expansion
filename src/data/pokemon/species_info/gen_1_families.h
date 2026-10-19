@@ -966,7 +966,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_BLASTOISE] =
     {
-        .baseHP        = 79,
+        .baseHP        = 83, // Ttime100 changed from 79
         .baseAttack    = 83,
         .baseDefense   = 100,
         .baseSpeed     = 78,
