@@ -145,11 +145,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_MEGANIUM] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 82,
+        .baseHP        = 85,    // Ttime100 changed from 80
+        .baseAttack    = 85,    // Ttime100 changed from 82
         .baseDefense   = 100,
         .baseSpeed     = 80,
-        .baseSpAttack  = 83,
+        .baseSpAttack  = 85,    // Ttime100 changed from 83
         .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_GRASS, TYPE_FAIRY), // ADDED FAIRY TYPING
         .catchRate = 45,
@@ -444,7 +444,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseAttack    = 84,
         .baseDefense   = 78,
         .baseSpeed     = 100,
-        .baseSpAttack  = 109,
+        .baseSpAttack  = 110, // Ttime100 changed from 109
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 45,
@@ -729,9 +729,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_FERALIGATR] =
     {
         .baseHP        = 85,
-        .baseAttack    = 105,
+        .baseAttack    = 108,   // Ttime100 changed from 105
         .baseDefense   = 100,
-        .baseSpeed     = 78,
+        .baseSpeed     = 80,    // Ttime100 changed from 78
         .baseSpAttack  = 79,
         .baseSpDefense = 83,
         .types = MON_TYPES(TYPE_WATER, TYPE_DARK), // ADDED DARK TYPING

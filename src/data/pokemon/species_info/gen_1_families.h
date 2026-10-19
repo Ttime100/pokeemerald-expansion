@@ -157,7 +157,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_VENUSAUR] =
     {
         .baseHP        = 80,
-        .baseAttack    = 82,
+        .baseAttack    = 92, // Ttime100 changed from 82
         .baseDefense   = 83,
         .baseSpeed     = 80,
         .baseSpAttack  = 100,
@@ -519,7 +519,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_CHARIZARD}),
     },
 
-#define CHARIZARD_SP_ATK (P_UPDATED_STATS >= GEN_2 ? 109 : 85)
+#define CHARIZARD_SP_ATK (P_UPDATED_STATS >= GEN_2 ? 110 : 85) // Ttime100 changed from 109 to 110
 
 #if P_UPDATED_EXP_YIELDS >= GEN_8
     #define CHARIZARD_EXP_YIELD 267
@@ -970,7 +970,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseAttack    = 83,
         .baseDefense   = 100,
         .baseSpeed     = 78,
-        .baseSpAttack  = 85,
+        .baseSpAttack  = 86, // Ttime100 changed from 85
         .baseSpDefense = BLASTOISE_SP_DEF,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 45,

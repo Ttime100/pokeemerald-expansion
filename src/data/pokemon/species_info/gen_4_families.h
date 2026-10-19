@@ -151,7 +151,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseDefense   = 105,
         .baseSpeed     = 56,
         .baseSpAttack  = 75,
-        .baseSpDefense = 85,
+        .baseSpDefense = 95, // Ttime100 changed from 85
         .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -370,7 +370,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_INFERNAPE] =
     {
-        .baseHP        = 76,
+        .baseHP        = 77, // Ttime100 changed from 76
         .baseAttack    = 104,
         .baseDefense   = 71,
         .baseSpeed     = 108,
@@ -601,9 +601,9 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_EMPOLEON] =
     {
-        .baseHP        = 84,
-        .baseAttack    = 86,
-        .baseDefense   = 88,
+        .baseHP        = 85, // Ttime100 changed from 84
+        .baseAttack    = 88, // Ttime100 changed from 86
+        .baseDefense   = 90, // Ttime100 changed from 88
         .baseSpeed     = 60,
         .baseSpAttack  = 111,
         .baseSpDefense = 101,
