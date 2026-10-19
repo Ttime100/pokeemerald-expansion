@@ -1780,7 +1780,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseAttack    = 50,
         .baseDefense   = 70,
         .baseSpeed     = 65,
-        .baseSpAttack  = 50,
+        .baseSpAttack  = 70, // Ttime100 increased from 50
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
         .catchRate = 45,
@@ -3842,11 +3842,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_SHEDINJA] =
     {
         .baseHP        = 1,
-        .baseAttack    = 90,
-        .baseDefense   = 45,
-        .baseSpeed     = 40,
-        .baseSpAttack  = 30,
-        .baseSpDefense = 30,
+        .baseAttack    = 110,   // Ttime100 changed from 90
+        .baseDefense   = 5,     // Ttime100 changed from 45
+        .baseSpeed     = 60,    // Ttime100 changed from 40
+        .baseSpAttack  = 100,   // Ttime100 changed from 30
+        .baseSpDefense = 10,    // Ttime100 changed from 30
         .types = MON_TYPES(TYPE_BUG, TYPE_GHOST),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 83 : 95,
@@ -4060,10 +4060,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_EXPLOUD] =
     {
         .baseHP        = 104,
-        .baseAttack    = 91,
-        .baseDefense   = 63,
+        .baseAttack    = 101,   // Ttime100 changed from 91
+        .baseDefense   = 73,    // Ttime100 changed from 63
         .baseSpeed     = 68,
-        .baseSpAttack  = 91,
+        .baseSpAttack  = 101,   // Ttime100 changed from 91
         .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 73 : 63,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 45,
@@ -7254,12 +7254,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_SPINDA
     [SPECIES_SPINDA] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 60,
-        .baseDefense   = 60,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 60,
+        .baseHP        = 70, // Ttime100 increased from 60
+        .baseAttack    = 70, // Ttime100 increased from 60
+        .baseDefense   = 70, // Ttime100 increased from 60
+        .baseSpeed     = 70, // Ttime100 increased from 60
+        .baseSpAttack  = 70, // Ttime100 increased from 60
+        .baseSpDefense = 70, // Ttime100 increased from 60
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 126 : 85,
