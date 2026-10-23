@@ -810,6 +810,22 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_EliteFourDrake, gTrainerPalette_EliteFourDrake, 0, 5, 0x1A0),
     },
+    [TRAINER_PIC_ELITE_FOUR_TYLER] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_EliteFourTyler, gTrainerPalette_EliteFourTyler),
+    },
+    [TRAINER_PIC_ELITE_FOUR_ROB] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_EliteFourRob, gTrainerPalette_EliteFourRob),
+    },
+    [TRAINER_PIC_ELITE_FOUR_AUSTIN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_EliteFourAustin, gTrainerPalette_EliteFourAustin),
+    },
+    [TRAINER_PIC_ELITE_FOUR_PARTH] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_EliteFourParth, gTrainerPalette_EliteFourParth),
+    },
     [TRAINER_PIC_LEADER_ROXANNE] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_LeaderRoxanne, gTrainerPalette_LeaderRoxanne),
