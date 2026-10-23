@@ -336,3 +336,34 @@ SSTidalCorridor_Text_Cabin3:
 SSTidalCorridor_Text_Cabin4:
 	.string "Cabin 4$"
 `
+script _SSTidalCorridor_EventScript_Briney {
+	lock
+	faceplayer
+	msgbox(SSTidalCorridor_Text_BrineyWelcomeAboard)
+	if (!flag(FLAG_RECEIVED_MYSTIC_TICKET)) {
+		msgbox(SSTidalCorridor_Text_BrineyMysticTicket)
+		giveitem(ITEM_MYSTIC_TICKET)
+		msgbox(SSTidalCorridor_Text_MysticTicketInstructions)
+		setflag(FLAG_RECEIVED_MYSTIC_TICKET)
+		setflag(FLAG_ENABLE_SHIP_NAVEL_ROCK)
+	}
+	release
+	end
+}
+
+text SSTidalCorridor_Text_BrineyMysticTicket {
+	format("Ah, but speaking of the deep ocean…\n"
+           "Before I took the helm here, a peculiar\l"
+           "traveler left something in my care.\p"
+           "They said it's meant for a trainer\n"
+           "who commands the respect\l"
+		   "of the sea and sky.\p"
+           "Peeko and I agree; there's no one more\n"
+           "deserving than you, my friend!")
+}
+
+text SSTidalCorridor_Text_MysticTicketInstructions {
+	format("Take that down to the harbor\n"
+           "whenever you're ready to set course\l"
+           "for some uncharted waters, Captain!")
+}
