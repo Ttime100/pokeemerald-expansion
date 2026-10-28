@@ -1,11 +1,37 @@
 raw`
 Starfall_Glacier_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Starfall_Glacier_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, StarfallGlacier_OnResume
 	.byte 0
 
 Starfall_Glacier_OnTransition:
 	setflag FLAG_LANDMARK_STARFALL_GLACIER
+	setflag FLAG_HIDE_ARTICUNO_EMERALD
+	call_if_set FLAG_RECEIVED_ROAMER_CALL, StarfallGlacier_EventScript_TryShowArticuno
 	end
+
+StarfallGlacier_EventScript_HideArticuno::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_ARTICUNO_EMERALD
+	return
+
+StarfallGlacier_EventScript_TryShowArticuno::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_CAUGHT_ARTICUNO, Common_EventScript_NopReturn
+	goto_if_set FLAG_DEFEATED_ARTICUNO, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_ARTICUNO_EMERALD
+	return
+
+StarfallGlacier_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, StarfallGlacier_EventScript_TryRemoveArticuno
+	end
+
+StarfallGlacier_EventScript_TryRemoveArticuno::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_STARFALL_GLACIER_ARTICUNO
+	return
 
 `
 script Starfall_Glacier_EventScript_Glacia {
@@ -56,4 +82,40 @@ text Glacia_Text_PostBattleSpeech {
 	"But be warned,\n"
 	"the new Elite Four is much more powerful than before.\p"
 	"Even I could not best them.$")
+}
+
+script StarfallGlacier_BattleArticuno {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_ARTICUNO,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_ARTICUNO,50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_STARFALL_GLACIER_ARTICUNO)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, StarfallGlacier_EventScript_DefeatedArticuno)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, StarfallGlacier_EventScript_RanFromArticuno)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, StarfallGlacier_EventScript_RanFromArticuno)
+	setflag(FLAG_CAUGHT_ARTICUNO)
+    release
+    end
+}
+
+script StarfallGlacier_EventScript_DefeatedArticuno {
+    setflag(FLAG_DEFEATED_ARTICUNO)
+	setvar(VAR_0x8004, SPECIES_ARTICUNO)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script StarfallGlacier_EventScript_RanFromArticuno {
+    setvar(VAR_0x8004, SPECIES_ARTICUNO)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
 }

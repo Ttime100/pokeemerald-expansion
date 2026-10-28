@@ -546,6 +546,9 @@
 #define FLAG_CAUGHT_SPIRITOMB                0x2AE // Ttime100 added
 #define FLAG_DEFEATED_SPIRITOMB              0x2AF // Ttime100 added
 #define FLAG_HIDE_SPIRITOMB                  0x2B0 // Ttime100 added
+#define FLAG_CAUGHT_ARTICUNO                 0x2A5 // Ttime100 added
+#define FLAG_DEFEATED_ARTICUNO               0x2A6 // Ttime100 added
+#define FLAG_HIDE_ARTICUNO_EMERALD           0x2A7 // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -690,7 +693,7 @@
 #define FLAG_HIDDEN_ITEM_STARFALL_GLACIER_STAR_PIECE         0x26B // Ttime100 added hidden Star Piece
 #define FLAG_HIDDEN_ITEM_STARFALL_GLACIER_ICE_STONE          0x26C // Ttime100 added hidden Ice Stone
 #define FLAG_HIDDEN_ITEM_STARFALL_GLACIER_SNOWBALL           0x26D // Ttime100 added hidden Snowball
-#define FLAG_HIDDEN_ITEM_STARFALL_COMET_SHART                0x26E // Ttime100 added hidden Comet Shard
+#define FLAG_HIDDEN_ITEM_STARFALL_COMET_SHARD                0x26E // Ttime100 added hidden Comet Shard
 #define FLAG_HIDDEN_ITEM_SLATEPORT_CITY_BOTTLE_CAP           0x26F // Ttime100 added hidden Bottle Cap
 #define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_COVERT_CLOAK          0x270 // Ttime100 added hidden Covert Cloak
 #define FLAG_HIDDEN_ITEM_UMBRA_INLET_DREAD_PLATE             0x271 // Ttime100 added hidden Dread Plate
@@ -745,9 +748,6 @@
 #define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
 #define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
 #define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
-#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC

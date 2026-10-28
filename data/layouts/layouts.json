@@ -4894,7 +4894,7 @@
     {
       "id": "LAYOUT_STARFALL_GLACIER",
       "name": "Starfall_Glacier_Layout",
-      "width": 37,
+      "width": 39,
       "height": 43,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
