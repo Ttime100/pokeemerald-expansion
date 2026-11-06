@@ -549,6 +549,12 @@
 #define FLAG_CAUGHT_ARTICUNO                 0x2A5 // Ttime100 added
 #define FLAG_DEFEATED_ARTICUNO               0x2A6 // Ttime100 added
 #define FLAG_HIDE_ARTICUNO_EMERALD           0x2A7 // Ttime100 added
+#define FLAG_CAUGHT_ZAPDOS                   0x2A2 // Ttime100 added
+#define FLAG_DEFEATED_ZAPDOS                 0x2A3 // Ttime100 added
+#define FLAG_HIDE_ZAPDOS_EMERALD             0x2A4 // Ttime100 added
+#define FLAG_CAUGHT_MOLTRES                  0x29F // Ttime100 added
+#define FLAG_DEFEATED_MOLTRES                0x2A0 // Ttime100 added
+#define FLAG_HIDE_MOLTRES_EMERALD            0x2A1 // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -742,12 +748,6 @@
 #define FLAG_UNUSED_0x29C  0x29C // Unused Flag
 #define FLAG_UNUSED_0x29D  0x29D // Unused Flag
 #define FLAG_UNUSED_0x29E  0x29E // Unused Flag
-#define FLAG_UNUSED_0x29F  0x29F // Unused Flag
-#define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
-#define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
-#define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
-#define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
-#define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
