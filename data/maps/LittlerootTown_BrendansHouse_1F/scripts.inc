@@ -434,3 +434,14 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 PlayersHouse_1F_Text_StillUnknownPokemon:
 	.string "Mom: Well, isn't that something!\n"
 	.string "There are still unknown Pokémon.$"
+
+PlayersHouse_1F_Text_NewEmergencyNewsFlash:
+	.string "We bring you this emergency\n"
+	.string "news flash!\p"
+	.string "Across Hoenn, there have\n"
+	.string "been reports of powerful\l"
+	.string "Pokémon appearing in the wild.\p"
+	.string "The identity of these Pokémon\n"
+	.string "are currently unknown.\p"
+	.string "We now return you to the regular\n"
+	.string "movie program.$"
