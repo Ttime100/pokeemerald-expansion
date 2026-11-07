@@ -10,11 +10,6 @@ MtChimney_OnTransition:
 	call_if_set FLAG_RECEIVED_ROAMER_CALL, MtChimney_EventScript_TryShowMoltres
 	end
 
-MtChimney_EventScript_HideMoltres::
-	setvar VAR_TEMP_1, 1
-	setflag FLAG_HIDE_MOLTRES_EMERALD
-	return
-
 MtChimney_EventScript_TryShowMoltres::
 	setvar VAR_TEMP_1, 1
 	goto_if_set FLAG_CAUGHT_MOLTRES, Common_EventScript_NopReturn

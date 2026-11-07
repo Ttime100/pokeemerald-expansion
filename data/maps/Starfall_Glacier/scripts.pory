@@ -10,11 +10,6 @@ Starfall_Glacier_OnTransition:
 	call_if_set FLAG_RECEIVED_ROAMER_CALL, StarfallGlacier_EventScript_TryShowArticuno
 	end
 
-StarfallGlacier_EventScript_HideArticuno::
-	setvar VAR_TEMP_1, 1
-	setflag FLAG_HIDE_ARTICUNO_EMERALD
-	return
-
 StarfallGlacier_EventScript_TryShowArticuno::
 	setvar VAR_TEMP_1, 1
 	goto_if_set FLAG_CAUGHT_ARTICUNO, Common_EventScript_NopReturn
