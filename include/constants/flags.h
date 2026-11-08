@@ -555,6 +555,12 @@
 #define FLAG_CAUGHT_MOLTRES                  0x29F // Ttime100 added
 #define FLAG_DEFEATED_MOLTRES                0x2A0 // Ttime100 added
 #define FLAG_HIDE_MOLTRES_EMERALD            0x2A1 // Ttime100 added
+#define FLAG_CAUGHT_DIALGA                   0x4D1 // Ttime100 added
+#define FLAG_DEFEATED_DIALGA                 0x4D2 // Ttime100 added
+#define FLAG_HIDE_DIALGA                     0x4D3 // Ttime100 added
+#define FLAG_CAUGHT_PALKIA                   0x4D4 // Ttime100 added
+#define FLAG_DEFEATED_PALKIA                 0x4D5 // Ttime100 added
+#define FLAG_HIDE_PALKIA                     0x4D6 // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -1295,12 +1301,6 @@
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
 #define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
-#define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

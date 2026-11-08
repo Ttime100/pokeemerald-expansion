@@ -1,0 +1,105 @@
+raw`
+SouthernIsland_Interior_2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SouthernIsland_Interior_2_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, SouthernIsland_Interior_2_OnResume
+	.byte 0
+
+SouthernIsland_Interior_2_OnTransition:
+    clearflag FLAG_HIDE_DIALGA
+    clearflag FLAG_HIDE_PALKIA
+	call_if_set FLAG_DEFEATED_DIALGA, SouthernIsland_Interior_2_EventScript_HideDialga
+    call_if_set FLAG_DEFEATED_PALKIA, SouthernIsland_Interior_2_EventScript_HidePalkia
+    call_if_set FLAG_CAUGHT_DIALGA, SouthernIsland_Interior_2_EventScript_HideDialga
+    call_if_set FLAG_CAUGHT_PALKIA, SouthernIsland_Interior_2_EventScript_HidePalkia
+    end
+
+SouthernIsland_Interior_2_OnResume:
+    call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SouthernIsland_Interior_2_EventScript_TryRemoveObject
+    end
+
+SouthernIsland_Interior_2_EventScript_TryRemoveObject::
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+    removeobject VAR_LAST_TALKED
+    return
+
+SouthernIsland_Interior_2_EventScript_HideDialga::
+    setflag FLAG_HIDE_DIALGA
+	return
+
+SouthernIsland_Interior_2_EventScript_HidePalkia::
+    setflag FLAG_HIDE_PALKIA
+	return
+
+`
+script SouthernIsland_Interior_2_BattleDialga {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_DIALGA,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_DIALGA,50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_SOUTHERN_ISLAND_INTERIOR_2_DIALGA)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, SouthernIsland_Interior_2_EventScript_DefeatedDialga)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, SouthernIsland_Interior_2_EventScript_RanFromDialga)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SouthernIsland_Interior_2_EventScript_RanFromDialga)
+	setflag(FLAG_CAUGHT_DIALGA)
+    release
+    end
+}
+
+script SouthernIsland_Interior_2_EventScript_DefeatedDialga {
+    setflag(FLAG_DEFEATED_DIALGA)
+	setvar(VAR_0x8004, SPECIES_DIALGA)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script SouthernIsland_Interior_2_EventScript_RanFromDialga {
+    setvar(VAR_0x8004, SPECIES_DIALGA)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script SouthernIsland_Interior_2_BattlePalkia {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_PALKIA,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_PALKIA,50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_SOUTHERN_ISLAND_INTERIOR_2_PALKIA)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, SouthernIsland_Interior_2_EventScript_DefeatedPalkia)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, SouthernIsland_Interior_2_EventScript_RanFromPalkia)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SouthernIsland_Interior_2_EventScript_RanFromPalkia)
+	setflag(FLAG_CAUGHT_PALKIA)
+    release
+    end
+}
+
+script SouthernIsland_Interior_2_EventScript_DefeatedPalkia {
+    setflag(FLAG_DEFEATED_PALKIA)
+	setvar(VAR_0x8004, SPECIES_PALKIA)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script SouthernIsland_Interior_2_EventScript_RanFromPalkia {
+    setvar(VAR_0x8004, SPECIES_PALKIA)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}

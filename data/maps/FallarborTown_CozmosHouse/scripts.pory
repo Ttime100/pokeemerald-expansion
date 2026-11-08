@@ -5,7 +5,7 @@ FallarborTown_CozmosHouse_MapScripts::
 FallarborTown_CozmosHouse_EventScript_ProfCozmo::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_FLASH_CANNON, FallarborTown_CozmosHouse_EventScript_GaveMeteorite
+	goto_if_set FLAG_RECEIVED_TM_FLASH_CANNON, FallarborTown_CozmosHouse_EventScript_GaveMeteoriteNew
 	checkitem ITEM_METEORITE
 	goto_if_eq VAR_RESULT, TRUE, FallarborTown_CozmosHouse_EventScript_PlayerHasMeteorite
 	msgbox FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow, MSGBOX_DEFAULT
@@ -118,3 +118,41 @@ FallarborTown_CozmosHouse_Text_CozmoIsSoHappy:
 	.string "He's so happy! I think it's cute.$"
 
 `
+script FallarborTown_CozmosHouse_EventScript_GaveMeteoriteNew {
+    if (flag(FLAG_IS_CHAMPION)) {
+        if (flag(FLAG_ENABLE_SHIP_SOUTHERN_ISLAND)) {
+    		msgbox(FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch, MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(FallarborTown_CozmosHouse_Text_GiveEonTicket)
+        giveitem(ITEM_EON_TICKET)
+        goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+        setflag(FLAG_ENABLE_SHIP_SOUTHERN_ISLAND)
+        msgbox(FallarborTown_CozmosHouse_Text_BeCareful)
+        release
+        end
+    }
+    msgbox(FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch, MSGBOX_DEFAULT)
+    release
+    end
+}
+
+text FallarborTown_CozmosHouse_Text_GiveEonTicket{
+	"Prof. Cozmo: Oh, {PLAYER}!\n"
+	"Congratulations on becoming Champion!\p"
+	"Thanks to the Meteorite you gave me,\n"
+	"my instruments have been picking up\p"
+	"bizarre spatial-temporal distortions\n"
+	"coming from Southern Island.\p"
+	"I found this old ticket while organizing\n"
+	"my research notes.\p"
+	"Could you take it to Lilycove Harbor\n"
+	"and go investigate for me?"
+}
+
+text FallarborTown_CozmosHouse_Text_BeCareful {
+	"Prof. Cozmo: Be careful out there.\p"
+	"Whatever is warping space-time on that\n"
+	"island must be unimaginably powerful."
+}

@@ -1,0 +1,65 @@
+{
+  "id": "MAP_SOUTHERN_ISLAND_INTERIOR_2",
+  "name": "SouthernIsland_Interior_2",
+  "layout": "LAYOUT_SOUTHERN_ISLAND_INTERIOR_2",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_SOUTHERN_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_INTERIOR_2_DIALGA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DIALGA)",
+      "x": 4,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SouthernIsland_Interior_2_BattleDialga",
+      "flag": "FLAG_HIDE_DIALGA"
+    },
+    {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_INTERIOR_2_PALKIA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PALKIA)",
+      "x": 27,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SouthernIsland_Interior_2_BattlePalkia",
+      "flag": "FLAG_HIDE_PALKIA"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 15,
+      "y": 20,
+      "elevation": 3,
+      "dest_map": "MAP_SOUTHERN_ISLAND_EXTERIOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 20,
+      "elevation": 3,
+      "dest_map": "MAP_SOUTHERN_ISLAND_EXTERIOR",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [],
+  "region": "REGION_HOENN"
+}
