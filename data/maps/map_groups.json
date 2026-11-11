@@ -486,7 +486,8 @@
     "NewMauville_SecretRoom",
     "IlexForest",
     "AncientColonnade",
-    "FieryPath_Room"
+    "FieryPath_Room",
+    "VictoryRoad_B2F_HiddenRoom"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

@@ -9553,6 +9553,16 @@
       "border_filepath": "data/layouts/SouthernIsland_Interior_2/border.bin",
       "blockdata_filepath": "data/layouts/SouthernIsland_Interior_2/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_B2F_HIDDEN_ROOM",
+      "name": "VictoryRoad_B2F_HiddenRoom_Layout",
+      "width": 34,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_B2F_HiddenRoom/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_B2F_HiddenRoom/map.bin"
     }
   ]
 }

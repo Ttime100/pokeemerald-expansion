@@ -1,5 +1,19 @@
 VictoryRoad_B2F_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, VictoryRoad_B2F_OnLoad
 	.byte 0
+
+VictoryRoad_B2F_OnLoad:
+	call_if_set FLAG_IS_CHAMPION, VictoryRoad_B2F_OpenHiddenRoom
+	end
+
+VictoryRoad_B2F_OpenHiddenRoom:
+	setmetatile 7, 22, METATILE_Cave_WallUpperLeftofOpening, TRUE
+	setmetatile 7, 23, METATILE_Cave_WallLowerLeftofOpening, TRUE
+	setmetatile 8, 22, METATILE_Cave_WallEntranceTop, TRUE
+	setmetatile 8, 23, METATILE_Cave_WallEntranceBottom, FALSE
+	setmetatile 9, 22, METATILE_Cave_WallUpperRightofOpening, TRUE
+	setmetatile 9, 23, METATILE_Cave_WallLowerRightofOpening, TRUE
+	return
 
 VictoryRoad_B2F_EventScript_Vito::
 	trainerbattle_single TRAINER_VITO, VictoryRoad_B2F_Text_VitoIntro, VictoryRoad_B2F_Text_VitoDefeat

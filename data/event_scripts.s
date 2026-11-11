@@ -1808,3 +1808,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/FieryPath_Room/scripts.inc"
 
 	.include "data/maps/SouthernIsland_Interior_2/scripts.inc"
+
+	.include "data/maps/VictoryRoad_B2F_HiddenRoom/scripts.inc"
