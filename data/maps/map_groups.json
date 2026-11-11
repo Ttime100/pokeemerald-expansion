@@ -487,7 +487,9 @@
     "IlexForest",
     "AncientColonnade",
     "FieryPath_Room",
-    "VictoryRoad_B2F_HiddenRoom"
+    "VictoryRoad_B2F_HiddenRoom",
+    "VictoryRoad_MewtwoRoom",
+    "VictoryRoad_B3F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
