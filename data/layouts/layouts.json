@@ -9557,8 +9557,8 @@
     {
       "id": "LAYOUT_VICTORY_ROAD_B2F_HIDDEN_ROOM",
       "name": "VictoryRoad_B2F_HiddenRoom_Layout",
-      "width": 34,
-      "height": 22,
+      "width": 40,
+      "height": 49,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/VictoryRoad_B2F_HiddenRoom/border.bin",

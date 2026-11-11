@@ -151,42 +151,98 @@
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
-      "dest_warp_id": "0"
+      "dest_warp_id": "6"
     },
     {
       "x": 11,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
-      "dest_warp_id": "0"
+      "dest_warp_id": "13"
     },
     {
       "x": 21,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
-      "dest_warp_id": "0"
+      "dest_warp_id": "11"
     },
     {
       "x": 24,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
-      "dest_warp_id": "0"
+      "dest_warp_id": "10"
     },
     {
       "x": 31,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
-      "dest_warp_id": "0"
+      "dest_warp_id": "9"
     },
     {
       "x": 5,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 2,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_MEWTWO_ROOM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 35,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 30,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 24,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 33,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_B2F",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 10,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_B2F_HIDDEN_ROOM",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
