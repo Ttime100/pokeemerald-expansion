@@ -1,0 +1,66 @@
+raw`
+VictoryRoad_MewtwoRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoad_MewtwoRoom_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, VictoryRoad_MewtwoRoom_OnResume
+	.byte 0
+
+VictoryRoad_MewtwoRoom_OnTransition:
+	setflag FLAG_HIDE_MEWTWO_EMERALD
+	call_if_set FLAG_IS_CHAMPION, VictoryRoad_MewtwoRoom_EventScript_TryShowMewtwo
+	end
+
+VictoryRoad_MewtwoRoom_EventScript_TryShowMewtwo::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_CAUGHT_MEWTWO, Common_EventScript_NopReturn
+	goto_if_set FLAG_DEFEATED_MEWTWO, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_MEWTWO_EMERALD
+	return
+
+VictoryRoad_MewtwoRoom_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, VictoryRoad_MewtwoRoom_EventScript_TryRemoveMewtwo
+	end
+
+VictoryRoad_MewtwoRoom_EventScript_TryRemoveMewtwo::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_VICTORY_ROAD_MEWTWO_ROOM_MEWTWO
+	return
+
+`
+
+script VictoryRoad_MewtwoRoom_BattleMewtwo {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_MEWTWO,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_MEWTWO,70)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_VICTORY_ROAD_MEWTWO_ROOM_MEWTWO)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, VictoryRoad_MewtwoRoom_EventScript_DefeatedMewtwo)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, VictoryRoad_MewtwoRoom_EventScript_RanFromMewtwo)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, VictoryRoad_MewtwoRoom_EventScript_RanFromMewtwo)
+	setflag(FLAG_CAUGHT_MEWTWO)
+    release
+    end
+}
+
+script VictoryRoad_MewtwoRoom_EventScript_DefeatedMewtwo {
+    setflag(FLAG_DEFEATED_MEWTWO)
+	setvar(VAR_0x8004, SPECIES_MEWTWO)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script VictoryRoad_MewtwoRoom_EventScript_RanFromMewtwo {
+    setvar(VAR_0x8004, SPECIES_MEWTWO)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
