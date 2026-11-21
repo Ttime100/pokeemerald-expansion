@@ -11,13 +11,13 @@ MossdeepCity_MapScripts::
 # 6 "data/maps/MossdeepCity/scripts.pory"
 MossdeepCity_OnTransition:
 # 7 "data/maps/MossdeepCity/scripts.pory"
-    clearflag FLAG_MOSSDEEP_GYM_SWITCH_1
+    @clearflag FLAG_MOSSDEEP_GYM_SWITCH_1
 # 8 "data/maps/MossdeepCity/scripts.pory"
-    clearflag FLAG_MOSSDEEP_GYM_SWITCH_2
+    @clearflag FLAG_MOSSDEEP_GYM_SWITCH_2
 # 9 "data/maps/MossdeepCity/scripts.pory"
-    clearflag FLAG_MOSSDEEP_GYM_SWITCH_3
+    @clearflag FLAG_MOSSDEEP_GYM_SWITCH_3
 # 10 "data/maps/MossdeepCity/scripts.pory"
-    clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
+   	@clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
 # 11 "data/maps/MossdeepCity/scripts.pory"
     call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
 # 12 "data/maps/MossdeepCity/scripts.pory"
