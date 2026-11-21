@@ -116,7 +116,7 @@ script Route114_LanettesHouse_EventScript_LanetteNew {
 	msgbox(Route114_LanettesHouse_Text_EverythingClutteredKeepThis, MSGBOX_DEFAULT)
 	getpartysize
     goto_if_eq(VAR_RESULT, PARTY_SIZE, LanetteHouse_Text_PartyIsFull)
-    givemon(SPECIES_PORYGON, 40, ITEM_DOUSE_DRIVE, 0, 0) // STRANGE_BALL == 0 (first 0), second 0 is for random IVs
+    givemon(SPECIES_PORYGON, 40, ITEM_SHOCK_DRIVE, 0, 0) // STRANGE_BALL == 0 (first 0), second 0 is for random IVs
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox(format("{PLAYER} received Porygon!"))
     waitmessage

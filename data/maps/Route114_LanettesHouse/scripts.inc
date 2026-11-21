@@ -223,7 +223,7 @@ Route114_LanettesHouse_EventScript_LanetteNew::
 # 118 "data/maps/Route114_LanettesHouse/scripts.pory"
 	goto_if_eq VAR_RESULT, PARTY_SIZE, LanetteHouse_Text_PartyIsFull
 # 119 "data/maps/Route114_LanettesHouse/scripts.pory"
-	givemon SPECIES_PORYGON, 40, ITEM_DOUSE_DRIVE, 0, 0
+	givemon SPECIES_PORYGON, 40, ITEM_SHOCK_DRIVE, 0, 0
 # 120 "data/maps/Route114_LanettesHouse/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 121 "data/maps/Route114_LanettesHouse/scripts.pory"
