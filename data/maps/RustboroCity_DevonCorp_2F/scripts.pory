@@ -5,7 +5,22 @@ RustboroCity_DevonCorp_2F_MapScripts::
 
 RustboroCity_DevonCorp_2F_OnTransition:
 	call_if_eq VAR_FOSSIL_RESURRECTION_STATE, 1, RustboroCity_DevonCorp_2F_EventScript_SetFossilReady
+	goto_if_set FLAG_DEFEATED_GENESECT, RustboroCity_DevonCorp_2F_EventScript_ResetAfterGenesect
+	goto_if_set FLAG_RECEIVED_GENESECT_CALL, RustboroCity_DevonCorp_2F_EventScript_SetupGenesectEvent
+	setflag FLAG_HIDE_GENESECT_EVENT
+	setflag FLAG_HIDE_DEVON_CORP_2F_MR_STONE
+	clearflag FLAG_HIDE_DEVON_CORP_2F_STAFF
 	end
+
+RustboroCity_DevonCorp_2F_EventScript_SetupGenesectEvent::
+	clearflag FLAG_HIDE_GENESECT_EVENT
+	setflag FLAG_HIDE_DEVON_CORP_2F_STAFF
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_ResetAfterGenesect::
+	setflag FLAG_HIDE_GENESECT_EVENT
+	clearflag FLAG_HIDE_DEVON_CORP_2F_STAFF
+	return
 
 RustboroCity_DevonCorp_2F_EventScript_SetFossilReady::
 	setvar VAR_FOSSIL_RESURRECTION_STATE, 2
@@ -504,5 +519,138 @@ text RustboroCity_DevonCorp_2F_Text_MultipleFossilsPickOne {
     Unfortunately, my machine can only\n
     regenerate one Pokémon at a time.\p
     Would you like to pick one of your\n
-    fossils for regeneration?$")
+    fossils for regeneration?")
+}
+
+script RustboroCity_DevonCorp_2F_EventScript_Genesect {
+	lock
+	playmoncry(SPECIES_GENESECT, CRY_MODE_NORMAL)
+	msgbox(format("Bzzzt-whirrr…"))
+	release
+	end
+}
+
+script RustboroCity_DevonCorp_2F_EventScript_RogueScientist {
+    lock
+    faceplayer
+    msgbox(RustboroCity_DevonCorp_2F_Text_ScientistMonologue)
+    closemessage
+	if(var(VAR_FACING) == DIR_NORTH) {
+    	applymovement(LOCALID_GENESECT, RustboroCity_DevonCorp_2F_Movement_GenesectAttackOnSouth)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+	}
+	if(var(VAR_FACING) == DIR_WEST) {
+		applymovement(LOCALID_GENESECT, RustboroCity_DevonCorp_2F_Movement_GenesectAttackOnEast)
+		waitmovement(0)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
+	}
+    playmoncry(SPECIES_GENESECT, CRY_MODE_ENCOUNTER)
+    delay(40)
+    waitmoncry
+    setwildbattle(SPECIES_GENESECT, 85, ITEM_DOUSE_DRIVE)
+    special(BattleSetup_StartLegendaryBattle)
+    setflag(FLAG_DEFEATED_GENESECT)
+	removeobject(LOCALID_GENESECT)
+	delay(20)
+	clearflag(FLAG_HIDE_DEVON_CORP_2F_MR_STONE)
+	playse(SE_EXIT)
+	addobject(LOCALID_MR_STONE)
+	delay(10)
+	applymovement(LOCALID_MAD_SCIENTIST, RustboroCity_DevonCorp_2F_Movement_MadScientistStepLeft)
+	waitmovement(0)
+    applymovement(LOCALID_MR_STONE, RustboroCity_DevonCorp_2F_Movement_MrStoneEnter)
+	waitmovement(0)
+	if (var(VAR_FACING) == DIR_NORTH) {
+        applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    }
+    if (var(VAR_FACING) == DIR_WEST) {
+        applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+    }
+    waitmovement(0)
+	delay(10)
+	msgbox(RustboroCity_DevonCorp_2F_Text_MrStoneScoldScientist)
+    if (var(VAR_FACING) == DIR_NORTH) {
+        applymovement(LOCALID_MR_STONE, Common_Movement_FaceDown)
+    }
+    if (var(VAR_FACING) == DIR_WEST) {
+        applymovement(LOCALID_MR_STONE, Common_Movement_FaceRight)
+    }
+    waitmovement(0)
+	delay(10)
+    msgbox(RustboroCity_DevonCorp_2F_Text_MrStoneToPlayer)
+	applymovement(LOCALID_MR_STONE, Common_Movement_FaceLeft)
+	waitmovement(0)
+	delay(10)
+	msgbox(RustboroCity_DevonCorp_2F_Text_MrStoneLetsGo)
+	closemessage
+	delay(20)
+	fadescreen(FADE_TO_BLACK)
+    setflag(FLAG_HIDE_GENESECT_EVENT)
+	setflag(FLAG_HIDE_DEVON_CORP_2F_MR_STONE)
+    removeobject(LOCALID_MAD_SCIENTIST)
+    removeobject(LOCALID_MR_STONE)
+	delay(20)
+	fadescreen(FADE_FROM_BLACK)
+	release
+    end
+}
+
+movement RustboroCity_DevonCorp_2F_Movement_GenesectAttackOnSouth {
+    face_down
+	walk_down
+	face_right
+    step_end
+}
+
+movement RustboroCity_DevonCorp_2F_Movement_GenesectAttackOnEast {
+	face_down
+	walk_down
+	walk_right
+	walk_right
+	face_up
+	step_end
+}
+
+movement RustboroCity_DevonCorp_2F_Movement_MadScientistStepLeft {
+    walk_left
+    face_right
+    step_end
+}
+
+movement RustboroCity_DevonCorp_2F_Movement_MrStoneEnter {
+    walk_down
+    face_left
+    step_end
+}
+
+text RustboroCity_DevonCorp_2F_Text_ScientistMonologue {
+    format("Three hundred million years of\n"
+    "predatory instincts…\l"
+	"perfected by modern engineering.\p"
+    "My colleagues called it dangerous.\n"
+    "I call it art.\p"
+    "Let us see how your strength\n"
+    "fares against an unfiltered weapon.")
+}
+
+text RustboroCity_DevonCorp_2F_Text_MrStoneScoldScientist {
+    format("Mr. Stone: Unbelievable…\n"
+	"What on Earth were you thinking,\l"
+	"putting lives at risk?!\p"
+	"I'll deal with you later.")
+}
+
+text RustboroCity_DevonCorp_2F_Text_MrStoneToPlayer {
+    format("…Ah, {PLAYER}.\n"
+	"Thank goodness you were here.\p"
+    "He has gone entirely mad\n"
+    "in the pursuit of science.\p"
+	"Devon Corp owes you a debt\n"
+    "we can never fully repay.")
+}
+
+text RustboroCity_DevonCorp_2F_Text_MrStoneLetsGo {
+	format("Let's go. We have much to discuss\n"
+	"regarding your reckless behavior.")
 }

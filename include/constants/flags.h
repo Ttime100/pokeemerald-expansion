@@ -124,7 +124,7 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
-#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
+#define FLAG_RECEIVED_GENESECT_CALL           0x67 // Ttime100 replaced FLAG_MOSSDEEP_GYM_SWITCH_4
 #define FLAG_RECEIVED_FLY_CALL               0x68  // Ttime100 added
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
@@ -218,7 +218,7 @@
 #define FLAG_DEFEATED_GRUNT_SPACE_CENTER_1F  0xBF
 #define FLAG_RECEIVED_SUN_STONE_MOSSDEEP     0xC0
 #define FLAG_WALLY_SPEECH                    0xC1
-#define FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1   0xC2 // Leftover from the RS version of Puzzle Room 7, functionally unused
+#define FLAG_HIDE_DEVON_CORP_2F_MR_STONE     0xC2 // Ttime100 added (was FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1)
 #define FLAG_MONKEY_TRADE_COMPLETE           0xC3 // Ttime100 added
 #define FLAG_SPOKE_TO_STEVEN_ROUTE_120       0xC4 // Ttime100 added from queggs
 #define FLAG_RECEIVED_BOOTS_AND_HELMET       0xC5 // Ttime100 added (was FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_4)
@@ -284,7 +284,7 @@
 #define FLAG_RECEIVED_BELUE_BERRY            0xFC
 #define FLAG_ENABLE_RIVAL_MATCH_CALL         0xFD
 #define FLAG_RECEIVED_CHARCOAL               0xFE
-#define FLAG_LATIOS_OR_LATIAS_ROAMING        0xFF   // Unused
+#define FLAG_HIDE_GENESECT_EVENT             0xFF   // Ttime100 added
 #define FLAG_RECEIVED_REPEAT_BALL            0x100
 #define FLAG_RECEIVED_OLD_ROD                0x101
 #define FLAG_RECEIVED_COIN_CASE              0x102
@@ -561,6 +561,7 @@
 #define FLAG_CAUGHT_PALKIA                   0x4D4 // Ttime100 added
 #define FLAG_DEFEATED_PALKIA                 0x4D5 // Ttime100 added
 #define FLAG_HIDE_PALKIA                     0x4D6 // Ttime100 added
+#define FLAG_DEFEATED_GENESECT               0x4D0 // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -1053,7 +1054,7 @@
 #define FLAG_HIDE_EXILED_ELITE_FOUR                                 0x4E2 // Ttime100 added
 #define FLAG_HIDE_EXILED_TEAM_MEMBERS                               0x4E3 // Ttime100 added
 #define FLAG_HIDE_SHADESPUR_POKEMON_CENTER_MASTER_BALL              0x4E4 // Ttime100 added
-#define FLAG_UNUSED_0x4E5                                           0x4E5
+#define FLAG_HIDE_DEVON_CORP_2F_STAFF                               0x4E5 // Ttime100 added
 #define FLAG_HIDE_MOTEL_OWNER                                       0x4DC // Ttime100 added
 #define FLAG_HIDE_MOTEL_GUEST                                       0x4DD // Ttime100 added
 #define FLAG_HIDE_RS_MALE                                           0x4DA // Ttime100 added
@@ -1300,7 +1301,6 @@
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
