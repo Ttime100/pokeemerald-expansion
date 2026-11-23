@@ -142,7 +142,7 @@ MossdeepCity_Gym_EventScript_ClearSwitch1::
 
 MossdeepCity_Gym_EventScript_Switch2::
 	lockall
-	goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_2, MossdeepCity_Gym_EventScript_ClearSwitch2
+	@goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_2, MossdeepCity_Gym_EventScript_ClearSwitch2
 	@setflag FLAG_MOSSDEEP_GYM_SWITCH_2
 	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
 	waitmovement 0
