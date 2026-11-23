@@ -1,0 +1,68 @@
+raw`
+ShoalCave_LowTide_Hidden_Ice_Room_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ShoalCave_LowTide_Hidden_Ice_Room_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, ShoalCave_LowTide_Hidden_Ice_Room_OnResume
+	.byte 0
+
+ShoalCave_LowTide_Hidden_Ice_Room_OnTransition:
+	call_if_set FLAG_CAUGHT_KYUREM, ShoalCave_LowTide_Hidden_Ice_Room_EventScript_HideKyurem
+	call_if_unset FLAG_CAUGHT_KYUREM, ShoalCave_LowTide_Hidden_Ice_Room_EventScript_TryShowKyurem
+	end
+
+ShoalCave_LowTide_Hidden_Ice_Room_EventScript_HideKyurem::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_KYUREM
+	return
+
+ShoalCave_LowTide_Hidden_Ice_Room_EventScript_TryShowKyurem::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_KYUREM, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_KYUREM
+	return
+
+ShoalCave_LowTide_Hidden_Ice_Room_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, ShoalCave_LowTide_Hidden_Ice_Room_EventScript_TryRemoveKyurem
+	end
+
+ShoalCave_LowTide_Hidden_Ice_Room_EventScript_TryRemoveKyurem::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_SHOAL_CAVE_KYUREM
+	return
+`
+script ShoalCave_LowTide_Hidden_Ice_Room_BattleKyurem {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_KYUREM,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_KYUREM,70)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_SHOAL_CAVE_KYUREM)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, ShoalCave_LowTide_Hidden_Ice_Room_EventScript_DefeatedKyurem)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, ShoalCave_LowTide_Hidden_Ice_Room_EventScript_RanFromKyurem)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, ShoalCave_LowTide_Hidden_Ice_Room_EventScript_RanFromKyurem)
+	setflag(FLAG_CAUGHT_KYUREM)
+    release
+    end
+}
+
+script ShoalCave_LowTide_Hidden_Ice_Room_EventScript_DefeatedKyurem {
+    setflag(FLAG_DEFEATED_KYUREM)
+	setvar(VAR_0x8004, SPECIES_KYUREM)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
+
+script ShoalCave_LowTide_Hidden_Ice_Room_EventScript_RanFromKyurem {
+    setvar(VAR_0x8004, SPECIES_KYUREM)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}

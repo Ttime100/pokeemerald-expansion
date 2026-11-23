@@ -121,11 +121,8 @@
 #define FLAG_MET_TEAM_AQUA_HARBOR            0x61
 #define FLAG_TV_EXPLAINED                    0x62
 #define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
-#define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
-#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 //
-#define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
-#define FLAG_RECEIVED_GENESECT_CALL           0x67 // Ttime100 replaced FLAG_MOSSDEEP_GYM_SWITCH_4
-#define FLAG_RECEIVED_FLY_CALL               0x68  // Ttime100 added
+#define FLAG_RECEIVED_GENESECT_CALL          0x67 // Ttime100 replaced FLAG_MOSSDEEP_GYM_SWITCH_4
+#define FLAG_RECEIVED_FLY_CALL               0x68 // Ttime100 added
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
 #define FLAG_RECEIVED_HM_ROCK_SMASH          0x6B
@@ -562,6 +559,9 @@
 #define FLAG_DEFEATED_PALKIA                 0x4D5 // Ttime100 added
 #define FLAG_HIDE_PALKIA                     0x4D6 // Ttime100 added
 #define FLAG_DEFEATED_GENESECT               0x4D0 // Ttime100 added
+#define FLAG_CAUGHT_KYUREM                   0x64  // Ttime100 added
+#define FLAG_DEFEATED_KYUREM                 0x65  // Ttime100 added
+#define FLAG_HIDE_KYUREM                     0x66  // Ttime100 added
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
