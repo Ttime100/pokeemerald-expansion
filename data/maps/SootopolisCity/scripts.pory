@@ -1739,7 +1739,7 @@ text SootopolisCity_Text_BirchRoamerCallPrompt {
     "something magnificent out there!\p"
     "Good luck, and stay safe!\p"
     "… … … … … …\l"
-    "Click!$")
+    "… … … … … Click!")
 }
 
 script SootopolisCity_EventScript_TryStevenCallOnFrame{
@@ -1772,5 +1772,27 @@ text SootopolisCity_Text_StevenMeltanCall {
     "Please stop by my home\nwhen you have a moment.\p"
 	"I think you'll find it well worth the trip!\p"
 	"… … … … … …\l"
-    "Click!$")
+    "… … … … … Click!")
+}
+
+script SootopolisCity_EventScript_GenesectCall {
+	lockall
+	pokenavcall(SootopolisCity_Text_GenesectCall)
+	waitmessage
+	setflag(FLAG_RECEIVED_GENESECT_CALL)
+	releaseall
+	end
+}
+
+text SootopolisCity_Text_GenesectCall {
+	format("… … … … … …\n"
+	"… … … … … BZZZT!\p"
+	"DEVON PRIORITY OVERRIDE\p"
+	"???: You've grown quite strong,\n"
+	"{PLAYER}… stronger than I expected.\p"
+	"Return to the Devon Corporation.\n"
+    "There is something you need to see.\p"
+	"Come alone.\p"
+	"… … … … … …\n"
+    "… … … … … Click!")
 }

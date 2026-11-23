@@ -3476,6 +3476,20 @@ SootopolisCity_EventScript_StevenMeltanCall_2:
 	goto SootopolisCity_EventScript_StevenMeltanCall_1
 
 
+SootopolisCity_EventScript_GenesectCall::
+# 1779 "data/maps/SootopolisCity/scripts.pory"
+	lockall
+# 1780 "data/maps/SootopolisCity/scripts.pory"
+	pokenavcall SootopolisCity_Text_GenesectCall
+# 1781 "data/maps/SootopolisCity/scripts.pory"
+	waitmessage
+# 1782 "data/maps/SootopolisCity/scripts.pory"
+	setflag FLAG_RECEIVED_GENESECT_CALL
+# 1783 "data/maps/SootopolisCity/scripts.pory"
+	releaseall
+	end
+
+
 SootopolisCity_Text_BirchRoamerCallPrompt::
 # 1722 "data/maps/SootopolisCity/scripts.pory"
 	.string "… … … … … …\n"
@@ -3497,7 +3511,7 @@ SootopolisCity_Text_BirchRoamerCallPrompt::
 	.string "something magnificent out there!\p"
 	.string "Good luck, and stay safe!\p"
 	.string "… … … … … …\l"
-	.string "Click!$"
+	.string "… … … … … Click!$"
 
 SootopolisCity_Text_StevenMeltanCall::
 # 1765 "data/maps/SootopolisCity/scripts.pory"
@@ -3516,4 +3530,17 @@ SootopolisCity_Text_StevenMeltanCall::
 	.string "I think you'll find it well worth the\n"
 	.string "trip!\p"
 	.string "… … … … … …\l"
-	.string "Click!$"
+	.string "… … … … … Click!$"
+
+SootopolisCity_Text_GenesectCall::
+# 1787 "data/maps/SootopolisCity/scripts.pory"
+	.string "… … … … … …\n"
+	.string "… … … … … BZZZT!\p"
+	.string "DEVON PRIORITY OVERRIDE\p"
+	.string "???: You've grown quite strong,\n"
+	.string "{PLAYER}… stronger than I expected.\p"
+	.string "Return to the Devon Corporation.\n"
+	.string "There is something you need to see.\p"
+	.string "Come alone.\p"
+	.string "… … … … … …\n"
+	.string "… … … … … Click!$"

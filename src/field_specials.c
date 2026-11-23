@@ -504,6 +504,31 @@ bool32 ShouldDoRoxanneCall(void)
     return TRUE;
 }
 
+bool32 ShouldDoGenesectCall(void)
+{
+    if (FlagGet(FLAG_BADGE08_GET) && !FlagGet(FLAG_RECEIVED_GENESECT_CALL))
+    {
+        switch (gMapHeader.mapType)
+        {
+        case MAP_TYPE_TOWN:
+        case MAP_TYPE_CITY:
+        case MAP_TYPE_ROUTE:
+        case MAP_TYPE_OCEAN_ROUTE:
+            if (++(*GetVarPointer(VAR_GENESECT_CALL_STEP_COUNTER)) < 40)
+                return FALSE;
+            break;
+        default:
+            return FALSE;
+        }
+    }
+    else
+    {
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
 bool32 ShouldDoRivalRayquazaCall(void)
 {
     if (FlagGet(FLAG_DEFEATED_MAGMA_SPACE_CENTER))
