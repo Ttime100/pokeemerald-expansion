@@ -488,7 +488,8 @@
     "AncientColonnade",
     "FieryPath_Room",
     "VictoryRoad_B2F_HiddenRoom",
-    "VictoryRoad_MewtwoRoom"
+    "VictoryRoad_MewtwoRoom",
+    "ShoalCave_LowTide_Hidden_Ice_Room"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

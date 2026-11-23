@@ -9573,6 +9573,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/VictoryRoad_MewtwoRoom/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoad_MewtwoRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHOAL_CAVE_LOW_TIDE_HIDDEN_ICE_ROOM",
+      "name": "ShoalCave_LowTide_Hidden_Ice_Room_Layout",
+      "width": 21,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ShoalCave_LowTide_Hidden_Ice_Room/border.bin",
+      "blockdata_filepath": "data/layouts/ShoalCave_LowTide_Hidden_Ice_Room/map.bin"
     }
   ]
 }

@@ -1812,3 +1812,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/VictoryRoad_B2F_HiddenRoom/scripts.inc"
 
 	.include "data/maps/VictoryRoad_MewtwoRoom/scripts.inc"
+
+	.include "data/maps/ShoalCave_LowTide_Hidden_Ice_Room/scripts.inc"
