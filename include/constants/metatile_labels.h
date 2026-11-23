@@ -10,20 +10,20 @@
 #define METATILE_BattleDome_Door_PreBattleRoom  0x20A
 
 // gTileset_BattleFrontier
-#define METATILE_BattleFrontier_CorridorOpenDoor_Bottom  0x20F
-#define METATILE_BattleFrontier_CorridorOpenDoor_Top     0x207
-#define METATILE_BattleFrontier_Door_Elevator            0x20E
-#define METATILE_BattleFrontier_Door_MultiCorridor_Left  0x2AD
-#define METATILE_BattleFrontier_Door_MultiCorridor_Right 0x2AE
-#define METATILE_BattleFrontier_Elevator_Bottom0         0x339
-#define METATILE_BattleFrontier_Elevator_Bottom1         0x33A
-#define METATILE_BattleFrontier_Elevator_Bottom2         0x33B
-#define METATILE_BattleFrontier_Elevator_Mid0            0x331
-#define METATILE_BattleFrontier_Elevator_Mid1            0x332
-#define METATILE_BattleFrontier_Elevator_Mid2            0x333
-#define METATILE_BattleFrontier_Elevator_Top0            0x329
-#define METATILE_BattleFrontier_Elevator_Top1            0x32A
-#define METATILE_BattleFrontier_Elevator_Top2            0x32B
+#define METATILE_BattleFrontier_CorridorOpenDoor_Bottom   0x20F
+#define METATILE_BattleFrontier_CorridorOpenDoor_Top      0x207
+#define METATILE_BattleFrontier_Door_Elevator             0x20E
+#define METATILE_BattleFrontier_Door_MultiCorridor_Left   0x2AD
+#define METATILE_BattleFrontier_Door_MultiCorridor_Right  0x2AE
+#define METATILE_BattleFrontier_Elevator_Bottom0          0x339
+#define METATILE_BattleFrontier_Elevator_Bottom1          0x33A
+#define METATILE_BattleFrontier_Elevator_Bottom2          0x33B
+#define METATILE_BattleFrontier_Elevator_Mid0             0x331
+#define METATILE_BattleFrontier_Elevator_Mid1             0x332
+#define METATILE_BattleFrontier_Elevator_Mid2             0x333
+#define METATILE_BattleFrontier_Elevator_Top0             0x329
+#define METATILE_BattleFrontier_Elevator_Top1             0x32A
+#define METATILE_BattleFrontier_Elevator_Top2             0x32B
 
 // gTileset_BattleFrontierOutsideEast
 #define METATILE_BattleFrontierOutsideEast_Door              0x3FC
@@ -123,6 +123,7 @@
 #define METATILE_BuildingFrlg_PCOn   0x063
 
 // gTileset_Cave
+#define METATILE_Cave_CaveWall                           0x219
 #define METATILE_Cave_CrackedFloor                       0x22F
 #define METATILE_Cave_CrackedFloor_Hole                  0x206
 #define METATILE_Cave_EntranceCover                      0x229
@@ -141,13 +142,12 @@
 #define METATILE_Cave_ShoalCave_BlueStone_Small          0x35B
 #define METATILE_Cave_ShoalCave_DirtPile_Large           0x358
 #define METATILE_Cave_ShoalCave_DirtPile_Small           0x35A
-#define METATILE_Cave_CaveWall                           0x219
-#define METATILE_Cave_WallLowerLeftofOpening             0x213
-#define METATILE_Cave_WallUpperLeftofOpening             0x20B
-#define METATILE_Cave_WallLowerRightofOpening            0x215
-#define METATILE_Cave_WallUpperRightofOpening            0x20D
-#define METATILE_Cave_WallEntranceTop                    0x20C
 #define METATILE_Cave_WallEntranceBottom                 0x214
+#define METATILE_Cave_WallEntranceTop                    0x20C
+#define METATILE_Cave_WallLowerLeftofOpening             0x213
+#define METATILE_Cave_WallLowerRightofOpening            0x215
+#define METATILE_Cave_WallUpperLeftofOpening             0x20B
+#define METATILE_Cave_WallUpperRightofOpening            0x20D
 
 // gTileset_CeladonCity
 #define METATILE_CeladonCity_CyclingRoad_Grass  0x352
