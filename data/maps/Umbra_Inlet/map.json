@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_SHADESPUR_ISLE",
-      "offset": 7,
+      "offset": 15,
       "direction": "left"
     }
   ],
@@ -23,7 +23,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SIDNEY",
       "x": 33,
-      "y": 16,
+      "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -36,7 +36,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 25,
-      "y": 15,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -45,6 +45,20 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TM_SHADOW_CLAW",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_UMBRA_INLET_TM_SHADOW_CLAW"
+    },
+    {
+      "local_id": "LOCALID_UMBRA_INLET_ZEKROM",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZEKROM)",
+      "x": 26,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Umbra_Inlet_EventScript_BattleZekrom",
+      "flag": "FLAG_HIDE_ZEKROM"
     }
   ],
   "warp_events": [],
@@ -53,7 +67,7 @@
     {
       "type": "hidden_item",
       "x": 8,
-      "y": 5,
+      "y": 13,
       "elevation": 0,
       "item": "ITEM_DREAD_PLATE",
       "flag": "FLAG_HIDDEN_ITEM_UMBRA_INLET_DREAD_PLATE"
@@ -61,7 +75,7 @@
     {
       "type": "hidden_item",
       "x": 29,
-      "y": 8,
+      "y": 16,
       "elevation": 0,
       "item": "ITEM_COMET_SHARD",
       "flag": "FLAG_HIDDEN_ITEM_UMBRA_INLET_COMET_SHARD"

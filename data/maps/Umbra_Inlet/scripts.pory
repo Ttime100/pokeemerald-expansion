@@ -1,6 +1,43 @@
 raw`
 Umbra_Inlet_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Umbra_Inlet_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, Umbra_Inlet_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, Umbra_Inlet_OnResume
 	.byte 0
+
+Umbra_Inlet_OnLoad:
+	call_if_unset FLAG_SYS_GAME_CLEAR, Umbra_Inlet_EventScript_HideStairs
+	end
+
+Umbra_Inlet_EventScript_HideStairs:
+	setmetatile 27, 14, 0x231, TRUE
+	return
+
+Umbra_Inlet_OnTransition:
+	call_if_set FLAG_CAUGHT_ZEKROM, Umbra_Inlet_EventScript_HideZekrom
+	call_if_unset FLAG_CAUGHT_ZEKROM, Umbra_Inlet_EventScript_TryShowZekrom
+	end
+
+Umbra_Inlet_EventScript_HideZekrom::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_ZEKROM
+	return
+
+Umbra_Inlet_EventScript_TryShowZekrom::
+	goto_if_unset FLAG_SYS_GAME_CLEAR, Umbra_Inlet_EventScript_HideZekrom
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_ZEKROM
+	return
+
+Umbra_Inlet_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Umbra_Inlet_EventScript_TryRemoveZekrom
+	end
+
+Umbra_Inlet_EventScript_TryRemoveZekrom::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_UMBRA_INLET_ZEKROM
+	return
 `
 script Umbra_Inlet_EventScript_Sidney {
     lock
@@ -32,12 +69,12 @@ text Sidney_Text_IntroSpeech {
 	That's good! Looking real good!\p
 	All right! You and me, let's enjoy\n
 	a battle that could rival\l
-	the Pokémon League!$")
+	the Pokémon League!")
 }
 
 text Sidney_Text_Defeat {
 format("Well, how do you like that? I lost!\n
-	Eh, it was fun, so it doesn't matter.$")
+	Eh, it was fun, so it doesn't matter.")
 }
 
 text Sidney_Text_PostBattleSpeech {
@@ -45,5 +82,33 @@ text Sidney_Text_PostBattleSpeech {
 	to say.\p
 	You've got what it takes to go far.\n
 	Now, go on to the Pokémon League and show
-	them what a real trainer can do!$")
+	them what a real trainer can do!")
+}
+
+script Umbra_Inlet_EventScript_BattleZekrom {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_ZEKROM,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_ZEKROM,70)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_UMBRA_INLET_ZEKROM)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, Umbra_Inlet_EventScript_RanFromZekrom)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, Umbra_Inlet_EventScript_RanFromZekrom)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Umbra_Inlet_EventScript_RanFromZekrom)
+	setflag(FLAG_CAUGHT_ZEKROM)
+    release
+    end
+}
+
+script Umbra_Inlet_EventScript_RanFromZekrom {
+    setvar(VAR_0x8004, SPECIES_ZEKROM)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
 }

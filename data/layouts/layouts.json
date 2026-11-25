@@ -4925,7 +4925,7 @@
       "id": "LAYOUT_UMBRA_INLET",
       "name": "Umbra_Inlet_Layout",
       "width": 36,
-      "height": 22,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_MeteorFalls",
       "border_filepath": "data/layouts/Umbra_Inlet/border.bin",
