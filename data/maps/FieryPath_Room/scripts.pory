@@ -1,0 +1,70 @@
+raw`
+FieryPath_Room_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, FieryPath_Room_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, FieryPath_Room_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, FieryPath_Room_OnResume
+	.byte 0
+
+FieryPath_Room_OnLoad:
+	call_if_unset FLAG_SYS_GAME_CLEAR, FieryPath_Room_EventScript_HideStairs
+	end
+
+FieryPath_Room_EventScript_HideStairs:
+    setmetatile 15, 26, METATILE_Lavaridge_RockWall, TRUE
+	setmetatile 12, 31, METATILE_Lavaridge_RockWall, TRUE
+	return
+
+FieryPath_Room_OnTransition:
+	call_if_set FLAG_CAUGHT_RESHIRAM, FieryPath_Room_EventScript_HideReshiram
+	call_if_unset FLAG_CAUGHT_RESHIRAM, FieryPath_Room_EventScript_TryShowReshiram
+	end
+
+FieryPath_Room_EventScript_HideReshiram::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_RESHIRAM
+	return
+
+FieryPath_Room_EventScript_TryShowReshiram::
+	goto_if_unset FLAG_SYS_GAME_CLEAR, FieryPath_Room_EventScript_HideReshiram
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_RESHIRAM
+	return
+
+FieryPath_Room_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FieryPath_Room_EventScript_TryRemoveReshiram
+	end
+
+FieryPath_Room_EventScript_TryRemoveReshiram::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_FIERY_PATH_ROOM_RESHIRAM
+	return
+`
+
+script FieryPath_Room_EventScript_BattleReshiram {
+    lock
+    faceplayer
+    setvar(VAR_TEMP_1, 1)
+    playmoncry(SPECIES_RESHIRAM,CRY_MODE_ENCOUNTER)
+    delay(30)
+	waitmoncry
+    seteventmon(SPECIES_RESHIRAM,70)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    special(BattleSetup_StartLegendaryBattle)
+	clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setvar(VAR_LAST_TALKED, LOCALID_FIERY_PATH_ROOM_RESHIRAM)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_WON, FieryPath_Room_EventScript_RanFromReshiram)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_RAN, FieryPath_Room_EventScript_RanFromReshiram)
+	goto_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FieryPath_Room_EventScript_RanFromReshiram)
+	setflag(FLAG_CAUGHT_RESHIRAM)
+    release
+    end
+}
+
+script FieryPath_Room_EventScript_RanFromReshiram {
+    setvar(VAR_0x8004, SPECIES_RESHIRAM)
+	call(Common_EventScript_LegendaryFlewAway)
+    release
+    end
+}
