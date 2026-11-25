@@ -553,12 +553,14 @@
 #define FLAG_DEFEATED_MOLTRES                0x2A0 // Ttime100 added
 #define FLAG_HIDE_MOLTRES_EMERALD            0x2A1 // Ttime100 added
 #define FLAG_CAUGHT_DIALGA                   0x4D1 // Ttime100 added
-#define FLAG_DEFEATED_DIALGA                 0x4D2 // Ttime100 added
-#define FLAG_HIDE_DIALGA                     0x4D3 // Ttime100 added
-#define FLAG_CAUGHT_PALKIA                   0x4D4 // Ttime100 added
-#define FLAG_DEFEATED_PALKIA                 0x4D5 // Ttime100 added
-#define FLAG_HIDE_PALKIA                     0x4D6 // Ttime100 added
-#define FLAG_DEFEATED_GENESECT               0x4D0 // Ttime100 added
+#define FLAG_HIDE_DIALGA                     0x4D2 // Ttime100 added
+#define FLAG_CAUGHT_PALKIA                   0x4D3 // Ttime100 added
+#define FLAG_HIDE_PALKIA                     0x4D4 // Ttime100 added
+#define FLAG_DEFEATED_GENESECT               0x4D5 // Ttime100 added
+#define FLAG_CAUGHT_RESHIRAM                 0x4D6 // Ttime100 added
+#define FLAG_HIDE_RESHIRAM                   0x4D7 // Ttime100 added
+#define FLAG_CAUGHT_ZEKROM                   0x4CE // Ttime100 added
+#define FLAG_HIDE_ZEKROM                     0x4CF // Ttime100 added
 #define FLAG_CAUGHT_KYUREM                   0x64  // Ttime100 added
 #define FLAG_DEFEATED_KYUREM                 0x65  // Ttime100 added
 #define FLAG_HIDE_KYUREM                     0x66  // Ttime100 added
@@ -1299,8 +1301,6 @@
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
